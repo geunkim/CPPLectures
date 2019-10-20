@@ -1,6 +1,6 @@
 # 템플릿(template)
 
-## 템플릿 함수 (unction template)
+## 템플릿 함수 (function template)
 
 다음과 같이 정수 두 수와 실수 두 수를 더하는 add 함수를 고려하자. C++의 함수 오버로딩 기능을 활용하여 다음과 같이 함수를 정의할 수 있다. 
 
@@ -35,5 +35,8 @@ T, T1, T2 등은 실제 프로그램 시 실제 자료형으로 대체된다. �
 ```C++
 template <typename T>
 T add(T& x, T& y) { return x + y; }
+
+## 템플릿 클래스(Template Class)
+
 
 
