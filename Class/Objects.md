@@ -92,7 +92,7 @@ public:
   int width, height;   // 멤버 변수
   int getArea();       // 멤버 함수
 };
-``
+```
 
 클래스 선언 영역 외부에서 Rect 클래스의 멤버함수 getArea()의 정의는 다음과 같다.
 
@@ -100,6 +100,7 @@ public:
 int Rect::getArea() {
   return width * height;
 }
+```
 
 클래스 선언 영역 내부에서 getArea() 함수의 정의는 다움과 같다.
 
