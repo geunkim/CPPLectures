@@ -115,6 +115,49 @@ public:
 
 ### 접근 지정자
 C++의 접근 지정자는 private, protected, public 의 3 종류가 있다. 이 접근지정자는 C++의 데이터 캡슐화와 관련이 있다.   
+* private: private 접근 지정자는 갖는 멤버 변수, 명변 함수는 클래스 외부에서는 접근이 불가능 것으로 클래스 내부의 멥버에 의해서만 
+접근이 가능하다. 
+```C++
+#include <iostream>
+
+using namespace std;
+
+class Rect {
+private:
+  int width, height;   // private 멤버 변수 
+public:
+  Rect(int w = 2, int h = 2) : width(w), height(h) {}
+  int getArea() { return width * height; }
+ };
+ 
+ 
+int main(int argc, char const *argv[])
+{
+  Rect rectangle;
+  rectangle.width = 5;     // 접근 오류
+  rectangle.height = 4;   // 접근 오류
+  
+  cout << "Width: " << rectangle.width<< endl;  // 접근 오류
+  cout << "Area: " << rectangle.getArea() << endl; 
+}
+```
+앞의 프로그램을 컴파일하면 아래와 같이 세 곳에서 에러가 발생한다. 
+```C++
+error: 'width' is a private member of 'Rect'
+  rectangle.width = 5;     // 접근 오류
+            ^
+error: 'height' is a private member of 'Rect'
+  rectangle.height = 4;   // 접근 오류
+            ^
+error: 'width' is a private member of 'Rect'
+  cout << "Width: " << rectangle.width<< endl;  // 접근 오류
+```  
+
+* protected: private 접근 지정자와 비슷하게 클래스 외부에서는 protected 멤버에 접근하지 못하나 상송을 받는 자식 클래스 내부의 멤버들은 접근이 가능하다.
+
+* public: public 접근 지정자로 지정된 멥버 변수와 멤버 함수는 클래스 외부에서 접근이 가능하다. 
+
+
 
 
 
