@@ -153,10 +153,160 @@ error: 'width' is a private member of 'Rect'
   cout << "Width: " << rectangle.width<< endl;  // 접근 오류
 ```  
 
-* protected: private 접근 지정자와 비슷하게 클래스 외부에서는 protected 멤버에 접근하지 못하나 상송을 받는 자식 클래스 내부의 멤버들은 접근이 가능하다.
-
 * public: public 접근 지정자로 지정된 멥버 변수와 멤버 함수는 클래스 외부에서 접근이 가능하다. 
 
+```C++ 
+#include <iostream>
+
+using namespace std;
+
+class Rect {
+public:
+  int width, height;   // public 멤버 변수 
+  Rect(int w = 2, int h = 2) : width(w), height(h) {}
+  int getArea() { return width * height; }
+ };
+ 
+int main(int argc, char const *argv[])
+{
+  Rect rectangle;
+  rectangle.width = 5;     // 접근 가능
+  rectangle.height = 4;    // 접근 가능
+  
+  cout << "Width: " << rectangle.width<< endl;  // 접근 가능
+  cout << "Area: " << rectangle.getArea() << endl; 
+}
+```
+앞의 프로그램을 컴파일하면 컴파일 에러가 발생하지 않으며 실행한 결과는 다음과 같다.
+```C++
+Width: 5
+Area: 20
+```
+* protected: private 접근 지정자와 비슷하게 클래스 외부에서는 protected 멤버에 접근하지 못하나 상속을 받는 자식 클래스 내부의 멤버들은 접근이 가능하다. 이 접근 지정자는 상속 관계에서만 의미를 가진다. **private 접근 지정자로 지정된 멤버는 상속받은 자식 클래스 내부에서 접근이 불가능하다.**
+
+```C++ 
+#include <iostream>
+
+using namespace std;
+
+class Rect {
+protected:
+  int width, height;   // protected 멤버 변수 
+public:
+  Rect(int w = 2, int h = 2) : width(w), height(h) {}
+  int getArea() { return width * height; }
+ };
+ 
+int main(int argc, char const *argv[])
+{
+  Rect rectangle;
+  rectangle.width = 5;     // 접근 오류
+  rectangle.height = 4;    // 접근 오류
+  
+  cout << "Width: " << rectangle.width<< endl;  // 접근 오류
+  cout << "Area: " << rectangle.getArea() << endl; 
+}
+```
+앞의 프로그램을 컴파일하면 아래와 같이 세 곳에서 에러가 발생한다. 
+```C++
+error: 'width' is a protected member of 'Rect'
+  rectangle.width = 5;     // 접근 오류
+            ^
+error: 'height' is a protected member of 'Rect'
+  rectangle.height = 4;   // 접근 오류
+            ^
+error: 'width' is a protected member of 'Rect'
+  cout << "Width: " << rectangle.width<< endl;  // 접근 오류
+```  
+
+```C++
+#include <iostream>
+
+using namespace std;
+
+class Shape {
+private:
+  int pointX, pointY;
+public:
+  Shape(int x = 2, int y = 2) : pointX(x), pointY(y) {}
+  void printPoint() { cout <<"point: " << pointX << ", " << pointY << endl; } 
+ };
+ 
+ class Rect : public Shape
+ {
+ private:
+ 	int width, height;
+ public:
+ 	Rect(int w, int h) : width(w), height(h) {}
+ 	void printEndpoint() {
+ 		cout <<"Rect: " << pointX + width << ", "   // 접근 에러
+ 			 << pointY + height << endl;
+ 	}
+ };
+ 
+int main(int argc, char const *argv[])
+{
+	Shape p1(10, 20);
+	Rect rectangle(10, 20);
+
+	p1.printPoint();
+
+	rectangle.printPoint();
+	rectangle.printEndpoint();
+}
+```
+앞의 코드를 컴파일 하면 다음과 같이 2개의 컴파일 에러가 발생한다. 에러가 발생하는 이유는 부모 클래스인 shape의 멤버 변수 
+pointX 와 pointY 가 private 접근 지정자로 지정되어 있어 자식 클래스인 Rect 클래스에서 접근이 가능하지 않기 떄문이다. 
+
+```C++
+error: 'pointX' is a private member of 'Shape'
+                cout <<"Rect: " << pointX + width << ", "    // 접근 에러
+error: 'pointY' is a private member of 'Shape'
+                         << pointY + height << endl;         // 접근 에러
+```
+다음 코드는 부모 클래스의 pointX, pointY 멤버 변수가 protected 접근 지정자로 지정되어 있다. 이를 상속받은 Rect 클래스의 멤버 함수에서 Shape 클래스의 pointX, pointY 를 접근할 수 있다. 
+```C++
+#include <iostream>
+
+using namespace std;
+
+class Shape {
+protected:
+  int pointX, pointY;
+public:
+  Shape(int x = 2, int y = 2) : pointX(x), pointY(y) {}
+  void printPoint() { cout <<"point: " << pointX << ", " << pointY << endl; }
+ };
+ 
+ class Rect : public Shape
+ {
+ private:
+ 	int width, height;
+ public:
+ 	Rect(int w, int h) : width(w), height(h) {}
+ 	void printEndpoint() {
+ 		cout <<"Rect: " << pointX + width << ", "    //접근 에러
+ 			 << pointY + height << endl;
+ 	}
+ };
+ 
+int main(int argc, char const *argv[])
+{
+	Shape p1(10, 20);
+	Rect rectangle(10, 20);
+
+	p1.printPoint();
+
+	rectangle.printPoint();
+	rectangle.printEndpoint();
+}
+```
+앞의 코드의 실행 결과는 다음과 같다.
+```C++
+point: 10, 20
+point: 2, 2
+Rect: 12, 22
+```
 
 
 
