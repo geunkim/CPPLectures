@@ -69,5 +69,19 @@ r3가 생성하였다. r3의 사용범위는 영역 2이기 때문에 영역 2�
 ```
 
 ## 정적 멤버함수
-### 정적 멤버함수는 
+멤버함수도 정적 멤버함수로 선언할 수 있다. 정적 멤버함수도 정적 멤버변수와 같이 특정 객체에 종속되지 않는 것으로 객체를 생성하지 않고도 호출이 가능하다. 객체가 생성되지 않았기 때문에 클래스 이름을 직접 사용한다. 
+```C++
+class Rect
+{
+	int width, height;
+	static int num;
+public:
+	Rect() {num++;}
+	~Rect() {num--;}
+	static int getNum() {return num;}
+	static int getWidth() {return width;}  // 접근 오류 
+};
+```
+
+
 
