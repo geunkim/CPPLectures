@@ -113,7 +113,13 @@ nt main(int argc, char const *argv[])
 	return 0;
 }
 ```
-앞의 main() 함수에서는 정적 멤버함수인 getNum()의 호출을 r1.getNum(), Rect::getNum(), r2.getNum() 의 형태로 할 수 있다. 
+앞의 main() 함수에서는 정적 멤버함수인 getNum()의 호출을 r1.getNum(), Rect::getNum(), r2.getNum() 의 형태로 할 수 있다.
+프로그램의 결과는 앞의 정적 멤버함수의 결과와 같다. 
+```C++
+(1)# of Rect: 2
+(2)# of Rect: 3
+(3)# of Rect: 2
+```
 
 
 
