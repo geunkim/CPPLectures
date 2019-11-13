@@ -43,6 +43,8 @@ Sample Sample::operator + (Sample& s);
 멤버함수로 제공하는 객체에 해당하고 b 객체는 ```opeator +``` 함수의 입력파러미터 s에 해당한다. 
 
 ```C++
+// myvector.h
+//
 class myVector
 {
 	double x, y;
@@ -54,10 +56,60 @@ public:
 	myVector operator-(myVector& V);	
 	bool operator == (myVector& V);
 };
-`
 
+myVector의 멤버함수를 정의한 코드는 다음과 같다. 
+```C++
+// myVector.cc or myVector.cpp
+#include "myVector.h"
 
+void myVector::printVector() {
+	cout << "vector (" << x <<", " << y << ")" << endl;
+}
 
+myVector myVector::operator+(myVector& V){
+	myVector rV = myVector(x+V.x, y+V.y);
+	return rV;
+}
+
+myVector myVector::operator-(myVector& V){
+	myVector rV = myVector(x-V.x, y-V.y);
+	return rV;
+}	
+
+bool myVector::operator == (myVector& V){
+	return (x == V.x && y == V.y);
+}
+```
+팡페에서 오버로딩된 연산자를 이용한 프로그램 코드는 다음과 같다.  아래의 코드
+(10.5, 20.1), (30.2, 11.5) 의 벡터 값을 저정하는 객체 a, b 를 선언하였고 
+객체 c 에  두 백터의 합과 차를 구하고 두 벡터에 저정된 값을 비교하는  ```==``₩ 연산자를 
+검증하였다. 
+
+```C++
+// myVectorTest.cc
+int main(int argc, char const *argv[])
+{
+	myVector a(10.5, 20.1);
+	myVector b(30.2, 11.5);
+	myVector c;
+
+	c = a + b;
+	c.printVector();
+	c = a - b;
+	c.printVector();
+
+	if(a == b) cout << " a 와 b 는 같음" << endl;
+	else cout << "a 와 b는 같지 않음" << endl;
+
+	return 0;
+}
+````
+프로그램의 실행결과는 다음과 같다. 
+```shell
+tor (40.7, 31.6)
+vector (-19.7, 8.6)
+a 와 b는 같지 않음
+```
 
 ```C++
 class Time
