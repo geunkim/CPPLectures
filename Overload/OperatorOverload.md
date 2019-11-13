@@ -28,6 +28,24 @@
 
 ## 연산자 오버로드 코드 
 ```C++
+class myVector
+{
+	double x, y;
+public:
+	myVector(double x = 0.0, double y = 0.0):  x(x), y(y){};
+	void printVector();	
+
+	myVector operator+(myVector& V);
+	myVector operator-(myVector& V);	
+	myVector operator*(myVector& V);
+	myVector operator/(myVector& V);
+	bool operator == (myVector& V);
+};
+```
+
+
+
+```C++
 class Time
 {
 	int hour, min, sec;
