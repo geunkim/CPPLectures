@@ -26,7 +26,22 @@
 | # | 문자열로 전처리기 변환 |
 | ## | 전처리기 연결 |
 
-## 연산자 오버로드 코드 
+* 오버로딩한 연산자는 non-static 클래스 멤버함수 또는 전역 함수이다. (private 또는 protected 접근자의 전역함수는 해당
+클래스의 friend 함수로 선언되어야 한다
+
+* 멤버함수로 오버로드된 이항 연산자의 경우 연산자 사용 시 첫번째 피연산자는 항상 연산자가 호출되는 객체이다.
+예로
+```C++
+Sample Sample::operator + (Sample& s);
+```
+의 연산자 오버로딩이 선언/정의되어 있을 경우, 이 연산자를 다음과 같이 사용할 수 있다.
+``` Sample a, b, c; ```
+```...```
+``` c = a + b; ```
+
+이 때 a 객체의 속성 값은 선언하는 클래스의 멤버 변수가 된다. 즉 a 객체는 ```opeator+```를 
+멤버함수로 제공하는 객체에 해당하고 b 객체는 ```opeator +``` 함수의 입력파러미터 s에 해당한다. 
+
 ```C++
 class myVector
 {
@@ -37,11 +52,10 @@ public:
 
 	myVector operator+(myVector& V);
 	myVector operator-(myVector& V);	
-	myVector operator*(myVector& V);
-	myVector operator/(myVector& V);
 	bool operator == (myVector& V);
 };
-```
+`
+
 
 
 
