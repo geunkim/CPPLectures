@@ -2,10 +2,11 @@
 
 사용자 정의 클래스에 대한 연산자에 특별한 의미를 부여하는 연산자 오버로딩을 할 수 있는 대표적인 연산자는 다음과 같이 분류할 수 있다. 
 * 대입연산자 (assignment operator): =
+* 복합 대입 연산자 (compound assignment operators): +=, -=, *=
 * 이진 산술 연산자 (binary arithmetic operators): +, -, *, /
-* 복합 할당 연산자 (compound assignment operators): +=, -=, *=
 * 비교 연산자 (comparision operators): ==, !=
 
+## 대입연산자 (assignment operator)
 ```C++
 class MyClass {
   public:
@@ -90,6 +91,16 @@ MyClass& MyClass::operator=(const MyClass &rhs) {
 1. 입력 파라미터(인자)는 상수 참조로 받는다. 
 2. 왼쪽에 참조를 반환해서 안전하고 적절한 연산자 연결을 지원한다. (\*this를 반환하는 방법으로)
 3. 포인터를 비교하여 자기 대입을 확인한다. (this와 &rhs) 
+
+## 이진 산술 연산자 
+
+이진 산술 연산자는 연산의 양쪽을 모두 수정하지 않으며 두 인자로 만든 새로운 값을 반환한다. 이 연산은 조금 추가적인 작업이 필요하다. 
+
+```C++
+//인스턴스의 값을 다른 곳에 추가하고 결과와 함께 새 인스턴스를 반환
+const MyClass MyClass::operator+(const MyClass &other) const {
+   return MyClass(*this) += other;
+}
 
 
  
