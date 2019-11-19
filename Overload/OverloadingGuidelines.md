@@ -92,16 +92,47 @@ MyClass& MyClass::operator=(const MyClass &rhs) {
 2. 왼쪽에 참조를 반환해서 안전하고 적절한 연산자 연결을 지원한다. (\*this를 반환하는 방법으로)
 3. 포인터를 비교하여 자기 대입을 확인한다. (this와 &rhs) 
 
+## 복합 대입 연산자 
+
+이 연산은 destructive 연산자로 대입의 왼쪽의 값이 갱신되거나 대체되게 된다. 
+```C++
+MyClass a, b;
+...
+a += b; // a.operator++(b) 와 같음 
+```
+이 연산자 오버로딩 함수의 형태는 다음과 같다.
+```C++
+MyClass& operator+= (const MyClass &rhs) {
+...
+}
+```
+반환 형태가 참조자이기 때문에 다음 코드가 가능하다.
+```C++
+MyClass mc;
+...
+(mc += 5) += 3;
+```
+이와 같이 코드를 작성하는 프로그래머는 드물겠지면 일반적인 대입 연산자와 같이 이 복합 대입 연산자는 기본 자료형에서 지원되기 때문에 이와 같은 사용자 정의 자료형에서도 같은 맥락으로 동적이 되어야 한다. 북합 대입 연산자의 구현도 ```C++\*this```를 반환하도록 작서한다. 그러므로 복합 대입 연산자의 정의는 다음과 같다.
+```C++
+MyClass& operator+= (const MyClass &rhs) {
+...   // 복합 대입 작업을 수행 
+  return *this;
+}
+
 ## 이진 산술 연산자 
 
 이진 산술 연산자는 연산의 양쪽을 모두 수정하지 않으며 두 인자로 만든 새로운 값을 반환한다. 이 연산은 조금 추가적인 작업이 필요하다. 
+이진 산술 연산자인 ```+```을 구현하는 함수는 다음과 같다. 
 
 ```C++
 //인스턴스의 값을 다른 곳에 추가하고 결과와 함께 새 인스턴스를 반환
 const MyClass MyClass::operator+(const MyClass &other) const {
-   return MyClass(*this) += other;
+   MyClass result = *this;  // 복사폰본을 만든다.
+   result += other;         // 
+   return result;
 }
-
+ ```
+ 
 
  
 
