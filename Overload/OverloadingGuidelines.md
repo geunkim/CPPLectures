@@ -112,7 +112,7 @@ MyClass mc;
 ...
 (mc += 5) += 3;
 ```
-이와 같이 코드를 작성하는 프로그래머는 드물겠지면 일반적인 대입 연산자와 같이 이 복합 대입 연산자는 기본 자료형에서 지원되기 때문에 이와 같은 사용자 정의 자료형에서도 같은 맥락으로 동적이 되어야 한다. 북합 대입 연산자의 구현도 ```C++\*this```를 반환하도록 작서한다. 그러므로 복합 대입 연산자의 정의는 다음과 같다.
+이와 같이 코드를 작성하는 프로그래머는 드물겠지면 일반적인 대입 연산자와 같이 이 복합 대입 연산자는 기본 자료형에서 지원되기 때문에 이와 같은 사용자 정의 자료형에서도 같은 맥락으로 동적이 되어야 한다. 북합 대입 연산자의 구현도 ```C++\*this```를 반환하도록 작성한다. 그러므로 복합 대입 연산자의 정의는 다음과 같다.
 ```C++
 MyClass& operator+= (const MyClass &rhs) {
 ...   // 복합 대입 작업을 수행 
@@ -133,6 +133,30 @@ const MyClass MyClass::operator+(const MyClass &other) const {
 }
  ```
  
+ 앞의 코드를 다음가 같이 한줄 구문으로 작성할 수 있다. 
+```C+
+const MyClass MyClass::operator+(const MyClass &other) const { 
+   return MyClass(*this) += other;
+}
+ ```
+앞의 코드는 ```*this```의 사본으로 이름없는 MyClass 인스턴스를 생성한다.
+그 후 ```+-``` 연산자는 이 임시 값에서 호출하고 반환한다.
+
+## 비교 연산자
+
+비교 연산자는 다음과 같이 선언된다.
+```C++
+bool MyCLiass::operator==(const MyClass &other) const {
+   .. .
+}
+```
+!= 연산자는 == 연산자를 활용하여 간편하게 정의한다. 
+```C++
+bool MyCLiass::operator!=(const MyClass &other) const {
+   return !(*this == other)
+}
+```
+
 
  
 
