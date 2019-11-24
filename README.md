@@ -2,7 +2,7 @@
 
 0. 역사와 호환성
 0.1 절차적 프로그래밍/ 객체지향 프로그래밍/ 제너릭 프로그래밍 (일반화 프로그래밍)/ 함수형 프로그래밍
-1. [C++ 기초](https://github.com/geunkim/CPPLectures/Basic.md)
+1. [C++ 기초](https://github.com/geunkim/CPPLectures/blob/master/Basic.md)
 2. 프로그래밍 기초
 3. 함수
 4. 배열, 구조체와 파일
