@@ -15,9 +15,7 @@ C++ 프로그램을 생성하고 실행시키기 위해서는 몇 가지 단계�
   두 정수를 키보드로 부터 입력 받아 x, y에 저장한 후 두 수의 합을 구하고 화면에 출력하는 프로그램 
 */
 #include <iostream>                            // cin, cout 클래스 선언 내용을 포함
-
 using namespace std;                           // std namespace 사용을 선언
-
 int main() {
   int x, y;
   cout << "두수를 입력하시오: ";  
