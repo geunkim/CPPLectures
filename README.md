@@ -29,3 +29,7 @@
 타입추론(type deduction)
 우측 값 레퍼런스 (rvalue reference)
 
+
+References
+
+1. [마이크로소프트 C++ 언어 참조 (Visual Studio 2019)](https://docs.microsoft.com/ko-kr/cpp/cpp/cpp-language-reference?view=vs-2019)
