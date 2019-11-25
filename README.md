@@ -19,4 +19,13 @@
 
 
 
+-------------------------------
+* To do (목록에 추가해야 할 내용들)
+
+함수 개체(function object)람수, functor
+람다 표현식(lambda expression)
+우측 값(rvalue)과 좌축 값(lvalue)
+스마트 포인터(Smart Pointer): shared_ptr, unique_ptr, weak_ptr
+타입추론(type deduction)
+우측 값 레퍼런스 (rvalue reference)
 
