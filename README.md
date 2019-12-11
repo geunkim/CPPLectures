@@ -17,6 +17,7 @@
 12. 에외처리와 형 변환
 13. 템플릿
 14. [STL](https://github.com/geunkim/CPPLectures/blob/master/STL/README.md)
+15. 디자인패턴
 
 
 
