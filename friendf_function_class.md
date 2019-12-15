@@ -13,7 +13,7 @@ C++ 에서는 클래스 외부에 작성된 함수나 클래스를 클래스 내
 ## 프렌드 함수 (외부 함수) 선언 
 클래스 외부에서 정의된 함수가 클래스 멤버를 접근할 수 있도록 하기 위해서 클래스 외부 함수를 클래스 내에서 프렌드 키워드를 사용허여 아래와 같이 선인한다.
 equals() 함수는 Box 클래스의 모든 멤버를 접근할 수 있다.
-```
+```C++
 class Box {
   ...
   friend bool equals(Box a, Box b); 
@@ -55,7 +55,7 @@ int main(int argc, char const *argv[])
 
 ## 프렌드 멤버(다른 클래스의 멤버 함수) 선언 
 
-```
+```C++
 class Box {
   ...
   friend bool BoxManager::equls(Box a, Box b);
@@ -66,7 +66,7 @@ class Box {
 
 ## 프렌드 클래스 선언
 
-```
+```C++
 class Box{             // 접근을 허용해주는 클래스 이름 (BoX)
   ...
   friend BoxManager;   // 접근을 허용받는 클래스 이름 (BoxManager)
@@ -110,6 +110,11 @@ int main(int argc, char const *argv[])
 	return 0;
 }
 ```
+실행 결과는 다음과 같다.
+```C++
+Not equal
+```
+
 앞의 함수들은 연산자 중복(오버로딩)을 통해서 구현이 가능하다. 
 
 ### 프렌드 함수의 특징
