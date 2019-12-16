@@ -71,6 +71,91 @@ T T::operator+(T& s);
 | 단항연산자 | 후위 연산자++ | const T operator++(int i); |
 | 단항연산자 | 역참조 연산자 * |                      |
 
+#### 연산자 오버로딩의 특징
+* C++ 언어에 있던 연산자만 중복 가능하다. 
+연산자 중복은 C++ 언어에 원래 있던 연산자에 대해서만 새로운 연산이 추가될 뿐 새로운 연산자를 만들어 낼 수 없다.
+
+* 피연산자의 타입이 다른 연산을 새롭게 정의한다.
+예로 C++에서 사칙연산(+, -, \*, /) 의 피연산자는 모두 숫자이다. 이들 연산을 중복하려면 피연산자가 숫자가 아니라 
+<객체, 수>, <수, 객체>, <객체, 객체>의 형태를 되어야 한다. 
+
+* 연산자 중복은 함수를 통해 이루어진다.
+새로운 연산 처리를 수행하는 함수를 구현하는 것이다. 이 함수를 연산자 함수(operator function)라 한다. 
+
+* 연산자 중복은 반드시 클래스와 관계를 가진다.
+중복된 연산자는 반드시 피 연산자에 객체를 동반한다. 그러므로 연산자 함수는 클래스 멤버함수로 구현하든지 아니면 전역 함수로
+구현하고 클래스에 프렌드 함수로 선언한다.
+
+* 연산자 중복으로 피연산자의 개수를 바꿀 수 없다.
+* 연산자 중복으로 연산의 우선순위를 바꿀 수 없다. 
+* 모든 연산자가 중복가능한 것은 아니다. 
+
+#### 연산자 중복을 위한 연산자 함수 선언
+연산자 중복은 연산자 함수를 통해 구현되며 연산자 함수는 다음의 2가지 방법으로 작성가능하다. 
+
+* 외부 함수로 구현하고 클래스의 프렌드 함수로 선언
+사칙연산과 비교연산자 함수는 외부 전역 함수로 선언하고 두 개의 피 연산자를 모두 매개 변수로 전달할 수 있다. 
+다음은 프렌드 함수를 이용하여 ```Rect``` 클래스의 ```equals```함수를 프렌드 함수로 구현한 것이다. 
+```C++
+#include <iostream>
+
+using namespace std;
+class Rect;
+bool operator == (const Rect& a, const Rect& b);
+
+class Rect
+{
+	int width, height;
+public:
+	Rect(int w, int h) : width(w), height(h) {}
+	friend bool operator == (const Rect& a, const Rect& b);
+};
+
+bool operator == (const Rect& a, const Rect& b) {
+ 	return ((a.width == b.width) && (a.height == b.height));
+}
+
+int main(int argc, char const *argv[])
+{
+	Rect a(5, 5), b(5, 5);
+	if(a == b) cout << "Equal" << endl;
+	else cout << "Not equal" << endl;
+	return 0;
+}
+```
+
+* 클래스의 멤버 함수로 구현
+
+다음은 프렌드 함수를 이용하여 ```Rect``` 클래스의 ```equals```함수를 클래스 멤버 함수 형태로 연산자 오버로딩으로 구현한 것이다.
+
+```C++
+#include <iostream>
+using namespace std;
+
+class Rect
+{
+	int width, height;
+public:
+	Rect(int w, int h) : width(w), height(h) {}
+	bool operator == (const Rect& b);
+};
+
+bool Rect::operator == (const Rect& b) {
+ 	return ((this->width == b.width) && (this->height == b.height));
+}
+
+int main(int argc, char const *argv[])
+{
+	Rect a(5, 5), b(5, 5);
+	if(a == b) cout << "Equal" << endl;
+	else cout << "Not equal" << endl;
+	return 0;
+}
+```
+
+
+#### 연산자 오버로딩 예
+```myVector``` 클래스에 대한 연산자 오버로딩을 클래스의 멤버함수로 선언하고 정의한 예를 보인다. 
 
 ```C++
 // myvector.h
