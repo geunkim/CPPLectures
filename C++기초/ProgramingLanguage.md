@@ -37,7 +37,7 @@ HTML(HyperText Markup Language)와 함수형 프로그래밍이 있다. HTML은 
 | 프로그램?          |    명령어의 수행     |    함수의 계산               |
 | 중점 시각          | 방법(how to)에 초점  | 무엇(what)에 초점            |
 | 이론적 배경         |    튜링 머신        | 람다 계산식                  |
-| 주요 프로그래밍 언어  |  C, C++, Java     | Closure, Haskell, ML, Lisp |
+| 주요 프로그래밍 언어  |  C, C++, Java, C# | Closure, Haskell, ML, Lisp |
 
 
 ### 절차지향 프로그래밍(Procedural Programming)
