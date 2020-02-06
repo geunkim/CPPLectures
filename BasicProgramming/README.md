@@ -9,6 +9,6 @@
 - 여러가지 조건문과 반복문을 이해하고 사용할 수 있다. 
 
 ## 학습 내용 
-- 변수 상수 
+- [변수, 상수, 컴퓨터의 데이터 표현](https://github.com/geunkim/CPPLectures/blob/master/BasicProgramming/Data_and_Variables.md)  
 - 자료형의 의미
 - 자료형에 따른 변수 상수 
