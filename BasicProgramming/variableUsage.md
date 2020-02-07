@@ -53,14 +53,18 @@
 예로 전구의 밝기를 제어하는 프로그램을 작성하고자 한다. 전구의 밝기가 0 ~ 255 까지 정수 값으로 제어하는 프로그램에서 
 밝기를 저장하는 변수 ```bulbBrightness``` 를 선언하고자 한다. 최소의 저장공간을 할당하는 자료형으로 선언하는 것은 다음과 같다.
 
-```unsigned char bulbBrightness;        // 변수 bulbBrightness 선언```
+```C++
+unsigned char bulbBrightness;        // 변수 bulbBrightness 선언
+```
 
 앞과 같이 ```bulbBrightness``` 변수를 선언하면 1바이트의 저장공간이 할당된다. 할당된 저장공간에는 임의의(random) 값이 저장된다. 
 변수의 선언은 저장공간을 활용하기 전 (변수에 데이터 값의 저장, 데이터 값의 변경 등 데이터를 처리하기 전)에 이루어지기만 하면된다.
 
 변수 선언문에 같은 자료형의 저장공간 여러 개를 동시에 선언할 수 있다.
 
-```unsigned char bulbBrightness, doorBulbBrightness; ```
+```C++
+unsigned char bulbBrightness, doorBulbBrightness; 
+```
 
 ### 변수 초기화
 
@@ -74,7 +78,9 @@ C++에서는 세 가지 방법이 사용된다.
 변수에 데이터를 저장하기 위해서  
 앞의 변수 ```bulbBrightness```를 선언할 때 대입연산자를 사용하여 저장공간에 100을 저장하는(초기화) 코드는 다음과 같다.
 
-```unsighed char bulbBrightness = 100; // 변수 bulbBrightness 선언과 동시에 저장 값 초기화 ```
+```C++
+unsighed char bulbBrightness = 100; // 변수 bulbBrightness 선언과 동시에 저장 값 초기화 
+```
 
 두번쨰는 소괄호 ()를 사용하여 직접 초기화하는 방법이다. **직접 초기화**는 일부 데이터 형태에서 복사 초기화 보다 성능이 더 뛰어날 수 있다.
 대입연산자를 이용한 초기화를 직접 초기화를 통한 초기화 코드는 다음과 같다.
@@ -85,7 +91,9 @@ C++에서는 세 가지 방법이 사용된다.
 C++ 11에서 **유니폼 초기화(uniform initializaion)** 라는 새로운 초기화 메커니즘을 추가했다. 
 유니폼 초기화로 초기화하는 코드는 다음과 같다. 
 
-```unsigned char bulbBrightness {100}```
+```C++
+unsigned char bulbBrightness {100}
+```
 
 
 ## 변수에 데이터 대입하기 
