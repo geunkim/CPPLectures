@@ -95,7 +95,7 @@ C++에서 정의하는 자료형은 다음 표와 같다. 크게 문자형, 정�
 </table>
 
 양수만 다루는 정수형 데이터 자료형은 ```unsigned char, unsigned short, unsigned int, unsigned long, unsigned long long``` 이 있으며 
-
+각 자료형 별 저장할 수 있는 수의 범위는 다음과 같다. 
 
 | 자료형 | 범위 |
 |:-----:|:-----:|
