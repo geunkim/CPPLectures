@@ -16,54 +16,82 @@
 * 데이터의 형태가 같아도 저장하는 데이터의 값이 따라 적절한 저장공간을 활당하기 위해 다양한 크기의 저장공간을 구분하기 위해 서로 다른
 자료형이 필요하다. 
 
+### 자료형의 종류 
+
+C++에서 정의하는 자료형은 다음 표와 같다. 
+
 <table style ="border:1px solid; text-align: center">
     <thead>
         <tr>
-            <th>데이터 형태</th>
+            <th>데이터 형태(자료형)</th>
             <th>자료형</th>
+            <th>설명</th>
             <th>메모리 공간</th>
+            <th>범위</th>
         </tr>
     </thead>
     <tbody>
         <tr>
-            <td>정수형/문자형</td>
+            <td>문자형</td>
+            <td>문자 및 정수</td>
             <td>char</td>
             <td>1바이트</td>
+            <td>-128 ~ 127</td>
         </tr>
         <tr>
             <td rowspan=4>정수형</td>
+            <td>정수값 저장>
             <td>short</td>
-            <td>2바이트</td>            
+            <td>2바이트</td>
+            <td>-32768 ~ 32767</td>
         </tr>
         <tr>
             <td>int</td>
-            <td>4바이트</td>            
+            <td>정수값 저장>
+            <td>4바이트</td>
+            <td>-214783648 ~ 214783647</td>
         </tr>
         <tr>
             <td>long</td>
-            <td>4바이트</td>            
+            <td>정수값 저장>
+            <td>8바이트</td>
+            <td>-9223372036854775808 ~ 9223372036854775807</td>
         </tr>
         <tr>
             <td>long long</td>
-            <td>8바이트</td>            
+            <td>정수값 저장>
+            <td>8바이트</td> 
+            <td>-9223372036854775808 ~ 9223372036854775807</td>
         </tr>
         <tr>
             <td rowspan=3>실수형</td>
             <td>float</td>
-            <td>4바이트</td>
+            <td>단일 정밀도 부동소수점</td>
+            <td>4바이트</td> 
+            <td>1.17549e-38 ~ 3.40282e+38 </td>
         </tr>
         <tr>
             <td>double</td>
-            <td>8바이트</td>            
+            <td rowspan = 2>두배 정밀도 부동소수점</td>
+            <td>8바이트</td>  
+            <td>2.22507e-308 ~ 1.79769e+308</td>
         </tr>
         <tr>
             <td>long double</td>
-            <td>8바이트 이상</td>            
+            <td>16바이트</td> 
+            <td>3.3621e-4932 ~ 1.18973e+4932</td>
         </tr>
+        <tr>
+            <td>부울형</td>
+            <td>bool</td>
+            <td>참/거짓 표현</td>
+            <td>1바이트</td>
+            <td>true, false</td>
+        </tr>        
     </tbody>
 </table>
 
 
 
 
-### 자료형의 종류 
+
