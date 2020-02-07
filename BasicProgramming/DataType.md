@@ -16,7 +16,7 @@
 * 데이터의 형태가 같아도 저장하는 데이터의 값이 따라 적절한 저장공간을 활당하기 위해 다양한 크기의 저장공간을 구분하기 위해 서로 다른
 자료형이 필요하다. 
 
-<table>
+<table style ="border:1px solid; text-align: center">
     <thead>
         <tr>
             <th>데이터 형태</th>
@@ -26,17 +26,39 @@
     </thead>
     <tbody>
         <tr>
-          <td>정수형 </td>
+            <td>정수형/문자형</td>
+            <td>char</td>
+            <td>1바이트</td>
         </tr>
         <tr>
-            <td>L3 Name B</td>
+            <td rowspan=4>정수형</td>
+            <td>short</td>
+            <td>2바이트</td>            
         </tr>
         <tr>
-            <td>L2 Name B</td>
-            <td>L3 Name C</td>
+            <td>int</td>
+            <td>4바이트</td>            
         </tr>
         <tr>
-            <td>L3 Name D</td>
+            <td>long</td>
+            <td>4바이트</td>            
+        </tr>
+        <tr>
+            <td>long long</td>
+            <td>8바이트</td>            
+        </tr>
+        <tr>
+            <td rowspan=3>실수형</td>
+            <td>float</td>
+            <td>4바이트</td>
+        </tr>
+        <tr>
+            <td>double</td>
+            <td>8바이트</td>            
+        </tr>
+        <tr>
+            <td>long double</td>
+            <td>8바이트 이상</td>            
         </tr>
     </tbody>
 </table>
