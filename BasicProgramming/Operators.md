@@ -52,6 +52,9 @@
 | x \|\| y  |  x와 y의 논리 합, 입력 모두 거짓을 때만 연산 결과가 참      |
 | !x      |  x의 논리 값의 반대 값을 반환                           |
 
+논리 연산자의 경우 피 연산자를 앞에서 부터 조사하기 때문에 논리 곱의 경우 앞의 피연산자가 false 이면 두 번째 피연산자를 확인하지 않고 결과를 false로 내고 
+논리 합의 경우는 앞의 피연산자가 true 이면 두 번째 
+
 ## 비트 연산자 
 
 비트 단위로 연산을 취하는 것으로 비트 비트 논리 연산자와 시프트(shift) 연산자가 있다.  
@@ -92,3 +95,173 @@
 ## 연산자 우선 순위
 
 
+
+<table>
+<tr>
+<th> 우선순위</th>
+<th> 연산자</th>
+<th> 설명</th>
+<th> 결합방향</th>
+</tr>
+<tr>
+<th> 1
+</th>
+<td> <code>::</code></td>
+<td> 범위 지정 (Scope resolution)</td>
+<td rowspan="6"> 좌 → 우</td>
+</tr>
+<tr>
+<th rowspan="5"> 2 </th>
+<td> <code>++</code>   <code>--</code> </td>
+<td> 후위 증가와 감소</td>
+</tr>
+<tr>
+<td> <code>()</code></td>
+<td> 함수호출</td>
+</tr>
+<tr>
+<td> <code>[]</code></td>
+<td> 배열 첨자</td></tr>
+<tr>
+<td> <code>.</code></td>
+<td> 참조로 요소 선택</td>
+</tr>
+<tr>
+<td> <code>-&gt;</code></td>
+<td> 포인터를 통해 요소 선택</td>
+</tr>
+<tr>
+<th rowspan="9"> 3</th>
+<td> <code>++</code>   <code>--</code></td>
+<td> 전위 증가와 감소</td>
+<td rowspan="9"> 우 → 좌</td>
+</tr>
+<tr>
+<td> <code>+</code>   <code>−</code></td>
+<td> 단항 부호 연산자</td>
+</tr>
+<tr>
+<td> <code>!</code>   <code>~</code></td>
+<td> 논리 부정, 비트단위 부정</td>
+</tr>
+<tr>
+<td> <code>(<i>type</i>)</code></td>
+<td> 타입 캐스트</td>
+</tr>
+<tr>
+<td> <code>*</code></td>
+<td> 역참조</td>
+</tr>
+<tr>
+<td> <code>&amp;</code></td>
+<td> 주소값</td>
+</tr>
+<tr>
+<td> <code>sizeof</code></td>
+<td> Size-of 연산자</td>
+</tr>
+<tr>
+<td><code>new</code>, <code>new[]</code></td>
+<td> 동적 메모리 할당</td>
+</tr>
+<tr>
+<td><code>delete</code>, <code>delete[]</code></td>
+<td> 동적 메모리 해제</td>
+</tr>
+<tr>
+<th> 4</th>
+<td> <code>.*</code>   <code>-&gt;*</code></td>
+<td> 멤버 포인터 접근</td>
+<td rowspan="12"> 좌 → 우</td>
+</tr>
+<tr>
+<th> 5</th>
+<td> <code>*</code>   <code>/</code>   <code>%</code></td>
+<td> 곱셈, 나눗셈, 나머지</td>
+</tr>
+<tr>
+<th> 6 </th>
+<td> <code>+</code>   <code>−</code></td>
+<td> 더하기, 빼기</td>
+</tr>
+<tr>
+<th> 7</th>
+<td> <code>&lt;&lt;</code>   <code>&gt;&gt;</code></td>
+<td> 비트 왼쪽 시프트와 오른쪽 시프트</td>
+</tr>
+<tr>
+<th rowspan="2"> 8</th>
+<td style="border-bottom-style: none"> <code>&lt;</code>   <code>&lt;=</code></td>
+<td style="border-bottom-style: none"> 비교(관계) 연산자 &lt; 와 ≤</td>
+</tr>
+<tr>
+<td> <code>&gt;</code>   <code>&gt;=</code></td>
+<td> 비교(관계) 연산자 &gt; 와 ≥</td>
+</tr>
+<tr>
+<th> 9 </th>
+<td> <code>==</code> <code>!=</code> </td>
+<td> 비교(관계) = 와 ≠</td>
+</tr>
+<tr>
+<th> 10</th>
+<td> <code>&amp;</code></td>
+<td> 비트 곱</td>
+</tr>
+<tr>
+<th> 11</th>
+<td> <code>^</code></td>
+<td> 비트 배타적 곱 (exclusive or)</td>
+</tr>
+<tr>
+<th> 12</th>
+<td> <code>|</code></td>
+<td> 비트 합 (inclusive or)</td>
+</tr>
+<tr>
+<th> 13</th>
+<td> <code>&amp;&amp;</code></td>
+<td> 논리 곱</td>
+</tr>
+<tr>
+<th> 14</th>
+<td> <code>||</code></td>
+<td> 논리 합</td>
+</tr>
+<tr>
+<th rowspan="6"> 15</th>
+<td> <code>?:</code></td>
+<td> 조건 연산자 (삼항 연산자)</td>
+<td rowspan="7"> 우 → 좌</td>
+</tr>
+<tr>
+<td> <code>=</code></td>
+<td> 직접 대입 (C++ 클래스를 위해 기본 제공)</td>
+</tr>
+<tr>
+<td> <code>+=</code>   <code>−=</code></td>
+<td> 합과 차 대입</td>
+</tr>
+<tr>
+<td> <code>*=</code>   <code>/=</code>   <code>%=</code></td>
+<td> 곱, 몫, 나머지 대입</td>
+</tr>
+<tr>
+<td> <code>&lt;&lt;=</code>   <code>&gt;&gt;=</code></td>
+<td> 비트 왼쪽 쉬프트와 오른쪽 쉬프트 후 할당</td>
+</tr>
+<tr>
+<td> <code>&amp;=</code>   <code>^=</code>   <code>|=</code></td>
+<td > 비트연산 곱, 배타곱, 합 연산 후 대입</td>
+</tr>
+<tr>
+<th> 16</th>
+<td> <code>throw</code></td>
+<td> (예외를 위한)Throw 연산자</td>
+</tr>
+<tr>
+<th> 17</th>
+<td> <code>,</code></td>
+<td> 콤마</td>
+<td> 좌 → 우</td>
+</tr></table>
