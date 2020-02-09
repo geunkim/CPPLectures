@@ -6,10 +6,10 @@
 - 대입연산자, 산술연산자, 비교연산자, 논리연산자, 비트 논리 연산자, 비트 이동 연산자 등을 이해하고 사용할 수 있다. 
 - 연산자 우선순위와 결합 방향의 의미를 설명하고 사용할 수 있다.
 - 우선순위와 결합 방향에 따른 수식의 처리 속도를 이해하고 사용할 수 있다. 
-- 여러가지 조건문과 반복문을 이해하고 사용할 수 있다. 
 
 ## 학습 내용 
 - [변수, 상수, 컴퓨터의 데이터 표현](https://github.com/geunkim/CPPLectures/blob/master/BasicProgramming/Data_and_Variables.md)  
 - [자료형, 자료형 의미, 종류](https://github.com/geunkim/CPPLectures/blob/master/BasicProgramming/DataType.md)
 - [변수의 사용](https://github.com/geunkim/CPPLectures/blob/master/BasicProgramming/VariableUsage.md)
-- [연산자]
+- [연산자와 연산자 우선순위](https://github.com/geunkim/CPPLectures/blob/master/BasicProgramming/Operators.md)
+
