@@ -4,20 +4,21 @@
 0.1 절차적 프로그래밍/ 객체지향 프로그래밍/ 제너릭 프로그래밍 (일반화 프로그래밍)/ 함수형 프로그래밍
 1. [C++ 기초](https://github.com/geunkim/CPPLectures/blob/master/C++기초/README.md)
 2. 프로그래밍 기초
-3. 함수
-4. 배열, 구조체와 파일
-5. 함수의 진화
-6. 클래스: 구조체의 진화
-7. 객체의 생성과 소멸 
+3. 제어문
+4. 함수
+5. 배열, 구조체와 파일
+6. 함수의 진화
+7. 클래스: 구조체의 진화
+8. 객체의 생성과 소멸 
 
-8. 객체와 포인터
-9. 상속
-10. 다형성
-11. 프렌드와 연산자 중복
-12. 에외처리와 형 변환
-13. 템플릿
-14. [STL](https://github.com/geunkim/CPPLectures/blob/master/STL/README.md)
-15. 디자인패턴
+9. 객체와 포인터
+10. 상속
+11. 다형성
+12. 프렌드와 연산자 중복
+13. 에외처리와 형 변환
+14. 템플릿
+15. [STL](https://github.com/geunkim/CPPLectures/blob/master/STL/README.md)
+16. 디자인패턴
 
 
 
