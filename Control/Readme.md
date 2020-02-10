@@ -26,6 +26,6 @@
  
  ## 학습 내용
  
- 1. 조건문
+ 1. [조건문](https://github.com/geunkim/CPPLectures/blob/master/Control/condition.md)
  2. 반복문
  
