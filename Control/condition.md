@@ -40,15 +40,15 @@ if (condition) {문장 1;
 항상 실행되는 문장;
 ```
 
-if 문의 괄호 안의 __condition__ 은 앞에서 살펴본 조건식으로 표현된다. __condition__ 주위의 괄호는 필수적이다.
+if 문의 괄호 안의 _condition_ 은 앞에서 살펴본 조건식으로 표현된다. _condition_ 주위의 괄호는 필수적이다.
 condition은 특정 조건을 검사하는 부분으로 조건식이 될 것이며 하나의 문장을 적을 수 있는 중괄호({}) 내부를
 if 문의 몸체라고 한다. 조건이 만족되었을 때 실행되는 프로그램 문장이 여러 개 인 경우 중괄호를 사용하고 문장이 하나이면 
 중괄호를 생략을 할 수 있다. 
 
 ## if-else 문
 
-앞에서 살펴본 ```if 문```은 __condition__ 을 만족하는 경우에 대해서만 해야할 일이 있는 경우 
-```if-else 문```은 ```if 문``` 의 __condtion__ 을 만족한 경우 그애 따른 일을 처리하고 그렇지 안으면 
+앞에서 살펴본 ```if 문```은 _condition_ 을 만족하는 경우에 대해서만 해야할 일이 있는 경우 
+```if-else 문```은 ```if 문``` 의 _condtion_ 을 만족한 경우 그애 따른 일을 처리하고 그렇지 안으면 
 다른 일을 처리해야하는 경우 사용된다. ```if```는 독립적으로 사용될 수도 있고 ```else```와 짝을 맞추어 사용될 수도 있다. 
 
 
@@ -68,7 +68,7 @@ else {            // condition이 만족하지 않으면 실행되는 블록
   ...
 }
 ```
-앞의 형식 예에서 __condtion__ 을 만족하면 "문장 1" 이 포함된 중괄호의 문장이 실행되고 __condition__ 이 만족되지
+앞의 형식 예에서 _condtion_ 을 만족하면 "문장 1" 이 포함된 중괄호의 문장이 실행되고 _condition_ 이 만족되지
 않는 경우 "문장 10"이 포함된 중괄호의 문장이 실행된다. 
 
 
@@ -91,8 +91,8 @@ else {
   ...
 }
 ``` 
-앞의 형식에서 ```문장 1```은 ___condition 1___ 을 만족하는 경우 실행되고 ```문장 2```는 
-___condition 2___ 를 만족하는 경우는 실행된다. ```문장 3```은 __condition 1__ 과 __condition 2__ 가
+앞의 형식에서 ```문장 1```은 _condition 1_ 을 만족하는 경우 실행되고 ```문장 2```는 
+_condition 2_ 를 만족하는 경우는 실행된다. ```문장 3```은 _condition 1_ 과 _condition 2_ 가
 만족되지 않은 경우 실행된다.
 
 ##  switch-case-brea-default 문
@@ -118,10 +118,10 @@ switch (expression) {
       ...
 }
 ```
-```switch 문```에서  __expression__ 을 평가하여  __expression__ 의 값이 ```case 문```의 값과 
+```switch 문```에서  _expression_ 을 평가하여  _expression_ 의 값이 ```case 문```의 값과 
 같으면 ```case 문``` 내부의 문장을 실행하고 ```break 문```을 만나면 ```switch 문```  블록의 
 싱행을 멈춘다. 만약 일치된 값이 없으면 ```default 문``` 내부 문장을 실행한다. 
-__expression__ 과 ```case 문``` 의 값들은 모두 정수형이어야 한다. 이 때 ```break 문``` 이
+_expression_ 과 ```case 문``` 의 값들은 모두 정수형이어야 한다. 이 때 ```break 문``` 이
 없는 경우는 case의 값의 조건이 논리 합의 결과가 되어야 한다. 
 
 ```switch 문```의 ```break 문```은 여러 ```case  문``` 중 하나의 ```case 문``` 만 실행되게
@@ -140,8 +140,8 @@ __expression__ 과 ```case 문``` 의 값들은 모두 정수형이어야 한다
 ```C++
 relation ? trueStatement : falseStatement;
 ```
-__relation__ 이 참이면 __trueStatement__ 를 실행하고  거짓이면 
-__falseStatement__ 를 실행한다.
+_relation_ 이 참이면 _trueStatement_ 를 실행하고  거짓이면 
+_falseStatement_ 를 실행한다.
 
 
 
