@@ -4,7 +4,7 @@
 0.1 절차적 프로그래밍/ 객체지향 프로그래밍/ 제너릭 프로그래밍 (일반화 프로그래밍)/ 함수형 프로그래밍
 1. [C++ 기초](https://github.com/geunkim/CPPLectures/blob/master/C++기초/README.md)
 2. 프로그래밍 기초
-3. 제어문
+3. [제어문](https://github.com/geunkim/CPPLectures/tree/master/Control)
 4. 함수
 5. 배열, 구조체와 파일
 6. 함수의 진화
