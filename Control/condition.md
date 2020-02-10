@@ -141,7 +141,9 @@ __expression__ 과 ```case 문``` 의 값들은 모두 정수형이어야 한다
 relation ? trueStatement : falseStatement;
 ```
 __relation__ 이 참이면 __trueStatement__ 를 실행하고  거짓이면 
-__falseStatement__ 
+__falseStatement__ 를 실행한다.
+
+
 
 
 
