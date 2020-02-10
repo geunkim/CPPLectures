@@ -133,6 +133,15 @@ __expression__ 과 ```case 문``` 의 값들은 모두 정수형이어야 한다
 
 ## ? : 조건 연산자.
 
+조건 연산자는 ```?:``` 기호를 사용하며 3개의 인수가 필요한 유일한 연산자이다. 
+
+조건 연산자의 형식은 다음과 같다.
+
+```C++
+relation ? trueStatement : falseStatement;
+```
+__relation__ 이 참이면 __trueStatement__ 를 실행하고  거짓이면 
+__falseStatement__ 
 
 
 
