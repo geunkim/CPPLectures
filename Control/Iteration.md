@@ -144,5 +144,57 @@ int main(int argc, char const *argv[])
 
 ## for 문
 
+```for  문```의 구조는 다음과 같다. ```for  문```은 일정한 횟수만큼 반복할 때 유용하다. 
 
-		
+```C++
+for (초기식; 조건식; 증감식) {
+   문장들
+}
+
+```for 문```은 ```while 문```, ```do~while 문```과 달리 초기식, 조건식, 증감식을 하나의 줄에서 표현되고 있다.
+
+```for 문```의 동작은 먼저 *초기식*이 한번 실행된다. 다음 *조건식*을 검사하고 참이면 문장들을 실행하고 *증감식"을 실행한 후 다시 *조건식*을 검사한다.
+*조건식* 검사 결과가 거짓이면 반복을 종료한다. 
+
+다음은 앞의 "Hello World!" 문장을 10번 반복 출력하는 것을 ```for 문```을 활용하여 작성한 프로그램이다. 
+
+```C++
+
+#include <iostream>
+
+using namespace std;
+
+int main(int argc, char const *argv[])
+{
+	
+	for(int count = 0; count < 10; count++) {
+		cout << count << ":  " << "Hello World!" << endl;
+	}
+
+	return 0;
+}
+```
+
+다음은 앞의 ```while 문```, ```do~while 문```을 활용하여 키보드로 부터 문자를 입력받고 출력하는 프로그램을 ```for 문```으로 작성한 것이다.
+마지막에 'z'를 출력하지 않도록 하기 위해서는 'z'가 출력되지 않도록 조건식을 추가하여야 한다. 
+
+
+```C++
+#include <iostream>
+
+using namespace std;
+
+int main(int argc, char const *argv[])
+{
+	char in;
+
+	for (in = 'a'; in != 'z'; ) {
+		cout << "input: ";
+		cin >> in;	
+		if(in != 'z') cout << "data: " << in << endl;
+	}
+
+	return 0;
+}
+```
+
