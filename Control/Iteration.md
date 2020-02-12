@@ -37,4 +37,89 @@ while(condition) {
 중괄호 안의 문장의 개수는 하나 이상이여야 하고 하나인 경우는 중괄호를 생략할 수 있다. 
 
 다음은 키보드로 부터 문자 하나를 계속 입력 받아 화면에 출력하는 프로그램으로 ```while 문```을 활용하고 있다.
-반복 입력 중 'z'가 입력되면 
+반복해서 문자를 입력 받던 중 'z'가 입력되면 화면에 출력하고 더 이상 입력 작업을 하지 않는 프로그램이다. 
+
+```c++
+#include <iostream>
+
+using namespace std;
+
+int main(int argc, char const *argv[])
+{
+	char in;                //변수 선언
+	cout << "input: ";      // 문자열 출력
+	cin << in;                 // 키보드로 부터 데이터 입력
+
+	while (in != 'z') {
+
+		cout << "data: " << in << endl;
+		cout << "input: ";        // 키보드로 부터 데이터 입력
+		cin >> in;
+	}
+
+	return 0;
+}
+```
+앞의 프로그램은 단순하게 키보드로 부터 문자가 입력될 것이라는 가정을 하고 작성이 된 것이다. 또한 키보드로 부터 입력받는 프로그램 코드가 두번 사용되었다. 
+이는 ```do while 문``` 을 활용하거나 ```while 문``` 전에 변수 **in**에 임의의 문자로 초기화를 하게 되면 ```while 문```에서만 입력과 출력 코드가
+필요하다.
+
+다음 프로그램 코드는 화면에 "Hello World!"를 ```while 문```을 활용하여 10번 출력하는 프로그램 코드이다.
+
+```C++
+#include <iostream>
+
+using namespace std;
+
+int main(int argc, char const *argv[])
+{
+	int count = 0;
+
+	while (count < 10) {
+
+		cout << count << ":  " << "Hello World!" << endl;
+		
+		count++;
+	}
+
+	return 0;
+}
+```
+## do~while 문 
+
+```do~while 문``` 은 ```while 문```과 비슷하나 반복 조건식을 검사하는 것이 반복해야할 문장들 다음에 위치한다는 것이 다르다. 그러므로 ```while 문```과 달리
+반복 문장이 최소한 한번은 실행된다. 따라서 ```do~while 문```은 반복 문장이 적어도 한번은 실행되어야 하는 경우에 사용하는 것이 바람직하다.  
+
+```do~while 문``` 의 구조는 다음과 같다.
+
+```C++
+do {
+  문장들
+}whle(condition);
+```
+```while 문```을 활용하여 키보드로 부터 문자를 입력받는 프로그램을 ```do~while 문```을 활요앟여 작성하면 다음과 같다. 
+		
+```c++
+#include <iostream>
+
+using namespace std;
+
+int main(int argc, char const *argv[])
+{
+	char in;
+
+	do {
+		cout << "input: ";
+		cin >> in;
+		cout << "data: " << in << endl;
+
+	}while(in != 'z');
+
+	return 0;
+}
+```
+
+앞에서도 설명하였듯이  ```do-while 문```을 사용하면 반복 문장을 ```do-while 문``` 안에 한번만 작성하면 된다. 
+
+
+		
