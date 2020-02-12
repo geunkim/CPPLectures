@@ -119,7 +119,30 @@ int main(int argc, char const *argv[])
 }
 ```
 
-앞에서도 설명하였듯이  ```do-while 문```을 사용하면 반복 문장을 ```do-while 문``` 안에 한번만 작성하면 된다. 
+앞에서도 설명하였듯이  ```do-while 문```을 사용하면 반복 문장을 ```do-while 문``` 안에 한번만 작성하면 된다. 다음은 ```do-while 문```을 활용하여 
+"Hello World!" 를 10번 출력하는 프로그램이다. 
+
+```C++
+#include <iostream>
+
+using namespace std;
+
+int main(int argc, char const *argv[])
+{
+	int count = 0;
+
+	do {
+
+		cout << count << ":  " << "Hello World!" << endl;
+		count++;
+
+	}while(count < 10);
+
+	return 0;
+}
+```
+
+## for 문
 
 
 		
