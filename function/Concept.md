@@ -79,7 +79,7 @@ int sum (int a, int b)
    return r;
 }
 ```
-함수 몸체(function body)의 세 줄을  ```return a + b; ``` 로 표현할 수 있다. 
+함수 몸체(function body)의 세 줄을  ```C++ return a + b; ``` 로 표현할 수 있다. 
 
 
 
