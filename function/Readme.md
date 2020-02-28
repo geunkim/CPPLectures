@@ -8,12 +8,23 @@
 * 함수 정의, 선언, 호출에 대해서 이해하고 설명할 수 있다. 
 * 함수를 정의하고 이를 이용할 수 있다.
 * 전역변수와 지역변수와 같이 변수의 스코프를 이해하고 설명할 수 있다. 
+* 순환함수에 대해서 이해하고 설명하고 사용할 수 있다. 
 
 
 
 ## 학습 내용
 
-* 함수관련 용어
+* [함수관련 용어](https://github.com/geunkim/CPPLectures/master/function/Concept.md)
+* [함수 호출](https://github.com/geunkim/CPPLectures/master/function/funcCall.md)
 * 디폴트 매개 변수
 * 함수 오버로드
 * 함수 템플릿
+
+
+
+## ToDo List
+* 순환함수 
+* 디폴트 매개 변수 
+* 인수 전달 방법
+* 변수 스코프 (지역변수, 전역변수, 정적 변수)
+* 시스템 함수 
