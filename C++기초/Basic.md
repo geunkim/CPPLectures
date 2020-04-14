@@ -11,7 +11,7 @@ C++ 프로그램을 생성하고 실행시키기 위해서는 몇 가지 단계�
 
 ```C++
 /* 
-  소스 파일명(Source File Name): simpleProgram.cpp
+  소스 파일명(Source File Name): simpleIOprogram.cpp
   두 정수를 키보드로 부터 입력 받아 x, y에 저장한 후 두 수의 합을 구하고 화면에 출력하는 프로그램 
 */
 #include <iostream>                            // cin, cout 클래스 선언 내용을 포함
