@@ -48,10 +48,9 @@ int main(int argc, char const *argv[])
 {
 	char in;                //변수 선언
 	cout << "input: ";      // 문자열 출력
-	cin << in;                 // 키보드로 부터 데이터 입력
+	cin >> in;                 // 키보드로 부터 데이터 입력
 
 	while (in != 'z') {
-
 		cout << "data: " << in << endl;
 		cout << "input: ";        // 키보드로 부터 데이터 입력
 		cin >> in;
@@ -74,14 +73,11 @@ using namespace std;
 int main(int argc, char const *argv[])
 {
 	int count = 0;
-
 	while (count < 10) {
-
-		cout << count << ":  " << "Hello World!" << endl;
-		
+		cout << count << ":  " << "Hello World!" << endl;		
 		count++;
 	}
-
+	
 	return 0;
 }
 ```
@@ -97,6 +93,7 @@ do {
   문장들
 }whle(condition);
 ```
+
 ```while 문```을 활용하여 키보드로 부터 문자를 입력받는 프로그램을 ```do~while 문```을 활요앟여 작성하면 다음과 같다. 
 		
 ```c++
@@ -107,20 +104,17 @@ using namespace std;
 int main(int argc, char const *argv[])
 {
 	char in;
-
 	do {
 		cout << "input: ";
 		cin >> in;
 		cout << "data: " << in << endl;
-
 	}while(in != 'z');
 
 	return 0;
 }
 ```
 
-앞에서도 설명하였듯이  ```do-while 문```을 사용하면 반복 문장을 ```do-while 문``` 안에 한번만 작성하면 된다. 다음은 ```do-while 문```을 활용하여 
-"Hello World!" 를 10번 출력하는 프로그램이다. 
+앞에서도 설명하였듯이  ```do-while 문```을 사용하면 반복 문장을 ```do-while 문``` 안에 한번만 작성하면 된다. 다음은 ```do-while 문```을 활용하여 "Hello World!" 를 10번 출력하는 프로그램이다. 
 
 ```C++
 #include <iostream>
@@ -130,14 +124,11 @@ using namespace std;
 int main(int argc, char const *argv[])
 {
 	int count = 0;
-
 	do {
-
 		cout << count << ":  " << "Hello World!" << endl;
 		count++;
-
 	}while(count < 10);
-
+	
 	return 0;
 }
 ```
@@ -150,6 +141,7 @@ int main(int argc, char const *argv[])
 for (초기식; 조건식; 증감식) {
    문장들
 }
+```
 
 ```for 문```은 ```while 문```, ```do~while 문```과 달리 초기식, 조건식, 증감식을 하나의 줄에서 표현되고 있다.
 
@@ -165,8 +157,7 @@ for (초기식; 조건식; 증감식) {
 using namespace std;
 
 int main(int argc, char const *argv[])
-{
-	
+{	
 	for(int count = 0; count < 10; count++) {
 		cout << count << ":  " << "Hello World!" << endl;
 	}
@@ -187,7 +178,6 @@ using namespace std;
 int main(int argc, char const *argv[])
 {
 	char in;
-
 	for (in = 'a'; in != 'z'; ) {
 		cout << "input: ";
 		cin >> in;	
