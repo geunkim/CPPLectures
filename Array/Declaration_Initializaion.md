@@ -1,9 +1,6 @@
 # Array Declaration and initialization (배열 선언과 초기화)
 
-
-
-
-## 배열 선언
+# 배열 선언
 
 변수를 사용하기 위해서 변수를 선언하였듯이 배열을 사용하기 위해서는 배열을 선언하여야 한다. 
 배열 선언을 통해 컴파일러에게 배열 요소의 개수가 몇 개이고 각 요소의 자료형도 함께 명시하여야 한다. 
@@ -71,7 +68,7 @@ int main(int argc, char const *argv[])
 ![image](./sizeofArray_result.png)
 
 
-## 배열의 초기화
+#  배열의 초기화
 
 배열을 선언과 동시에 초기화는 다음과 같이 할 수 있다.
 ```C++
