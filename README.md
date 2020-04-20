@@ -5,7 +5,7 @@
 1. [C++ 기초](https://github.com/geunkim/CPPLectures/blob/master/C++기초/Readme.md)
 2. 프로그래밍 기초
 3. [제어문](https://github.com/geunkim/CPPLectures/tree/master/Control/Readme.md)
-4. [함수](https://github.com/geunkim/CPPLectures/function)
+4. [함수](https://github.com/geunkim/CPPLectures/tree/master/function)
 5. 배열, 구조체와 파일
 6. 함수의 진화
 7. 클래스: 구조체의 진화
