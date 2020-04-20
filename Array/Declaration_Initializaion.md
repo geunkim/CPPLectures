@@ -52,6 +52,13 @@ int score[MAX];
 sizeof 연산자를 배열이름에 적용하면 배열의 바이트 크기를 구할 수 있다. 
 배열 score에 sizeof 연산자를 적용한 연산식은 **sizeof(score)** 이고 연산결과는 배열 score를 위해 메모리에 할당한 저장공간 전체의 바이트 크기이다. 
 
+* sizeof 연산자를 통해 배열 score의 크기를 계산하는 방법
+ ```C++
+ sizeof(score)/sizeof(score[0])
+```
+
+다음 프로그램은 sizeof 연산자를 사용하여 배열 score, department의 바이트 단위의 메모리 저장공간의 크기를 얻어 출력한다. 
+
 ```C++
 #include <iostream>
 
