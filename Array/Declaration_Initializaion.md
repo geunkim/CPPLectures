@@ -17,9 +17,7 @@
 int score[5];  // 5개의 int 형 저장장소를 할당하는 배열 score
 ```
 
-![image](./score_array.png) 
-
-<score 배열>
+![image](./score_array.png)    
 
 * 문자형(char) 데이터 10개를 저장할 수 있는 배열 name의 선언은 다음과 같다.
 
@@ -29,7 +27,6 @@ char name[10]   // 10개의 char형 저장장소를 할당하는 배열 name
 
 ![image](./name_array.png) 
 
-<name 배열>
 
 * 배열을 선언하면 메모리에 지정한 갯수만큼 저장공간을 메모리에 **연속적으로 할당한다.** 
 * score와 name은 배열의 이름이며 이는 연속적으로 할당된 메모리 저장공간의 시작주소를 의미한다.
