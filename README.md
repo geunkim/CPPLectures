@@ -6,10 +6,12 @@
 2. 프로그래밍 기초
 3. [제어문](https://github.com/geunkim/CPPLectures/tree/master/Control/Readme.md)
 4. [함수](https://github.com/geunkim/CPPLectures/tree/master/function)
-5. 배열, 구조체와 파일
-6. 함수의 진화
-7. 클래스: 구조체의 진화
-8. 객체의 생성과 소멸 
+5. 배열
+6. 포인터 변수 
+6. 구조체와 파일
+7. 함수의 진화
+8. 클래스: 구조체의 진화
+9. 객체의 생성과 소멸 
 
 9. 객체와 포인터
 10. 상속
