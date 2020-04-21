@@ -19,7 +19,7 @@
 12. 프렌드와 연산자 중복
 13. 에외처리와 형 변환
 14. 템플릿
-15. [STL](https://github.com/geunkim/CPPLectures/blob/master/STL/README.md)
+15. [STL(Standard Template Library)](https://github.com/geunkim/CPPLectures/tree/master/STL)
 16. 디자인패턴
 
 
