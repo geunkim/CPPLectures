@@ -1,4 +1,5 @@
-# Sample Programs related to Control Statements (제어문 관련 샘플 프로그램)
+# 제어문 관련 샘플 프로그램
+Repository for sample programs related to control statements
 
 ## 조건문 관련 프로그램 파일 
   * basicRandom.cc: 난수를 발생하게 하는 코드만 들어가 있는 프로그램 
