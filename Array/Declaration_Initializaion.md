@@ -1,4 +1,4 @@
-# Array Declaration and initialization (배열 선언과 초기화)
+# Array Declaration and initialization (배열 선언  초기화)
 
 ## 배열 선언
 
@@ -17,7 +17,9 @@
 int score[5];  // 5개의 int 형 저장장소를 할당하는 배열 score
 ```
 
-![image](./score_array.png) <score 배열>
+![image](./score_array.png) 
+
+<score 배열>
 
 * 문자형(char) 데이터 10개를 저장할 수 있는 배열 name의 선언은 다음과 같다.
 
@@ -25,7 +27,9 @@ int score[5];  // 5개의 int 형 저장장소를 할당하는 배열 score
 char name[10]   // 10개의 char형 저장장소를 할당하는 배열 name
 ```
 
-![image](./name_array.png) <name 배열>
+![image](./name_array.png) 
+
+<name 배열>
 
 * 배열을 선언하면 메모리에 지정한 갯수만큼 저장공간을 메모리에 **연속적으로 할당한다.** 
 * score와 name은 배열의 이름이며 이는 연속적으로 할당된 메모리 저장공간의 시작주소를 의미한다.
@@ -83,13 +87,14 @@ int main(int argc, char const *argv[])
 배열의 선언과 동시에 저장공간을 초기화하는 것은 다음과 같다.
 ```C++
 int score[5] = {10, 20, 30};  // 배열 score에는 10, 20, 30, 0, 0 이 저장됨 
-char name[10] = "John";       // 배열 name의 저장 장소는 10개 이고 name[0]: 'J', name[1]:'o', name[2]:'h', name[3]:'n', name[4]:'\0'
+char name[10] = "John";       
+// 배열 name의 저장 장소는 10개 이고 name[0]: 'J', name[1]:'o', name[2]:'h', name[3]:'n', name[4]:'\0'
 ```
 
 배열의 선언과 동시에 초기화를 하는 경우에는 배열의 크기를 다음과 같이 명시적으로 표현하지 않아도 된다.
 ```C++
-double area[] = {10.1, 20.2, 30.4, 40.4};    // 초기화하는 데이터가 4개 이므로 배열 area의 크기는 4 임
-char department[] = "Game_Engineering";      // 초기화하는 문자열의 문자 수가 16개이고 문자열을 저장하므로 배열 department의 크기는 17 임
+double area[] = {10.1, 20.2, 30.4, 40.4}; // 초기화하는 데이터가 4개 이므로 배열 area의 크기는 4 임
+char department[] = "Game_Engineering";   // 초기화하는 문자열의 문자 수가 16개이고 문자열을 저장하므로 배열 department의 크기는 17 임
 
 배열의 모든 요소를 0으로 초기화 하는 방법
 ```C++
