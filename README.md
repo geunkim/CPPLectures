@@ -2,11 +2,11 @@
 
 0. 역사와 호환성
 0.1 절차적 프로그래밍/ 객체지향 프로그래밍/ 제너릭 프로그래밍 (일반화 프로그래밍)/ 함수형 프로그래밍
-1. [C++ 기초](https://github.com/geunkim/CPPLectures/blob/master/C++기초/Readme.md)
+1. [C++ 기초](https://github.com/geunkim/CPPLectures/blob/master/C++기초)
 2. 프로그래밍 기초
-3. [제어문](https://github.com/geunkim/CPPLectures/tree/master/Control/Readme.md)
+3. [제어문](https://github.com/geunkim/CPPLectures/tree/master/Control)
 4. [함수](https://github.com/geunkim/CPPLectures/tree/master/function)
-5. 배열
+5. [배열](https://github.com/geunkim/CPPLectures/tree/master/Array)
 6. 포인터 변수 
 6. 구조체와 파일
 7. 함수의 진화
