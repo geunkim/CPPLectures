@@ -163,6 +163,59 @@ cout << str1 << endl;
 s1\>s2 이면 양수 반환 
 * ```char* strtok(char *s, const char *delimeer)```: 문자열 s에서 기준 구분자들을 이용하여 문자열을 나눈 문자열들을 반환
 
+```C++
+#include <iostream>
+#include <string>  // 문자열 함수와 string 클래스를 위해 사용
+
+using namespace std;
+
+int main(int argc, char const *argv[])
+{
+	
+	char str1[20] = "Hello";
+	char str2[20] = " World!";
+	char str3[20];
+	
+	// 문자열 길이 구하기 
+	cout << "length of str1: " << strlen(str1) << endl;
+
+	// 문자열 복사하기
+	cout << "str3: " << strcpy(str3, str1) << endl;
+
+	// 문자열 비교 
+	cout << "compare st1 and str3: " << strcmp(str1, str3) << endl;
+
+	// 문자열 붙이기 
+	cout << "str1: " << strcat(str1, str2) << endl;
+	cout << "length of str1(after concat): " << strlen(str1) << endl;
+
+	// 문자열 비교 
+	cout << "compare st1 and str3(after concat): " << strcmp(str1, str3) << endl;
+	cout << "compare str3 and str1(afer concat): " << strcmp(str3, str1) << endl;
+	// 문자열 분리 
+	char *str = strtok(str1, " ");
+	
+	while (str != NULL) {
+		cout << str << endl;
+		str = strtok(NULL, " ");  //이전 strtok 함수에서 처리했던 문자열 다음 문자로 부터 처리 
+	}
+
+	return 0;
+}
+```
+
+실행 결과는 다음과 같다.
+ ```C++
+length of str1: 5
+str3: Hello
+compare st1 and str3: 0
+str1: Hello World!
+length of str1(after concat): 12
+compare st1 and str3(after concat): 32
+compare str3 and str1(afer concat): -32
+Hello
+World!
+```
 
 ## C++의 문자열 처리를 위한 std::string 클래스
 
