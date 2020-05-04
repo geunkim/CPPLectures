@@ -6,7 +6,7 @@
 * [배열이 필요한 이유](https://github.com/geunkim/CPPLectures/blob/master/Array/whyArray.md)
 * [배열 선언 및 초기화](https://github.com/geunkim/CPPLectures/blob/master/Array/Declaration_Initializaion.md)
 * [배열의 사용](https://github.com/geunkim/CPPLectures/blob/master/Array/AccessArrayElements.md)
-* [배열과 문자열]
+* [배열과 문자열](https://github.com/geunkim/CPPLectures/blob/master/Array/charArray.md)
 * [다차원 배열]
 
  
