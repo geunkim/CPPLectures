@@ -155,17 +155,23 @@ cout << str1 << endl;
 이 함수들을 표준 라이브러리(standard library)라고 한다. 
 표준 라이브러리에는 다양한 문자열 처리 함수가 정의되어 있다. 
 앞에서 논의했던 문자열의 길이 측정, 문자열의 복사, 문자열을 합치는 함수 등이 있다.  
-
+이들 함수를 C++에서 사용하기 위해서 <cstring> 헤더 파일을 포함하여야 한다. 
+(참고사이트: [programiz 페이지](https://www.programiz.com/cpp-programming/library-function/cstring)
+	
 * ```C++ =size_t strlen(const char * s);```: 문자열 s에서 NULLL 문자를 제외한 길이를 반환
 * ```C++ char* strcpy(char* s1, const char* s2);```: 문자열 s2를 문자열 배열 s1에 복사한 후 s1을 반환
+* ```C++ char* strncpy(char* s1, const char* s2);```: 문자열 s2를 문자열 배열 s1에 문자 n 개를 복사한 후 s1을 반환
 * ```C++ char* strcat(char* s1, const char* s2);```: 문자열 s2를 문자열 s1 끝에 붙이고 s1을 반환
-* ```C++ int strcmp(char* s1, const char* s2);```: 문자열 s1과 문자열 s2를 비교하여 s1<s2 이면 음수, s1\==s2 이면 0,
+* ```C++ int strcmp(const char* s1, const char* s2);```: 문자열 s1과 문자열 s2를 비교하여 s1<s2 이면 음수, s1\==s2 이면 0
+* ```C++ int strncmp(const char* s1, const char* s2);```: 문자열 s1과 문자열 s2의 n개의 문자를 비교하여 s1<s2 이면 음수, s1\==s2 이면 0
+
+
 s1\>s2 이면 양수 반환 
 * ```char* strtok(char *s, const char *delimeer)```: 문자열 s에서 기준 구분자들을 이용하여 문자열을 나눈 문자열들을 반환
 
 ```C++
 #include <iostream>
-#include <string>  // 문자열 함수와 string 클래스를 위해 사용
+#include <cstring>  // 문자열 함수와 string 클래스를 위해 사용
 
 using namespace std;
 
@@ -221,6 +227,7 @@ World!
 
 객체 지향 언어인 C++에서는 문자열을 저장하고 처리기능(멤버 함수)을 가진 std::string 클래스를 정의하고 있다. 
 문자열을 처리할 경우 string 클래스의 객체를 생성하고 멤버 함수를 사용하면 앞에서 살펴보았던 기능을 이용할 수 있다.
+
 
 
 
