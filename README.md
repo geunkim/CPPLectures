@@ -5,8 +5,8 @@
 1. [C++ 기초](https://github.com/geunkim/CPPLectures/blob/master/C++기초)
 2. 프로그래밍 기초
 3. [제어문](https://github.com/geunkim/CPPLectures/tree/master/Control)
-4. [함수](https://github.com/geunkim/CPPLectures/tree/master/function)
-5. [배열](https://github.com/geunkim/CPPLectures/tree/master/Array)
+4. [배열](https://github.com/geunkim/CPPLectures/tree/master/Array)
+5. [함수](https://github.com/geunkim/CPPLectures/tree/master/function)
 6. 포인터 변수 
 6. 구조체와 파일
 7. 함수의 진화
