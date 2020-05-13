@@ -156,14 +156,14 @@ cout << str1 << endl;
 표준 라이브러리에는 다양한 문자열 처리 함수가 정의되어 있다. 
 앞에서 논의했던 문자열의 길이 측정, 문자열의 복사, 문자열을 합치는 함수 등이 있다.  
 이들 함수를 C++에서 사용하기 위해서 <cstring> 헤더 파일을 포함하여야 한다. 
-(참고사이트: [programiz 페이지](https://www.programiz.com/cpp-programming/library-function/cstring)
+(참고사이트: [programiz 페이지](https://www.programiz.com/cpp-programming/library-function/cstring))
 	
-* ```C++ =size_t strlen(const char * s);```: 문자열 s에서 NULLL 문자를 제외한 길이를 반환
-* ```C++ char* strcpy(char* s1, const char* s2);```: 문자열 s2를 문자열 배열 s1에 복사한 후 s1을 반환
-* ```C++ char* strncpy(char* s1, const char* s2);```: 문자열 s2를 문자열 배열 s1에 문자 n 개를 복사한 후 s1을 반환
-* ```C++ char* strcat(char* s1, const char* s2);```: 문자열 s2를 문자열 s1 끝에 붙이고 s1을 반환
-* ```C++ int strcmp(const char* s1, const char* s2);```: 문자열 s1과 문자열 s2를 비교하여 s1<s2 이면 음수, s1\==s2 이면 0
-* ```C++ int strncmp(const char* s1, const char* s2);```: 문자열 s1과 문자열 s2의 n개의 문자를 비교하여 s1<s2 이면 음수, s1\==s2 이면 0
+* ```size_t strlen(const char * s);```: 문자열 s에서 NULLL 문자를 제외한 길이를 반환
+* ```char* strcpy(char* s1, const char* s2);```: 문자열 s2를 문자열 배열 s1에 복사한 후 s1을 반환
+* ```char* strncpy(char* s1, const char* s2);```: 문자열 s2를 문자열 배열 s1에 문자 n 개를 복사한 후 s1을 반환
+* ```char* strcat(char* s1, const char* s2);```: 문자열 s2를 문자열 s1 끝에 붙이고 s1을 반환
+* ```int strcmp(const char* s1, const char* s2);```: 문자열 s1과 문자열 s2를 비교하여 s1<s2 이면 음수, s1\==s2 이면 0
+* ```int strncmp(const char* s1, const char* s2);```: 문자열 s1과 문자열 s2의 n개의 문자를 비교하여 s1<s2 이면 음수, s1\==s2 이면 0
 
 
 s1\>s2 이면 양수 반환 
