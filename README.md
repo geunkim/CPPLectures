@@ -8,19 +8,20 @@
 4. [배열](https://github.com/geunkim/CPPLectures/tree/master/Array)
 5. [함수](https://github.com/geunkim/CPPLectures/tree/master/function)
 6. [포인터 변수](https://github.com/geunkim/CPPLectures/tree/master/Pointer) 
-6. 구조체와 파일
-7. 함수의 진화
-8. 클래스: 구조체의 진화
-9. 객체의 생성과 소멸 
+6. 구조체
+7. 파일
+8. 함수의 진화
+9. 클래스: 구조체의 진화
+10. 객체의 생성과 소멸 
 
-9. 객체와 포인터
-10. 상속
-11. 다형성
-12. 프렌드와 연산자 중복
-13. 에외처리와 형 변환
-14. 템플릿
-15. [STL(Standard Template Library)](https://github.com/geunkim/CPPLectures/tree/master/STL)
-16. 디자인패턴
+11. 객체와 포인터
+12. 상속
+13. 다형성
+14. 프렌드와 연산자 중복
+15. 에외처리와 형 변환
+16. 템플릿
+17. [STL(Standard Template Library)](https://github.com/geunkim/CPPLectures/tree/master/STL)
+18. 디자인패턴
 
 
 
