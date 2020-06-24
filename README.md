@@ -7,7 +7,7 @@
 3. [제어문](https://github.com/geunkim/CPPLectures/tree/master/Control)
 4. [배열](https://github.com/geunkim/CPPLectures/tree/master/Array)
 5. [함수](https://github.com/geunkim/CPPLectures/tree/master/function)
-6. 포인터 변수 
+6. [포인터 변수](https://github.com/geunkim/CPPLectures/tree/master/Pointer) 
 6. 구조체와 파일
 7. 함수의 진화
 8. 클래스: 구조체의 진화
