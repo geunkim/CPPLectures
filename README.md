@@ -1,5 +1,7 @@
 # CPPLectures
 
+## Part 1
+
 0. 역사와 호환성
 0.1 절차적 프로그래밍/ 객체지향 프로그래밍/ 제너릭 프로그래밍 (일반화 프로그래밍)/ 함수형 프로그래밍
 * [C++ 기초](https://github.com/geunkim/CPPLectures/blob/master/C++기초)
@@ -11,7 +13,11 @@
 * 구조체
 * 함수의 진화
 * 메모리 모델과 이름 공간
+
+## Part 2
+
 * [클래스: 구조체의 진화](https://github.com/geunkim/CPPLectures/blob/master/Class)
+* [
 * 객체의 생성과 소멸 
 
 * 객체와 포인터
@@ -40,3 +46,4 @@
 References
 
 1. [마이크로소프트 C++ 언어 참조 (Visual Studio 2019)](https://docs.microsoft.com/ko-kr/cpp/cpp/cpp-language-reference?view=vs-2019)
+2. [boost C++ Libraries](https://www.boost.org/)
