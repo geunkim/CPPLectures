@@ -2,27 +2,29 @@
 
 0. 역사와 호환성
 0.1 절차적 프로그래밍/ 객체지향 프로그래밍/ 제너릭 프로그래밍 (일반화 프로그래밍)/ 함수형 프로그래밍
-1. [C++ 기초](https://github.com/geunkim/CPPLectures/blob/master/C++기초)
-2. [프로그래밍 기초](https://github.com/geunkim/CPPLectures/tree/master/BasicProgramming)
-3. [제어문](https://github.com/geunkim/CPPLectures/tree/master/Control)
-4. [배열](https://github.com/geunkim/CPPLectures/tree/master/Array)
-5. [함수](https://github.com/geunkim/CPPLectures/tree/master/function)
-6. [포인터 변수](https://github.com/geunkim/CPPLectures/tree/master/Pointer) 
-6. 구조체
-7. 파일
-8. 함수의 진화
-9. [클래스: 구조체의 진화](https://github.com/geunkim/CPPLectures/blob/master/Class)
-10. 객체의 생성과 소멸 
+* [C++ 기초](https://github.com/geunkim/CPPLectures/blob/master/C++기초)
+* [프로그래밍 기초](https://github.com/geunkim/CPPLectures/tree/master/BasicProgramming)
+* [제어문](https://github.com/geunkim/CPPLectures/tree/master/Control)
+* [배열](https://github.com/geunkim/CPPLectures/tree/master/Array)
+* [함수](https://github.com/geunkim/CPPLectures/tree/master/function)
+* [포인터 변수](https://github.com/geunkim/CPPLectures/tree/master/Pointer) 
+* 구조체
+* 함수의 진화
+* 메모리 모델과 이름 공간
+* [클래스: 구조체의 진화](https://github.com/geunkim/CPPLectures/blob/master/Class)
+* 객체의 생성과 소멸 
 
-11. 객체와 포인터
-12. 상속
-13. 다형성
-14. 프렌드와 연산자 중복
-15. 에외처리와 형 변환
-16. 템플릿
-17. [STL(Standard Template Library)](https://github.com/geunkim/CPPLectures/tree/master/STL)
-18. [데이터입출력](https://github.com/geunkim/CPPLectures/tree/master/InputOutput)
-19. 디자인패턴
+* 객체와 포인터
+* 클래스와 상속
+* C++ 
+* 다형성
+* 연산자 중복
+* 프렌드와 연산자 중복
+* 에외처리와 형 변환
+* 템플릿
+* [STL(Standard Template Library)](https://github.com/geunkim/CPPLectures/tree/master/STL)
+* [데이터 입출력](https://github.com/geunkim/CPPLectures/tree/master/InputOutput)
+* 디자인패턴
 
 -------------------------------
 * To do (목록에 추가해야 할 내용들)
