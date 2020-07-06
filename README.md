@@ -11,7 +11,7 @@
 6. 구조체
 7. 파일
 8. 함수의 진화
-9. 클래스: 구조체의 진화
+9. [클래스: 구조체의 진화](https://github.com/geunkim/CPPLectures/blob/master/Class)
 10. 객체의 생성과 소멸 
 
 11. 객체와 포인터
