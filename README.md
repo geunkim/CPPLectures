@@ -21,10 +21,8 @@
 15. 에외처리와 형 변환
 16. 템플릿
 17. [STL(Standard Template Library)](https://github.com/geunkim/CPPLectures/tree/master/STL)
-18. 디자인패턴
-19. [데이터입출력](https://github.com/geunkim/CPPLectures/tree/master/InputOutput)
-
-
+18. [데이터입출력](https://github.com/geunkim/CPPLectures/tree/master/InputOutput)
+19. 디자인패턴
 
 -------------------------------
 * To do (목록에 추가해야 할 내용들)
