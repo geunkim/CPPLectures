@@ -11,7 +11,6 @@
 * [함수](https://github.com/geunkim/CPPLectures/tree/master/function)
 * [포인터 변수](https://github.com/geunkim/CPPLectures/tree/master/Pointer) 
 * 구조체
-* 함수의 진화
 * 메모리 모델과 이름 공간
 
 ## Part 2
@@ -28,6 +27,7 @@
 * 프렌드와 연산자 중복
 * 에외처리와 형 변환
 * 템플릿
+* 함수의 진화
 * [STL(Standard Template Library)](https://github.com/geunkim/CPPLectures/tree/master/STL)
 * [데이터 입출력](https://github.com/geunkim/CPPLectures/tree/master/InputOutput)
 * 디자인패턴
