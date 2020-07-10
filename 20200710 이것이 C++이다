@@ -1,0 +1,19 @@
+이것이 C++이다
+http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&mallGb=KOR&barcode=9788968482465&orderClick=LEa&Kc=
+
+CHAPTER 04 복사 생성자와 임시 객체
+__4.1 복사 생성자
+__4.2 묵시적 변환
+__4.3 임시 객체와 이동 시맨틱
+
+CHAPTER 08 수평적 관계와 집합 관계
+__8.1 friend
+__8.2 집합 관계
+
+CHAPTER 11 객체지향 주소록
+__11.1 C 주소록 예제
+__11.2 첫 번째: 기초 수준 객체화
+__11.3 두 번째: 컨테이너 구현
+__11.4 세 번째: 반복자 구현
+__11.5 번외편
+
