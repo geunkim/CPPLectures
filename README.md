@@ -21,9 +21,9 @@
 14. 템플릿
 15. [STL(Standard Template Library)](https://github.com/geunkim/CPPLectures/tree/master/STL)
 16. 디자인패턴
-17. 복사 생성자와 임시 객체
-18. 수평적 관계와 집합 관계
-19. 객체지향 주소록
+17. 복사 생성자와 임시 객체[이것이 C++이다]
+18. 수평적 관계와 집합 관계[이것이 C++이다]
+19. 객체지향 주소록[이것이 C++이다]
 
 
 
@@ -41,3 +41,4 @@
 References
 
 1. [마이크로소프트 C++ 언어 참조 (Visual Studio 2019)](https://docs.microsoft.com/ko-kr/cpp/cpp/cpp-language-reference?view=vs-2019)
+2. [이것이 C++이다]http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&mallGb=KOR&barcode=9788968482465&orderClick=LEa&Kc=
