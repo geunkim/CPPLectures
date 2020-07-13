@@ -48,3 +48,9 @@ References
 2. [boost C++ Libraries](https://www.boost.org/)
 3. [TCPSCHOOL.com - CPP](http://tcpschool.com/cpp/intro)
 
+
+14. 새로운 클래스
+14.3 가상 함수(오버라이드)
+14.5 클래스 계층(다중 상속)
+15. 클래스와 관련된 고급 주제
+15. 5 예외 처리
