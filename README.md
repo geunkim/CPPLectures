@@ -12,21 +12,22 @@
 * [포인터 변수](https://github.com/geunkim/CPPLectures/tree/master/Pointer) 
 * 구조체
 * 메모리 모델과 이름 공간
+* 함수의 진화 - 오버로딩
 
 ## Part 2
 
 * [클래스: 구조체의 진화](https://github.com/geunkim/CPPLectures/blob/master/Class)
 * 객체의 생성과 소멸 
-
 * 객체와 포인터
 * 클래스와 상속
-* C++ 
+* 함수의 진화
+  - 오버라이딩
 * 다형성
+  - 가상함수
 * 연산자 중복
 * 프렌드와 연산자 중복
 * 에외처리와 형 변환
 * 템플릿
-* 함수의 진화
 * [STL(Standard Template Library)](https://github.com/geunkim/CPPLectures/tree/master/STL)
 * [데이터 입출력](https://github.com/geunkim/CPPLectures/tree/master/InputOutput)
 * 디자인패턴
