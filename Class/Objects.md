@@ -298,7 +298,7 @@ int main(int argc, char const *argv[])
 {
 	Shape p1(10, 20);
 	Rect rectangle(10, 20);
-
+ 
 	p1.printPoint();
 
 	rectangle.printPoint();
