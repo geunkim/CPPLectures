@@ -102,7 +102,7 @@ int Rect::getArea() {
 }
 ```
 
-클래스 선언 영역 내부에서 getArea() 함수의 정의는 다움과 같다.
+클래스 선언 영역 내부에서 getArea() 함수의 정의는 다음과 같다.
 
 ```C++
 class Rect {
