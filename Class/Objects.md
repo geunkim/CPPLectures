@@ -20,7 +20,7 @@
 
 실생활에서 다루는 특정한 객체(사물)에 대해서 살펴보자. 프로그램에서 자동차를 표현하려고 한다. 실생활의 객체를 프로그램에서 모델링하기 위해서는 다루려는 객체가 어떠한 **일반적연 속성과 기능** 을 가지고 있는지 확인하는데서 부터 시작된다. 
 자동자가 가지는 속성으로 *차량번호, 등록번호, 연료의 양, 엔진의 용량, 최대 수용 인원* 등을 고려할 수 있다. 이들 속성은 구체적인 자동차에 따라 데이터 값을 가지며 이들 값을 자동차의 상태를 표현하게 된다. 
-자동차는 상태를 표현하는 속성 이외에 "시동 걸기", "시동 끄기", "가속하기", "감속하가", "정지" 등의  기능을 가진다. 즉 
+자동차는 상태를 표현하는 속성 이외에 "시동 걸기", "시동 끄기", "가속하기", "감속하기", "정지" 등의  기능을 가진다. 즉 
 실생활의 객체는 상태 및 특성을 나타내는 속성 값과 관련된 기능을 가지며 프로그램에서의 객체도 이러한 상태와 특성을 나타내는 속성(변수) 값과 관련된 기능(함수)을 가진다. 
 
 ## 클래스와 객체
@@ -42,6 +42,49 @@ class 자동차 {
 };
 
 ```
+
+
+```
+//	[클래스 부분]
+class weapon {
+public:
+    // 정보 부분
+    string name = "빈 이름";
+    string lore = "빈 설명";
+    // 스펙 부분
+    int damage = 0;
+};
+class creature {
+public:
+    // 정보 부분
+    string name = "박이름";
+    // 스펙 부분
+    int health = 100;
+    int atk = 5;
+    weapon equipment;
+    int cash = 10;
+
+    void attack(creature& target) {
+        //목표물의 체력을 자신의 기본 공격력과 무기의 데미지만큼 깎습니다.
+        target.health -= atk + equipment.damage;
+        cout << name << " 는 " << target.name << " 에게 " << atk + equipment.damage << " 만큼의 데미지를 주었습니다. ( 남은 체력 " << target.health << ")" << endl;
+    }
+    void changeEquipment(weapon &changeTo) {
+        equipment = changeTo;
+        cout << name << "은 무기를" << changeTo.name << "으로 바꿨다!" << endl;
+    }
+};
+
+//	[객체 부분]
+// 무기 선언
+weapon knife = { knife.name = "칼", knife.lore = "날카롭게 갈은 칼.", knife.damage = 30 };
+weapon hammer = { hammer.name = "해머", hammer.lore = "상당히 무겁다.", hammer.damage = 20 };
+
+// 캐릭터 선언
+creature zebasi = { "제바시", 100 , 10 , knife };
+creature bardur = { "발두르", 100 , 10 , hammer };
+```
+
 ## 캡슐화 
 
 캡슐화는 객체지향 프로그램의 주요 특징으로 객체의 속성인 데이터를 캡슐로 감싸서 보호하여 객체 외부에서 객체의 데이터에 접근(데이터 값 읽기 및 쓰기)할 수 업도록 하는 것이다. 외부에서 객체의 데이터를 접근하지 못하도록 캡슐화하면 객체 내의 데이터를 보호할 수 있다.
