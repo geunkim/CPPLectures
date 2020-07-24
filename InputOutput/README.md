@@ -11,12 +11,8 @@
 
 ## 학습 내용 
 
-* [스트림 (Stream)](https://github.com/geunkim/CPPLectures/blob/master/InputOutput/stream.md)
+* [스트림 (stream)](https://github.com/geunkim/CPPLectures/blob/master/InputOutput/stream.md)
 * [출력 스트림 (output stream)](https://github.com/geunkim/CPPLectures/blob/master/InputOutput/output.md)
 * [입력 스트림 (input stream)](https://github.com/geunkim/CPPLectures/blob/master/InputOutput/input.md) 
-
-* 입 출력 객체
-* cin 객체: input strem의 객체로 파일, 콘솔 등과 같은 입력 스트림(input stream)으로 부터 입력을 얻는데 사용된다. 
-* cout 객체: output stream의 객체로 출력을 나타내는데 사용된다. 
-
+* [파일 스트림 (file stream)](https://github.com/geunkim/CPPLectures/blob/master/InputOutput/Advanced_InOut.md)
 
