@@ -265,12 +265,9 @@ int main(int argc, char const *argv[])
 
 앞의 프로그램을 실행한 결과는 다음과 같다. 
 
-
 1: Hello World!
 
 2: This a sample file.
-
-
 
 다음은 앞의 프로그램 예제를 ```istream``` 클래스의 ```getline(char* line, int n)```멤버 함수를 이용하여 ``text.txt`` 파일의 내용을 한 줄씩 읽어 화면에 출력하는 프로그램 코드이다
 
