@@ -141,16 +141,20 @@ Rvalue
 * 자신의 상태를 수정할 수 없다.
 * rvalue를 사용하는 식에서만 유효함. 단 rvalue를 참조하는 변수가 있을 경우, 그 변수가 소멸할때까지 유효함
 
-Lvalue 레퍼런스
-메모리가 확실히 존재, 위치를 식별할 수 있는 변수들만 대입이 가능하다.
-예)
+Lvalue 레퍼런스: 메모리가 확실히 존재, 위치를 식별할 수 있는 변수들만 대입이 가능하다.
+```
 int k = 10
 int & lvalueRef = k;
+```
 
-Rvalue 레퍼런스
-메모리의 위치를 특정할 수 없는 변수에 참조를 받을 수 있다.
-예)
+Rvalue 레퍼런스: 메모리의 위치를 특정할 수 없는 변수에 참조를 받을 수 있다.
+```
 int && rvalueRef = 20;
+```
+Rvalue 값의 재사용이 필요한 경우, Rvalue 레퍼런스를 활용하면 된다. 이때, Rvalue는  Rvalue 레퍼런스가 파괴될때까지 유효해진다.
 
-Rvalue 값의 재사용이 필요한 경우, Rvalue 레퍼런스를 활용하면 된다.
-이때, Rvalue는  Rvalue 레퍼런스가 파괴될때까지 유효해진다.
+*lvalue Rvalue 설명
+
+https://assortrock.com/236
+
+https://zenoahn.tistory.com/79
