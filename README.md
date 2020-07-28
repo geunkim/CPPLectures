@@ -19,7 +19,7 @@
 * [클래스: 구조체의 진화](https://github.com/geunkim/CPPLectures/blob/master/Class)
 * 객체의 생성과 소멸 
 * 객체와 포인터
-* 클래스와 상속
+* [클래스와 상속](https://github.com/geunkim/CPPLectures/tree/master/Inheritance)
   - 다중 상속
 * 함수의 진화
   - 오버라이딩
