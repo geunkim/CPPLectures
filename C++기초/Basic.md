@@ -16,7 +16,7 @@ C++ 프로그램을 생성하고 실행시키기 위해서는 몇 가지 단계�
 */
 #include <iostream>                            // cin, cout 클래스 선언 내용을 포함
 using namespace std;                           // std namespace 사용을 선언
-int main() {
+int main(int argc, char const *argv[]) {
   int x, y;
   cout << "두수를 입력하시오: ";  
   cin >> x >> y;                               // x, y를 입력        
