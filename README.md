@@ -22,7 +22,7 @@
 * [클래스와 상속](https://github.com/geunkim/CPPLectures/tree/master/Inheritance)
 * 함수의 진화
   - 오버라이딩
-* 다형성
+* [다형성](https://github.com/geunkim/CPPLectures/tree/master/Polymorphism)
   - 가상함수
   - 순수 가상함수
 * 연산자 중복
