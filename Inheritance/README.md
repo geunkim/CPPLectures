@@ -11,7 +11,7 @@
 
 ## 학습 내용
 
-* [상속의 개념]((https://github.com/geunkim/CPPLectures/blob/master/Inheritance/Concept.md)
+* [상속의 개념](https://github.com/geunkim/CPPLectures/blob/master/Inheritance/Concept.md)
 * 자식 클래스 정의하기
 * 상속과 접근 지정자
 * 상속과 생성자 소멸자 관계 
