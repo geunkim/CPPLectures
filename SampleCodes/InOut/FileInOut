@@ -1,0 +1,123 @@
+```
+/*
+    이진 파일 입출력
+    작성자 20193468 박태윤
+    2020-08-20
+*/
+
+#include <iostream>
+#include <fstream>
+using namespace std;
+
+
+
+int main() {
+
+    fstream writeFile01; //fstream 클래스
+    writeFile01.open("exampleFile.bin", ios_base::out | ios_base::in | ios_base::binary); // 파일을 연다.
+    if (writeFile01.is_open()) { // 파일이 존재해서 파일이 잘 열렸을 때,
+        cout << "파일 열기 성공!" << endl;
+
+        // 연산자 << 활용
+        
+        writeFile01 << 31 << "bananna" << true << 3.14159f << '\0'; // 마지막에 '\0' 널 문자를 넣어 문장의 끝을 알린다.
+        // << 연산자로 입력한 값은 exampleFile.bin에서 모두 아스키 코드로 작성된다. (ex. 정수 10을 문자열 1과 0으로 만듦)
+        
+        char* myStringStorage; 
+        long size; size = writeFile01.tellg();
+        writeFile01.seekg(0, ios::beg); myStringStorage = new char[size];
+        writeFile01.read(myStringStorage, size); // char 포인터에다가 size만큼 파일의 내용을 읽어 저장합니다.
+        //printf("파일에 저장된 내용 : %s", myStringStorage); cout << endl;
+        cout << "파일에 저장된 내용 : " << myStringStorage << endl;
+        delete[] myStringStorage;
+
+        writeFile01.seekp(0); //처음 부분으로 설정합니다.
+
+        cout << endl;
+
+        // put 활용
+        writeFile01.put('h');
+        writeFile01.put('e');
+        writeFile01.put('l');
+        writeFile01.put('l');
+        writeFile01.put('o');
+        writeFile01.put('\0');
+
+        size = writeFile01.tellg();
+        writeFile01.seekg(0, ios::beg); myStringStorage = new char[size];
+        writeFile01.read(myStringStorage, size);
+        cout << "파일에 저장된 내용 : " << myStringStorage << endl;
+        delete[] myStringStorage;
+
+        writeFile01.seekp(0);
+
+        cout << endl;
+
+        //write 활용
+        const char* inputString = "This is first input string.\n";
+        writeFile01.write(inputString, strlen(inputString));
+        writeFile01.write("And this is second string.\0", 27);
+
+        size = writeFile01.tellg();
+        writeFile01.seekg(0, ios::beg); myStringStorage = new char[size];
+        writeFile01.read(myStringStorage, size);
+        cout << "파일에 저장된 내용 : " << myStringStorage << endl;
+        delete[] myStringStorage;
+
+        writeFile01.seekp(0);
+        
+        cout << endl;
+
+        // tellp, tellg 커서의 위치를 리턴한다
+        // seekp, seekg 커서의 위치를 숫자로 설정
+        
+        const char* originalString = "This is original string\0";
+        cout << originalString << endl;
+
+        writeFile01.write(originalString, strlen(originalString));
+        cout << "현재 커서의 위치는" << writeFile01.tellp() << "입니다" << endl;
+        writeFile01.seekp(8); // 8번째 칸으로 이동
+        cout << "현재 커서의 위치는" << writeFile01.tellp() << "입니다" << endl;
+        char edited[8] = "######\0";
+        writeFile01.write(edited, 7); // 8번째
+        cout << "현재 커서의 위치는" << writeFile01.tellp() << "입니다" << endl;
+
+
+        size = writeFile01.tellg();
+        writeFile01.seekg(0, ios::beg); myStringStorage = new char[size];
+        writeFile01.read(myStringStorage, size);
+        cout << "파일에 저장된 내용 : " << myStringStorage << endl;
+        delete[] myStringStorage;
+
+        writeFile01.seekp(0);
+        
+        cout << endl;
+        //get 함수
+
+
+        writeFile01.write(originalString, strlen(originalString));
+        writeFile01.seekp(0);
+
+        char c01 = writeFile01.get();
+        char c02 = writeFile01.get();
+        char c03 = writeFile01.get();
+        char c04 = writeFile01.get();
+
+        cout << "파일에 저장된 내용 : " << c01 << c02 << c03 << c04 << endl;
+
+        cout << endl;
+
+
+        writeFile01.seekp(0);
+
+        char string01[24] = "";
+        writeFile01.getline(string01, 24);
+        cout << string01 << endl;
+        
+        writeFile01.close();
+    }
+    else cout << "정상적으로 파일이 열리지 않았습니다!" << endl; // 파일명이 없을 때 출력
+	return 0;
+    
+}
+```
