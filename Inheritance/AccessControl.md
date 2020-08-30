@@ -1,9 +1,9 @@
 # 상속과 접근지정자 
 
-클래스 안으로 담을 때, 상속받는 멤버들을 어느만큼 보호를 강화할지 결정할 수 있다.
+자식 클래스가 부모 클래스로부터 상속을 받을 때, 부모 클래스로부터 상속받은 멤버들의 보호 수준을 높일 수 있다.
 
-```
-class privClass : private BaseClass, Base2, public Base3 { // BaseClass, Base2를 상속받은 후 보호수준을 private로 격상시킨다.
+```C++
+class privClass : private BaseClass, Base2, public Base3 { // BaseClass, Base2를 상속받은 후 보호수준을 private로 격상시킨다, Base3은 그냥 상속받는다.
 public:
     void func() {
         a;
@@ -14,31 +14,33 @@ public:
 };
 ```
 
-클래스 선언문 다음에 :을 붙이고, 접근 지정자를 붙인 뒤 상속받을 기반 클래스의 이름이 온다. (클래스가 여러 개일 경우, 쉼표로 구분한다.)
-이 때, 기반 클래스로부터 상속받은 멤버는 최소한 상속의 접근 지정자 이상의 보호를 받게 된다.
-예를 들어 기반 클래스가 제한이 없는 pubilc인 경우, 파생 클래스가 상속받을 때 상속 접근 지정자를 private로 지정한 경우 상속받은 멤버 변수는 파생 클래스 내부에서만 사용할 수 있다는 것이다.
+클래스 선언문 다음에 :을 붙이고, 접근 지정자를 붙인 뒤 상속받을 부모 클래스의 이름이 온다. (클래스가 여러 개일 경우, 쉼표로 구분한다.)
+이 때, 부모 클래스로부터 상속받은 멤버는 최소한 상속의 접근 지정자 이상의 보호를 받게 된다.
+예를 들어 부모 클래스가 제한이 없는 pubilc인 경우, 자식 클래스가 상속받을 때 상속 접근 지정자를 private로 지정한 경우 상속받은 멤버 변수는 자식 클래스 내부에서만 사용할 수 있다는 것이다.
 또 이는 다른 클래스가 다시 상속을 할 때, 이렇게 제한 접근이 강화된 것은 public 상속 접근 지정자를 사용 하여도 그대로 유지된다.
+
+
 
 
 아래는 이를 정리한 것이다.
 
 상속 접근 지정자가 private이면
-* 기반 클래스가 private일 때 접근 불가능
-* 기반 클래스가 protected일 때 private
-* 기반 클래스가 public일 때 private
+* 부모 클래스의 변수가 private일 때 접근 불가능
+* 부모 클래스의 변수가 protected일 때 private
+* 부모 클래스의 변수가 public일 때 private
 
 상속 접근 지정자가 protected이면
-* 기반 클래스가 private일 때 접근 불가능
-* 기반 클래스가 protected일 때 protected
-* 기반 클래스가 public일 때 protected
+* 부모 클래스의 변수가 private일 때 접근 불가능
+* 부모 클래스의 변수가 protected일 때 protected
+* 부모 클래스의 변수가 public일 때 protected
 
-상속 접근 지정자가 private이면
-* 기반 클래스가 private일 때 접근 불가능
-* 기반 클래스가 protected일 때 protected
-* 기반 클래스가 public일 때 public
+상속 접근 지정자가 public이면
+* 부모 클래스의 변수가 private일 때 접근 불가능
+* 부모 클래스의 변수가 protected일 때 protected
+* 부모 클래스의 변수가 public일 때 public
 
 예제 코드
-```
+```C++
 #include <iostream>
 using namespace std;
 
@@ -51,11 +53,6 @@ protected:
 public:
     int c;
 };
-class Base2 {
-protected:
-    int d;
-};
-
 
 class privClass : private BaseClass { // BaseClass를 상속받은 후 멤버의 최소 보호수준을 private로 격상시킨다.
 public:
@@ -63,7 +60,6 @@ public:
         //a; //접근 불가능
         b;
         c;
-        d;
     }
 };
 class privClassDerived : public privClass {
