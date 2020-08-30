@@ -1,7 +1,7 @@
 # 상속과 접근지정자 
 
-자식 클래스가 부모 클래스로부터 상속을 받을 때, 부모 클래스로부터 상속받은 멤버들의 보호 수준을 높일 수 있다.
-
+자식 클래스가 부모 클래스로부터 상속을 받을 때, 자식 클래스는 부모 클래스로부터 상속받은 멤버들을
+즉, 부모 클래스의 멤버와 부모 클래스로부터 상속받은 멤버는 다른 것이다.
 ```C++
 // BaseClass, Base2를 상속받은 후 보호수준을 private로 격상시킨다, Base3은 그냥 상속받는다.
 class privClass : private BaseClass, Base2, public Base3 {
@@ -25,17 +25,17 @@ public:
 아래는 이를 정리한 것이다.
 
 상속 접근 지정자가 private이면
-* 부모 클래스의 멤버가 private일 때 접근 불가능
+* 부모 클래스의 멤버가 private일 때 접근 불가능(자식 클래스가 사용할 수 없음)
 * 부모 클래스의 멤버가 protected일 때 private
 * 부모 클래스의 멤버가 public일 때 private
 
 상속 접근 지정자가 protected이면
-* 부모 클래스의 멤버가 private일 때 접근 불가능
+* 부모 클래스의 멤버가 private일 때 접근 불가능(자식 클래스가 사용할 수 없음)
 * 부모 클래스의 멤버가 protected일 때 protected
 * 부모 클래스의 멤버가 public일 때 protected
 
 상속 접근 지정자가 public이면
-* 부모 클래스의 멤버가 private일 때 접근 불가능
+* 부모 클래스의 멤버가 private일 때 접근 불가능(자식 클래스가 사용할 수 없음)
 * 부모 클래스의 멤버가 protected일 때 protected
 * 부모 클래스의 멤버가 public일 때 public
 
