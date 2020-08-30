@@ -39,7 +39,7 @@ public:
 * 부모 클래스의 멤버가 protected일 때 protected(자식 클래스 자신과 자식 클래스를 상속받는 클래스는 허용)
 * 부모 클래스의 멤버가 public일 때 public(외부에서도 접근이 가능함)
 
-###예제 코드
+### 예제 코드
 
 Derived 클래스가 부모 클래스 Base의 맴버들을 private로 상속받았다. 이런 식으로 상속을 받게 된다면 Derived 클래스의 자식 클래스들은 Derived의 부모 클래스의 멤버들에 접근할 수 없게 된다.
 (Derived의 자식 클래스가 Derived의 부모 클래스를 public으로 상속받는다고 표기하여도 모호함이 발생하게 된다.)
