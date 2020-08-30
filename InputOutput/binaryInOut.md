@@ -28,7 +28,7 @@ char형 문자를 하나 받아, 파일에 입력한다.
 ```ostream& put (char c);```
 
 예제 코드
-```
+```C++
 #include <iostream>
 #include <fstream>
 using namespace std;
@@ -49,7 +49,7 @@ int main() {
 ```ostream& write (const char* s, streamsize n);```
 
 예제 코드
-```
+```C++
 #include <iostream>
 #include <fstream>
 using namespace std;
@@ -87,7 +87,7 @@ ostream& seekp (streamoff off, ios_base::seekdir way);
 스트림에서 문자를 가져온다
 
 예제 코드 get(char & c) 인 경우
-```
+```C++
 #include <iostream>
 #include <fstream>
 using namespace std;
@@ -121,7 +121,7 @@ int main() {
     return 0;
 }
 ```
-만약에 get(char*s, streamsize n) 을 사용하게 되면
+만약에 ``` get(char*s, streamsize n) ``` 을 사용하게 되면
 한 번에 줄바꿈 '\n'까지 읽을 수 있다. (줄바꿈을 못 만난다면 n-1개의 글자를 읽는다.)
 get 함수로 읽을 때, 첫 문자가 \n이라면 문서의 커서(문자를 읽고 있는 곳)가 -1로 되어 문서가 읽히지 않는다.
 
