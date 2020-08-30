@@ -25,19 +25,19 @@ public:
 아래는 이를 정리한 것이다.
 
 상속 접근 지정자가 private이면
-* 부모 클래스의 멤버가 private일 때 접근 불가능(자식 클래스가 사용할 수 없음)
-* 부모 클래스의 멤버가 protected일 때 private
-* 부모 클래스의 멤버가 public일 때 private
+* 부모 클래스의 멤버가 private일 때 접근 불가능(자식 클래스도 사용할 수 없음)
+* 부모 클래스의 멤버가 protected일 때 private(자식 클래스 자신만 허용)
+* 부모 클래스의 멤버가 public일 때 private(자식 클래스 자신만 허용)
 
 상속 접근 지정자가 protected이면
-* 부모 클래스의 멤버가 private일 때 접근 불가능(자식 클래스가 사용할 수 없음)
-* 부모 클래스의 멤버가 protected일 때 protected
-* 부모 클래스의 멤버가 public일 때 protected
+* 부모 클래스의 멤버가 private일 때 접근 불가능(자식 클래스도 사용할 수 없음)
+* 부모 클래스의 멤버가 protected일 때 protected(자식 클래스 자신과 자식 클래스를 상속받는 클래스는 허용)
+* 부모 클래스의 멤버가 public일 때 protected(자식 클래스 자신과 자식 클래스를 상속받는 클래스는 허용)
 
 상속 접근 지정자가 public이면
-* 부모 클래스의 멤버가 private일 때 접근 불가능(자식 클래스가 사용할 수 없음)
-* 부모 클래스의 멤버가 protected일 때 protected
-* 부모 클래스의 멤버가 public일 때 public
+* 부모 클래스의 멤버가 private일 때 접근 불가능(자식 클래스도 사용할 수 없음)
+* 부모 클래스의 멤버가 protected일 때 protected(자식 클래스 자신과 자식 클래스를 상속받는 클래스는 허용)
+* 부모 클래스의 멤버가 public일 때 public(외부에서도 접근이 가능함)
 
 ###예제 코드
 
