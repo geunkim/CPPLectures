@@ -3,7 +3,8 @@
 자식 클래스가 부모 클래스로부터 상속을 받을 때, 부모 클래스로부터 상속받은 멤버들의 보호 수준을 높일 수 있다.
 
 ```C++
-class privClass : private BaseClass, Base2, public Base3 { // BaseClass, Base2를 상속받은 후 보호수준을 private로 격상시킨다, Base3은 그냥 상속받는다.
+// BaseClass, Base2를 상속받은 후 보호수준을 private로 격상시킨다, Base3은 그냥 상속받는다.
+class privClass : private BaseClass, Base2, public Base3 {
 public:
     void func() {
         a;
@@ -21,31 +22,32 @@ public:
 
 
 
-
 아래는 이를 정리한 것이다.
 
 상속 접근 지정자가 private이면
-* 부모 클래스의 변수가 private일 때 접근 불가능
-* 부모 클래스의 변수가 protected일 때 private
-* 부모 클래스의 변수가 public일 때 private
+* 부모 클래스의 멤버가 private일 때 접근 불가능
+* 부모 클래스의 멤버가 protected일 때 private
+* 부모 클래스의 멤버가 public일 때 private
 
 상속 접근 지정자가 protected이면
-* 부모 클래스의 변수가 private일 때 접근 불가능
-* 부모 클래스의 변수가 protected일 때 protected
-* 부모 클래스의 변수가 public일 때 protected
+* 부모 클래스의 멤버가 private일 때 접근 불가능
+* 부모 클래스의 멤버가 protected일 때 protected
+* 부모 클래스의 멤버가 public일 때 protected
 
 상속 접근 지정자가 public이면
-* 부모 클래스의 변수가 private일 때 접근 불가능
-* 부모 클래스의 변수가 protected일 때 protected
-* 부모 클래스의 변수가 public일 때 public
+* 부모 클래스의 멤버가 private일 때 접근 불가능
+* 부모 클래스의 멤버가 protected일 때 protected
+* 부모 클래스의 멤버가 public일 때 public
 
-예제 코드
+###예제 코드
+
+Derived 클래스가 부모 클래스 Base의 맴버들을 private로 상속받았다. 이런 식으로 상속을 받게 된다면 Derived 클래스의 자식 클래스들은 Derived의 부모 클래스의 멤버들에 접근할 수 없게 된다.
+(Derived의 자식 클래스가 Derived의 부모 클래스를 public으로 상속받는다고 표기하여도 모호함이 발생하게 된다.)
 ```C++
 #include <iostream>
 using namespace std;
 
-
-class BaseClass {
+class Base {
 private:
     int a;
 protected:
@@ -53,16 +55,17 @@ protected:
 public:
     int c;
 };
-
-class privClass : private BaseClass { // BaseClass를 상속받은 후 멤버의 최소 보호수준을 private로 격상시킨다.
+class Derived : private Base {
 public:
     void func() {
         //a; //접근 불가능
-        b;
-        c;
+        b; //자식 클래스는 접근 허용 (protected)
+        c; //접근 허용
     }
 };
-class privClassDerived : public privClass {
+
+// Derived의 자식 클래스가 접근
+class Derived2 : public Derived {
 public:
     void func() {
         //a; //접근 불가능
@@ -70,64 +73,97 @@ public:
         //c; //접근 불가능
     }
 };
-
-
-class protClass : protected BaseClass { // BaseClass를 상속받은 후 멤버의 최소 보호수준을 protected로 격상시킨다.
-public:
-    void func() {
-        //a; //접근 불가능
-        b;
-        c;
-    }
-};
-class protClassDerived : public protClass {
-public:
-    void func() {
-        //a; //접근 불가능
-        b;
-        c;
-    }
-};
-
-
-class publClass : public BaseClass { // BaseClass를 public으로 상속받는다.
-public:
-    void func() {
-        //a; //접근 불가능
-        b;
-        c;
-    }
-};
-class publClassDerived : public publClass {
-public:
-    void func() {
-        //a; //접근 불가능
-        b;
-        c;
-    }
-};
-
-
-int main() // 외부의 메인 함수
-{
-    std::cout << "Hello World!\n";
-    protClassDerived A;
-    //A.a = 10; //접근 불가능 private
-    //A.b = 10; //접근 불가능 private
-    //A.c = 10; //접근 불가능 private
-
-    protClassDerived B;
-    //B.a = 10; //접근 불가능 private
-    //B.b = 10; //접근 불가능 protected
-    //B.c = 10; //접근 불가능 protected
-
-    publClassDerived C;
-    //C.a = 10; //접근 불가능 private
-    //C.b = 10; //접근 불가능 protected
-    C.c = 10;
+//외부에서 접근
+int main() {
+    Derived A;
+    //A.a = 10; //외부에서 접근 불가능 (private)
+    //A.b = 10; //외부에서 접근 불가능 (private)
+    //A.c = 10; //외부에서 접근 불가능 (private)
+    return 0;
 }
 ```
 
+Derived 클래스가 부모 클래스 Base의 맴버들을 protected로 상속받았다. 이런 식으로 상속받게 된다면 외부에서는 (부모로부터 상속받은) 멤버에 접근할 수 없지만, 상속받은 관계에서는 부모 클래스의 private 멤버를 제외한 멤버들에 접근할 수 있게 된다.
+```C++
+#include <iostream>
+using namespace std;
+
+class Base {
+private:
+    int a;
+protected:
+    int b;
+public:
+    int c;
+};
+class Derived : protected Base {
+public:
+    void func() {
+        //a; //접근 불가능
+        b; //자식 클래스는 접근 허용 (protected)
+        c; //접근 허용
+    }
+};
+
+// 자식의 자식 클래스
+class Derived2 : public Derived {
+public:
+    void func() {
+        //a; //접근 불가능
+        b; //자식 클래스는 접근 허용 (protected)
+        c; //자식 클래스는 접근 허용 (protected)
+    }
+};
+//외부에서 접근
+int main() {
+    Derived A;
+    //A.a = 10; //외부에서 접근 불가능 (private)
+    //A.b = 10; //외부에서 접근 불가능 (protected)
+    //A.c = 10; //외부에서 접근 불가능 (protected)
+    return 0;
+}
+```
+
+Derived 클래스가 부모 클래스 Base의 맴버들을 public으로 상속받았다. 이런 식으로 상속받게 되면 외부에서는 public 멤버만 접근할 수 있게 된다.
+```C++
+#include <iostream>
+using namespace std;
+
+class Base {
+private:
+    int a;
+protected:
+    int b;
+public:
+    int c;
+};
+class Derived : public Base {
+public:
+    void func() {
+        //a; //접근 불가능
+        b; //자식 클래스는 접근 허용 (protected)
+        c; //접근 허용
+    }
+};
+
+// 자식의 자식 클래스
+class Derived2 : public Derived {
+public:
+    void func() {
+        //a; //접근 불가능
+        b; //자식 클래스는 접근 허용 (protected)
+        c; //접근 허용
+    }
+};
+//외부에서 접근
+int main() {
+    Derived A;
+    //A.a = 10; //외부에서 접근 불가능 (private)
+    //A.b = 10; //외부에서 접근 불가능 (protected)
+    A.c = 10; //접근 허용
+    return 0;
+}
+```
 기본적으로 class는 상속받을 때 상속 접근 지정자를 적어놓지 않았을 때 private 접근 지정자로 간주한다.
 따라서 상속이 직렬로 2차례 이상 일어 날 때 접근 지정자를 적어놓지 않으면 기반 클래스의 멤버가 접근이 되지 않는다.
 protected 혹은 public 접근 지정자를 사용하면 원본 멤버를 건너받을 수 있다.
