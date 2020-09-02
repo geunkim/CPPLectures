@@ -274,12 +274,17 @@ private:
    string name;
    int age;
 public:
+   ~Person();
    void setName(string n) { name = n;}
    void setAge(int a) { age = a;}
    void show() {
       cout << name << ", " << age << endl;
    }
 };
+
+Person::~Person() {
+   cout << "소멸자 호출" << endl;
+}
 
 int main(int argc, char const *argv[])
 {
@@ -295,7 +300,6 @@ int main(int argc, char const *argv[])
 객체 ```s```의 소멸자가 호출되어 "소멸자 호출"이라는 문자열이 출력된다. 
 실행 결과는 다음과 같다.
 
-``
-Chul-soo Lee, 20
-소멸자 호출
-``
+``Chul-soo Lee, 20``
+
+``소멸자 호출``
