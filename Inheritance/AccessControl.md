@@ -34,7 +34,8 @@ public으로 상속 | 접근 불가능 | protected | public
 ## 자식 클래스의 접근 가능 여부
 부모 클래스에서 상속 접근 지정자를 통해서 받을 때 자식 클래스가 접근이 가능한 지, 불가능한지가 있다
 
-private가 된 
+만약에 부모 클래스를 private로 상속받는다면
+모든 맴버는 private이 되기 때문에 자식 클래스는 접근이 불가능해진다.
 
 
 
@@ -59,12 +60,12 @@ protect은 자기 자신 클래스 내부 뿐만 아니라, 자신을 상속할 
 * 부모 클래스의 멤버가 protected일 때 private(자식 클래스 자신만 허용)
 * 부모 클래스의 멤버가 public일 때 private(자식 클래스 자신만 허용)
 
-상속 접근 지정자가 protected이면 [case 1. protected](####-상속-접근-지정자가-protected이면)
+상속 접근 지정자가 protected이면 [case 2. protected](####-상속-접근-지정자가-protected이면)
 * 부모 클래스의 멤버가 private일 때 접근 불가능(자식 클래스도 사용할 수 없음)
 * 부모 클래스의 멤버가 protected일 때 protected(자식 클래스 자신과 자식 클래스를 상속받는 클래스는 허용)
 * 부모 클래스의 멤버가 public일 때 protected(자식 클래스 자신과 자식 클래스를 상속받는 클래스는 허용)
 
-상속 접근 지정자가 public이면 [case 1. public](####-상속-접근-지정자가-public이면)
+상속 접근 지정자가 public이면 [case 3. public](####-상속-접근-지정자가-public이면)
 * 부모 클래스의 멤버가 private일 때 접근 불가능(자식 클래스도 사용할 수 없음)
 * 부모 클래스의 멤버가 protected일 때 protected(자식 클래스 자신과 자식 클래스를 상속받는 클래스는 허용)
 * 부모 클래스의 멤버가 public일 때 public(외부에서도 접근이 가능함)
