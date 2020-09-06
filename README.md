@@ -5,10 +5,10 @@
 0. 역사와 호환성
 0.1 절차적 프로그래밍/ 객체지향 프로그래밍/ 제너릭 프로그래밍 (일반화 프로그래밍)/ 함수형 프로그래밍
 * [C++ 기초](./C++기초)
-* [프로그래밍 기초](./BasicProgramming)
+(* [프로그래밍 기초](./BasicProgramming)
 * [제어문](./Control)
 * [배열](./Array)
-* [함수]./function)
+* [함수](./function)
 * [포인터 변수](./Pointer) 
 * 구조체
 * [메모리 모델과 이름 공간](./MemoryModelAndNameSpace)
