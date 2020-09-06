@@ -3,10 +3,6 @@
 	Author: Geun-Hyung Kim
 */
 
-/*
-	File name: defaultConstruct.cc
-	Author: Geun-Hyung Kim
-*/
 #include <iostream>
 using namespace std;
 
