@@ -4,33 +4,33 @@
 
 0. 역사와 호환성
 0.1 절차적 프로그래밍/ 객체지향 프로그래밍/ 제너릭 프로그래밍 (일반화 프로그래밍)/ 함수형 프로그래밍
-* [C++ 기초](https://github.com/geunkim/CPPLectures/blob/master/C++기초)
-* [프로그래밍 기초](https://github.com/geunkim/CPPLectures/tree/master/BasicProgramming)
-* [제어문](https://github.com/geunkim/CPPLectures/tree/master/Control)
-* [배열](https://github.com/geunkim/CPPLectures/tree/master/Array)
-* [함수](https://github.com/geunkim/CPPLectures/tree/master/function)
-* [포인터 변수](https://github.com/geunkim/CPPLectures/tree/master/Pointer) 
+* [C++ 기초](./C++기초)
+* [프로그래밍 기초](./BasicProgramming)
+* [제어문](./Control)
+* [배열](./Array)
+* [함수]./function)
+* [포인터 변수](./Pointer) 
 * 구조체
-* 메모리 모델과 이름 공간
+* [메모리 모델과 이름 공간](./MemoryModelAndNameSpace)
 * 함수의 진화 - 오버로딩
 
 ## Part 2
 
-* [클래스: 구조체의 진화](https://github.com/geunkim/CPPLectures/blob/master/Class)
-* [객체의 생성과 소멸](https://github.com/geunkim/CPPLectures/blob/master/Class/constructor_destructor.md) 
+* [클래스: 구조체의 진화](./Class)
+* [객체의 생성과 소멸](./Class/constructor_destructor.md) 
 * 객체와 포인터
-* [클래스와 상속](https://github.com/geunkim/CPPLectures/tree/master/Inheritance)
+* [클래스와 상속]./Inheritance)
 * 함수의 진화
   - 오버라이딩
-* [다형성](https://github.com/geunkim/CPPLectures/tree/master/Polymorphism)
+* [다형성]./Polymorphism)
   - 가상함수
   - 순수 가상함수
 * 연산자 중복
 * 프렌드와 연산자 중복
 * 에외처리와 형 변환
 * 템플릿
-* [STL(Standard Template Library)](https://github.com/geunkim/CPPLectures/tree/master/STL)
-* [데이터 입출력](https://github.com/geunkim/CPPLectures/tree/master/InputOutput)
+* [STL(Standard Template Library)](./STL)
+* [데이터 입출력](./InputOutput)
 * 디자인패턴
 
 -------------------------------
