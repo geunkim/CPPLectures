@@ -12,7 +12,7 @@
 * [포인터 변수](./Pointer) 
 * 구조체
 * [메모리 모델과 이름 공간](./MemoryModelAndNameSpace)
-* 함수의 진화 - 오버로딩
+* [함수의 진화 - 함수 중복](./function/overload.md)
 
 ## Part 2
 
