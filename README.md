@@ -19,10 +19,10 @@
 * [클래스: 구조체의 진화](./Class)
 * [객체의 생성과 소멸](./Class/constructor_destructor.md) 
 * 객체와 포인터
-* [클래스와 상속]./Inheritance)
+* [클래스와 상속](./Inheritance)
 * 함수의 진화
   - 오버라이딩
-* [다형성]./Polymorphism)
+* [다형성](./Polymorphism)
   - 가상함수
   - 순수 가상함수
 * 연산자 중복
