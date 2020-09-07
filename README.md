@@ -10,7 +10,7 @@
 * [배열](./Array)
 * [함수](./function)
 * [포인터 변수](./Pointer) 
-* 구조체
+* [구조체](./Structure)
 * [메모리 모델과 이름 공간](./MemoryModelAndNameSpace)
 * [함수의 진화 - 함수 중복](./function/overload.md)
 
@@ -23,12 +23,12 @@
 * 함수의 진화
   - 오버라이딩
 * [다형성](./Polymorphism)
-  - 가상함수
+  - [가상함수](./Polymorphism/VirtualFunction.md)
   - 순수 가상함수
 * [중복](./Overload)
   - [연산자 중복](./Overload/OperatorOverload.md)
   - 프렌드와 연산자 중복
-* 에외처리와 형 변환
+* [에외처리와 형 변환](./Exception)
 * [템플릿](./Template)
 * [STL(Standard Template Library)](./STL)
 * [데이터 입출력](./InputOutput)
