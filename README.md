@@ -25,10 +25,11 @@
 * [다형성](./Polymorphism)
   - 가상함수
   - 순수 가상함수
-* 연산자 중복
-* 프렌드와 연산자 중복
+* [중복](./Overload)
+  - [연산자 중복](./Overload/OperatorOverload.md)
+  - 프렌드와 연산자 중복
 * 에외처리와 형 변환
-* 템플릿
+* [템플릿](./Template)
 * [STL(Standard Template Library)](./STL)
 * [데이터 입출력](./InputOutput)
 * 디자인패턴
