@@ -19,19 +19,19 @@
 * [클래스: 구조체의 진화](./Class)
 * [객체의 생성과 소멸](./Class/constructor_destructor.md) 
 * 객체와 포인터
-* [클래스와 상속](./Inheritance)
+* [클래스와 상속]./Inheritance)
 * 함수의 진화
-  - 오버라이딩
-* [다형성](./Polymorphism)
-  - 가상함수
+  - [오버라이딩](./Polymorphism/Concept.md)
+* [다형성]./Polymorphism)
+  - [가상함수](./Polymorphism/VirtualFunction.md)
   - 순수 가상함수
 * 연산자 중복
-* 프렌드와 연산자 중복
-* 에외처리와 형 변환
-* 템플릿
+* [프렌드와 연산자 중복](./friendf_function_class.md)
+* [예외처리와 형 변환](./Exception)
+* [템플릿](/Template)
 * [STL(Standard Template Library)](./STL)
 * [데이터 입출력](./InputOutput)
-* 디자인패턴
+* [디자인패턴](./DesignPattern/summary.md)
 
 -------------------------------
 * To do (목록에 추가해야 할 내용들)
