@@ -58,5 +58,5 @@ class Person {
 	int getAge();
 };
 ```
-4. ([Class Codes](../SampleCodes/Class)의 프로그램 실행하기.
+4. [Class Codes](../SampleCodes/Class)의 프로그램 실행하기.
 
