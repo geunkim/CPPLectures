@@ -48,7 +48,7 @@ class Date{
 
 
 ```
-3. 클래스 ```Person```과 관련한 멤버 변수와 멤버 함수를 추가하시오. (../SampleCodes/Class/Person.cc)).
+3. 클래스 ```Person```과 관련한 멤버 변수와 멤버 함수를 추가하시오. ([참조](../SampleCodes/Class/dateClass.cc)).
 
 ```C++
 class Person {
@@ -58,3 +58,5 @@ class Person {
 	int getAge();
 };
 ```
+4. ([Class Codes](../SampleCodes/Class)의 프로그램 실행하기.
+
