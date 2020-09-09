@@ -1,4 +1,4 @@
-*
+/*
 	File name: dateClass.cc
 	Author: Geun-Hyung Kim
 */
