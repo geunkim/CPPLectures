@@ -27,7 +27,7 @@ int main(int argc, char const *argv[])
 	return 0;
 }
 ```
-2. 클래스 ```Date```와 관련한 멤버함수를 구현하시오.
+2. 클래스 ```Date```와 관련한 멤버함수를 구현하시오([참조](../SampleCodes/Class/dateClass.cc)).
 
 ```C++
 class Date{
@@ -45,8 +45,10 @@ class Date{
 	int getDay();
 	void printDate();
 };
+
+
 ```
-3. 클래스 ```Person```과 관련한 멤버 변수와 멤버 함수를 추가하시오.
+3. 클래스 ```Person```과 관련한 멤버 변수와 멤버 함수를 추가하시오. (../SampleCodes/Class/Person.cc)).
 
 ```C++
 class Person {
