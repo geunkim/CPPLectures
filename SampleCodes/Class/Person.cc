@@ -1,4 +1,4 @@
-*
+/*
 	File name: Person.cc
 	Author: Geun-Hyung Kim
 */
