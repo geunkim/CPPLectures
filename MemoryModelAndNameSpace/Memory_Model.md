@@ -99,3 +99,34 @@ register 변수에 대한 추가 정보
 스택은 일반적으로 CUP 캐시에 있는 것처럼 선호되므로 스택에 저장된 객체와 관련된 작업이 더 빠른 경향이 있다.
 그러나 스택은 용량이 어느 정도로 한정되어있다. 만약에 스택에 들어간 변수들중 일부의 크기가 너무 커져버리면
 스택 영역에 있어야 할 지역변수의 공간이 인접한 다른 메모리 영역을 침범하게 되어 메모리 접근 오류가 발생하게 된다.
+
+예제 코드 (과도한 정적 할당으로 스택 용량 부족)
+```
+#include <iostream>
+using namespace std;
+
+int main() {
+ double number1[256 * 256][5];
+	return 0;
+}
+```
+혹은 함수가 너무 깊거나 무한 루프인 경우도 이에 해당한다.
+
+예제 코드 (무한 루프 혹은 너무 깊은 함수를 사용하는 경우)
+```
+#include <iostream>
+using namespace std;
+
+static int a = 0;
+void loop() {
+    cout << a << "번 째 루프." << endl;
+    a++;
+    loop();
+}
+
+int main()
+{
+    loop();
+    return 0;
+}
+```
