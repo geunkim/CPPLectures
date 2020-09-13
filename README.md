@@ -52,4 +52,6 @@ References
 3. [TCPSCHOOL.com - CPP](http://tcpschool.com/cpp/intro)
 4. [cplusplus.com](http://www.cplusplus.com/)
 5. [GeeksforGeeks - C++ Programming Language](https://www.geeksforgeeks.org/c-plus-plus/)
+6. [A list of open source C++ libraries](https://en.cppreference.com/w/cpp/links/libs)
+
 
