@@ -8,7 +8,7 @@
 * [deepCopy.cc](../SampleCodes/Class/deepCopy.cc)
 * [shallowCopy.cc](../SampleCodes/Class/shallowCopy.cc)
 
-2. 아래의 ``Point`` 클래스를 사용하여 ```main()``` 함수에서 다양한 형태의 ```Point``` 클래스의 객체를 생성하고 디폴트 복사 생상자와 디폴트 대입연산자를 사용하고 각 연산의 결과가 제대로 동작하는지 확인하는 코드를 작성하시오.
+2. 아래의 ``Point`` 클래스를 사용하여 ```main()``` 함수에서 다양한 형태의 ```Point``` 클래스의 객체를 생성하고 디폴트 복사 생성자와 디폴트 대입연산자를 사용하고 각 연산의 결과가 제대로 동작하는지 확인하는 코드를 작성하시오.
 ([참고](../SampleCodes/Class/pointTest.cc))
 
 ```c++
