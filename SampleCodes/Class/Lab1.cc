@@ -17,7 +17,8 @@ public:
 
 int main(int argc, char const *argv[])
 {
-	Test t;
+	Test t;  // 에러가 발생한다.
+	Test t1(10);
 	t.setX(100);
 	cout << t.getX() << endl;
 	return 0;
