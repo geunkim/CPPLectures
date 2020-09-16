@@ -62,7 +62,8 @@ class Date{
 	int year;
 	int month;
 	int day;
-	Date()
+public:
+	Date();
 	Date(int y, int m, int d);
 	~Date();
 	void setYear(int y);
