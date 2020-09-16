@@ -36,7 +36,7 @@ int main(int argc, char const *argv[])
 
 ### 복사 대입연산자 
 
-3. 앞의 ``Point`` 클래스에 대해 대입연산자 함수를 재 정의하시오.
+3. 앞의 ``Point`` 클래스에 대해 대입연산자 함수를 재 정의하고 ```main()``` 함수에서 확인하시오.
 ([참고](../SampleCodes/Class/pointTest.cc))
 
 ```c++
