@@ -3,7 +3,7 @@
 
 ### 복사 생성자
 
-1. 다음의 프로그램을 실행하고 차이점을 분석하고 ShallowCopy.cc 를 실행하였을 때 에러가 발생하는 이유를 검토하시오.
+1. 다음의 프로그램을 실행하고 차이점을 분석하고 shallowCopy.cc 를 실행하였을 때 에러가 발생하는 이유를 검토하시오.
 
 * [deepCopy.cc](../SampleCodes/Class/deepCopy.cc)
 * [shallowCopy.cc](../SampleCodes/Class/shallowCopy.cc)
