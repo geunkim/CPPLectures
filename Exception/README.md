@@ -1,4 +1,4 @@
-# 예외처리 (Exception)
+# 예외처리 (Exception Haidling)
 
 ## 학습 목표
 
