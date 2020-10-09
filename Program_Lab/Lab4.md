@@ -63,7 +63,7 @@ class Circle{
 	double radius;
 	static int count;
 public:
-	Cicle () : x{0.0}, y{0.0}, radius{2.0} {}
+	Circle () : x{0.0}, y{0.0}, radius{2.0} {}
 	Circle (double a, double b, double c) : x{a}, y{b}, radius(c) {}
 	static int getCount();
 	~Circle() {}
