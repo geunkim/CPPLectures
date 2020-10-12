@@ -96,7 +96,7 @@ class Singleton{
 	static Singleton* instance;  // 생성된 객체의 주소 값을 저장 
 	int total;                // 객체가 생성될 때 값은 0으로 초기화 
 public:
-	static Signleton* getInstance(); // Singleton 객체를 반환하는 함수 (한번 생성하고 공유할 수 있도록 함)
+	static Singleton* getInstance(); // Singleton 객체를 반환하는 함수 (한번 생성하고 공유할 수 있도록 함)
 	~Singleton() {}
 	void cummulate(int value); // 입력 파러미터 value를 total에 더하기 
 	int getTotal();            // 
