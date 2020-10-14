@@ -97,7 +97,7 @@ public:
 * 멤버 변수 초기화 시 초기화 리스트를 활용하기 
 
 ```cpp
-{
+class Car {
 	int speed;
 public:
 	Car (int s);
