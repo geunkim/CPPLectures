@@ -13,6 +13,6 @@
 
 * [상속의 개념](./Concept.md)
 * [자식 클래스 정의하기](./ChildClass.md)
-* [상속과 접근 지정자](./MultipleInheritance.md)
-* [상속과 생성자 소멸자 관계](./AccessControl.md) 
+* [상속과 접근 지정자](./AccessControl.md)
+* 상속과 생성자 소멸자 관계 
 * [다중 상속](./MultipleInheritance.md)
