@@ -9,7 +9,7 @@ class Derived : public Base:
 ```
 
 ```cpp
-cass Base {
+class Base {
 	int v1;
 protected:
 	int v2;
