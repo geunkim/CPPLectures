@@ -84,7 +84,7 @@ public:
 	TwoDimension(double i, double j);
 };
 
-class ThreeDimesion {
+class ThreeDimension {
 	double x, y, z;
 public:
 	ThreeDimension(double i, double j, double k);
