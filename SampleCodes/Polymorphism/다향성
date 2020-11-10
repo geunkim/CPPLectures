@@ -1,0 +1,41 @@
+#include <iostream>
+using namespace std;
+
+class Shape
+{
+public:
+	virtual void area() = 0;
+};
+
+class Rectangle : public Shape
+{
+public:
+	int x, y;
+	Rectangle(int _x, int _y) :x(_x), y(_y) {}
+
+	void area()
+	{
+		cout << x * y << endl;
+	}
+};
+
+class Triangle : public Shape
+{
+public:
+	int x1, y1;
+	Triangle(int _x1, int _y1) :x1(_x1), y1(_y1) {}
+
+	void area()
+	{
+		cout << (x1 * y1) / 2 << endl;
+	}
+};
+
+int main()
+{
+	Rectangle rectangle(3, 3);
+	Triangle triangle(2, 2);
+
+	rectangle.area();
+	triangle.area();
+}
