@@ -27,7 +27,7 @@ T sum(T *arr, int num);
 int myAbs(int a);
 double myAbs(double a);
 long myAbs(long a);
-float myAbs(flaot a);
+float myAbs(float a);
 ```
 
 
