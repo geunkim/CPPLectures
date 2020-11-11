@@ -8,13 +8,13 @@
 int sum(int *arr, int num);
 double sum(double *arr, int num);
 long sum(long *arr, int num);
-float sum(long *arr, int num);
+float sum(float *arr, int num);
 ```
 
 2. 1번의 오버로딩 함수를 템플릿 함수로 정의하고 다양한 자료형에 대해서 호출하여 검증하시오.
 
 ```cpp
-template <typenam T> 
+template <typename T> 
 T sum(T *arr, int num);
 ```
 
@@ -24,10 +24,10 @@ T sum(T *arr, int num);
 4. 수를 입력받아 절대 값을 구하는 함수 ``myAbs`` 를 템플릿 함수로 정의하고 검증하시오.
 
 ```cpp
-int abs(int a);
-double abs(double a);
-long abs(long a);
-float abas(flaot a);
+int myAbs(int a);
+double myAbs(double a);
+long myAbs(long a);
+float myAbs(flaot a);
 ```
 
 
