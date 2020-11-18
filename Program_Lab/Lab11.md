@@ -17,7 +17,7 @@ public:
 		for (int i = 0; i < SIZE; i++)
 			buf[i] = 0;
 	}
-int& operator[] (int i);
+	int& operator[] (int i);
 
 };
 
@@ -26,7 +26,8 @@ int& MyArray::operator[](int i) {
 		cout << "bad index";
 		return buf[0];
 	}
-	return buf[i];}
+	return buf[i];
+}
 
 int main(int argc, char const *argv[])
 {
