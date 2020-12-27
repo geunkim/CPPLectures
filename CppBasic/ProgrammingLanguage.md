@@ -106,3 +106,5 @@ C++ 언어 외의 긱체지향 프로그래밍 언어로 1995년에 만들어진
 [1] [명령형 프로그래밍 위키 페이지](https://ko.wikipedia.org/wiki/명령형_프로그래밍)
 
 [2] [선언형 프로그래밍 위키 페이지](https://ko.wikipedia.org/wiki/선언형_프로그래밍)
+
+[3] [Bjarne Stroustrup 홈페이지](https://www.stroustrup.com/)
