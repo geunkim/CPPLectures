@@ -2,9 +2,7 @@
 
 ## Part 1
 
-0. 역사와 호환성
-0.1 절차적 프로그래밍/ 객체지향 프로그래밍/ 제너릭 프로그래밍 (일반화 프로그래밍)/ 함수형 프로그래밍
-* [C++ 기초](./C++기초)
+* [C++ 기초](./CppBasic)
 * [프로그래밍 기초](./BasicProgramming)
 * [제어문](./Control)
 * [배열](./Array)
@@ -43,6 +41,8 @@
 스마트 포인터(Smart Pointer): shared_ptr, unique_ptr, weak_ptr
 타입추론(type deduction)
 우측 값 레퍼런스 (rvalue reference)
+0. 역사와 호환성
+0.1 절차적 프로그래밍/ 객체지향 프로그래밍/ 제너릭 프로그래밍 (일반화 프로그래밍)/ 함수형 프로그래밍
 
 
 References
