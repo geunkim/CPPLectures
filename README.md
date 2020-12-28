@@ -3,14 +3,22 @@
 ## Part 1
 
 * [C++ 기초](./CppBasic)
+	- [프로그래밍 언어 개념](./CppBasic/ProgrammingLanguage.md)
+	- [C++ 프로그래밍 언어 기초](./CppBasic/Basic.md) 
+	- [전처리기(Preprocessor)](./CppBasic/Preprocessor.md)
 * [프로그래밍 기초](./BasicProgramming)
+	- [변수, 상수, 컴퓨터의 데이터 표현](./BasicProgramming/Data_and_Variables.md)  
+	- [자료형, 자료형 의미, 종류](./BasicProgramming/DataType.md)
+	- [변수의 사용](./BasicProgramming/VariableUsage.md)
+	- [연산자와 연산자 우선순위](./BasicProgramming/Operators.md)
 * [제어문](./Control)
 * [배열](./Array)
 * [함수](./function)
+	- [함수 중복](./function/overload.md)
 * [포인터 변수](./Pointer) 
 * [구조체](./Structure)
 * [메모리 모델과 이름 공간](./MemoryModelAndNameSpace)
-* [함수의 진화 - 함수 중복](./function/overload.md)
+
 
 ## Part 2
 
