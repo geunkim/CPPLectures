@@ -8,8 +8,8 @@
 - 우선순위와 결합 방향에 따른 수식의 처리 속도를 이해하고 사용할 수 있다. 
 
 ## 학습 내용 
-- [변수, 상수, 컴퓨터의 데이터 표현](https://github.com/geunkim/CPPLectures/blob/master/BasicProgramming/Data_and_Variables.md)  
-- [자료형, 자료형 의미, 종류](https://github.com/geunkim/CPPLectures/blob/master/BasicProgramming/DataType.md)
-- [변수의 사용](https://github.com/geunkim/CPPLectures/blob/master/BasicProgramming/VariableUsage.md)
-- [연산자와 연산자 우선순위](https://github.com/geunkim/CPPLectures/blob/master/BasicProgramming/Operators.md)
+- [변수, 상수, 컴퓨터의 데이터 표현](./Data_and_Variables.md)  
+- [자료형, 자료형 의미, 종류](./DataType.md)
+- [변수의 사용](./VariableUsage.md)
+- [연산자와 연산자 우선순위](./Operators.md)
 
