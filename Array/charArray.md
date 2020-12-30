@@ -27,7 +27,7 @@ char str[20] = "Hello World!";   // char형 배열 선언과 초기화
 문자형 배열 str은 20개의 문자를 저장할 수 있는 공간이며 다음과 같이 str[0]에는 문자 'H', str[1]에는 'e' 가
 차례로 저장된다. 
 
-![image](./charArray.png)
+![image](./images/charArray.png)
 
 문자열 리터럴이 메모리에 저장될 때는 마지막에 NULL 문자('\0')가 저장된다. C++에서 NULL 문자는 문자열의 마지막을 
 나타내는 문자이다. 그러므로 문자열을 저장하기 위해서 문자열의 문자의 수보다 하나 큰 저장공간이 요구된다. 
@@ -162,8 +162,8 @@ cout << str1 << endl;
 * ```char* strcpy(char* s1, const char* s2);```: 문자열 s2를 문자열 배열 s1에 복사한 후 s1을 반환
 * ```char* strncpy(char* s1, const char* s2);```: 문자열 s2를 문자열 배열 s1에 문자 n 개를 복사한 후 s1을 반환
 * ```char* strcat(char* s1, const char* s2);```: 문자열 s2를 문자열 s1 끝에 붙이고 s1을 반환
-* ```int strcmp(const char* s1, const char* s2);```: 문자열 s1과 문자열 s2를 비교하여 s1<s2 이면 음수, s1\==s2 이면 0
-* ```int strncmp(const char* s1, const char* s2);```: 문자열 s1과 문자열 s2의 n개의 문자를 비교하여 s1<s2 이면 음수, s1\==s2 이면 0
+* ```int strcmp(const char* s1, const char* s2);```: 문자열 s1과 문자열 s2를 비교하여 s1\<s2 이면 음수, s1\==s2 이면 0
+* ```int strncmp(const char* s1, const char* s2);```: 문자열 s1과 문자열 s2의 n개의 문자를 비교하여 s1\<s2 이면 음수, s1\==s2 이면 0
 
 
 s1\>s2 이면 양수 반환 
