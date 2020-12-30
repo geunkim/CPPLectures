@@ -5,19 +5,35 @@
 * [C++ 기초](./CppBasic)
 	- [프로그래밍 언어 개념](./CppBasic/ProgrammingLanguage.md)
 	- [C++ 프로그래밍 언어 기초](./CppBasic/Basic.md) 
+	- [키보드 입력 및 콘솔 출력]
 	- [전처리기(Preprocessor)](./CppBasic/Preprocessor.md)
+	- [프로그램 연습]
 * [프로그래밍 기초](./BasicProgramming)
 	- [변수, 상수, 컴퓨터의 데이터 표현](./BasicProgramming/Data_and_Variables.md)  
 	- [자료형, 자료형 의미, 종류](./BasicProgramming/DataType.md)
 	- [변수의 사용](./BasicProgramming/VariableUsage.md)
 	- [연산자와 연산자 우선순위](./BasicProgramming/Operators.md)
+	- [프로그램 연습]
 * [제어문](./Control)
+	- [조건문](./Control/condition.md)
+	- [반복문](./Control/Iteration.md)
+	- [프로그램 연습]
 * [배열](./Array)
+	- [배열이 필요한 이유](./Array/whyArray.md)
+	- [배열 선언 및 초기화](./Array/Declaration_Initializaion.md)
+	- [배열의 사용](./Array/AccessArrayElements.md)
+	- [배열과 문자열](./Array/charArray.md)
+	- [다차원 배열](./Array/multiDimArray.md)
+	- [프로그램 연습]
 * [함수](./function)
 	- [함수 중복](./function/overload.md)
-* [포인터 변수](./Pointer) 
+	- [프로그램 연습]
+* [포인터 변수](./Pointer)
+	- [프로그램 연습] 
 * [구조체](./Structure)
+	- [프로그램 연습]
 * [메모리 모델과 이름 공간](./MemoryModelAndNameSpace)
+	- [프로그램 연습]
 
 
 ## Part 2
