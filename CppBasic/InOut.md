@@ -17,7 +17,7 @@
 C++의 스트림은 입력 스트림과 출력 스트림으로 구성된다. 입력 스트림은 키보드, 네트워크 파일 등 데이터 입력 장치로 부터 입력된 데이터를 순서대로 프로그램에 입력하는 객체이며 출력 스트림은 프로그램에서 출력한 데이터를 프린터, 하드디스크, 콘솔, 네트워크, 파일 등 과 같이 하드웨어 장치로 데이터로 전달하는 객체이다. 
 
 
-![image](./images/IOStreams.png)
+![IOStreams](./images/IOStreams.png)
 
 <출처: https:\/\/www3.ntu.edu.sg\/home\/ehchua\/programming\/>
 
