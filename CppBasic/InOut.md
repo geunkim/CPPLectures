@@ -19,7 +19,7 @@ C++의 스트림은 입력 스트림과 출력 스트림으로 구성된다. 입
 
 ![IOStreams](./images/IOstreams.png)
 
-<출처: https:\/\/www3.ntu.edu.sg\/home\/ehchua\/programming\/>
+  <출처: https:\/\/www3.ntu.edu.sg\/home\/ehchua\/programming\/>
 
 
 ## 입출력 관련 클래스
