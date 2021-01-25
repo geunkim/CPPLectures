@@ -138,7 +138,7 @@ public:
    ....
 };
 ```
-추출 연산자를 이용하여 문자열을 입력받는 경우 공백 문자를 만나면 그 전까지 입력된 문자들을 하나의 문자열로 인식하는 [프로그램](../SampleCodes/InOut/stringIn.cc)) 이다.
+추출 연산자를 이용하여 문자열을 입력받는 경우 공백 문자를 만나면 그 전까지 입력된 문자들을 하나의 문자열로 인식하는 [프로그램](../SampleCodes/InOut/stringIn.cc) 이다.
 
 ```cpp
 #include <iostream>
@@ -168,7 +168,7 @@ int main(int argc, char const *argv[])
 * size: buf[] 배열의 크기 
 * delimitChar: 문자열 입력 끝을 지정하는 구분 문자 
 
-다음은 ```getline``` 멤버 함수를 사용해서 한 줄의 문자열을 입력하는 [프로그램](../SampleCodes/InOut/strline.cc)) 이다.
+다음은 ```getline``` 멤버 함수를 사용해서 한 줄의 문자열을 입력하는 [프로그램](../SampleCodes/InOut/strline.cc) 이다.
 
 ```cpp
 #include <iostream>
