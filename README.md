@@ -6,7 +6,7 @@
 * [C++ 기초](./CppBasic)
 	- [프로그래밍 언어 개념](./CppBasic/ProgrammingLanguage.md)
 	- [C++ 프로그래밍 언어 기초](./CppBasic/Basic.md) 
-	- [키보드 입력 및 콘솔 출력]
+	- [키보드 입력 및 콘솔 출력](./CppBasic/InOut.md)
 	- [전처리기(Preprocessor)](./CppBasic/Preprocessor.md)
 	- [프로그램 연습]
 * [프로그래밍 기초](./BasicProgramming)
