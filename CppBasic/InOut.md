@@ -33,27 +33,161 @@ C++의 입출력 관련 클래스는 다음과 같은 클래스 계층 관계를
 
 | 분류   |  클래스들 |  설명  |
 |-----------|-----------|-----------|
-| 표준 입출력 클래스 | istream, ostream, iostream | 키보드 입력, 모니터 출력 |
+| 표준 입출력 클래스 | istream, ostream, iostream | 문자 단위의 입력, 출력, 입출력 스트림 , 키보드 입력, 모니터 출력 |
 | 파일 입출력 클래스 | ifstream, ofstream, fstream | 파일 입력, 파일 출력 |
 
 포준 입출력 클래스와 관련 객체, 기능, 관련 하드웨어는 다음과 같다.
 
 | 클래스  |객체 | 기능|
 |--------|-----------|--------------|
-| istream | cin   | 키보드로 부터 데이터 입력 |
-| ostream | cout  | 모니터로 데이터 출력 |
-| ostream | cerr  | 모니터로 오류 츌력 |
-
-
-
-
+| istream | cin   | **키보드**로 부터 데이터 **입력** 스트림 객체 |
+| ostream | cout  | **모니터**로 데이터 **출력** 스트림 객체 |
+| ostream | cerr  | **모니터**로 오류 **츌력** 스트림 객체 (버퍼를 거치지 않고 출력) |
+| ostream | clog  | **모니터**로 오류 **출력** 스트림 객체 (버퍼를 거쳐 출력) |
 
 
 ## 데이터를 콘솔 화면에 출력 
 
+스크린(모니터)에 데이터를 출력하기위해 출력 스트림에 데이터를 출력하는 삽입 연산자(insertion operator) 또는 삽입자라 부르는 ```<<```연산자가 사용된다. 
+
+### 삽입 연산자
+
+C++ 입출력 시스템의 ```ostream``` 클래스에는 삽입 연산자인 ```<<``` 를 사용하여 다양한 값을 출력할 수 있다.
+다음은 ```ostream``` 클래스에서  ```<<``` 연산자 오버로딩(overloading) 된 코드이다.
 
 
-## 키보드로 부터 데이터 입력
+```cpp
+
+classs ostream : virtual public ios {
+	...
+public:
+	ostream& operator<< (char c);
+	ostream& operator<< (signed char c);
+	ostream& operator<< (unsigned char c);
+	ostream& operator<< (const char* s);
+	ostream& operator<< (const signed char* s);
+	ostream& operator<< (const unsigned char* s);
+	ostream& operator<< (int n);
+	ostream& operator<< (double d);
+
+   ....
+};
+```
+
+```ostream``` 클래스 내의 ```<<``` 연산자의 반환 자료형(함수를 참조)은 ```ostream``` 클래스 형태이며
+반환 자료형은 ```ostream&``` 출력 스트림의 참조가 반환된다. 
+
+### 삽입 연산자의 동작 순서  
+
+다음의 ```<<``` 연산자의 실행 과정은 다음과 같다. 
+
+```cpp
+cout << "age: " << 24 << endl;```
+
+ i) ``cout << "age: "``에서 연산자 함수를 호출한다. 매개변수로 전달되는 것은 "age: " 이므로 
+ ``ostream operator<< (const char* s)`` 를 호출하고 "age: "를 매개변수로 전달한다. 
+
+ ```cpp
+ ostream& operator << (const char* s) {
+ 	스트림 버퍼에 "age :" 를 저장한다.
+ 	return *this    // 이 스트림의 참조를 반환한다.
+}
+```
+여기서 ``*this``는 현재 스트림에 대한 참조이다. 현재 스트림이 ``cout``이기 때문에 반환되는 참조도 ``cout``을 가리킨다. 즉 ``cout << "age: "``의 결과는 스트림 버퍼에 값이 저장된 후 cout 이 반환단다.
+
+ii) 그 후 ```cout << 24``` 이 호출된다. 
+
+```cpp
+ ostream& operator << (int n) {
+ 	스트림 버퍼에 n(24) 를 저장한다.
+ 	return *this    // 이 스트림의 참조를 반환한다.
+}
+```
+```cout << "age: " <<< 24```
+
+실행된  후에는 ```cout``` 스트림이 반환되고 스트림 버퍼에는 ``age: 24`` 가 저장된다. 
+
+iii) 그 후  ```cout << endl``` 이 호출된다. 
+
+스트림 버퍼에 줄바꿈 문자를 저장하고 스크린에 스트림 버퍼의 내용을 출력한다.  
+
+
+## 키보드로 부터 데이터 입력 
+
+입력스트림 ```istream```의 객체 ```cin```은 키보드와 C++ 응용 프로그램을 연결하는 C++ 표준 입력 스트림 객체(standard input stream object)이다. 키보드로 부터 입력되는 값은 모두 ```cin``` 객체의 스트림 버퍼에 저장되며 응용 프로그램은 ```cin``` 객체의 스트림 버퍼에 저장된 키 값을 읽는다.  
+
+### 추출 연산자
+
+데이터를 키보드로 부터 입력하는 클래스인 ```istream```의 ```cin```과 함께 사용하는 ```>>``` 연산자를 
+추출 연산자(extraction operator) 또는 추출자라고 부른다. ```>>``` 연산자는 ```cin``` 으로 부터 키를 입력 받거나 파일에서 데이터를 읽을 때 사용된다. 
+C++ 입출력 시스템은 다음과 같이 입력 스트림으로 부터 값을 입력받는 다양한 ```>>``` 연산자를 ```istream``` 클래스에 연산자 오버로딩된다. 
+
+```cpp
+classs istream : virtual public ios {
+	...
+public:
+	istream& operator>> (char& c);       //문자를 입력하는 >> 연산자 
+	istream& operator>> (signed char& c);
+	istream& operator>> (unsigned char& c);
+	istream& operator>> (const char* s);
+	istream& operator>> (const signed char* s);
+	istream& operator>> (const unsigned char* s);
+	istream& operator>> (int& n);
+	istream& operator>> (double& d);
+
+   ....
+};
+```
+추출 연산자를 이용하여 문자열을 입력받는 경우 공백 문자를 만나면 그 전까지 입력된 문자들을 하나의 문자열로 인식하는 [프로그램](../SampleCodes/InOut/stringIn.cc)) 이다.
+
+```cpp
+#include <iostream>
+using namespace std;
+
+int main(int argc, char const *argv[])
+{
+	char arr[20];
+	cout << "문자열을 입력하시오:";
+	cin >> arr;
+	cout << arr << endl;
+
+	return 0;
+}
+```
+
+### 공백이 포함된 문자열 입력 
+
+공백이 포함된 문자열을 입력받기 위해서는 ```cin```객체의 ```getline()```  멤버함수를 사용한다. 
+```getline()```함수의 프로토타입(원형)은 다음과 같다.
+
+```cpp
+ cin.getline(char buf[], int size, char delimitChar);
+```
+
+* buf: 키보드로부터 읽은 문자열을 저장할 배열 
+* size: buf[] 배열의 크기 
+* delimitChar: 문자열 입력 끝을 지정하는 구분 문자 
+
+다음은 ```getline``` 멤버 함수를 사용해서 한 줄의 문자열을 입력하는 [프로그램](../SampleCodes/InOut/strline.cc)) 이다.
+
+```cpp
+#include <iostream>
+using namespace std;
+
+int main(int argc, char const *argv[])
+{
+	char inbuf[100];
+
+	cout << "문자열을 입력하시오: ";
+	cin.getline(inbuf, 100, '\n');
+
+	cout << "length of input string: " << strlen(inbuf) <<endl;
+	cout << "input data: " << inbuf << endl;
+
+	return 0;
+}
+```
+
 
 
 
