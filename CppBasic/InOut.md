@@ -48,9 +48,81 @@ C++의 입출력 관련 클래스는 다음과 같은 클래스 계층 관계를
 
 ## 데이터를 콘솔 화면에 출력 
 
-스크린(모니터)에 데이터를 출력하기위해 출력 스트림에 데이터를 출력하는 삽입 연산자(insertion operator) 또는 삽입자라 부르는 ```<<```연산자가 사용된다. 
+
+### ostream의 문자출력 멤버함수 
+
+```cpp
+ostream& put(char ch);  // ch에 저장된 문자를 스트림에 출력
+ostream& write(char* str, int n);  //str 배열에 저장된 n 개의 문자를 스트림에 출력 
+ostream& flush();   // 스트림 버퍼에 저장된 데이터를 강제 출력 
+```
+
+* ``put()`` 메소드
+
+```cpp
+cout.put('C');
+```
+``put()`` 은 문자 단위로 출력하는 cout 객체의 멤버함수로 문자 'C'를 출력하는 코드 예이다. 
+
+
+```cpp
+cout.put(65);
+```
+다음은 ASCII 코드 값 65에 해당하는 문자인 'A'를 화면에 출력하는 코드 예이다. 다음 [프로그램](../SampleCodes/InOut/ioPut.cc)은 ASCII 코드 값 65 부터 69 까지의 문자를 출력하는 코드이다. 'A' 부터 'E'까지 문자를 출력한다. 
+
+```cpp
+#include <iostream>
+using namespace std;
+
+int main(int argc, char const *argv[])
+{
+	int i = 0;
+
+	while(i < 5){
+		cout.put(65+i);
+		i++;
+	}
+	cout.put('\n');
+
+	return 0;
+}
+```
+
+```cpp
+cout.put()
+``` 
+멤버 함수의 반환 자료형은 ```ostream&``` 클래스의 참조로 ```cout```객체를 반환한다. 그러므로 
+
+```cpp
+cout.put('A').put('B').put('C').put('\n');
+```
+은 화면에 문자 'A', 'B', 'C' 가 연속적으로 출력한다. 이를 이용한 [프로그램](../SampleCodes/InOut/putConcate.cc)은 다음과 같다.
+
+```cpp
+#include <iostream>
+using namespace std;
+
+int main(int argc, char const *argv[])
+{
+	cout.put('A').put('B').put('C').put('D').put('\n');
+	return 0;
+}
+```
+
+* ``write()`` 메소드
+
+```write()``` 멤버 함수는 배열에 저장된 문자를 출력하는 함수로 예제 [프로그램]은 다음과 같다. 
+
+```cpp
+
+
+
+```
+
 
 ### 삽입 연산자
+
+스크린(모니터)에 데이터를 출력하기위해 출력 스트림에 데이터를 출력하는 삽입 연산자(insertion operator) 또는 삽입자라 부르는 ```<<```연산자가 사용된다. 
 
 C++ 입출력 시스템의 ```ostream``` 클래스에는 삽입 연산자인 ```<<``` 를 사용하여 다양한 값을 출력할 수 있다.
 다음은 ```ostream``` 클래스에서  ```<<``` 연산자 오버로딩(overloading) 된 코드이다.
