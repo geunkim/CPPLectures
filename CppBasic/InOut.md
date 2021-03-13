@@ -62,27 +62,35 @@ ostream& flush();   // 스트림 버퍼에 저장된 데이터를 강제 출력
 ```cpp
 cout.put('C');
 ```
+
 ``put()`` 은 문자 단위로 출력하는 cout 객체의 멤버함수로 문자 'C'를 출력하는 코드 예이다. 
 
 
 ```cpp
 cout.put(65);
 ```
+
 다음은 ASCII 코드 값 65에 해당하는 문자인 'A'를 화면에 출력하는 코드 예이다. 다음 [프로그램](../SampleCodes/InOut/ioPut.cc)은 ASCII 코드 값 65 부터 69 까지의 문자를 출력하는 코드이다. 'A' 부터 'E'까지 문자를 출력한다. 
 
 ```cpp
+/*
+	File: ioPut.cc
+	Author: Geun-Hyung Kim
+	Description:
+	ASCII 코드 값 65에서 69까지 해당되는 문자를 출력하느 프로그램
+*/
 #include <iostream>
 using namespace std;
 
 int main(int argc, char const *argv[])
 {
-	int i = 0;
+	int i = 0; 			 //정수형 변수 i 선언과 0 으로 초가화
 
-	while(i < 5){
-		cout.put(65+i);
-		i++;
+	while(i < 5){        // i의 값이 5보다 작으면 중괄호 내 코드 수행         
+		cout.put(65+i);  // 65+i  값이 해당하는 문자를 콘솔화면에 출력
+		i++;             // i를 1 증가
 	}
-	cout.put('\n');
+	cout.put('\n');      // 줄 바꿈 문자 출력 
 
 	return 0;
 }
@@ -91,14 +99,23 @@ int main(int argc, char const *argv[])
 ```cpp
 cout.put()
 ``` 
+
 멤버 함수의 반환 자료형은 ```ostream&``` 클래스의 참조로 ```cout```객체를 반환한다. 그러므로 
 
 ```cpp
 cout.put('A').put('B').put('C').put('\n');
 ```
+
 은 화면에 문자 'A', 'B', 'C' 가 연속적으로 출력한다. 이를 이용한 [프로그램](../SampleCodes/InOut/putConcate.cc)은 다음과 같다.
 
 ```cpp
+/* 
+	File: putConcate.cc
+	Author: Geun-Hyung Kim
+	Description:
+	put 함수의 결과에 새로운 put 함수를 연속해서 호출하는 프로그램 
+*/
+
 #include <iostream>
 using namespace std;
 
@@ -111,25 +128,40 @@ int main(int argc, char const *argv[])
 
 * ``write()`` 메소드
 
-```write()``` 멤버 함수는 배열에 저장된 문자를 출력하는 함수로 예제 [프로그램]은 다음과 같다. 
+``write()`` 멤버 함수는 배열에 저장된 문자를 출력하는 함수로 [예제 프로그램](./SampleCoes/InOut/inWrite.cc)은 다음과 같다. 
 
-```cpp
+```c++
+/*
+	File: ioWrite.cc
+	Author: Geun-Hyung Kim
+	Description:
+	"Hello World!" 문자열을 str 배열에 저장하고 배열에 저장된 데이터를 write 함수를 
+	이용하여 콘솔화면에 출력하는 프로그램 
+*/
 
+#include <iostream>
+using namespace std;
 
+int main(int argc, char const *argv[])
+{
+	char str[] = "Hello World!";  // "Hello World!" 문자열을 배열에 저장
 
+	cout.write(str, strlen(str)); // 배열에 저장한 데이터를 cout.write 함수로 콘솔에 출력 
+	cout.put('\n');               // 콘솔에 줄바꿈 문자를 출력 
+	
+	return 0;
+}
 ```
-
 
 ### 삽입 연산자
 
-스크린(모니터)에 데이터를 출력하기위해 출력 스트림에 데이터를 출력하는 삽입 연산자(insertion operator) 또는 삽입자라 부르는 ```<<```연산자가 사용된다. 
+스크린(모니터)에 데이터를 출력하기위해 출력 스트림에 데이터를 출력하는 삽입 연산자(insertion operator) 또는 삽입자라 부르는  ``<<``연산자가 사용된다. 
 
-C++ 입출력 시스템의 ```ostream``` 클래스에는 삽입 연산자인 ```<<``` 를 사용하여 다양한 값을 출력할 수 있다.
-다음은 ```ostream``` 클래스에서  ```<<``` 연산자 오버로딩(overloading) 된 코드이다.
+C++ 입출력 시스템의 ``ostream`` 클래스에는 삽입 연산자인 ``<<`` 를 사용하여 다양한 값을 출력할 수 있다.
+다음은 ``ostream`` 클래스에서  ``<<`` 연산자 오버로딩(overloading) 된 코드이다.
 
 
 ```cpp
-
 classs ostream : virtual public ios {
 	...
 public:
@@ -141,58 +173,59 @@ public:
 	ostream& operator<< (const unsigned char* s);
 	ostream& operator<< (int n);
 	ostream& operator<< (double d);
-
    ....
 };
 ```
 
-```ostream``` 클래스 내의 ```<<``` 연산자의 반환 자료형(함수를 참조)은 ```ostream``` 클래스 형태이며
-반환 자료형은 ```ostream&``` 출력 스트림의 참조가 반환된다. 
+``ostream`` 클래스 내의 ``<<`` 연산자의 반환 자료형(함수를 참조)은 ``ostream`` 클래스 형태이며
+반환 자료형은 ``ostream&`` 출력 스트림의 참조가 반환된다. 
 
 ### 삽입 연산자의 동작 순서  
 
-다음의 ```<<``` 연산자의 실행 과정은 다음과 같다. 
+다음의 ``<<`` 연산자의 실행 과정은 다음과 같다. 
 
 ```cpp
-cout << "age: " << 24 << endl;```
+cout << "age: " << 24 << endl;
+```
 
- i) ``cout << "age: "``에서 연산자 함수를 호출한다. 매개변수로 전달되는 것은 "age: " 이므로 
+1) ``cout << "age: "`` 에서 연산자 함수를 호출한다. 매개변수로 전달되는 것은 "age: " 이므로 
  ``ostream operator<< (const char* s)`` 를 호출하고 "age: "를 매개변수로 전달한다. 
 
- ```cpp
- ostream& operator << (const char* s) {
+```cpp
+ostream& operator << (const char* s) {
  	스트림 버퍼에 "age :" 를 저장한다.
  	return *this    // 이 스트림의 참조를 반환한다.
 }
 ```
 여기서 ``*this``는 현재 스트림에 대한 참조이다. 현재 스트림이 ``cout``이기 때문에 반환되는 참조도 ``cout``을 가리킨다. 즉 ``cout << "age: "``의 결과는 스트림 버퍼에 값이 저장된 후 cout 이 반환단다.
 
-ii) 그 후 ```cout << 24``` 이 호출된다. 
+2) 그 후 ``cout << 24`` 이 호출된다. 
 
 ```cpp
- ostream& operator << (int n) {
+ostream& operator << (int n) {
  	스트림 버퍼에 n(24) 를 저장한다.
  	return *this    // 이 스트림의 참조를 반환한다.
 }
 ```
+
 ```cout << "age: " <<< 24```
 
-실행된  후에는 ```cout``` 스트림이 반환되고 스트림 버퍼에는 ``age: 24`` 가 저장된다. 
+실행된  후에는 ``cout`` 스트림이 반환되고 스트림 버퍼에는 ``age: 24`` 가 저장된다. 
 
-iii) 그 후  ```cout << endl``` 이 호출된다. 
+3) 그 후  ``cout << endl`` 이 호출된다. 
 
 스트림 버퍼에 줄바꿈 문자를 저장하고 스크린에 스트림 버퍼의 내용을 출력한다.  
 
 
 ## 키보드로 부터 데이터 입력 
 
-입력스트림 ```istream```의 객체 ```cin```은 키보드와 C++ 응용 프로그램을 연결하는 C++ 표준 입력 스트림 객체(standard input stream object)이다. 키보드로 부터 입력되는 값은 모두 ```cin``` 객체의 스트림 버퍼에 저장되며 응용 프로그램은 ```cin``` 객체의 스트림 버퍼에 저장된 키 값을 읽는다.  
+입력스트림 ``istream``의 객체 ``cin``은 키보드와 C++ 응용 프로그램을 연결하는 C++ 표준 입력 스트림 객체(standard input stream object)이다. 키보드로 부터 입력되는 값은 모두 ``cin`` 객체의 스트림 버퍼에 저장되며 응용 프로그램은 ``cin`` 객체의 스트림 버퍼에 저장된 키 값을 읽는다.  
 
 ### 추출 연산자
 
-데이터를 키보드로 부터 입력하는 클래스인 ```istream```의 ```cin```과 함께 사용하는 ```>>``` 연산자를 
-추출 연산자(extraction operator) 또는 추출자라고 부른다. ```>>``` 연산자는 ```cin``` 으로 부터 키를 입력 받거나 파일에서 데이터를 읽을 때 사용된다. 
-C++ 입출력 시스템은 다음과 같이 입력 스트림으로 부터 값을 입력받는 다양한 ```>>``` 연산자를 ```istream``` 클래스에 연산자 오버로딩된다. 
+데이터를 키보드로 부터 입력하는 클래스인 ``istream``의 ``cin``과 함께 사용하는 ``>>`` 연산자를 
+추출 연산자(extraction operator) 또는 추출자라고 부른다. ``>>`` 연산자는 ``cin`` 으로 부터 키를 입력 받거나 파일에서 데이터를 읽을 때 사용된다. 
+C++ 입출력 시스템은 다음과 같이 입력 스트림으로 부터 값을 입력받는 다양한 ``>>`` 연산자를 ``istream`` 클래스에 연산자 오버로딩된다. 
 
 ```cpp
 classs istream : virtual public ios {
@@ -210,18 +243,26 @@ public:
    ....
 };
 ```
+
 추출 연산자를 이용하여 문자열을 입력받는 경우 공백 문자를 만나면 그 전까지 입력된 문자들을 하나의 문자열로 인식하는 [프로그램](../SampleCodes/InOut/stringIn.cc) 이다.
 
 ```cpp
+/*
+	File: stringIn.cc
+	Author: Geun-Hyung Kim
+	Description:
+	키보드로 부터 문자열을 입력받아 콘솔에 출력하는 프로그램 
+*/
 #include <iostream>
 using namespace std;
 
 int main(int argc, char const *argv[])
 {
-	char arr[20];
-	cout << "문자열을 입력하시오:";
-	cin >> arr;
-	cout << arr << endl;
+	char arr[20];				// 문자형 배열 선언
+	cout << "문자열을 입력하시오:";  
+ 	cin >> arr;                 // 키보드로 부터 문자열을 입력 받아 arr 배열 변수에 저장
+ 								// 키보드에서 return에 입력되면 다음 코드로 이동
+	cout << arr << endl;        // arr 배열에 저장된 문자열과 줄바꿈 문자를 콘손에 출력
 
 	return 0;
 }
@@ -229,8 +270,8 @@ int main(int argc, char const *argv[])
 
 ### 공백이 포함된 문자열 입력 
 
-공백이 포함된 문자열을 입력받기 위해서는 ```cin```객체의 ```getline()```  멤버함수를 사용한다. 
-```getline()```함수의 프로토타입(원형)은 다음과 같다.
+공백이 포함된 문자열을 입력받기 위해서는 ``cin``객체의 ``getline()``  멤버함수를 사용한다. 
+``getline()``함수의 프로토타입(원형)은 다음과 같다.
 
 ```cpp
  cin.getline(char buf[], int size, char delimitChar);
@@ -240,25 +281,33 @@ int main(int argc, char const *argv[])
 * size: buf[] 배열의 크기 
 * delimitChar: 문자열 입력 끝을 지정하는 구분 문자 
 
-다음은 ```getline``` 멤버 함수를 사용해서 한 줄의 문자열을 입력하는 [프로그램](../SampleCodes/InOut/strline.cc) 이다.
+다음은 ``getline`` 멤버 함수를 사용해서 한 줄의 문자열을 입력하는 [프로그램](../SampleCodes/InOut/strline.cc) 이다.
 
 ```cpp
+/*
+	File: strline.cc
+	Author: Geun-Hyung Kim
+	Description:
+	키보드로 입력된 문자 14개 또는 줄 바꿈 문자까지의 문자만을 입력받는 프로그램 
+*/
+
 #include <iostream>
 using namespace std;
 
 int main(int argc, char const *argv[])
 {
-	char inbuf[100];
+	char inbuf[100];     // 문자형 배열 선언 (저장공간 100개)
 
 	cout << "문자열을 입력하시오: ";
-	cin.getline(inbuf, 100, '\n');
-
-	cout << "length of input string: " << strlen(inbuf) <<endl;
-	cout << "input data: " << inbuf << endl;
+	
+	cin.getline(inbuf, 15, '\n');   // 입력 버퍼에서 14 문자 또는 (\n)까지의 문자를 읽어와서 inbuf에 저장
+	cout << "length of input string: " << strlen(inbuf) <<endl;  // strlen 함수를 사용하여 inbuf에 저장된 문자열의 길이를 구해 콘솔 화면에 출력 
+	cout << "input data: " << inbuf << endl; // inbuf에 저장된 문자열 콘솔화면에 출력
 
 	return 0;
 }
 ```
+## 문제 
 
 
 
