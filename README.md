@@ -44,13 +44,13 @@
 * 객체와 포인터
 * [클래스와 상속](./Inheritance)
 * 함수의 진화
-  - 오버라이딩
+  	- 오버라이딩
 * [다형성](./Polymorphism)
-  - [가상함수](./Polymorphism/VirtualFunction.md)
-  - 순수 가상함수
+  	- [가상함수](./Polymorphism/VirtualFunction.md)
+  	- 순수 가상함수
 * [중복](./Overload)
-  - [연산자 중복](./Overload/OperatorOverload.md)
-  - 프렌드와 연산자 중복
+  	- [연산자 중복](./Overload/OperatorOverload.md)
+  	- 프렌드와 연산자 중복
 * [에외처리와 형 변환](./Exception)
 * [템플릿](./Template)
 * [STL(Standard Template Library)](./STL)
@@ -60,13 +60,13 @@
 -------------------------------
 * To do (목록에 추가해야 할 내용들)
 
- - 함수 개체(function object)람수, functor
- - 람다 표현식(lambda expression)
- - 우측 값(rvalue)과 좌축 값(lvalue)
- - 스마트 포인터(Smart Pointer): shared_ptr, unique_ptr, weak_ptr
- - 타입추론(type deduction)
- - 우측 값 레퍼런스 (rvalue reference)
- - 0. 역사와 호환성
+	- 함수 개체(function object)람수, functor
+ 	- 람다 표현식(lambda expression)
+ 	- 우측 값(rvalue)과 좌축 값(lvalue)
+ 	- 스마트 포인터(Smart Pointer): shared_ptr, unique_ptr, weak_ptr
+ 	- 타입추론(type deduction)
+ 	- 우측 값 레퍼런스 (rvalue reference)
+ 	- 0. 역사와 호환성
 
 
 References
