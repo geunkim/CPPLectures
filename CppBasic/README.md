@@ -17,6 +17,6 @@
 - [프로그래밍 언어 개념](./ProgrammingLanguage.md)
 - [C++ 프로그래밍 언어 기초](./Basic.md) 
 - [키보드 입력 및 콘솔 출력](./InOut.md)
-- [전처리기(Preprocessor)](./Preprocessor.md)
+- [전처리기 (Preprocessor)](./Preprocessor.md)
 
 
