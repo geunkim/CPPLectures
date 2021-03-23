@@ -95,7 +95,7 @@ else {
 ```문장 2```는 _condition 1_ 을 만족하지 않으며 _condition 2_ 를 만족하는 경우(!_condtion 1_ && _condition 2_) 실행된다. 
 ```문장 3```은 _condition 1_ 이 만족되지 않으며 _condition 2_ 가 만족되지 않은 경우(!_condition 1_ && !_condition 2_) 실행된다.
 
-##  switch-case-brea-default 문
+##  switch-case-break-default 문
 
 ```switch 문```은 ```if else 문```과 같이 프로그램 제어 흐름을 여러 방향으로 나누기 위해 사용된다. ```switch 문```
 은  ```case```, ```break```, ```default``` 키워드와 함께 사용된다. 
