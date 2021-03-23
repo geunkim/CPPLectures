@@ -79,7 +79,7 @@ C++에서는 세 가지 방법이 사용된다.
 앞의 변수 ```bulbBrightness```를 선언할 때 대입연산자를 사용하여 저장공간에 100을 저장하는(초기화) 코드는 다음과 같다.
 
 ```C++
-unsighed char bulbBrightness = 100; // 변수 bulbBrightness 선언과 동시에 저장 값 초기화 
+unsigned char bulbBrightness = 100; // 변수 bulbBrightness 선언과 동시에 저장 값 초기화 
 ```
 
 두번쨰는 소괄호 ()를 사용하여 직접 초기화하는 방법이다. **직접 초기화**는 일부 데이터 형태에서 복사 초기화 보다 성능이 더 뛰어날 수 있다.
