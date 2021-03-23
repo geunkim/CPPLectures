@@ -91,9 +91,9 @@ else {
   ...
 }
 ``` 
-앞의 프로그램 코드에서 ```문장 1```은 _condition 1_ 을 만족하는 경우 실행되고 
-```문장 2```는 _condition 1_ 을 만족하지 않으며 _condition 2_ 를 만족하는 경우(!_condtion 1_ && _condition 2_) 실행된다. 
-```문장 3```은 _condition 1_ 이 만족되지 않으며 _condition 2_ 가 만족되지 않은 경우(!_condition 1_ && !_condition 2_) 실행된다.
+앞의 프로그램 코드에서 "문장 1"은 _condition 1_ 을 만족하는 경우 실행되고 
+"문장 2" 는 _condition 1_ 을 만족하지 않으며 _condition 2_ 를 만족하는 경우(!_condtion 1_ && _condition 2_) 실행된다. 
+"문장 3" 은 _condition 1_ 이 만족되지 않으며 _condition 2_ 가 만족되지 않은 경우(!_condition 1_ && !_condition 2_) 실행된다.
 
 ##  switch-case-break-default 문
 
