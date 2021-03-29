@@ -52,7 +52,7 @@ if 문의 몸체라고 한다. 조건식의 조건이 만족되었을 때 실행
 _condition_ 을 만족하지 않을 때 다른 일(프로그램 문장)을 처리하는 경우에 사용된다. 
 ```if```는 독립적으로 사용될 수도 있고 ```else```와 짝을 맞추어 사용될 수도 있다. ```else```는 독립적으로 사용될 수 없으며 항상 ```if```와 함께 사용되어야 한다. 
 
-```if-else 문```의 형식은 다음과 같다.
+```if-else```문의 형식은 다음과 같다.
 
 ```C++
 if (condition) {   // condition이 만족하는 경우 실행되는 블록
@@ -70,11 +70,53 @@ else {            // condition이 만족하지 않으면 실행되는 블록
 ```
 앞의 프로그램 코드는 _condtion_ 을 만족하면 "문장 1" 이 포함된 중괄호의 문장이 실행되고 _condition_ 이 만족되지
 않는 경우 "문장 10"이 포함된 중괄호의 문장이 실행된다. 
+다음은 ```if-else```문을 사용한 조건 문으로 작성한 [프로그램](../SampleCodes/Control/simpleCompare.cc) 이다.
 
+```c++
+#include <iostream>
+using namespace std;
+
+int main(int argc, char const *argv[])
+{
+  int x = 10;
+  int y = 20;
+
+  if(x > y)
+    cout << "x(" << x << ")는 " << "y(" << y << ")보다 크다." << endl;
+  else
+    cout << "y(" <<y << ")는 " << "x(" <<x << ")보다 크거나 같다." << endl;
+  return 0;
+}
+```
+
+다음은 정수형 변수 ```score```의 값을 비교하여 95 이상이면 **Pass**를 출력하고 95 미만이면 **Fail**을 출력하는 [프로그램](./SampleCodes/simpleif_else.cc)이다. ``After if-else-statement`` 문자열은 ```if-else```문을 마친 후 항상 출력된다. 
+
+```c++
+#include <iostream>
+using namespace std;
+
+int main(int argc, char const *argv[])
+{
+  int score = 85;
+
+  if(score >= 95)
+  {
+    cout << "Pass" << endl;
+  }
+  else 
+  {
+    cout << "Fail" << endl;
+  }
+
+  cout << "After if-else-statement" << endl;
+
+  return 0;
+}
+```
 
 ## if-else-else if 문
 
-앞의 ```if-else 문```의 ```else```의 조건을 더욱 세분한 조건으로 구분해야 할 경우 ```else if 문```을 사용하게 된다. 
+앞의 ```if-else```문의 ```else```의 조건을 더욱 세분한 조건으로 구분해야 할 경우 ```else if 문```을 사용하게 된다. 
 ```else if  문```이 사용되는 형식은 다음과 같다. 
 
 ```C++
@@ -94,6 +136,27 @@ else {
 앞의 프로그램 코드에서 "문장 1"은 _condition 1_ 을 만족하는 경우 실행되고 
 "문장 2" 는 _condition 1_ 을 만족하지 않으며 _condition 2_ 를 만족하는 경우(!_condtion 1_ && _condition 2_) 실행된다. 
 "문장 3" 은 _condition 1_ 이 만족되지 않으며 _condition 2_ 가 만족되지 않은 경우(!_condition 1_ && !_condition 2_) 실행된다.
+
+다음 [프로그램](./SampleCodes/multiCompare.cc)은 앞의 ```if-else```문에서 두 개의 값이 같은 경우를 별도로 처리하기 위해서 ```if-else if-else```문을 사용한 것이다. 
+
+```cpp
+#include <iostream>
+using namespace std;
+
+int main(int argc, char const *argv[])
+{
+  int x = 20;
+  int y = 20;
+
+  if (x > y)
+    cout << "x(" << x << ")는 " << "y(" << y << ")보다 크다." << endl;
+  else if (y > x)
+    cout << "y(" <<y << ")는 " << "x(" <<x << ")보다 크다." << endl;
+  else 
+    cout << "x(" << x << ")는 " << "y(" << y << ")와 같다." << endl;
+  return 0;
+}
+```
 
 ##  switch-case-break-default 문
 
