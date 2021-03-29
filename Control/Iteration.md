@@ -188,8 +188,12 @@ int main(int argc, char const *argv[])
 	return 0;
 }
 ```
+## break 문  continue 문 
 
-### 무한 반복
+
+
+
+## 무한 반복
 
 * ```for```문의 세 부분이 모두 비워있는 경우 ```for```문은 무한 반복된다.
 * ```while```문과 ```do~while```문을 사용하여 무한 반복문을 작성하기 위해서는 조건식 부분에 **true**로 명시하면 된다.
