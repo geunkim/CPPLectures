@@ -14,4 +14,5 @@
 - [자료형, 자료형 의미, 종류](./DataType.md)
 - [변수의 사용](./VariableUsage.md)
 - [연산자와 연산자 우선순위](./Operators.md)
+- [프로그램 연습](./Problems.md)
 
