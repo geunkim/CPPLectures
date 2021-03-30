@@ -190,7 +190,7 @@ int main(int argc, char const *argv[])
 ```
 ## break 문  
 
-[다음](../SampleCodes/Conrol/breakIteration.cc)은 반복문에서 break 문을 사용한 예로 **ㅑ** 의 값이 0 에서 부터 5까지 출력을 한 후 반복문을 강제 종려하는 예아다. 
+[다음](../SampleCodes/Conrol/breakIteration.cc)은 반복문에서 ``break`` 문을 사용한 예로 **i** 의 값이 0 에서 부터 5까지 출력을 한 후 반복문을 강제 종료하는 예아다. 
 가능한 break는 사용을 하지 않고 반복문의 계속 조건(종료 조건)을 활용하여 반본문을 종료하도록 프로그램을 작성하는 것이 바람직하다.
 
 ```c++
@@ -210,10 +210,26 @@ int main(int argc, char const *argv[])
 }
 ```
 
-#continue 문 
+## continue 문 
 
+[다음](../SampleCodes/Conrol/continueIteration.cc)은 반복문에서 ``continue`` 문을 사용한 예로 **i** 의 값이 5 일 때와 8 일 때를 출력하지 않고 반복문을 계속하는 예아다. 
 
+```C++
+#include <iostream>
+using namespace std;
 
+int main(int argc, char const *argv[])
+{
+	int i = 0;
+	for( ; i < 10; i++) {
+		if(i == 5 || i == 8) continue;
+		cout <<"i: " << i << endl;
+	}
+
+	cout << "after i: " << i << endl;
+	return 0;
+}
+```
 
 ## 무한 반복
 
