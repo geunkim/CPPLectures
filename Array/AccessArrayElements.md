@@ -38,6 +38,13 @@ int score[3] = {50, 40, 30};
 for(int i = 0; i < 3; i++) 
   cout << score[i] << endl; 
 ```
+
+```C++
+int score[] = {50, 40, 30};
+for(auto data: score)
+	cout << data << endl;
+```
+
 ## 배열의 복사
 
 배열에 저장된 요소들은 다른 배열로 복사를 하는 경우 기반 대입연산자로는 불가능하다. 
@@ -54,20 +61,20 @@ for(int i = 0; i < 5; i++)
 두 배열이 각 요소에 같은 값이 저장되어 있는지 아닌지를 확인하는 확인해보자.
 두 배열을 비교하기 위해서 먼저 두 배열의 크기가 같아야 한다. 
 
-```C++
+```c++
 int source[5] = {70, 80, 90, 100, 50};   // 기존 데이터
 int comp1[5] = {70, 80, 90, 100, 50};    // 비교할 배열 1
 int comp2[5] = {70, 80, 90, 10, 40};     // 비교할 배열 2
 bool same = false;                       // 비교 결과를 저장할 변수
 
-// source 와 comp1 비교 - 무식한 비교 
+// source 와 comp1 비교 
 for(int i = 0; i < 5; i++) {
   if(source[i] == comp1[i]) same = true;
   else same = false;
 }
 // 여기서 same에 저장된 데이터가 true이면 두 배열을 같은 것, false이면 다른 것 
 
-// source 와 comp2 비교 - 무식한 비교
+// source 와 comp2 비교
 for(int i = 0; i < 5; i++) {
   if(source[i] == comp2[i]) same = true;
   else same = false;
