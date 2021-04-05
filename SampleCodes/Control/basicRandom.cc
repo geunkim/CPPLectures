@@ -13,7 +13,7 @@ int main(int argc, char const *argv[])
 {
 	int num;
 	srand((unsigned int)time(NULL));  	// rand() 함수의 seed 설정, 프로그램이 실행될 때 마다 time 값을 활용하여 seed 값 설정
-	num = rand() % 200; 				//  rand()함수: 0 ~ RAND_MAX 의 값을 가짐, (0 <= num) && (num <= 200)
+	num = rand() % 200; 				//  rand()함수: 0 ~ RAND_MAX 의 값을 가짐, (0 <= num) && (num < 200)
 
 	cout << "num: " << num << endl;
 	//
