@@ -26,8 +26,13 @@
 	- [배열과 문자열](./Array/charArray.md)
 	- [다차원 배열](./Array/multiDimArray.md)
 	- [프로그램 연습](./Array/Problems.md)
-* [함수](./function)
-	- [함수 중복](./function/overload.md)
+* [함수](./Function)
+	- [함수관련 용어](./Function/Concept.md)
+	- [함수 호출](./Function/functionCall.md)
+	- [디폴트 매개 변수](./Function/defaultArgumentr.md)
+	- [가변 매개변수 함수](./Function/variadic.md)
+	- [함수 오버로드](./Function/overload.md)
+	- [함수 템플릿](./Template/functionTemplate.md)
 	- [프로그램 연습]
 * [포인터 변수](./Pointer)
 	- [프로그램 연습] 
