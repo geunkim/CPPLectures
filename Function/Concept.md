@@ -85,7 +85,10 @@ void Greeting(bool state)
 }                                            // 함수 몸체 끝
 ```
 
-함수 헤더: ```void Greeting(bool state)```
+함수 헤더: 
+```c++
+void Greeting(bool state)
+```
 
 
 3. 입력 데이터와 반환 데이터 모두 있는 함수 예 
