@@ -31,12 +31,6 @@
 
 ## 값의 의한 호출 (call by value)
 
-함수를 호출할 때 값을 
-
-
-
-
-
 
 ## 참조에 의한 호출 (call by reference)
 
