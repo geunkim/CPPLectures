@@ -9,6 +9,8 @@
 
 ## 학습 내용
 
+[포인터 변수](./PointerVariable.md)
+
 
 
 
