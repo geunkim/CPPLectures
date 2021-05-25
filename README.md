@@ -37,7 +37,7 @@
 * [포인터 변수](./Pointer)
 	- [프로그램 연습] 
 * [구조체](./Structure)
-	- [프로그램 연습]
+	- [프로그램 연습](./Structure/Problems.md)
 * [메모리 모델과 이름 공간](./MemoryModelAndNameSpace)
 	- [프로그램 연습]
 
