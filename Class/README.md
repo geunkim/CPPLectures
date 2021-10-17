@@ -17,6 +17,7 @@
     + 묵시적 변환
   - 소멸자 
 * [정적 클래스](./Static.md) 
+* [프랜즈 클래스](../friend_function_class.md)
 
 * 복사생성자
 
