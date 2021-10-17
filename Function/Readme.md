@@ -20,7 +20,7 @@
 * [가변 매개변수 함수](./variadic.md)
 * [함수 오버로드](./overload.md)
 * [함수 템플릿](../Template/functionTemplate.md)
-* [프렌드 함수](../friend_function_class.md)
+* [프렌즈 함수](../friend_function_class.md)
 
 
 ## ToDo List
