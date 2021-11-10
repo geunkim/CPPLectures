@@ -8,7 +8,7 @@ public:
    Counter(int value = 0) { this->value = value;}
    Counter operator+(const Counter& c);
    Counter operator=(const Counter& c);
-   Conter& opeator++();  // 전위 증가
+   Counter& opeator++();  // 전위 증가
    const Counter operator++(int i);  // 후위 증가
    friend ostream& operator<<(ostream& out, const Counter& c);
 }; 
