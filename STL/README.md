@@ -73,7 +73,7 @@ C++14 버전에서는 반복자의 정확한 데이터 구조를 몰라도 auto 
  * swap 함수  
  ** a.swap(b) 와 swap(a, b)가 제공되면 일정 시간이 이루어짐 
  * ==, !=: 콘텐츠 기반 비교 
- * lexicographic 순서 비교: 크기가 같지 않은 데어터 요소가 순서를 결정
+ * lexicographic 순서 비교: 크기가 같지 않은 데이터 요소가 순서를 결정
  * begin(), end()
  * size(), empty(), max_size();
  
