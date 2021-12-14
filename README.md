@@ -7,8 +7,6 @@
 
 ![img](./CPP_기능.png)
 
-
-
 ## Part 1
 
 * [C++ 기초](./CppBasic)
