@@ -81,3 +81,6 @@ template <class ForwardIterator, class Predicate>
 ForwardIterator remove_if(ForwardIterator first, ForwardIterator last, Predicate pred);
 ```
 ```remove_if```의 마지막 인자도 부울 값을 반환하는 함수 객체이다. 함수 객체의 반환 값이 **true**이면 반복자 ```first```에서 ```last```로 접근이 되는 컨테이너로 부터 요소가 삭제된다. 인자 ```pred```에 ```<functional>``` 해더에 선언된 함수 객체 또는 직접 정의한 함수 객체를 사용할 수 있다. 
+
+
+## Sample Code
