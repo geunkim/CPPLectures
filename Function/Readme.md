@@ -15,12 +15,14 @@
 ## 학습 내용
 
 * [함수관련 용어](./Concept.md)
+* [inline 함수](./inline.md)
 * [함수 호출](./functionCall.md)
 * [디폴트 매개 변수](./defaultArgumentr.md)
 * [가변 매개변수 함수](./variadic.md)
+* [프렌즈 함수](../friend_function_class.md)
 * [함수 오버로드](./overload.md)
 * [함수 템플릿](../Template/functionTemplate.md)
-* [프렌즈 함수](../friend_function_class.md)
+
 
 
 ## ToDo List
