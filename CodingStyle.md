@@ -148,6 +148,26 @@ std::string tableName;   // 나쁨 - 대소문자 혼합 사용
 
 클래스의 데이터 멤버(static 과 non-static)는 일반 비멤버 변수처럼 이름이 지정되지만 뒤에 밑줄을 표시한다.
 
+```c++
+class TableInfo {
+  ...
+ private:
+  std::string table_name_;  // OK - underscore at end.
+  static Pool<TableInfo>* pool_;  // OK.
+};
+```
+
+####  구조체 데이터 멤버(Struct Data Members)
+
+구조체의 데이터 멤버(static 과 non-static)는 일반 비멤버 변수처럼 이름이 지정되지만 클래스의 데이터 멤버와 달리 이름 뒤에 밑줄을 사용하지 않는다. 
+
+```c++
+struct UrlTableProperties {
+  std::string name;
+  int num_entries;
+  static Pool<UrlTableProperties>* pool;
+};
+````
 
 ### 상수 이름(Constant Names)
 
