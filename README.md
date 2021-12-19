@@ -10,7 +10,7 @@
 
 ## 공통 사항
 
-* [코딩 스타일](./Coding_Style.md)
+* [코딩 스타일](./CodingStyle.md)
 
 ## Part 1
 
