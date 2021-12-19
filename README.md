@@ -7,6 +7,11 @@
 
 ![img](./CPP_기능.png)
 
+
+## 공통 사항
+
+* [코딩 스타일](./Coding_Style.md)
+
 ## Part 1
 
 * [C++ 기초](./CppBasic)
