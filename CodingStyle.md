@@ -199,6 +199,27 @@ OpenFileOrDie()
 
 ### 열거형 이름(Enumerator names)
 
+범위가 지정된 열거형과 범위가 지정되지 않은 열거형은 모두 매크러가 아닌 상수처럼 이름을 지정되어야 한다. 즉 ```ENUM_NAME```이 아닌 ```kEnumName```을 사용한다. 
+
+
+```c++
+enum class UrlTableError {
+  kOk = 0,
+  kOutOfMemory,
+  kMalformedInput,
+};
+```
+
+```c++
+enum class AlternateUrlTableError {
+  OK = 0,
+  OUT_OF_MEMORY = 1,
+  MALFORMED_INPUT = 2,
+};
+```
+2009년 1월까지 매크로와 같이 열거값의 이름을 붙이는 방식이 사용되었다. 이 때문에 열거값과 매크로 간의 이름 충돌 문제가 발생했다.
+따라서 상수 스타일의 명명을 선호하는 변경 사항이 적용되었다. 새로운 코드는 상수 스타일 명명을 사용해야 한다. 
+
 ### 매크로 이름(Macro Names)
 
 ### 명명 규칙의 예외(Exceptions to Naming Rules) 
