@@ -255,17 +255,17 @@ enum class AlternateUrlTableError {
 
 ## 주석 (Comments)
 
-### 주식 스타일
+### 주식 스타일 (Comment Style)
 
-### 파일 주석
+### 파일 주석 (File Comments)
 
-### 타입 주석
+### 타입 주석 (Class Comments)
 
-### 함수 주석
+### 함수 주석 (Function Comments)
 
-### 변수 주석
+### 변수 주석 (Variable Comments)
 
-### 구현 주석
+### 구현 주석 (Implementation Comments)
 
 ### 구두점, 철자 및 문법
 
@@ -274,10 +274,17 @@ enum class AlternateUrlTableError {
 
 ## 함수 (Functions)
 
+### 입력 및 출력 (Inputs and Outputs)
+
+### 짧은 함수 작성 (Write Short Functions)
+
+### 함수 오버로딩 (Function Overloading)
+
+### 디폴트 매개변수 (Default Arguments)
+
+### 후행 일반 유형 구문 (Trailing Return Type Syntax)
 
 ## 클래스 (Class)
-
-
 
 
 
