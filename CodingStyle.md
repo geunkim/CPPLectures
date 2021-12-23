@@ -242,9 +242,9 @@ enum class AlternateUrlTableError {
 
 기존 C 또는 C++ 엔티티와 유사한 것에 명명을 하는 경우 기존 명명 규칙 체계를 따를 수 있다. 
 
-```bigopen()````: ```open()```형식을 따르는 함수 이름 
+```bigopen()```: ```open()```형식을 따르는 함수 이름 
 
-```uint````: typedef
+```uint```: typedef
 
 ```bigpos```: ```pos```형식을 따르는 구조체, 클래스
 
