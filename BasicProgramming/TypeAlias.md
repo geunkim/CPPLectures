@@ -11,7 +11,10 @@ C++11 에서 등장한 ```using``` 키워드를 이용한 자료형 별칭은 �
 ```using``` 키워드를 사용한 별칭 선언의 구문을 다음과 같다.
 
 ```c++
-using identifier = type;
+using identifier attr(optional) = type;
+
+template <template-parameter-list>
+using identifier attr(optional) = type;
 ```
 
 여기서 *identifer* 는 별칭의 이름이고 *type*은 별칭을 만드는 자료형의 식별자이다. 
