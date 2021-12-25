@@ -13,11 +13,13 @@ C++11 에서 등장한 ```using``` 키워드를 이용한 자료형 별칭은 �
 ```c++
 using identifier attr(optional) = type;
 
-template <template-parameter-list>
+template <parameter-list>
 using identifier attr(optional) = type;
 ```
 
-여기서 *identifer* 는 별칭의 이름이고 *type*은 별칭을 만드는 자료형의 식별자이다. 
+여기서 *identifer* 는 별칭의 이름이고 *parameter-list* 템플릿 선언에서 템플릿 매개변수 리스트이고 *type*은 별칭을 만드는 자료형의 식별자이다. 
+
+
 별칭은 새로운 자료형을 만들지 않으며 기존 자료형 이름의 의미를 변경할 수 없다. 
 
 다음은 C++03의 ```typedef``` 메커니즘과 동일한 별칭의 단순한 형식이다. 두 경우 모두 "counter" 자료형의 변수를 생성할 수 있도록 한다.
