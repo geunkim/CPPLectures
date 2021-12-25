@@ -107,4 +107,4 @@ ptr<int>::type ptr_int;
 참고자료
 
 * [Aliases and typedefs (C++)](https://docs.microsoft.com/en-us/cpp/cpp/aliases-and-typedefs-cpp?redirectedfrom=MSDN&view=msvc-170)
-* [Type alias, alias template](https://en.cppreference.com/w/cpp/language/type_alias)
+* [Type alias, alias template (in cppreference.com](https://en.cppreference.com/w/cpp/language/type_alias)
