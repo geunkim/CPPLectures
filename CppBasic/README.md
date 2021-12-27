@@ -14,9 +14,12 @@
 
 ## 학습 내용
 
-- [프로그래밍 언어 개념](./ProgrammingLanguage.md)
-- [C++ 프로그래밍 언어 기초](./Basic.md) 
+- [컴퓨터와 프로그래밍(프로그래밍 언어 개념)](./ProgrammingLanguage.md)
+- [기본 C++ 프로그래밍 요소](./Basic.md) 
 - [키보드 입력 및 콘솔 출력](./InOut.md)
 - [전처리기 (Preprocessor)](./Preprocessor.md)
+- [프로그램 개발 과정](./ProgramDev.md)
+- [개념(Concept)](./Concept.md)
+- [프로그램 연습](./Problmes.md)
 
 
