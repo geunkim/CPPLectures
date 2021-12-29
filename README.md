@@ -15,11 +15,13 @@
 ## Part 1
 
 * [C++ 기초](./CppBasic)
-   - [프로그래밍 언어 개념](./CppBasic/ProgrammingLanguage.md)
-   - [C++ 프로그래밍 언어 기초](./CppBasic/Basic.md) 
+   - [컴퓨터와 프로그래밍(프로그래밍 언어 개념)](./CppBasic/ProgrammingLanguage.md)
+   - [기본 C++ 프로그래밍 언어 요소](./CppBasic/Basic.md) 
    - [키보드 입력 및 콘솔 출력](./CppBasic/InOut.md)
    - [전처리기(Preprocessor)](./CppBasic/Preprocessor.md)
-   - [프로그램 연습]
+   - [프로그램 개발 과정](./CppBasic/ProgramDev.md)
+   - [개념(Concept)](./CppBasic/Concept.md)
+   - [프로그램 연습](./CppBasic/Problems.md)
 * [프로그래밍 기초](./BasicProgramming)
    - [변수, 상수, 컴퓨터의 데이터 표현](./BasicProgramming/Data_and_Variables.md)  
    - [자료형, 자료형 의미, 종류](./BasicProgramming/DataType.md)
