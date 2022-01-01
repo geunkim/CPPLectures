@@ -44,7 +44,7 @@
    - [다차원 배열](./Array/multiDimArray.md)
    - [프로그램 연습](./Array/Problems.md)
 
-### *[함수](./Function)**
+### **[함수](./Function)**
    - [함수관련 용어](./Function/Concept.md)
    - [함수 호출](./Function/functionCall.md)
    - [디폴트 매개 변수](./Function/defaultArgumentr.md)
