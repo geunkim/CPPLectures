@@ -15,7 +15,7 @@
 
 ## Part 1
 
-* [C++ 기초](./CppBasic)
+### **[C++ 기초](./CppBasic)**
    - [컴퓨터와 프로그래밍(프로그래밍 언어 개념)](./CppBasic/ProgrammingLanguage.md)
    - [기본 C++ 프로그래밍 언어 요소](./CppBasic/Basic.md) 
    - [키보드 입력 및 콘솔 출력](./CppBasic/InOut.md)
@@ -23,24 +23,28 @@
    - [프로그램 개발 과정](./CppBasic/ProgramDev.md)
    - [개념(Concept)](./CppBasic/Concept.md)
    - [프로그램 연습](./CppBasic/Problems.md)
-* [프로그래밍 기초](./BasicProgramming)
+
+### **[프로그래밍 기초](./BasicProgramming)**
    - [변수, 상수, 컴퓨터의 데이터 표현](./BasicProgramming/Data_and_Variables.md)  
    - [자료형, 자료형 의미, 종류](./BasicProgramming/DataType.md)
    - [변수의 사용](./BasicProgramming/VariableUsage.md)
    - [연산자와 연산자 우선순위](./BasicProgramming/Operators.md)
    - [프로그램 연습](./BasicProgramming/Problems.md)
-* [제어문](./Control)
+
+### **[제어문](./Control)**
    - [조건문](./Control/condition.md)
    - [반복문](./Control/Iteration.md)
    - [프로그램 연습](./Control/Problems.md)
-* [배열](./Array)
+
+### **[배열](./Array)**
    - [배열이 필요한 이유](./Array/whyArray.md)
    - [배열 선언 및 초기화](./Array/Declaration_Initializaion.md)
    - [배열의 사용](./Array/AccessArrayElements.md)
    - [배열과 문자열](./Array/charArray.md)
    - [다차원 배열](./Array/multiDimArray.md)
    - [프로그램 연습](./Array/Problems.md)
-* [함수](./Function)
+
+### *[함수](./Function)**
    - [함수관련 용어](./Function/Concept.md)
    - [함수 호출](./Function/functionCall.md)
    - [디폴트 매개 변수](./Function/defaultArgumentr.md)
@@ -48,13 +52,16 @@
    - [함수 오버로드](./Function/overload.md)
    - [함수 템플릿](./Template/functionTemplate.md)
    - [프로그램 연습]
-* [포인터 변수](./Pointer)
+
+
+### **[포인터 변수](./Pointer)**
    - [프로그램 연습] 
-* [구조체](./Structure)
+
+
+### **[구조체](./Structure)**
    - [프로그램 연습](./Structure/Problems.md)
 * [메모리 모델과 이름 공간](./MemoryModelAndNameSpace)
    - [프로그램 연습]
-
 
 ## Part 2
 
@@ -98,7 +105,7 @@
  	- 우측 값 레퍼런스 (rvalue reference)
 
 
-References
+### References
 
 1. [마이크로소프트 C++ 언어 참조 (Visual Studio 2019)](https://docs.microsoft.com/ko-kr/cpp/cpp/cpp-language-reference?view=vs-2019)
 2. [boost C++ Libraries](https://www.boost.org/)
