@@ -11,6 +11,7 @@
 ## 공통 사항
 
 * [코딩 스타일(Coding Style)](./CodingStyle.md)
+* [github - Pro Git book](https://git-scm.com/book/ko/v2): Pro Git book의 한글 버전
 
 ## Part 1
 
@@ -106,4 +107,5 @@ References
 5. [GeeksforGeeks - C++ Programming Language](https://www.geeksforgeeks.org/c-plus-plus/)
 6. [A list of open source C++ libraries](https://en.cppreference.com/w/cpp/links/libs)
 7. [cppreference.com](https://en.cppreference.com/)
+8. [git --everything-is-local](https://git-scm.com/)
 
