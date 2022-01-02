@@ -19,7 +19,7 @@
 - [컴퓨터와 프로그래밍(프로그래밍 언어 개념)](./ProgrammingLanguage.md)
 - [기본 C++ 프로그래밍 요소](./Basic.md) 
 - [키보드 입력 및 콘솔 출력](./InOut.md)
-- [이름공간(namespace](./Namespace.md)
+- [이름공간(namespace)](./Namespace.md)
 - [전처리기 (Preprocessor)](./Preprocessor.md)
 - [프로그램 개발 과정](./ProgramDev.md)
 - [개념(Concept)](./Concept.md)
