@@ -12,6 +12,9 @@
 
 * [코딩 스타일(Coding Style)](./CodingStyle.md)
 * [github - Pro Git book](https://git-scm.com/book/ko/v2): Pro Git book의 한글 버전
+* Visual Studio에 및 C++ 지원 설치 밍 간단한 C++ 프로젝트 만들기
+    - [Microsoft Visaul Studio 2017 설치](https://docs.microsoft.com/ko-kr/cpp/build/vscpp-step-0-installation?view=msvc-150)
+    - C++를 사용한 데스크톱 개발 워크로드 선택한 다음 설치
 
 ## Part 1
 
@@ -107,7 +110,7 @@
 
 ### References
 
-1. [마이크로소프트 C++ 언어 참조 (Visual Studio 2019)](https://docs.microsoft.com/ko-kr/cpp/cpp/cpp-language-reference?view=vs-2019)
+1. [마이크로소프트 C++ 언어 참조 (Visual Studio 2022)](https://docs.microsoft.com/ko-kr/cpp/cpp/cpp-language-reference?view=msvc-170)
 2. [boost C++ Libraries](https://www.boost.org/)
 3. [TCPSCHOOL.com - CPP](http://tcpschool.com/cpp/intro)
 4. [cplusplus.com](http://www.cplusplus.com/)
