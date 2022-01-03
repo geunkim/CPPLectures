@@ -58,6 +58,9 @@
 
 ### **[포인터 변수](./Pointer)**
    - [포인터 변수](./Pointer/PointerVariables.md)
+   - [이중 포인터](./Pointer/DoublePointer.md)
+   - [프로그램 연습]
+ 
    
  
 
