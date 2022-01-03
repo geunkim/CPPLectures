@@ -56,10 +56,10 @@
    - [함수 템플릿](./Template/functionTemplate.md)
    - [프로그램 연습]
 
-
 ### **[포인터 변수](./Pointer)**
-    - [포인터 변수](./Pointer/PointerVariables.md)
-    - [프로그램 연습] 
+   - [포인터 변수](./Pointer/PointerVariables.md)
+   
+ 
 
 
 ### **[구조체](./Structure)**
