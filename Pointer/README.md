@@ -9,7 +9,8 @@
 
 ## 학습 내용
 
-[포인터 변수](./PointerVariables.md)
+* [포인터 변수](./PointerVariables.md)
+* [이중 포인터](./DoublePointer.md)
 
 
 
