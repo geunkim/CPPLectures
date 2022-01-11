@@ -19,16 +19,7 @@ int score0, score1, score2, score3, score4;
 배열 안에 저장된 각각의 데이터들은 **인덱스(index)** 를 사용하여 구분한다. 
 
 ```c++
-/*
-	File: array-basec.cc
-	Author: Geun-Hyung Kim
-
-	Description: 
-	정수를 저장할 저장 공간 5개를 일반 변수와 배열 변수를 이용하여 할당하고 
-	저장 공간의 값을 초기화한 후 화면에 출력해보는 프로그램  
-*/
 #include <iostream>
-
 using namespace std;
 
 int main(int argc, char const *argv[])
