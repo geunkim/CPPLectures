@@ -7,6 +7,7 @@
 
 int main(int argc, char const *argv[])
 {
+	// 다음 줄에 화면에 Hello World!! 를 출력하는 코드 작성
 	
 	return 0;
 }
@@ -19,7 +20,7 @@ int main(int argc, char const *argv[])
 int main(int argc, char const *argv[])
 {
 	int first, second;
-
+	// 다음 줄에 앞에서 선언된 변수 first, second에 각각 10, 20을 저장하는 코드 작성
 
 	cout << first << ", " << second << endl;
 	return 0;
@@ -37,6 +38,7 @@ int main(int argc, char const *argv[])
 {
 	char buf[255];
 	
+	// 다음 줄에 키보드로 부터 Hello World! 를 입력받아 buf 에 저장하는 코드 작성
 
 	cout << buf << endl;
 
@@ -63,10 +65,10 @@ namespace your {
 int main(int argc, char const *argv[])
 {
 	
-	// 10이 저장된 value 갑을 화면에 출력하기 
+	// 다음 줄에 10이 저장된 변수 value 값을 화면에 출력하는 코드 작성 
 
 
-	// 20이 저장된 value 갑을 화면에 출력하기 
+	// 다음 줄에 20이 저장된 변수 value 값을 화면에 출력하는 코드 작성
 
 	return 0;
 }
