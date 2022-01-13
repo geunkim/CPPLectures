@@ -23,6 +23,7 @@
 - [전처리기 (Preprocessor)](./Preprocessor.md)
 - [프로그램 개발 과정](./ProgramDev.md)
 - [개념(Concept)](./Concept.md)
-- [프로그램 연습](./Problems.md)
+- [프로그램 실습](./Labs.md)
+- [프로그램 문제](./Problems.md)
 
 
