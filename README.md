@@ -65,7 +65,7 @@
  
 
 
-### **[구조체](./Structure)**
+### **[구조체, 공용체, ](./Structure)**
    - [프로그램 연습](./Structure/Problems.md)
 
 ### [메모리 모델과 이름 공간](./MemoryModelAndNameSpace)
