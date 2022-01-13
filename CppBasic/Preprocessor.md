@@ -25,7 +25,7 @@
 | #error    | 컴파일 시간에 사용자 지정 오류메시지를 내보낸 다음 컴파일을 종료|
 | #import   | 형식 라이브러리의 정보를 통합하는데 사용|
 | #undef    | ``#define``으로 만든 이름을 제거 (정의 해제)| 
-| #if       | 소스 파일의 부부에 대한 컴파일을 제어한다. ``#if ??``의 ``??``에 0이 오면 ``#if`` 다음 블럭을 컴파일하지 않음|
+| #if       | 소스 파일의 부분에 대한 컴파일을 제어한다. ``#if ??``의 ``??``에 0이 오면 ``#if`` 다음 블럭을 컴파일하지 않음|
 | #else     | ``#else``는 ``#if``와 함께 사용되는 것으로 ``#if``지시어의 조건이 만족되지 않을 때 수행할 코드가 있는 경우 사용|
 | #elif     | ``#if`` 와 함께 사용되며 ``#if`` 조건 외 다른 조건을 적용 시킬 때 사용|
 | #endif    | 조건부 컴파일의 시작 지시문인 ``#if``와 ``#ifdef``과 쌍으로 조건 블록의 끝을 나타내기 위해 사용|
@@ -34,3 +34,38 @@
 | #ifndef   | ``#ifdef``` 에 의해서 확인된 조건의 반대인 경우를 확인하기 위해 사용|
 | #pragma   | 컴파일러에게 직접 명령을 내릴 때 사용, 각각의 컴파일러마다 독립적인 기능을 제공하기 위해 사용|
 | #line     | 프로그램 소스의 줄 번호와 파일 이름을 변경할 때 사용하며 지시문 바로 다음에 오는 줄의 값을 설정할 때 사용|
+
+다음 코드는 ``#define``, ``#ifndef``, ``else``, ``endif``를 사용한 프로그램 코드로 화면에 ```Normal```에 출력된다.
+```#define DEBUG``` 문은 ``DEBUG``라는 식별자를 정의한 것이고
+```#ifndef DEBUG``` 문은 ``DEBUG``라는 식별자가 정의되지 않는 경우를 확인하는 것으로 앞에서 ``DEBUG``가 정의되어 있기 때문에
+이 조건문의 결과는 false 가 되어 ```	cout << str2 << endl;``` 가 실행되지 않는다.
+```#else```는 ```#ifndef #else #endif``` 구조의 ```else```에 해당하는 것으로 ``DEBUG`` 라는 식별자가 정의된 경우를 
+조사하는 것으로 지금 코드에서 ``DEBUG`` 라는 식별자가 정의되어 있기 때문에 
+```cout << str1 << endl;``` 가 실행된다. 
+
+```c++
+#include <iostream>
+using namespace std;
+
+#define DEBUG
+
+int main(int argc, char const *argv[])
+{	
+	string str1 = "Normal";
+	string str2 = "Error";
+
+	#ifndef DEBUG
+	cout << str2 << endl;
+	#else
+	cout << str1 << endl;
+	#endif
+  
+	return 0;
+}
+```
+
+코드의 실행 결과는 다음과 같다.
+```bash
+Normal
+```
+
