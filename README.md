@@ -25,7 +25,7 @@
    - [전처리기(Preprocessor)](./CppBasic/Preprocessor.md)
    - [프로그램 개발 과정](./CppBasic/ProgramDev.md)
    - [개념(Concept)](./CppBasic/Concept.md)
-   - [프로그램 연습](./CppBasic/Labs.md)
+   - [Lab](./CppBasic/Labs.md)
    - [프로그램 문제](./CppBasic/Problems.md)
 
 ### **[프로그래밍 기초](./BasicProgramming)**
