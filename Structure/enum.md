@@ -8,7 +8,7 @@
 
 다음 그림은 int 자료형의 데이터와 short 자료형 데이터, char 자료형의 데이터를 저장할 수 있는 공용체의 메모리 할당 모습이다.
 
-![img]{./images/union-figure.png}
+<img src="./images/union-figure.png" />
 
 ```c++
 union <자료형 이름>{
