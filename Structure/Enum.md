@@ -18,7 +18,55 @@ union <자료형 이름>{
 }; 
 ```
  
+#include <iostream>
 
+using namespace std;
+
+
+union Student {
+	char grade;
+	int id;
+	short score;
+};
+
+int main(int argc, char const *argv[])
+{
+	Student peter;
+
+	cout << "할당된 메모리 크기: " << sizeof(peter) << endl;
+
+	peter.grade = 'A';
+
+	cout << "grade: " << peter.grade << endl;
+	cout << "grade(code 값): " << (int) peter.grade << endl;
+
+	peter.score = 512 + 66;
+	cout << "score: " << peter.score << endl;
+
+	cout << "grade: "  << peter.grade << endl;
+
+	peter.id = 65536 + 1024 + 67;
+
+	cout << "id: " << peter.id << endl;
+	cout << "score: " << peter.score << endl;
+	cout << "grade: " << peter.grade << endl;
+
+	return 0;
+}
+````
+  
+프로그램의 실행 결과는 다음과 같다.
+
+```bash
+할당된 메모리 크기: 4
+grade: A
+grade(code 값): 65
+score: 578
+grade: B
+id: 66627
+score: 1091
+grade: C
+````
   
   
 
