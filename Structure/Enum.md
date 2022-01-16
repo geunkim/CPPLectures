@@ -29,8 +29,7 @@ union <자료형 이름>{
 
 ```peter.id = 0;```으로 공용체 변수 peter의 저장장소 초기화를 한 후 
 ```peter.grade = 'A';``` 로 peter의 1 바이트의 값만을 변경하고
-```peter.score = 512 + 66;```로 peter의 2 바이트의 값을 변경하고  
-```peter.id = 65536 + 1024 + 67;``` 로 peter의 4바이트의 값을 변경한 후 
+```peter.score = 512 + 66;```로 peter의 2 바이트의 값을 변경하고 ```peter.id = 65536 + 1024 + 67;```로 peter의 4바이트의 값을 변경한 후 
  공용체 peter의 각 변수에 저장된 값을 출력하면 4 바이트 중 1 바이트, 2바이트, 4바이트에 해당되는 값을 출력함을 확인할 수 있다. 
 
 ```c++
@@ -51,24 +50,23 @@ int main(int argc, char const *argv[])
 
 	peter.grade = 'A';
 
-	cout << "grade: " << peter.grade << endl;
-	cout << "grade(code 값): " << (int) peter.grade << endl;
+	cout << "grade(code 값): " << (int) peter.grade << endl; // 정수 값 65 출력
 
-	cout << "id: " << peter.id << endl;
-	cout << "score: " << peter.score << endl;
-	cout << "grade: " << peter.grade << endl;
+	cout << "id: " << peter.id << endl;        // 정수 값 65 출력
+	cout << "score: " << peter.score << endl;  // 정수 값 65 출력
+	cout << "grade: " << peter.grade << endl;  // 문자 'A' 출력
 
-	peter.score = 512 + 66;
+	peter.score = 512 + 66;   // 문자 B와 2^9 값 저장 
 
-	cout << "id: " << peter.id << endl;
-	cout << "score: " << peter.score << endl;
-	cout << "grade: " << peter.grade << endl;
+	cout << "id: " << peter.id << endl;         // 정수 값 578 출력
+	cout << "score: " << peter.score << endl;   // 정수 값 578 출력 
+	cout << "grade: " << peter.grade << endl;   // 문자 'B' 출력
 
-	peter.id = 65536 + 1024 + 67;
+	peter.id = 65536 + 1024 + 67;  //2^16 + 2^10 + 'C' 저장 
 
-	cout << "id: " << peter.id << endl;
-	cout << "score: " << peter.score << endl;
-	cout << "grade: " << peter.grade << endl;
+	cout << "id: " << peter.id << endl;         // 정수 값 66627 출력 
+	cout << "score: " << peter.score << endl;   // 정수 값 1091 출력
+	cout << "grade: " << peter.grade << endl;   // 문자 'C' 출력
 
 	return 0;
 }
@@ -78,7 +76,6 @@ int main(int argc, char const *argv[])
 
 ```bash
 할당된 메모리 크기: 4
-grade: A
 grade(code 값): 65
 id: 65
 score: 65
