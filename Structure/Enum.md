@@ -17,7 +17,9 @@ union <자료형 이름>{
   자료형 변수3;
 }; 
 ```
- 
+
+
+```c++
 #include <iostream>
 
 using namespace std;
