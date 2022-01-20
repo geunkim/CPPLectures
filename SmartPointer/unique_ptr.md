@@ -31,7 +31,7 @@ int main(int argc, char const *argv[])
 ```
 실행 결과예 다음과 같이 같은 주소 값을 가진다. 
 
-```text
+```bash
 address of foo: 0x7fc84c401910
 address of baz: 0x7fc84c401910
 ```

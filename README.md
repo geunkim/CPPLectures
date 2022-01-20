@@ -5,7 +5,7 @@
 
 * C++98, C++03, [C++11](https://en.cppreference.com/w/cpp/11), [C++14](https://en.cppreference.com/w/cpp/14), [C++17](https://en.cppreference.com/w/cpp/17), [C++20](https://en.cppreference.com/w/cpp/20), [C++23](https://en.cppreference.com/w/cpp/23) ([reference](https://en.cppreference.com/w/))
 
-![img](./CPP_기능.png)
+![img](./CPP_기능.png)
 
 
 ## 공통 사항
@@ -33,11 +33,13 @@
    - [자료형, 자료형 의미, 종류](./BasicProgramming/DataType.md)
    - [변수의 사용](./BasicProgramming/VariableUsage.md)
    - [연산자와 연산자 우선순위](./BasicProgramming/Operators.md)
+   - [Lab]
    - [프로그램 연습](./BasicProgramming/Problems.md)
 
 ### **[제어문](./Control)**
    - [조건문](./Control/condition.md)
    - [반복문](./Control/Iteration.md)
+   - [Lab]
    - [프로그램 연습](./Control/Problems.md)
 
 ### **[배열](./Array)**
@@ -46,6 +48,7 @@
    - [배열의 사용](./Array/AccessArrayElements.md)
    - [배열과 문자열](./Array/charArray.md)
    - [다차원 배열](./Array/multiDimArray.md)
+   - [Lab]
    - [프로그램 연습](./Array/Problems.md)
 
 ### **[함수](./Function)**
@@ -55,19 +58,24 @@
    - [가변 매개변수 함수](./Function/variadic.md)
    - [함수 오버로드](./Function/overload.md)
    - [함수 템플릿](./Template/functionTemplate.md)
+   - [Lab]
    - [프로그램 연습]
 
 ### **[포인터 변수](./Pointer)**
    - [포인터 변수](./Pointer/PointerVariables.md)
    - [이중 포인터](./Pointer/DoublePointer.md)
+   - [스마트 포인터](./SmartPointer)
+
+   - [Lab]
    - [프로그램 연습]
  
    
- 
-
-
-### **[구조체, 공용체, 열거형](./Structure)**
-   - [프로그램 연습](./Structure/Problems.md)
+### **[구조체, 공용체, 열거형](./Struct)**
+   - [구조체](./Struct/Struct.md)
+   - [공용체](./Struct/Union.md)
+   - [열거형](./Struct/Enum.md)
+   - [Lab]
+   - [프로그램 연습](./Struct/Problems.md)
 
 ### [메모리 모델과 이름 공간](./MemoryModelAndNameSpace)
    - [프로그램 연습]
@@ -87,7 +95,7 @@
    - [연산자 중복](./Overload/OperatorOverload.md)
    - 프렌드와 연산자 중복
 * [에외처리와 형 변환](./Exception)
-* [스마트 포인터](./SmartPonter)
+* [스마트 포인터](./SmartPointer)
    - [스마트 포인터 개요](./SmartPointer/SmartPointer.md)
    - [Unique Pointer](./SmartPointer/unique_ptr.md)
    - [Shared Pointer](./SmartPointer/shared_ptr.md)
