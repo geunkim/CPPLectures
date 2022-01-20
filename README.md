@@ -95,6 +95,8 @@
    - [연산자 중복](./Overload/OperatorOverload.md)
    - 프렌드와 연산자 중복
 * [에외처리와 형 변환](./Exception)
+   - [프로그램에서의 에러](./Exception/)
+   - [예외처리](./Exception/Exception.md)
 * [스마트 포인터](./SmartPointer)
    - [스마트 포인터 개요](./SmartPointer/SmartPointer.md)
    - [Unique Pointer](./SmartPointer/unique_ptr.md)
@@ -117,7 +119,6 @@
 * To do (목록에 추가해야 할 내용들)
 
  	- 우측 값(rvalue)과 좌축 값(lvalue)
- 	- 스마트 포인터(Smart Pointer): shared_ptr, unique_ptr, weak_ptr
  	- 타입추론(type deduction)
  	- 우측 값 레퍼런스 (rvalue reference)
 
