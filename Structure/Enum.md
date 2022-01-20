@@ -84,6 +84,7 @@ int value = Yourcard::Hearts;  // Error
 
 
 
+
 참고자료
 
 * [MS Docs](https://docs.microsoft.com/ko-kr/cpp/cpp/enumerations-cpp?view=msvc-170)
