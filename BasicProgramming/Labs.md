@@ -1,4 +1,4 @@
-# Labs
+# Labs - Basic Programming
 
 1. 다루려는 정수의 값의 범위가 60,000 이하의 양수인 데이터를 저장할 변수 a, b를 선언하고, 
    각각의 값을 두 수를 더한 결과와 두 수를 곱한 결과를 저장할 수 있는 변수 c 를 선언하고 연산 결과를 저장한 후 저장된 값을 출력하는 프로그램을 작성하고자 한다.
@@ -148,7 +148,7 @@ int main(int argc, char const *argv[])
 	return 0;
 }
 
-8. 다음 프로그램 코드의 연산 결과를 추론하고 실행 결과와 같은지 확인하고 결과의 이유를 설멍하라.
+8. 다음 프로그램 코드의 연산 결과를 추론하고 실행 결과와 같은지 확인하고 결과 값의 근거를 설멍하라.
 
 ```c++
 #include <iostream>
@@ -169,5 +169,31 @@ int main(int argc, char const *argv[])
 	return 0;
 }
 ```
+9. 다음 프로그램 코드의 연산 결과를 추록하고 실행 결과와 같은지 확인하고 결과 값의 근거를 설명하라.
+
+```c++
+#include <iostream>
+using namespace std;
+
+int main(int argc, char const *argv[])
+{
+	bool a = true, b = false;
+	int c = 10, d = 20;
+
+
+	cout << "[출력 1]: " << !b << endl;      		// 논리 부정
+	cout << "[출력 2]: " << (a && b) << endl;  		// 논리 곱 
+	cout << "[출력 3]: " << (a || b) << endl;  		// 논리 합
+
+	cout << "[출력 4]: " << (c != d || a) << endl;  // 관계 연산과 논리 합
+	cout << "[출력 5]: " << (c < d && b) << endl;   // 관계 연산과 논리 곱
+
+	cout << "[출력 6]: " << (c > 5 && c < 15) << endl; 	// 관계 연산자와 논리 곱
+	cout << "[출력 7]: " << (c <= 5 || c >=15) << endl;   // 관계 연산자와 논리 합
+
+	return 0;
+}
+```
+
 
 
