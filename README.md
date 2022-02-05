@@ -33,7 +33,7 @@
    - [자료형, 자료형 의미, 종류](./BasicProgramming/DataType.md)
    - [변수의 사용](./BasicProgramming/VariableUsage.md)
    - [연산자와 연산자 우선순위](./BasicProgramming/Operators.md)
-   - Lab
+   - [Lab](./BasicProgramming/Labs.md)
    - [프로그램 연습](./BasicProgramming/Problems.md)
 
 ### **[제어문](./Control)**
