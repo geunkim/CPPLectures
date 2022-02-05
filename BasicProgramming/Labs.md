@@ -227,6 +227,28 @@ int main(int argc, char const *argv[])
 }
 ```
 
+11. 다음 프로그램 코드의 실행 결과를 추론한 후 실행 결과와 같은지 확인하고 결과 값의 근거를 설명하라.
+
+```c++
+#include <iostream>
+using namespace std;
 
 
+int main(int argc, char const *argv[])
+{
+	
+	int value1 = 2;
+	int value2 = 256;
 
+	cout << "[value1 << 1]" << (value1 << 1) << endl;
+	cout << "[value1 << 2]" << (value1 << 2) << endl;
+	cout << "[value1 << 3]" << (value1 << 3) << endl;
+
+	cout << "[value2 << 1]" << (value2 << 1) << endl; 
+	cout << "[value2 >> 1]" << (value2 >> 1) << endl; 
+	cout << "[value2 >> 2]" << (value2 >> 2) << endl; 
+	cout << "[value2 >> 3]" << (value2 >> 3) << endl; 
+
+	return 0;
+}
+```
