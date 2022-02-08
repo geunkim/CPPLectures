@@ -26,7 +26,50 @@ int main(int argc, char const *argv[])
 
 2. 1의 결과가 원하는대로 출력이 되도록 프로그램 코드를 수정하라.
 
-3. 
+3. 다음 프로그램 코드는 입력 값이 15일 때 ```입력한 값은 15, 10보다 큰 정수이다``` 라고 출력이 되고 입력 값이 5 일 때 ```10보다 각은 정수이다``` 가 출력이 되도록 작성한 것이다.
+   컴파일 시 에러가 발생한다. 원인을 추론하고 원하는 결과가 나오도록 프로그램을 수정하라.  
+
+```c++
+#include <iostream>
+using namespace std;
+
+int main(int argc, char const *argv[])
+{
+	int value;
+
+	cout << "정수를 입력하시오: ";
+	cin >> value;
+
+	if(value > 10) 	
+		cout << "입력한 값은 " << value << endl;
+		cout << "10보다 큰 정수이다" << endl;
+	else 
+		cout << "10보다 작은 정수이다" << endl;
+
+	return 0;
+}
+```
+
+4. 다음 프로그램 실행 시 짝수가 입력되면 ```짝 수 이다.``` 가 출력되고 홀수가 입력되면 ```홀수 아다.``` 가 출력되도록 ```A``` 또는 ```B```출력 부분을 수정하라. 그리고 프로그램 결과를 분석하라.
+
+```c++
+#include <iostream>
+using namespace std;
+
+int main(int argc, char const *argv[])
+{
+	int value;
+
+	cout << "정수를 입력하시오: ";
+	cin >> value;
+
+	if(value % 2)
+		cout << " A " << endl;
+	else 
+		cout << " B " << endl;
+	return 0;
+}
+```
 
 4. 다음 프로그램 코드를 실행 시 반복되는 문장이 무엇인지 답하고 반복되는 횟수를 추론할 수 있는가? 또한 반복의 종료 조건은 무엇인가?
 
