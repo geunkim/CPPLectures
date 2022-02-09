@@ -207,4 +207,25 @@ int main(int argc, char const *argv[])
 	return 0;
 }							  							  
 ```
+
+12. 다음 프로그램 코드의 실행 결과가 다음과 같이 되도록 프로그램을 완성하라.
+
+```c++
+0, 1, 2, 3, 0, 1, 2, 3, 0, 1 가 되도록 프로그램을 완성하라.
+```
+
+```c++
+#include <iostream>
+using namespace std;
+
+int main(int argc, char const *argv[])
+{
+	for(int i = 0; i < 10; i++){
+        // 프포그램 코드가 들어가야 할 영역 
+	}
+	cout << endl;	
+
+	return 0;
+}
+```
 		    
