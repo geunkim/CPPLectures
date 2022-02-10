@@ -25,7 +25,7 @@
    - [전처리기(Preprocessor)](./CppBasic/Preprocessor.md)
    - [프로그램 개발 과정](./CppBasic/ProgramDev.md)
    - [개념(Concept)](./CppBasic/Concept.md)
-   - [Lab](./CppBasic/Labs.md)
+   - [프로그램 실습](./CppBasic/Labs.md)
    - [프로그램 문제](./CppBasic/Problems.md)
 
 ### **[프로그래밍 기초](./BasicProgramming)**
@@ -33,14 +33,14 @@
    - [자료형, 자료형 의미, 종류](./BasicProgramming/DataType.md)
    - [변수의 사용](./BasicProgramming/VariableUsage.md)
    - [연산자와 연산자 우선순위](./BasicProgramming/Operators.md)
-   - [Lab](./BasicProgramming/Labs.md)
-   - [프로그램 연습](./BasicProgramming/Problems.md)
+   - [프로그램 실습](./BasicProgramming/Labs.md)
+   - [프로그램 문제](./BasicProgramming/Problems.md)
 
 ### **[제어문](./Control)**
    - [조건문](./Control/condition.md)
    - [반복문](./Control/Iteration.md)
-   - [Lab](./Control/Labs.md)
-   - [프로그램 연습](./Control/Problems.md)
+   - [프로그램 실습](./Control/Labs.md)
+   - [프로그램 문제](./Control/Problems.md)
 
 ### **[배열](./Array)**
    - [배열이 필요한 이유](./Array/whyArray.md)
@@ -48,8 +48,8 @@
    - [배열의 사용](./Array/AccessArrayElements.md)
    - [배열과 문자열](./Array/charArray.md)
    - [다차원 배열](./Array/multiDimArray.md)
-   - Lab
-   - [프로그램 연습](./Array/Problems.md)
+   - [프로그램 실습]
+   - [프로그램 문제](./Array/Problems.md)
 
 ### **[함수](./Function)**
    - [함수관련 용어](./Function/Concept.md)
@@ -58,26 +58,26 @@
    - [가변 매개변수 함수](./Function/variadic.md)
    - [함수 오버로드](./Function/overload.md)
    - [함수 템플릿](./Template/functionTemplate.md)
-   - Lab
-   - [프로그램 연습]
+   - [프로그램 실습]
+   - [프로그램 문제]
 
 ### **[포인터 변수](./Pointer)**
    - [포인터 변수](./Pointer/PointerVariables.md)
    - [이중 포인터](./Pointer/DoublePointer.md)
    - [스마트 포인터](./SmartPointer)
-   - Lab
-   - [프로그램 연습]
+   - [프로그램 실습]
+   - [프로그램 문제]
  
    
 ### **[구조체, 공용체, 열거형](./Struct)**
    - [구조체](./Struct/Struct.md)
    - [공용체](./Struct/Union.md)
    - [열거형](./Struct/Enum.md)
-   - Lab
-   - [프로그램 연습](./Struct/Problems.md)
+   - [프로그램 실습]
+   - [프로그램 문제](./Struct/Problems.md)
 
 ### [메모리 모델과 이름 공간](./MemoryModelAndNameSpace)
-   - [프로그램 연습]
+   - [프로그램 문제]
 
 ## Part 2
 
