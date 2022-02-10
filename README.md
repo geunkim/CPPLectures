@@ -48,7 +48,7 @@
    - [배열의 사용](./Array/AccessArrayElements.md)
    - [배열과 문자열](./Array/charArray.md)
    - [다차원 배열](./Array/multiDimArray.md)
-   - [프로그램 실습]
+   - [프로그램 실습](./Array/Labs.md)
    - [프로그램 문제](./Array/Problems.md)
 
 ### **[함수](./Function)**
