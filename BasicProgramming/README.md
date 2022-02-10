@@ -18,4 +18,4 @@
 - [변수의 사용](./VariableUsage.md)
 - [연산자와 연산자 우선순위](./Operators.md)
 - [프로그램 실습](./Labs.md)
-- [프로그램 연습](./Problems.md)
+- [프로그램 문제](./Problems.md)
