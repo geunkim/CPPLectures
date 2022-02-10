@@ -39,7 +39,7 @@
 ### **[제어문](./Control)**
    - [조건문](./Control/condition.md)
    - [반복문](./Control/Iteration.md)
-   - Lab
+   - [Lab](./Control/Labs.md)
    - [프로그램 연습](./Control/Problems.md)
 
 ### **[배열](./Array)**
