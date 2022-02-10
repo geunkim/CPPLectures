@@ -20,6 +20,7 @@ C++에서 정의한 배열에 대해서 살펴본다. C++의 배열은 같은 �
 * [배열의 사용](./AccessArrayElements.md)
 * [배열과 문자열](./charArray.md)
 * [다차원 배열](./multiDimArray.md)
+* [프로그램 실습](./Labs.md)
 * [프로그램 문제](./Problems.md)
 
  
