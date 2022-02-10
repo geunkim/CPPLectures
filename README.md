@@ -76,7 +76,11 @@
    - [프로그램 실습]
    - [프로그램 문제](./Struct/Problems.md)
 
-### [메모리 모델과 이름 공간](./MemoryModelAndNameSpace)
+### **[메모리 모델과 이름 공간](./MemoryModelAndNameSpace)
+   - [메모리 모델](./MemoryModelAndNameSpace/MemoryModel.md)
+   - [변수의 생명 주기(life cycle)]
+   - [이름 공간](./MemoryModelAndNameSpace/NameSpace.md)
+
    - [프로그램 문제]
 
 ## Part 2
