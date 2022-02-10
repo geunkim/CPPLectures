@@ -28,5 +28,6 @@
  
  * [조건문](./condition.md)
  * [반복문](./Iteration.md)
+ * [Lab](./Labs.md)
  * [프로그램 연습](./Problems.md)
  
