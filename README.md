@@ -53,16 +53,16 @@
 
 ### **[함수](./Function)**
    - [함수관련 용어](./Function/Concept.md)
-   - [inline 함수]
    - [함수 호출](./Function/functionCall.md)
    - [디폴트 매개 변수](./Function/defaultArgumentr.md)
+   - [inline 함수](./Function/inline.md)
    - [가변 매개변수 함수](./Function/variadic.md)
-   - [프렌즈 함수]
+   - [프렌즈 함수](./friend_function_class.md)
    - [함수 오버로드](./Function/overload.md)
    - [함수 템플릿](./Template/functionTemplate.md)
-   - [람다 표현]
-   - [프로그램 실습]
-   - [프로그램 문제]
+   - [람다 표현](./Function/LambdaExpression.md)
+   - [프로그램 실습](./Function/Labs.md)
+   - [프로그램 문제](./Function/Problems.md)
 
 ### **[포인터 변수](./Pointer)**
    - [포인터 변수](./Pointer/PointerVariables.md)
