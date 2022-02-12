@@ -75,6 +75,37 @@ int main(int argc, char const *argv[])
 
 ```
 
-4. 다음 프로그램 코드를 
+4. 다음 프로그램 코드를 컴파일하여 실행 파일을 만든 후 명령창(command) 에서 다음과 같이 3 형식으로 실행한 후 결과를 확인하고 결과로 부터 프로그램 코드의 ```argc``` 의 의미를 추론하라.
 
+```bash
+$Lab4 first
+$Lab4 first second
+$Lab4 first second third
+```
 
+```c++
+#include <iostream>
+using namespace std;
+
+int main(int argc, char const *argv[])
+{
+	cout << "# of input parameters: " << argc << endl;
+	return 0;
+}
+```
+5. 다음 프로그램 코드는 4번 프로그램 코드에서 ```argv```를 통해 전달 받은 값을 출력하려는 것이다. 프로그램을 실행하고 ```argv[]```와 ```argc```와의 관계를 추론하라. 프로그램의 실행은 4번과 같이 명령창에서 명령어를 입력하여 확인하라. 
+
+```c++
+#include <iostream>
+using namespace std;
+
+int main(int argc, char const *argv[])
+{
+	cout << "# of input parameters: " << argc << endl;
+	for(int i = 0; i < argc; i++)
+		cout << argv[i] << endl;
+	return 0;
+}
+```
+
+6. 
