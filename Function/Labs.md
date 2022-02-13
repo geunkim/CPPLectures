@@ -108,4 +108,90 @@ int main(int argc, char const *argv[])
 }
 ```
 
-6. 
+6. 다음 프로그램 코드를 컴파일하여 발생하는 에러를 해결하라. 컴파일에서 발생하는 예러의 이유를 추론하라.
+
+```c++
+#include <iostream>
+using namespace std;
+
+int main(int argc, char const *argv[])
+{
+	float x, y;
+
+	cout << "실수 두개를 입력하시오: " << endl;
+	cin >> x >> y;
+	
+	cout << mul(x, y) << endl;
+	return 0;
+}
+
+void mul(float a, float b) {
+	return a * b;
+}
+```
+
+7. 다음 프로그램 코드를 실행하였을 때 화면에 ```출력: 11``` 이 출력되도록 ```increase``` 함수를 포함하여 (가장 적인 코드를 추가하여)수정하라. 수정한 근거도 함께 기술하라.
+
+```c++
+#include <iostream>
+using namespace std;
+
+
+void increase(int x){
+	x++;
+}
+
+int main(int argc, char const *argv[])
+{
+	int x = 10;
+
+	increase(x);
+
+	cout << "출력: " <<  x << endl;
+
+	return 0;
+}
+```
+
+
+8. 다음 프로그램 코드를 실행하였을 때 화면에 출력될 각 결과를 추론하고 실제 프로그램 실행 결과와 비교하라. 
+
+
+```c++
+#include <iostream>
+using namespace std;
+
+void swap1(int x, int y){
+	cout << "(swap1 연산 전 출력) x:" << x <<", y: " << y << endl;
+	int tmp = x;
+	x = y;
+	y = tmp;
+	cout << "(swap1 연산 후 출력) x:" << x <<", y: " << y << endl;
+}
+
+
+void swap2(int &x, int &y){
+	cout << "(swap2 연산 전 출력) x:" << x <<", y: " << y << endl;
+	int tmp = x;
+	x = y;
+	y = tmp;
+	cout << "(swap2 연산 후 출력) x:" << x <<", y: " << y << endl;
+}
+
+
+int main(int argc, char const *argv[])
+{
+	int x = 10, y = 20;
+
+	cout << "(출력 1) x: "  << x << ", y: " << y << endl;
+	swap1(x, y);
+	cout << "(출력 2) x: "  << x << ", y: " << y << endl;
+	swap2(x, y);
+	cout << "(출력 3) x: "  << x << ", y: " << y << endl;
+
+	return 0;
+}
+```
+
+10.
+
