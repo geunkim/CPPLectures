@@ -154,7 +154,7 @@ int main(int argc, char const *argv[])
 ```
 
 
-8. 다음 프로그램 코드를 실행하였을 때 화면에 출력될 각 결과를 추론하고 실제 프로그램 실행 결과와 비교하라. 
+8. 다음 프로그램 코드를 실행하였을 때 화면에 출력될 각 결과를 추론하고 추론 근거를 농하고 실제 프로그램 실행 결과와 비교하라. 
 
 
 ```c++
@@ -169,7 +169,6 @@ void swap1(int x, int y){
 	cout << "(swap1 연산 후 출력) x:" << x <<", y: " << y << endl;
 }
 
-
 void swap2(int &x, int &y){
 	cout << "(swap2 연산 전 출력) x:" << x <<", y: " << y << endl;
 	int tmp = x;
@@ -177,7 +176,6 @@ void swap2(int &x, int &y){
 	y = tmp;
 	cout << "(swap2 연산 후 출력) x:" << x <<", y: " << y << endl;
 }
-
 
 int main(int argc, char const *argv[])
 {
@@ -193,5 +191,24 @@ int main(int argc, char const *argv[])
 }
 ```
 
-10.
+10. 다음 프로그램 코드 실행 시 각 출력의 결과를 추론하고 추론 곤거를 논하고 실행 결과의 비교하라. 
+
+```c++
+#include <iostream>
+using namespace std;
+
+double div_eq(double x = 10, double y = 20) {
+	return x / y; 
+}
+
+int main(int argc, char const *argv[])
+{
+	cout << "출력(1): " << div_eq() << endl;
+	cout << "출력(2): " << div_eq(5) << endl;
+	cout << "출력(3): " << div_eq(50, 10) << endl;
+	return 0;
+}
+```
+
+
 
