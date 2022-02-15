@@ -11,5 +11,5 @@
  ## 학습 내용
 
 * [메모리 모델](./Memory_Model.md)
-* 변수의 생명 주기(life cycle)
+* [변수의 범위와 생명 주기](./Scope_LifeCycle.md)
 * [이름 공간](./NameSpace.md) 
