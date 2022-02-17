@@ -58,6 +58,9 @@ void inc(int& x) {
 인라인 함수로 작성된 프로그램 소스파일(inline_func.cc)과 일반 함수로 작성된 프로그램 소스파일(inline_comp_func.cc)을 작성하고 
 파일의 크기와 맥북에서 g++ 컴파일러와 링커를 사용하여 생성한 실행 파일의 크기를 비교하면 다음과 같다.
 
+<img src=./inline_func.png>
+
+소스파일의 크기를 비교하면 인라인 함수로 구현된 ```inline_func.cc``` 소스파일의 크기가 일반 함수로 구현된 ```inline_comp_func.cc``` 소스 파일보다 7 바이트 더 크다는 것을 확인할 수 있다.
 
 
 
