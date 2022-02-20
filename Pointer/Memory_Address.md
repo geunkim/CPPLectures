@@ -44,7 +44,7 @@ int main(int argc, char const *argv[])
 ```dvar2```는 ```0x7ffeed7019b0 ~ 0x7ffeed7019bf```까지의 저장공간, ```dvar1```는 ```0x7ffeed7019c0 ~ 0x7ffeed7019cf```까지의 저장공간을 할당받아 사용한다. 
 다른 변수들도 자료형에 따른 저장공간을 연속적으로 할당받게 된다. 이처럼 메모리의 저장 공간은 바이트 단위로 식별할 수 있는 주소 값을 가진다.
 
-<img width=20pt src=./memory_alloc.png>
+<img width = 300pt src=./memory_alloc.png>
 
 C++에서 다음과 같이 변수 ```data```를 선언하면 ```data```에 해당하는 저장공간이 할당된다. ```data``` 변수의 값을 할당된 메모리의 주소 값을 이용하여 참조하고 새로운 값을 저장할 수 있다.  
 
