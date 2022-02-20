@@ -40,22 +40,13 @@ int main(int argc, char const *argv[])
 변수 lvar1, lvar2에 할당된 메모리 주소: 0x7ffeed7019d8, 0x7ffeed7019d0
 변수 dvar1, dvar2에 할당된 메모리 주소: 0x7ffeed7019c0, 0x7ffeed7019b0
 ```
+앞의 프로그램 코드의 변수 선언이 메모리에 할당된 모습은 다름 그림과 같다. ```dvar1```과 ```dvar2```는 메모리에 16bit가 할당되는 자료형으로 
+```dvar2```는 ```0x7ffeed7019b0 ~ 0x7ffeed7019bf```까지의 저장공간, ```dvar1```는 ```0x7ffeed7019c0 ~ 0x7ffeed7019cf```까지의 저장공간을 할당받아 사용한다. 
+다른 변수들도 자료형에 따른 저장공간을 연속적으로 할당받게 된다. 이처럼 메모리의 저장 공간은 바이트 단위로 식별할 수 있는 주소 값을 가진다.
 
-<img src=./memory_alloc.png>
+<img width=20pt src=./memory_alloc.png>
 
-
-
-
-
-
-
-
-
-
-
-
-
-C++에서 다음과 같이 변수 ```data```를 선언하면 ```data```에 해당하는 저장공간이 할당된다. 
+C++에서 다음과 같이 변수 ```data```를 선언하면 ```data```에 해당하는 저장공간이 할당된다. ```data``` 변수의 값을 할당된 메모리의 주소 값을 이용하여 참조하고 새로운 값을 저장할 수 있다.  
 
 ```c++
 #include <iostream>
@@ -63,13 +54,13 @@ using namespace std;
 
 int main(int argc, char const *argv[])
 {
-	int data;
+	int data;    // 정수 값을 저장하기 위한 int형 변수 data 선언 (메모리 공간 할당)
 
 	cout << "data 변수를 위해 할당된 메모리 주소: " <<  &data << endl;
 
 	cout << &data <<"에 저장된 데이터: " << *(&data) << endl;
 
-	*(&data) = 200;     // 변수 data의 저장공간에 정수 값 200 저장
+	*(&data) = 200;                 // 변수 data의 저장공간에 정수 값 200 저장
 
 	cout << &data <<"에 저장된 데이터: " << *(&data) << endl;
 
@@ -80,4 +71,20 @@ int main(int argc, char const *argv[])
 	return 0;
 }
 ```
-변수 ```data```에 할당된 메모리 공간은  
+
+프로그램 실행 결과는 다음과 같다. 
+
+```bash
+data 변수를 위해 할당된 메모리 주소: 0x7ffeed0259dc
+0x7ffeed0259dc에 저장된 데이터: 0
+0x7ffeed0259dc에 저장된 데이터: 200
+0x7ffeed0259dc에 저장된 데이터: 400
+```
+
+변수 ```data```에 할당된 메모리의 저장공간의 주소는 ```0x7ffeed0259dc``` 이다. 새로운 데이터 값을 저장하기 전에 메모리에는 ```0```이 저장되어 있다.
+
+```*(&data) = 200```은 ```data``변수가 할당된 메모리 공간의 주소를 이용하여 메모리 공간에 200을 저장하는 코드로 
+변수 이름이 아닌 메모리 주소를 이용하여 값을 저장할 수 있음을 확인할 수 있다. 
+
+```data = 400;
+
