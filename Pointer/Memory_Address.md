@@ -1,4 +1,4 @@
-# 메모리 주소(Memory Address)
+# 메모리와 주소(Memory and Address)
 
 컴퓨터에서 프로그램이 실행되면 운영체제는 데이터와 프로그램 코드를 위한 메모리 공간을 할당한다. 할당해주는 메모리 공간은 크게 코드(Code), 데이터(Data), 스택(Stack), 힙(Heap)의 네 영역으로 구성된다. 
 컴퓨터에서 운영체제가 프로그램을 실행하는 절차는 [다음](https://github.com/geunkim/CPPLectures/blob/master/MemoryModelAndNameSpace/Memory_Model.md#%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8-%EC%8B%A4%ED%96%89)을 참조하라.
