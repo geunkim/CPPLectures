@@ -17,6 +17,7 @@
 * [포인터 변수](./PointerVariables.md)
 * [포인터 관련 연산자](./PointerOperator.md)
 * [이중 포인터](./DoublePointer.md)
+* [스마트 포인터]
 
 
 ## 복습과제 
