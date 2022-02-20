@@ -41,8 +41,7 @@ int main(int argc, char const *argv[])
 변수 dvar1, dvar2에 할당된 메모리 주소: 0x7ffeed7019c0, 0x7ffeed7019b0
 ```
 
-
-
+<img src=./memory_alloc.png>
 
 
 
