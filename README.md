@@ -81,7 +81,7 @@
    - [프로그램 실습](./Struct/Labs.md)
    - [프로그램 문제](./Struct/Problems.md)
 
-### **[메모리 모델과 이름 공간](./MemoryModelAndNameSpace)
+### **[메모리 모델과 이름 공간](./MemoryModelAndNameSpace)**
    - [메모리 모델](./MemoryModelAndNameSpace/Memory_Model.md)
    - [변수의 유효범위와 생명주기](./MemoryModelAndNameSpace/Scope_LifeCycle.md)
    - [이름 공간](./MemoryModelAndNameSpace/NameSpace.md)
@@ -90,38 +90,49 @@
 
 ## Part 2
 
-* [클래스: 구조체의 진화](./Class)
+### **[클래스: - 구조체의 진화](./Class)**
 * [객체의 생성과 소멸](./Class/constructor_destructor.md) 
 * 객체와 포인터
-* [클래스와 상속](./Inheritance)
+
+### **[클래스와 상속](./Inheritance)**
 * 함수의 진화
    - 오버라이딩
-* [다형성](./Polymorphism)
+   
+### **[다형성](./Polymorphism)**
    - [가상함수](./Polymorphism/VirtualFunction.md)
    - 순수 가상함수
-* [중복](./Overload)
+   -
+### **[중복](./Overload)**
    - [연산자 중복](./Overload/OperatorOverload.md)
    - 프렌드와 연산자 중복
-* [에외처리와 형 변환](./Exception)
+   - 
+### **[에외처리와 형 변환](./Exception)**
    - [프로그램에서의 에러](./Exception/)
    - [예외처리](./Exception/Exception.md)
-* [스마트 포인터](./SmartPointer)
+   - 
+### **[스마트 포인터](./SmartPointer)**
    - [스마트 포인터 개요](./SmartPointer/SmartPointer.md)
    - [Unique Pointer](./SmartPointer/unique_ptr.md)
    - [Shared Pointer](./SmartPointer/shared_ptr.md)
    - [Weak Pointer](./SmartPointer/weak_ptr.md)
-* [템플릿](./Template)
+   
+### **[템플릿](./Template)**
    - 템플릿 개요
    - [함수 템플릿](./Template/functionTemplate.md)
    - [클래스 템플릿](./Template/classTemplate.md)
    - 클래스 템플릿의 특수화
-* [STL(Standard Template Library)](./STL)
+
+
+### **[STL(Standard Template Library)](./STL)**
    - [STL 개요](./STL/STL_Intro.md)
    - [컨테이너](./STL/Container.md)
    - [반복자](./STL/Iterator.md)
-   - [알고리즘](./algorithm.md)
-* [데이터 입출력](./InputOutput)
-* 디자인패턴
+   - [알고리즘](./STL/algorithm.md)
+
+
+### **[데이터 입출력](./InputOutput)**
+
+### **디자인패턴**
 
 -------------------------------
 * To do (목록에 추가해야 할 내용들)
