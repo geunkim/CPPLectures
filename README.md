@@ -90,21 +90,19 @@
 
 ## Part 2
 
-### **[클래스: - 구조체의 진화](./Class)**
-    - [클래스와 객체](./Class/Objects.md)
-    - [생성자와 소멸자](./Class/constructor_destructor.md)
-    - [정적 클래스](./Class/Static.md)
-    - [프렌즈 클래스](../friend_function_class.md)
-    - [임시 객체](TemporaryClass.md)
+### **[클래스 - 구조체의 진화](./Class)**
+   - [클래스와 객체](./Class/Objects.md)
+   - [생성자와 소멸자](./Class/constructor_destructor.md)
+   - [정적 클래스](./Class/Static.md)
+   - [프렌즈 클래스](../friend_function_class.md)
+   - [임시 객체](TemporaryClass.md)
 
 ### **[클래스와 상속](./Inheritance)**
-    - [상속의 개념](./Inheritance/Copcept.md)
-    - [자식 클래스 정의하가](./Inheritance/ChildCloass.md)
-    - [상속과 접근 지정자](./Inheritance/AccessControl.md)
-    - [상속과 생성자 소멀자 관계]
-    - [다중 상속](./Inheritance/MultipleInheritance.md)
-* 함수의 진화
-   - 오버라이딩
+   - [상속의 개념](./Inheritance/Copcept.md)
+   - [자식 클래스 정의하가](./Inheritance/ChildCloass.md)
+   - [상속과 접근 지정자](./Inheritance/AccessControl.md)
+   - [상속과 생성자 소멀자 관계]
+   - [다중 상속](./Inheritance/MultipleInheritance.md)
    
 ### **[다형성](./Polymorphism)**
    - [다형성의 개념](./Polymorphism/Concept.md)
