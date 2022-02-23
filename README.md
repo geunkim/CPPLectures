@@ -5,7 +5,7 @@
 
 * C++98, C++03, [C++11](https://en.cppreference.com/w/cpp/11), [C++14](https://en.cppreference.com/w/cpp/14), [C++17](https://en.cppreference.com/w/cpp/17), [C++20](https://en.cppreference.com/w/cpp/20), [C++23](https://en.cppreference.com/w/cpp/23) ([reference](https://en.cppreference.com/w/))
 
-![img](./CPP_기능.png)
+![img](./CPP_ref.png)
 
 
 ## 공통 사항
