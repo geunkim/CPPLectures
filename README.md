@@ -157,9 +157,7 @@
 -------------------------------
 * To do (목록에 추가해야 할 내용들)
 
- 	- 우측 값(rvalue)과 좌축 값(lvalue)
  	- 타입추론(type deduction)
- 	- 우측 값 레퍼런스 (rvalue reference)
 
 
 ### References
@@ -172,4 +170,5 @@
 6. [A list of open source C++ libraries](https://en.cppreference.com/w/cpp/links/libs)
 7. [cppreference.com](https://en.cppreference.com/)
 8. [git --everything-is-local](https://git-scm.com/)
+9. [LEARN C++](https://www.learncpp.com/)
 
