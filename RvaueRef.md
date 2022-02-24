@@ -7,8 +7,9 @@ C++17 표준은 표현식에 해당하는 값 범주를 다음과 같이 정의�
 각 표현 식은 prvalue, xvalue, lvalue의 세가지 기본 값 범주 중 하나에 속한다.
 
 * **glvalue("generalized" lvalue)**: 객체, 비트 필드 또는 함수의 ID를 결정하는 표현식이다.
-* **prvalue("pure" rvalue)**: 객체, 비트 필드를 **초기화**하거나 보여지는 맥락에 의해서 지정된 대로 연산자의 피연산자의 값을 **계산**하는 표현식이다.
-* **xvalue("eXpiring" value)**: 자원을 재사용할 수 있는 객체, 비트 필드를 나타내는 *glvalue*이다 (보통 수명이 거의 다 되었기 때문에). 예: *rvalue 참조(rvalue reference)* 를 포함하는 특정 종류의 표현식은 반환 유형이 *rvalue 참조(rvalue reference)* 또는 *rvalue 참조 타입(rvalue reference type)* 에 대한 형변환(cast)인 함수에 대한 호출과 같은 *xvalue*를 생성한다. 
+* **prvalue("pure" rvalue)**: 객체, 비트 필드를 **초기화**하거나 연산자가 보여지는 맥락에 의해서 지정된 대로 연산자의 피연산자의 값을 **계산**하는 표현식이다.
+* **xvalue("eXpiring" value)**: 자원을 재사용할 수 있는 객체, 비트 필드를 나타내는 *glvalue*이다 (일반적으로 수명이 거의 다 되었기 때문에). 
+  예: *rvalue 참조(rvalue reference)* 를 포함하는 특정 종류의 표현식은 반환 자료형이 *rvalue 참조(rvalue reference)* 또는 *rvalue 참조 타입(rvalue reference type)* 으로 형변환(cast)되는 함수에 대한 호출과 같은 *xvalue*를 생성한다. 
 * **lvalue**: *xvalue*가 아닌 *glvalue*이다 (대입 표현식에서 왼쪽에 나타낼 수 있다는 점에서 lvalue라 불림). 
 * **rvalue**: *prvalue* 또는 *xvalue*이다 (대입 표현식에서 오른쪽에 나타날 수 있다는 점에서 rvalue라 불림). 
 
@@ -16,11 +17,11 @@ C++17 표준은 표현식에 해당하는 값 범주를 다음과 같이 정의�
 
 ![img](./value_categories.png)
 
-lvalue는 프로그램이 접근할 수 있는 주소를 갖는다. lvalue 표현 식의 예로는 const 변수, 배열 요소, lvalue 참조를 반환하는 함수 호출, 비트 필드, 공용체, 클래스 멤버를 포함한 변수 이름이 있다. 
-prvalue 표현식은 프로그램에서 접근할 수 있는 주소를 갖지 않는다. prvalue 표현식의 예로는 리터럴, 비 참조 타입을 반환하는 함수 호출, 표현식을 검사하는 과정 중에는 생성되지만
+lvalue는 프로그램이 접근할 수 있는 주소를 갖는다. lvalue 표현식의 예로는 const 변수, 배열 요소, lvalue 참조, 비트 필드, 공용체, 클래스 멤버를 를 반환하는 함수 호출을 포함한 변수 이름이 있다. 
+prvalue 표현식은 프로그램에서 접근할 수 있는 주소를 갖지 않는다. prvalue 표현식의 예로는 리터럴, 참조가 아닌 자료형을 반환하는 함수 호출 및 표현식을 검사하는 과정 중에는 생성되지만
 컴파일러에서만 액세스할 수 있는 임시 객체가 있다. 
 xvalue 표현식은 프로그램에서 더 이상 접근할 수 없지만 표현식에 대한 접근을 제공하는 rvalue 참조를 초기하는데 사용할 수 있는 주소를 가진다. 
-예로는 rvalue 참조를 반환하는 함수 호출, 배열 또는 객체가 rvalue 참조인 멤버 표현식에 대한 멤버와 포인터, 배열 첨자가 있다. 
+예로는 rvalue 참조를 반환하는 함수 호출, 배열 또는 객체가 rvalue 참조인 멤버 표현식에 대한 배열 첨자, 멤버와 포인터가 있다. 
 
 C++에서는 Rvalue와 Lvalue이 정의되어 있다.
 
@@ -75,3 +76,5 @@ C++에서의 참조는 좌측 값 참조이다.
 ## reference
 
 * [Value categories](https://en.cppreference.com/w/cpp/language/value_category)
+* [기본 개념(C++)](https://docs.microsoft.com/ko-kr/cpp/cpp/basic-concepts-cpp?view=msvc-170)
+* [Lvalue 및 Rvalue (C++)](https://docs.microsoft.com/ko-kr/cpp/cpp/lvalues-and-rvalues-visual-cpp?view=msvc-170)
