@@ -29,22 +29,98 @@ C++에서는 **표현 식의 계산이 끝난 후 계속 존재하는 객체(값
 *const* 타입을 포함하는 모든 변수는 Lvalue 이다.  
 
 
+## lvalue reference
 
+C++의 lvalue 참조(lvalue reference)는 존재하는 객체에 대한 또 다른 이름(별명)이다. 객체의 주소를 보유하지만, 구문상 객체처럼 동작한다. 
+참조가 한번 정의되면, 참조에 대한 연산은 참조된 객체에 적용된다. 참조 선언자는 ```&``` 이다. 
+lvalue 참조 선언은 참조 선언자가 뒤에 나오는 선택적 지정자 목록으로 구성된다. 참조는 초기화되어야 하고 다른 객체를 참조하도록 변경될 수 없다. 
 
+주소가 지정된 포인터 형식으로 변환될 수 있는 객체는 유사한 참조 형식으로도 변환될 수 있다. 
+예를 들어 주소가 ```char *```형식으로 변환될 수 있는 객체는 ```char &``` 형식으로도 변환될 수 있다.
+**lvale 참조는 기본적으로 참조되는 객체와 동일하다.**
 
+### lvalue 참조 변수 선언 및 초기화 
 
+다음 프로그램 코드 lvalue 참조 변수 선언 및 초기화 에이다. 
 
+```c++
+int  x = 5;    // x는 일반 변수 (lvalue)
+int& ref = x;  // ref는 lvalue 참조 변수       
+```
+lvalue 참조 변수는 선언과 동시에 저장공간이 있는 변수로 초기화 되어야 한다. 
+
+### lvalue 참조를 이용한 값 변경 
+
+앞의 프로그램 코드 예는 참조하고 있는 객체의 값을 읽기 위해서 lvalue 참조를 사용할 수 있음을 보였다.
+다음 프로그램 코드는 참조된 객체의 값을 변경하기 위해서 lvalue 참조를 사용할 수도 있다. 
+
+```c++
+#include <iostream>
+using namespace std;
+
+int main(int argc, char const *argv[])
+{
+	int x {10};
+	int& ref {x};
+
+	cout << "(after modify) x: " << x << endl;  // 10 출력
+
+	ref = 40;
+
+	cout << "(after modify) x: " << x << endl;  // 40 출력
+	return 0;
+}
+```
+실행 결과는 다음과 같다.
+```bash
+(after modify) x: 10
+(after modify) x: 40
+```
+### lvalue 참조 변수의 초기화 
+
+다음 코드는 lvalue 참조 변수의 초기화가 제대로 이루어진 경우와 잘못된 경우를 보인다. 
+lvalue 참조 변수 ```ref```는 변수 선언과 함께 ```x```로 초기화 하였으나 ``ìnvalidRef```는 변수 선언만 이루어지고 객체로 초기화되지 않아 
+에러가 발생한다. 
+
+```c++
+#include <iostream>
+using namespace std;
+
+int main(int argc, char const *argv[])
+{
+	int x { 30 };
+	int& ref{ x };
+	int& invalidRef; //error: declaration of reference variable 'invalidRef' requires an initializer
+
+	return 0;
+}
+```
+
+lvaue 참조 변수는 수정 가능한 lvalue(modifiable lvalue)로 바운딩되어야 한다. 
+
+```c++
+#include <iostream>
+using namespace std;
+
+int main(int argc, char const *argv[])
+{
+	int x = 5;
+	int& ref = x;
+
+	const int y = 5;
+	int& invalidRef1 = y;  // error: binding reference of type 'int' to value of type 'const int' drops 'const' qualifier
+	int& invalidRef2 = 30; // error: non-const lvalue reference to type 'int' cannot bind to a temporary of type 'int'
+
+	return 0;
+}
+```
+
+## rvalue reference
 
 
 ### 좌측값 
 
 좌측값은 객체를 식별할 수 있는 메모리 위치를 참조한다. 
-
-
-
-
-
-
 
 
 ```c++
@@ -78,3 +154,4 @@ C++에서의 참조는 좌측 값 참조이다.
 * [Value categories](https://en.cppreference.com/w/cpp/language/value_category)
 * [기본 개념(C++)](https://docs.microsoft.com/ko-kr/cpp/cpp/basic-concepts-cpp?view=msvc-170)
 * [Lvalue 및 Rvalue (C++)](https://docs.microsoft.com/ko-kr/cpp/cpp/lvalues-and-rvalues-visual-cpp?view=msvc-170)
+* [Lvalue references](https://www.learncpp.com/cpp-tutorial/lvalue-references/)
