@@ -79,7 +79,7 @@ int main(int argc, char const *argv[])
 ### lvalue 참조 변수의 초기화 
 
 다음 코드는 lvalue 참조 변수의 초기화가 제대로 이루어진 경우와 잘못된 경우를 보인다. 
-lvalue 참조 변수 ```ref```는 변수 선언과 함께 ```x```로 초기화 하였으나 ``ìnvalidRef```는 변수 선언만 이루어지고 객체로 초기화되지 않아 
+lvalue 참조 변수 ```ref```는 변수 선언과 함께 ```x```로 초기화 하였으나 ```ìnvalidRef```는 변수 선언만 이루어지고 객체로 초기화되지 않아 
 에러가 발생한다. 
 
 ```c++
@@ -148,7 +148,7 @@ int main(int argc, char const *argv[])
 	return 0;
 }
 ```
-앞의 프로그램 코드의 실행 결과는 다음과 같다. 프로그램에는 일반 변수 ```x```, ```y``와 lvalue 참조 변수 ```ref```가 선언되어 있으며 
+앞의 프로그램 코드의 실행 결과는 다음과 같다. 프로그램에는 일반 변수 ```x```, ```y```와 lvalue 참조 변수 ```ref```가 선언되어 있으며 
 ```ref = x``` 식으로 ```ref```가 ```x```를 참조하는 것으로 변수 ```x```의 주소와 ```ref``` 주소를 화면에 출력한 결과 같은 값을 가짐을 확인한다. 
 그러나 ```ref = y``` 식은 ```ref```가 다시 ```y```를 참조하는 것이 아니라 ```ref```가 참조하는 ```x```에 ```y```의 값을 대입한 것으로 
 변수 ```x```의 저장 장소에 저장된 값이 6으로 변경된다. 
@@ -161,6 +161,50 @@ x: 6
 &x: 0x7ffee4f179dc
 &ref: 0x7ffee4f179dc
 ````
+
+### 참조 변수의 유효범위와 생명주기 
+
+참조 변수는 일반 변수의 유혀범위와 생명주기의 규칙을 따른다. 
+
+```c++
+#include <iostream>
+using namespace std;
+
+int main(int argc, char const *argv[])
+{
+	int x {6};      // 일반 변수
+	int& ref {x};   // 일반 변수를 참조하는 참조 변수    
+
+	return 0;
+}   // 일반 변수와 참조 변수 소멸  
+```
+
+참조 변수와 참조되는 변수는 독립적인 생명주기를 갖는다. 참조 변수의 생명주기와 참조 변수가 참조하는 변수의 생명주기는 독립적이다. 
+
+* 참조 변수는 참조하는 변수가 소멸되기 전에 소멸될 수 있다. 
+* 참조되는 객체는 참조 변수보다 먼저 소멜될 수 있다. 
+
+참조되는 객체보다 참조 변수가 소멸되면 참조되는 변수는 영향이 없다. 다음 프로그램은 그 예를 보인다. 
+
+```c++
+#include <iostream>
+using namespace std;
+
+int main(int argc, char const *argv[])
+{
+	int x {6};
+
+	{
+		int& ref {x};   // ref 변수 선언과 함께 일반 변수 x를 참조
+		cout << "internal scope: " << ref << endl;  
+	}  // 참조 변수 ref 소멸 
+	cout << "outer scope(x): " << x << endl;
+	cout << "outer scope(ref): " << ref << endl;  // error: reference to overloaded function could not be resolved; did you mean to call it?
+	// ref 변수의 유효범위를 벗어나서 값을 출력할 수 없음  
+	
+	return 0;	
+}
+```
 
 
 ## rvalue 
