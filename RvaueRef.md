@@ -96,7 +96,7 @@ int main(int argc, char const *argv[])
 }
 ```
 
-lvaue 참조 변수는 수정 가능한 lvalue(modifiable lvalue)로 바운딩되어야 한다. 
+lvalue 참조 변수는 수정 가능한 lvalue(modifiable lvalue)로 바운딩되어야 한다. lvalue 참조는 수정 불가능한(non-modifiable) lvalue 또는 rvalue로 바운딩될 수 없다(그렇지 않으면 참조를 통해 해당 값을 변경할 수 있어 그의 상수성(const-ness)을 위반할 수 있다). 이러한 이유로 lvalue 참조는 때때로 non-constant 에 대한 lvalue 참조(때로는 non-const 참조로 축약)라고도 한다. 
 
 ```c++
 #include <iostream>
@@ -115,7 +115,16 @@ int main(int argc, char const *argv[])
 }
 ```
 
-## rvalue reference
+```void```로의 lvalue 참조는 허용되지 않는다.
+
+### 참조는 다른 객체를 참조할 수 없음 
+
+C++ lvalue 참조는 일단 초기화되면 다른 지정할 수 없다. 즉 다른 객체를 참조하도록 변경할 수 없다. 
+
+새로운 C++ 프로그래머는 참조할 다른 변수와 함께 참조를 제공하기 위해    
+
+
+## rvalue 
 
 
 ### 좌측값 
