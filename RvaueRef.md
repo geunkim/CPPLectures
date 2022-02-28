@@ -121,7 +121,44 @@ int main(int argc, char const *argv[])
 
 C++ lvalue 참조는 일단 초기화되면 다른 지정할 수 없다. 즉 다른 객체를 참조하도록 변경할 수 없다. 
 
-새로운 C++ 프로그래머는 참조할 다른 변수와 함께 참조를 제공하기 위해    
+새로운 C++ 프로그래머는 참조할 다른 변수와 함께 참조를 제공하기 위해 대입을 사용하여 참조를 재 지정하려는 경우가 많다. 
+이것은 컴파일되고 실행되지만 예상대로 작동하지는 않는다. 
+
+```c++
+#include <iostream>
+using namespace std;
+
+int main(int argc, char const *argv[])
+{
+	int x = 5;
+	int y = 6;
+
+	int& ref = x; // ref -> y 의 의미 
+
+	cout << "x: " << x << endl;
+	cout << "&x: "<< &x << endl;       // 변수 x의 저장공간 주소 
+	cout << "&ref: " << &ref << endl;  // ref의 저장공간 주소 
+
+	ref = y;   // ref -> y 가 아닌 x = y 와 동일한 것 
+
+	cout << "x: " << x << endl;
+	cout << "&x: "<< &x << endl;       // 변수 x의 저장공간 주소 
+	cout << "&ref: " << &ref << endl;  // ref의 저장공간 주소
+
+	return 0;
+}
+```
+앞의 프로그램 코드의 실행 결과는 다음과 같다. 프로그램에는 일반 변수 ```ㅌ```, ```y``와 lvalue 참조 변수 ```ref```가 선언되어 있으며 
+```x```
+
+```bash
+x: 5
+&x: 0x7ffee4f179dc
+&ref: 0x7ffee4f179dc
+x: 6
+&x: 0x7ffee4f179dc
+&ref: 0x7ffee4f179dc
+````
 
 
 ## rvalue 
