@@ -51,6 +51,49 @@ rvalue 참조를 사용하면 프로그램의 다른 곳에서 참조할 수 없
 ```W```, ```X```, ```Y``` 및 ```Z```의 네 가지 자료형을 선언하는 예를 살펴보자. 
 각 자료형의 생성자는 ```const```와 ```const```가 아닌 rvalue 참조의 다른 조합을 파러미터로 사용한다. 
 
+```c++
+{
+   W(int&, int&) { cout << "W constructor" << endl; }
+};
+
+struct X
+{
+   X(const int&, int&) { cout << "X constructor" << endl; }
+};
+
+struct Y
+{
+   Y(int&, const int&) { cout << "Y constructor" << endl; }
+};
+
+struct Z
+{
+   Z(const int, const int&) { cout << "Z constructor" << endl; }
+};
+
+int main(int argc, char const *argv[])
+{
+	int i = 10, j = 20;
+
+	W w(i, j);
+	X x(i, j);
+	Y y(i, j);
+	Z z(i, j);
+
+	return 0;
+}
+```
+
+프로그램 실행의 결과는 다음과 같다. 
+
+```bash
+W constructor
+X constructor
+Y constructor
+Z constructor
+```
+
+
 
 
 
