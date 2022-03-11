@@ -171,4 +171,5 @@
 7. [cppreference.com](https://en.cppreference.com/)
 8. [git --everything-is-local](https://git-scm.com/)
 9. [LEARN C++](https://www.learncpp.com/)
+10. [C++ Tutor - Visualize C++ code execution to learn C++ online](https://pythontutor.com/cpp.html#mode=edit)
 
