@@ -19,7 +19,7 @@ C++ 키워드와 문법에 따라 작성한 코드를 컴퓨터 CPU가 이해할
 
 편집과 빌드를 통해 만들어진 실행 파일을 컴퓨터의 메모리에 로드하고 CPU가 메모리에 로드된 프로그램 코드 영역의 기계어 코드를 읽어 해석하여 해당 작업을 수행하여 소스 파일에 작성된 작업을 수행하는 과정이다. 
 
-## MSVC에서 C++ 프로젝트
+## MVS(MicroSoft Visual Studio)에서 C++ 프로젝트
 
 * [C++ 콘솔 앱 프로젝트 만들기 및 편집](https://docs.microsoft.com/ko-kr/cpp/build/vscpp-step-1-create?view=msvc-150)
 
