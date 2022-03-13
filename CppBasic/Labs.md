@@ -73,3 +73,42 @@ int main(int argc, char const *argv[])
 	return 0;
 }
 ```
+
+5. 아래의 프로그램을 실행하였을 때 아래와 같은 결과를 얻고자 한다. 실행 후 원하는 결과가 나오도록 수정하라.
+
+원하는 결과
+
+```bash
+Hello
+World
+```
+
+프로그램 코드 
+```c++
+#include <iostream>
+
+int main()
+{
+	cout << "Hello";
+	cout << "World";
+
+	return 0;
+}
+```
+6. 다음 프로그램 코드는 변수 ```a```에 저장된 값을 출력하고자 한다. 실행파일을  
+
+```c++
+#include <iostream>
+using namespace std;
+
+int main(int argc, char const *argv[])
+{
+	int a = 20;
+
+	cout << "a" 
+
+	return 0;
+}
+```
+
+7. 
