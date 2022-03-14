@@ -307,7 +307,30 @@ int main(int argc, char const *argv[])
 	return 0;
 }
 ```
-## 문제 
+아래의 프로그램은 키보드로 부터 정수를 입력받아 출력하는 프로그램이다. 키보드로 부터 입력된 것이 숫자가 아닌 문자가 입력된 경우 에러가 발생하여야 한다. 
+```cin.fail()``` 메소드를 통해 입력 데이터가 숫자가 아닌 경우를 검증할 수 있도록 한다.
+
+```c++
+#include <iostream>
+using namespace std;
+
+int main(int argc, char const *argv[])
+{
+	int a;
+
+	cout << "정수를 입력하시오: ";
+
+	cin >> a;
+
+	if(cin.fail()) {
+		cout << "Input Error!!" << endl;
+	}
+	else {
+		cout << a << endl;
+	}
+	return 0;
+}
+```
 
 
 
