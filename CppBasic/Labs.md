@@ -120,6 +120,9 @@ A
 
 프로그램 코드 
 ```c++
+#include <iostream>
+using namespace std;
+
 int main(int argc, char const *argv[])
 {
 	int value = 65;  // 'A' 의 ASCII 값은 65 임 
@@ -133,3 +136,18 @@ int main(int argc, char const *argv[])
 }
 ```
 
+8. 다음 프로그램을 실행하고 실행 결과로 부터 ```"true"``` 와 ```true```, ```"false"```, ```false``의 차이점을 추론하시오.
+
+```c++
+#include <iostream>
+using namespace std;
+
+int main(int argc, char const *argv[])
+{
+	cout << "true" << endl;
+	cout << true << endl;
+	cout << "false << endl;
+	cout << false << endl;
+	
+	return 0;
+}
