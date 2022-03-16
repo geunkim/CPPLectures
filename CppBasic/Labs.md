@@ -112,11 +112,13 @@ int main(int argc, char const *argv[])
 ```
 
 7. 다음 프로그램 코드으 실행 결과과 다음과 같이 나오도록 변수 ```ch```를 선언하고 변수 ```value```의 값을 ```ch```에 복사하는 코드를 추가하시오.
+프로그램 실행 결과 
 ```bash
 65
 A
 ```
 
+프로그램 코드 
 ```c++
 int main(int argc, char const *argv[])
 {
