@@ -111,4 +111,23 @@ int main(int argc, char const *argv[])
 }
 ```
 
-7. 
+7. 다음 프로그램 코드으 실행 결과과 다음과 같이 나오도록 변수 ```ch```를 선언하고 변수 ```value```의 값을 ```ch```에 복사하는 코드를 추가하시오.
+```bash
+65
+A
+```
+
+```c++
+int main(int argc, char const *argv[])
+{
+	int value = 65;  // 'A' 의 ASCII 값은 65 임 
+	cout << value << endl;
+
+	// value에 저장된 값을 변수 ch를 선언하고 value의 값을 ch에 복사하는 코드를 작성
+
+	cout << ch << endl;
+
+	return 0;
+}
+```
+
