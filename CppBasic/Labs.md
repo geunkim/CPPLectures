@@ -36,7 +36,7 @@ using namespace std;
 
 int main(int argc, char const *argv[])
 {
-	char buf[255];
+	char buf[255] = {};
 	
 	// 다음 줄에 키보드로 부터 Hello World! 를 입력받아 buf 에 저장하는 코드 작성
 
