@@ -4,6 +4,7 @@
 
 ```c++
 #include <iostream>
+using namespace std;
 
 int main(int argc, char const *argv[])
 {
@@ -16,6 +17,7 @@ int main(int argc, char const *argv[])
 2. 키보드로 부터 정수 두 개를 입력받아 변수 ```first```, ```second```에 저장하고 화면에 출력하는 프로그램을 완성하시오.
 ```c++
 #include <iostream>
+using namespace std;
 
 int main(int argc, char const *argv[])
 {
@@ -31,7 +33,6 @@ int main(int argc, char const *argv[])
 
 ```c++
 #include <iostream>
-
 using namespace std;
 
 int main(int argc, char const *argv[])
@@ -50,7 +51,6 @@ int main(int argc, char const *argv[])
 ```c++
 #include <iostream>
 #include <string>
-
 using namespace std;
 //
 
@@ -86,6 +86,7 @@ World
 프로그램 코드 
 ```c++
 #include <iostream>
+using namespace std;
 
 int main()
 {
