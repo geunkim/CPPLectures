@@ -21,7 +21,7 @@ using namespace std;
 
 int main(int argc, char const *argv[])
 {
-	int first, second;
+	int first = 0, second = 0;
 	// 다음 줄에 앞에서 선언된 변수 first, second에 각각 10, 20을 저장하는 코드 작성
 
 	cout << first << ", " << second << endl;
