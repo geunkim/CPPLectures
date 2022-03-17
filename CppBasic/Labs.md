@@ -11,7 +11,7 @@ int main(int argc, char const *argv[])
 	// 다음 줄에 화면에 Hello World!! 를 출력하는 코드 작성
 	
 	return 0;
-}
+}/
 ````
 
 2. 키보드로 부터 정수 두 개를 입력받아 변수 ```first```, ```second```에 저장하고 화면에 출력하는 프로그램을 완성하시오.
@@ -37,6 +37,7 @@ using namespace std;
 
 int main(int argc, char const *argv[])
 {
+	// char buf[255] = "Hello World!";
 	char buf[255] = {};
 	
 	// 다음 줄에 키보드로 부터 Hello World! 를 입력받아 buf 에 저장하는 코드 작성
