@@ -17,5 +17,6 @@
 - [자료형 별칭](./TypeAlias.md)
 - [변수의 사용](./VariableUsage.md)
 - [연산자와 연산자 우선순위](./Operators.md)
+- [main 함수 인자](./main_args.md)
 - [프로그램 실습](./Labs.md)
 - [프로그램 문제](./Problems.md)
