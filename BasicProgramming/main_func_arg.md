@@ -40,13 +40,17 @@ int main(int argc, char const *argv[])
 	return 0;
 }
 ````
-실행 결과는 다음과 같다. 
+
+(1) 실행파일 이름만 입력한 경우의 실행 결과는 다음과 같다. 
 
 ```bash
 $./main_args
 argc: 1
 ./main_args
 ```
+
+(2) 실행파일 이름과 추가 인자("first") 한 개가 함께 입력된 경우 실행 결과는 다음과 같다. 
+
 ```bash
 $./main_args first
 argc: 2
@@ -54,3 +58,12 @@ argc: 2
 first
 ```
 
+(3) 실행파일 이름과 추가 인자("first" , "second") 두 개가 함께 입력된 경우 실행 결과는 다음과 같다. 
+
+```bash
+$./main_args first second
+argc: 3
+./main_args
+first
+second
+```
