@@ -174,7 +174,7 @@ int main(int argc, char const *argv[])
 }
 ```
 							  
-10. 다음 프로그램 실핼 결과를 추룬하고 이유를 기술하시오.							  
+10. 다음 프로그램 실핼 결과를 추론하고 이유를 기술하시오.							  
 
 ```c++
 #include <iostream>
@@ -191,7 +191,7 @@ int main(int argc, char const *argv[])
 }							  							  
 ```
 		    
-11. 다음 프로그램 실핼 결과를 추룬하고 이유를 기술하시오.							  
+11. 다음 프로그램 실핼 결과를 추론하고 이유를 기술하시오.							  
 
 ```c++
 #include <iostream>
@@ -264,3 +264,37 @@ int main(int argc, char const *argv[])
 
 15. 14번의 코드를 1에서 16까지 곱과 1에서 17까지의 곲을 구하고 원하는 결과가 나오는지 확인하라. 원하는 결과가 나오지 않는 이유와 해결책을 제시하라. 
 
+16. 다음과 같이 두 수를 입력 받아 두 수가 같으면 "두수는 같다.", 같지 않다면 "X는(은) Y보다 크다" 라고 출력되도록 프로그램을 작성하라.
+
+실행 예
+```bash
+$./Lab16
+두수를 입력하라.
+20
+20
+두수는 같다.
+```
+```bash
+$./Lab16
+두수를 입력하라.
+20
+30
+30은(는) 20보다 크다.
+```
+```c++
+#include <iostream>
+using namespace std;
+
+int main(int argc, char const *argv[])
+{
+	int data1, data2;
+
+	cout <<"두 수를 입력하라."
+	
+	cin >> data1 >> data2;
+
+	// 아래에 프로그램을 작성하라. 
+
+	return 0;
+}
+```
