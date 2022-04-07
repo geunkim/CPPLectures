@@ -1,0 +1,45 @@
+#include <iostream>
+using namespace std;
+
+class PlayList {
+public:
+	PlayList (){ cout << "Music Start . . . " << endl; } // 생성자
+	virtual ~PlayList() { cout << "The end of the Music . . . " << endl; } // 가상소멸자
+	virtual void Play() = 0; // 순수가상함수, 자식클래스에서 무조건 정의해야함
+};
+
+class Song1 : public PlayList { //자식클래스1
+public:
+	void Play() { cout <<"Playing To Die For . . ." << endl; }
+};
+
+class Song2 : public PlayList { //자식클래스2
+public:
+	void Play() { cout << "Playing Heat Waves . . ." << endl; }
+};
+
+class Song3 : public PlayList { //자식클래스3
+public:
+	void Play() { cout << "Playing Dancing In The Moonlight" << endl; }
+};
+
+int main()
+{
+	//PlayList s; 순수가상함수는 객체 생성 불가능
+	PlayList* s[3]; // 부모클래스의 포인터 배열변수 선언
+	Song1 t; // Song1 객체 t 생성
+	Song2 h; // Song2 객체 h 생성
+	Song3 d; // Song3 객체 d 생성
+	s[0] = &t; // 포인터 변수에 객체 t 저장
+	s[1] = &h; // 포인터 변수에 객체 h 저장
+	s[2] = &d; // 포인터 변수에 객체 d 저장
+
+	t.Play(); // 객체 t의 Play 함수 호출
+	h.Play(); // 객체 h의 Play 함수 호출
+	d.Play(); // 객체 d의 Play 함수 호출
+	s[0]->Play(); //부모클래스의 포인터가 향하는 Song1의 함수 호출
+	s[1]->Play(); //부모클래스의 포인터가 향하는 Song2의 함수 호출
+	s[2]->Play(); //부모클래스의 포인터가 향하는 Song3의 함수 호출
+	
+	return 0;
+}
