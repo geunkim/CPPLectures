@@ -26,4 +26,40 @@ int main(int argc, char const *argv[])
 
 3. 2번의 생성자는 default parameter 값을 20으로 를 가지며 값을 진달받지 않는 경우 20이 age에 저장되도록 생성자를 수정하라.
 
-4. 
+4. 다음 프로그램의 생성자와 멤버함수를 구현하고 화면에 다음과 같이 출력이 이루어 지도록 프로그램을 작성하라.
+```bash
+  num: 100. (객체의  num에 저장된 값)
+  gas: 200.5  (객체의 gas에 저장된 값)
+```
+
+```c++
+#include <iostream>
+using namespace std;
+
+class Car
+{
+	int num;
+	double gas;
+public:
+	Car(int n, double g);
+	int getNum(); // 인라인 멤버함수
+	double getGas(); // 인라인 멤버함수
+	void show();  // num 값과 gas 값을 화면에 출력하는 멤버 함수 
+};
+
+// 생성자 
+Car::Car(int n, double g) {}. // n의 값을 num에 g의 값을 gas에 저장하는 생성자
+
+int Car::getNum() { }  // num 값 반환
+
+double Car getGas() { } // gas 값 반환
+
+void Car::show() { }  // num 값과 gas 값을 화면에 출력 
+
+int main(int argc, char const *argv[])
+{
+	Car h(100, 200.5);
+	h.show();
+	return 0;
+}
+```
