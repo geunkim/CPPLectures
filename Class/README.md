@@ -27,6 +27,6 @@
 * 임시 객체
 
 
-* [problem1](./Problem1.md)
-* [Problem2](./Problem2.md)
-* [Problem3](./Problem3.md)
+* [프로그램 실습](./Labs.md)
+* [프로그램 문제](./Problem2.md)
+
