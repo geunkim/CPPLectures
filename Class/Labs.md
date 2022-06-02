@@ -55,7 +55,7 @@ Car::Car(int n, double g) {}. // n의 값을 num에 g의 값을 gas에 저장하
 
 int Car::getNum() { }  // num 값 반환
 
-double Car getGas() { } // gas 값 반환
+double Car::getGas() { } // gas 값 반환
 
 void Car::show() { }  // num 값과 gas 값을 화면에 출력 
 
