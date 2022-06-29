@@ -12,7 +12,7 @@
 
 * [코딩 스타일(Coding Style)](./CodingStyle.md)
 * [github - Pro Git book](https://git-scm.com/book/ko/v2): Pro Git book의 한글 버전
-* Visual Studio에 및 C++ 지원 설치 밍 간단한 C++ 프로젝트 만들기
+* Visual Studio에 및 C++ 지원 설치 및 간단한 C++ 프로젝트 만들기
     - [Microsoft Visaul Studio 2017 설치](https://docs.microsoft.com/ko-kr/cpp/build/vscpp-step-0-installation?view=msvc-150)
     - C++를 사용한 데스크톱 개발 워크로드 선택한 다음 설치
 
