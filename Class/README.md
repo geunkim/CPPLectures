@@ -15,7 +15,7 @@
   - [클래스와 객체의 관계](https://github.com/geunkim/CPPLectures/blob/master/Class/Objects.md#-클래스와-객체의-관계)
     + 프로그램에서의 객체 
     + 프로그램의 객체와 실생활의 객체
-  - [클래스와 캡슐화](https://github.com/geunkim/CPPLectures/blob/master/Class/Objects.md#-%ED%81%B4%EB%9E%98%EC%8A%A4%EC%99%80-%EC%BA%A1%EC%8A%90%ED%99%94)
+  - [클래스와 캡슐화](https://github.com/geunkim/CPPLectures/blob/master/Class/Objects.md#-클래스와-캡술화)
     + 캡슐화
     + 인터페이스
   - C++ 클래스의 구성요소 
