@@ -13,14 +13,14 @@
 * [C 구조체와 C++ 구조체 비교](./sturct_in_c_cpp.md)
 * [클래스와 객체](./Objects.md)
   - [클래스와 객체의 관계](https://github.com/geunkim/CPPLectures/blob/master/Class/Objects.md#%ED%81%B4%EB%9E%98%EC%8A%A4%EC%99%80-%EA%B0%9D%EC%B2%B4)
-    > 프로그램에서의 객체 
-    > 프로그램의 객체와 실생활의 객체
+    + 프로그램에서의 객체 
+    + 프로그램의 객체와 실생활의 객체
   - 클래스와 캠슐화
-    > 캡슐화
-    > 인터페이스
+    + 캡슐화
+    + 인터페이스
   - C++ 클래스의 구성요소 
-    > 접근 지정자
-    > 객체 생성
+    + 접근 지정자
+    + 객체 생성
   - [프로그램 연습](./Problem1.md)
 * [생성자와 소멸자](./constructor_destructor.md)
   - 생성자
