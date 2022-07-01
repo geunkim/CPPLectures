@@ -12,10 +12,10 @@
 
 * [C 구조체와 C++ 구조체 비교](./sturct_in_c_cpp.md)
 * [클래스와 객체](./Objects.md)
-  - [클래스와 객체의 관계](https://github.com/geunkim/CPPLectures/blob/master/Class/Objects.md#%ED%81%B4%EB%9E%98%EC%8A%A4%EC%99%80-%EA%B0%9D%EC%B2%B4)
+  - [클래스와 객체의 관계](https://github.com/geunkim/CPPLectures/blob/master/Class/Objects.md#클래스와 객체의 관계)
     + 프로그램에서의 객체 
     + 프로그램의 객체와 실생활의 객체
-  - 클래스와 캠슐화
+  - [클래스와 캠슐화](https://github.com/geunkim/CPPLectures/blob/master/Class/Objects.md#클래스와 캡슐화)
     + 캡슐화
     + 인터페이스
   - C++ 클래스의 구성요소 
