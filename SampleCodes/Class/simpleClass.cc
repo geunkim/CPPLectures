@@ -6,11 +6,11 @@
 class Point{
 	double x;
 	double y;
+public:
 	double getX();
 	double getY();
 	Point();
 	Point(int x, int y);
-	~Point();
 	void setX(int x);
 	void setY(int y);
 	void printPoint();
