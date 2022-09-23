@@ -94,7 +94,7 @@
    - [클래스와 객체](./Class/Objects.md)
    - [생성자와 소멸자](./Class/constructor_destructor.md)
    - [정적 클래스](./Class/Static.md)
-   - [프렌즈 클래스](../friend_function_class.md)
+   - [프렌즈 클래스](./friend_function_class.md)
    - [임시 객체](TemporaryClass.md)
 
 ### **[클래스와 상속](./Inheritance)**
