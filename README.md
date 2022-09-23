@@ -143,7 +143,7 @@
    - [STL 개요](./STL/STL_Intro.md)
    - [컨테이너](./STL/Container.md)
    - [반복자](./STL/Iterator.md)
-   - [알고리즘](./STL/algorithm.md)
+   - [알고리즘](./STL/algorithms.md)
 
 
 ### **[데이터 입출력](./InputOutput)**
