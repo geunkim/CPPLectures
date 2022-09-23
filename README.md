@@ -120,7 +120,7 @@
    - 
 ### **[에외처리와 형 변환](./Exception)**
    - [예외의 개념](./Exception/Exception.md)
-   - [프로그램의 에러종류](./Exception/Erors_in_Program.md)
+   - [프로그램의 에러종류](./Exception/Errors_in_Program.md)
    - 에외 처리기
    - 예외 전달 방법
    - 다중 catch 문장
