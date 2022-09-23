@@ -106,7 +106,7 @@
    
 ### **[다형성](./Polymorphism)**
    - [다형성의 개념](./Polymorphism/Concept.md)
-   - [가상함수와 동적바인딩](./Polymorphisn/VirtualFunction.md)
+   - [가상함수와 동적바인딩](./Polymorphism/VirtualFunction.md)./VirtualFunction.md
    - [가상 소멸자](./Polymorphism/virtual_destructor.md)
    - [순수 가상함수]
    - [상향 형변환]
