@@ -101,7 +101,7 @@
    - [상속의 개념](./Inheritance/Copcept.md)
    - [자식 클래스 정의하기](./Inheritance/ChildCloass.md)
    - [상속과 접근 지정자](./Inheritance/AccessControl.md)
-   - [상속과 생성자 소멀자 관계]
+   - [상속과 생성자 소멀자 관계](https://github.com/Hongyoosung/Cpp-Learning/blob/master/Inheritance/Protected.md)
    - [다중 상속](./Inheritance/MultipleInheritance.md)
    
 ### **[다형성](./Polymorphism)**
