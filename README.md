@@ -99,7 +99,7 @@
 
 ### **[클래스와 상속](./Inheritance)**
    - [상속의 개념](./Inheritance/Copcept.md)
-   - [자식 클래스 정의하가](./Inheritance/ChildCloass.md)
+   - [자식 클래스 정의하기](./Inheritance/ChildCloass.md)
    - [상속과 접근 지정자](./Inheritance/AccessControl.md)
    - [상속과 생성자 소멀자 관계]
    - [다중 상속](./Inheritance/MultipleInheritance.md)
@@ -109,7 +109,7 @@
    - [가상함수와 동적바인딩](./Polymorphisn/VirtualFunction.md)
    - [가상 소멸자](./Polymorphism/virtual_destructor.md)
    - [순수 가상함수]
-   - [상형 형변환]
+   - [상향 형변환]
    
 ### **[중복](./Overload)**
    - [함수 중복]
