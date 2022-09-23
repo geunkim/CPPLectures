@@ -150,7 +150,7 @@
    - [스트림(stream)](./InputOutput/stream.md)
    - [출력 스트림(output stream)](./InputOutput/output.md)
    - [입력 스트림(input stream)](./InputOutput/input.md)
-   - [파일 스트림(file stream)](./Advanced_InOut.md)
+   - [파일 스트림(file stream)](./InputOutput/Advanced_InOut.md)
 
 ### **디자인패턴**
 
