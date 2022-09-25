@@ -76,7 +76,7 @@
    
 ### **[구조체, 공용체, 열거형](./Struct)**
    - [구조체](./Struct/Struct.md)
-   - [공용체](./Struct/Union.md)
+   - [공용체](./Struct/Union.md)
    - [열거형](./Struct/Enum.md)
    - [프로그램 실습](./Struct/Labs.md)
    - [프로그램 문제](./Struct/Problems.md)
@@ -94,22 +94,22 @@
    - [클래스와 객체](./Class/Objects.md)
    - [생성자와 소멸자](./Class/constructor_destructor.md)
    - [정적 클래스](./Class/Static.md)
-   - [프렌즈 클래스](../friend_function_class.md)
+   - [프렌즈 클래스](./friend_function_class.md)
    - [임시 객체](TemporaryClass.md)
 
 ### **[클래스와 상속](./Inheritance)**
-   - [상속의 개념](./Inheritance/Copcept.md)
-   - [자식 클래스 정의하가](./Inheritance/ChildCloass.md)
+   - [상속의 개념](./Inheritance/Concept.md)
+   - [자식 클래스 정의하기](./Inheritance/ChildClass.md)
    - [상속과 접근 지정자](./Inheritance/AccessControl.md)
-   - [상속과 생성자 소멀자 관계]
+   - [상속과 생성자 소멀자 관계](https://github.com/Hongyoosung/Cpp-Learning/blob/master/Inheritance/Protected.md)
    - [다중 상속](./Inheritance/MultipleInheritance.md)
    
 ### **[다형성](./Polymorphism)**
    - [다형성의 개념](./Polymorphism/Concept.md)
-   - [가상함수와 동적바인딩](./Polymorphisn/VirtualFunction.md)
+   - [가상함수와 동적바인딩](./Polymorphism/VirtualFunction.md)
    - [가상 소멸자](./Polymorphism/virtual_destructor.md)
    - [순수 가상함수]
-   - [상형 형변환]
+   - [상향 형변환]
    
 ### **[중복](./Overload)**
    - [함수 중복]
@@ -120,7 +120,7 @@
    - 
 ### **[에외처리와 형 변환](./Exception)**
    - [예외의 개념](./Exception/Exception.md)
-   - [프로그램의 에러종류](./Exception/Erors_in_Program.md)
+   - [프로그램의 에러종류](./Exception/Errors_in_Program.md)
    - 에외 처리기
    - 예외 전달 방법
    - 다중 catch 문장
@@ -143,14 +143,14 @@
    - [STL 개요](./STL/STL_Intro.md)
    - [컨테이너](./STL/Container.md)
    - [반복자](./STL/Iterator.md)
-   - [알고리즘](./STL/algorithm.md)
+   - [알고리즘](./STL/algorithms.md)
 
 
 ### **[데이터 입출력](./InputOutput)**
    - [스트림(stream)](./InputOutput/stream.md)
    - [출력 스트림(output stream)](./InputOutput/output.md)
    - [입력 스트림(input stream)](./InputOutput/input.md)
-   - [파일 스트림(file stream)](./Advanced_InOut.md)
+   - [파일 스트림(file stream)](./InputOutput/Advanced_InOut.md)
 
 ### **디자인패턴**
 
