@@ -21,7 +21,6 @@
   - C++ 클래스의 구성요소 
     + 접근 지정자
     + 객체 생성
-  - [프로그램 연습](./Problem1.md)
 * [생성자와 소멸자](./constructor_destructor.md)
   - 생성자
   - 소멸자
@@ -36,6 +35,7 @@
 
 * [프로그램 실습](./Labs.md)
 * [프로그램 문제 1](./Problems.md)
-* [프로그램 문제 2](./Problem2.md)
+* [프로그램 문제 2](./Problem1.md)
+* [프로그램 문제 3](./Problem2.md)
 
 
