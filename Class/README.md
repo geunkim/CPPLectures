@@ -37,7 +37,6 @@
 
 * [프로그램 실습](./Labs.md)
 * [프로그램 문제 1](./Problems.md)
-* [프로그램 문제 2](./Problem1.md)
-* [프로그램 문제 3](./Problem2.md)
+* [프로그램 문제 2](./Problem2.md)
 
 
