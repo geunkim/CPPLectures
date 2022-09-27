@@ -24,9 +24,8 @@
   - [프로그램 연습](./Problem1.md)
 * [생성자와 소멸자](./constructor_destructor.md)
   - 생성자
-  - 복사생성자
-    + 묵시적 변환
-  - 소멸자 
+  - 소멸자
+* [복사생성자](./copy_constructor.md)
 * [정적 클래스](./Static.md) 
 * [프랜즈 클래스](../friend_function_class.md)
 
