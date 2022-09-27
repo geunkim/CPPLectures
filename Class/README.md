@@ -30,12 +30,9 @@
 * [정적 클래스](./Static.md) 
 * [프랜즈 클래스](../friend_function_class.md)
 
-* 복사생성자
-
-  - 임시 객체와 이동 시맨틱
 
 * 정적 멤버 함수 (o)
-* 임시 객체
+* [임시 객체](./TemporaryClass.md)
 
 
 * [프로그램 실습](./Labs.md)
