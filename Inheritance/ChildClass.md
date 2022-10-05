@@ -59,12 +59,14 @@ public:
 int main(int argc, char const* argv[])
 {
 	Cruise dolphin;
-	dolphin.ride();    // 부모클래스 멤버변수 접근
+	dolphin.ride();    // 부모클래스 멤버함수  접근
+	dolphin.load(10);  // 부모클래스 멤버함수  접근
 	dolphin.countPerson();     // 자식클래스 멤버함수 호출
   
-	AirPlane CppAir;
-	CppAir.ride();    // 부모클래스의 멤버변수 접근
-	CppAir.countPerson();     // 자식클래스 멤버함수 호출
+	AirPlane cppAir;
+	cppAir.ride();    // 부모클래스의 멤버함수 접근
+	cppAir.load(20);  // 부모클래스 멤버함수  접근 
+	cppAir.countPerson();     // 자식클래스 멤버함수 호출
 }
 ```
 
