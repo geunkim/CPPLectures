@@ -53,26 +53,65 @@ int main() {
 }
 ```
 
-
-
-
-x. 클래스 템플릿
+2. friend class의 코드를 실행하고 분석하라. 
+(a) 클래스 ClassA를 정의하기 전에 클래스 ClassB 를 선언한 이유는
+(b) 클래스 ClassA가 클래스 ClassB를 포함하는 관계인가?
 
 ```c++
-// C++ program to demonstrate the use of class templates
+#include <iostream>
+using namespace std;
 
+class ClassB;
+
+class ClassA {
+    private:
+        int numA;
+
+        // friend class declaration
+        friend class ClassB;
+
+    public:
+        ClassA() : numA(12) {}
+};
+
+class ClassB {
+    private:
+        int numB;
+
+    public:
+        ClassB() : numB(1) {}
+    
+    // member function to add numA
+    // from ClassA and numB from ClassB
+    int add() {
+        ClassA objectA;
+        return objectA.numA + numB;
+    }
+};
+
+int main() {
+    ClassB objectB;
+    cout << "Sum: " << objectB.add();
+    return 0;
+}
+```
+
+3. 클래스 템플릿 프로그램을 실행하고 분석하라. 
+(a) 클래스 템플릿을 사용하여 특정 데이터 타입의 객체를 생성하는 방법을 분석
+
+```c++
 #include <iostream>
 using namespace std;
 
 // Class template
-template <class T>
+template <typename T>
 class Number {
    private:
     // Variable of type T
     T num;
 
    public:
-    Number(T n) : num(n) {}   // constructor
+    Number(T n) : num(n) {}  
 
     T getNum() {
         return num;
@@ -81,10 +120,7 @@ class Number {
 
 int main() {
 
-    // create object with int type
     Number<int> numberInt(7);
-
-    // create object with double type
     Number<double> numberDouble(7.7);
 
     cout << "int Number = " << numberInt.getNum() << endl;
@@ -94,7 +130,7 @@ int main() {
 }
 ```
 
-x. 클래스 템플릿
+4. 클래스 템플릿 프로그램을 실행하고 분석하라.
 
 ```c++
 #include <iostream>
@@ -140,13 +176,12 @@ int main() {
 }
 ```
 
-x. 여러 타입이 있는 클래스 템플릿
+5. 여러 타입이 있는 클래스 템플릿 프로그램을 실행시키고 분석하라.
 
 ```c++
 #include <iostream>
 using namespace std;
 
-// Class template with multiple and default parameters
 template <class T, class U, class V = char>
 class ClassTemplate {
    private:
@@ -165,12 +200,12 @@ class ClassTemplate {
 };
 
 int main() {
-    // create object with int, double and char types
+   
     ClassTemplate<int, double> obj1(7, 7.7, 'c');
     cout << "obj1 values: " << endl;
     obj1.printVar();
 
-    // create object with int, double and bool types
+   
     ClassTemplate<double, char, bool> obj2(8.8, 'a', false);
     cout << "\nobj2 values: " << endl;
     obj2.printVar();
@@ -179,12 +214,11 @@ int main() {
 }
 ```
 
-x. 함수 오버라이딩
+6. 앞의 프로그램 3, 4, 5를 비교 분석하라. 
+
+7. 함수 오버라이딩 프로그램을 실행하고 코드를 분석하라.
 
 ```c++
-// C++ program to access overridden function
-// in main() using the scope resolution operator ::
-
 #include <iostream>
 using namespace std;
 
@@ -213,6 +247,7 @@ int main() {
 }
 ```
 
+8. 함수 오버라이딩 프로그램을 실행하고 코드를 분석하라.
 
 
 ```c++
@@ -243,6 +278,8 @@ int main() {
 }
 ```
 
+9. 함수 오버라이딩 프로그램을 실행하고 코드를 분석하라.
+
 ```c++
 #include <iostream>
 using namespace std;
@@ -263,94 +300,11 @@ class Derived : public Base {
 
 int main() {
     Derived derived1;
-
-    // pointer of Base type that points to derived1
     Base* ptr = &derived1;
-
-    // call function of Base class using ptr
     ptr->print();
 
     return 0;
 }
 ```
 
-
-```c++
-// C++ program to access overridden function using pointer
-// of Base type that points to an object of Derived class
-
-#include <iostream>
-using namespace std;
-
-class Base {
-   public:
-    void print() {
-        cout << "Base Function" << endl;
-    }
-};
-
-class Derived : public Base {
-   public:
-    void print() {
-        cout << "Derived Function" << endl;
-    }
-};
-
-int main() {
-    Derived derived1;
-
-    // pointer of Base type that points to derived1
-    Base* ptr = &derived1;
-
-    // call function of Base class using ptr
-    ptr->print();
-
-    return 0;
-}
-```
-
-
-
-```c++
-// C++ program to demonstrate the working of friend class
-
-#include <iostream>
-using namespace std;
-
-// forward declaration
-class ClassB;
-
-class ClassA {
-    private:
-        int numA;
-
-        // friend class declaration
-        friend class ClassB;
-
-    public:
-        // constructor to initialize numA to 12
-        ClassA() : numA(12) {}
-};
-
-class ClassB {
-    private:
-        int numB;
-
-    public:
-        // constructor to initialize numB to 1
-        ClassB() : numB(1) {}
-    
-    // member function to add numA
-    // from ClassA and numB from ClassB
-    int add() {
-        ClassA objectA;
-        return objectA.numA + numB;
-    }
-};
-
-int main() {
-    ClassB objectB;
-    cout << "Sum: " << objectB.add();
-    return 0;
-}
-
+10. 앞의 7, 8, 9 프로그램을 비교 분석하라. 
