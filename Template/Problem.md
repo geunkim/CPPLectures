@@ -142,7 +142,7 @@ int main() {
 #include <iostream>
 using namespace std;
 
-template <class T>
+template <typename T>
 class Calculator {
    private:
     T num1, num2;
