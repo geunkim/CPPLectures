@@ -15,35 +15,24 @@
 #include <iostream>
 using namespace std;
 
-// forward declaration
 class ClassB;
 
-class ClassA {
-    
-    public:
-        
-        ClassA() : numA(12) {}
-        
+class ClassA { 
+    public:        
+        ClassA() : numA(12) {}        
     private:
         int numA;
-  
-         friend int add(ClassA, ClassB);
+ friend int add(ClassA, ClassB);
 };
 
 class ClassB {
-
-    public:
-        // constructor to initialize numB to 1
-        ClassB() : numB(1) {}
-    
+    public:     
+        ClassB() : numB(1) {} 
     private:
         int numB;
- 
-        // friend function declaration
-        friend int add(ClassA, ClassB);
+ friend int add(ClassA, ClassB);
 };
 
-// access members of both classes
 int add(ClassA objectA, ClassB objectB) {
     return (objectA.numA + objectB.numB);
 }
@@ -70,11 +59,8 @@ class ClassB;
 
 class ClassA {
     private:
-        int numA;
-
-        // friend class declaration
+        int numA;        
         friend class ClassB;
-
     public:
         ClassA() : numA(12) {}
 };
@@ -82,12 +68,8 @@ class ClassA {
 class ClassB {
     private:
         int numB;
-
     public:
-        ClassB() : numB(1) {}
-    
-    // member function to add numA
-    // from ClassA and numB from ClassB
+        ClassB() : numB(1) {}    
     int add() {
         ClassA objectA;
         return objectA.numA + numB;
@@ -109,13 +91,11 @@ int main() {
 #include <iostream>
 using namespace std;
 
-// Class template
 template <typename T>
 class Number {
    private:
-    // Variable of type T
     T num;
-
+    
    public:
     Number(T n) : num(n) {}  
 
@@ -210,7 +190,6 @@ int main() {
     ClassTemplate<int, double> obj1(7, 7.7, 'c');
     cout << "obj1 values: " << endl;
     obj1.printVar();
-
    
     ClassTemplate<double, char, bool> obj2(8.8, 'a', false);
     cout << "\nobj2 values: " << endl;
@@ -276,7 +255,6 @@ int main() {
     Derived derived1, derived2;
     derived1.print();
 
-    // access print() function of the Base class
     derived2.Base::print();
 
     return 0;
