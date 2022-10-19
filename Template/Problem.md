@@ -188,7 +188,7 @@ int main() {
 #include <iostream>
 using namespace std;
 
-template <class T, class U, class V = char>
+template <typename T, typename U, typename V = char>
 class ClassTemplate {
    private:
     T var1;
