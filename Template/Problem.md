@@ -239,22 +239,20 @@ class Derived : public Base {
    public:
     void print() {
         cout << "Derived Function" << endl;
+
+        // call overridden function
+        Base::print();
     }
 };
 
 int main() {
-    Derived derived1, derived2;
+    Derived derived1;
     derived1.print();
-
-    // access print() function of the Base class
-    derived2.Base::print();
-
     return 0;
 }
 ```
 
 8. 함수 오버라이딩 프로그램을 실행하고 코드를 분석하라.
-
 
 ```c++
 #include <iostream>
@@ -271,15 +269,16 @@ class Derived : public Base {
    public:
     void print() {
         cout << "Derived Function" << endl;
-
-        // call overridden function
-        Base::print();
     }
 };
 
 int main() {
-    Derived derived1;
+    Derived derived1, derived2;
     derived1.print();
+
+    // access print() function of the Base class
+    derived2.Base::print();
+
     return 0;
 }
 ```
@@ -307,8 +306,11 @@ class Derived : public Base {
 int main() {
     Derived derived1;
     Base* ptr = &derived1;
+    Derived* dptr = &derive1;
+    
     ptr->print();
-
+    dptr->print();
+    
     return 0;
 }
 ```
