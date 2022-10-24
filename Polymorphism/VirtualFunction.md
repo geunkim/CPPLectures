@@ -16,6 +16,7 @@ C++ 프로그램에서 함수를 호출할 때 컴파일러는 어느 함수를 
 다형성 개념을 구현하기 위해서는 바인딩이 정적으로 이루어지면 안된다. 
 
 C++ 프로그램에서 함수를 호출하는 코드는 컴파일 시점에 실행될 함수의 코드가 저장된 고정된 메모리 주소로 변환된다. 이 것을 정적 바인딩(static binding) 또는 초기 바인딩(early binding)이라 한다.
+
 C++ 프로그램에서 가상함수가 아닌 멤버 함수는 정적 바인딩을 한다. 
 그러나 C++ 프로그램에서 가상 함수는 프로그램이 실행될 때 대상 객체를 결정하기 때문에 
 가상 함수의 호출은 컴파일 시점에 함수 호출 코드를 바인딩 할 수 없다. 
@@ -73,14 +74,15 @@ int main(int argc, char const *argv[])
 ```
 
 앞의 코드의 실행 결과는 다음과 같다.
-``
+
+```bash
 Base::check()
 Derived::check()
 Derived::check()
 Base::check()
 Derived::check()
 Derived::check()
-``
+```
 
 다음은 정적 바인딩을 설명하는 프로그램 예제이다. 
 
@@ -128,14 +130,14 @@ int main(int argc, char const *argv[])
 
 앞의 프로그램의 실행 결과는 다음과 같다.
 
-``
+```bash
 Base::check()
 Derived::check()
 Base::check()
 Base::check()
 Base::check()
 Derived::check()
-``
+```
 
 
 
