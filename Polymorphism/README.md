@@ -14,5 +14,5 @@
 * [가상 함수와 동적 바인딩](./VirtualFunction.md)
 * [가상 소멸자](./virtual_destructor.md)
 * [순수 가상 함수](./pureVirtualFunc.md)
-* [실습](./Labs.md)
-* [문제](./Problems.md)
+* [프로그램 실습](./Labs.md)
+* [프로그램 문제](./Problems.md)
