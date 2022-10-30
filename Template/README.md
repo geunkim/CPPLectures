@@ -6,7 +6,7 @@
 
 ## 학습할 내용
 
-* 템플릿 이란 
+* [템플릿 이란](./template.md) 
 * [함수 템플릿](./functionTemplate.md) 
 * [클래스 템플릿](./classTemplate.md)
 * 클래스 템플릿의 특수화 
