@@ -12,18 +12,9 @@
 
 * [C 구조체와 C++ 구조체 비교](./struct_in_c_cpp.md)
 * [클래스와 객체](./Objects.md)
-  - [클래스와 객체의 관계](./Objects.md#-클래스와-객체의-관계)
-    + 프로그램에서의 객체 
-    + 프로그램의 객체와 실생활의 객체
-  - [클래스와 캡슐화](./Objects.md#-클래스와-캡술화)
-    + 캡슐화
-    + 인터페이스
-  - C++ 클래스의 구성요소 
-    + 접근 지정자
-    + 객체 생성
+  - [클래스와 객체의 관계](./Objects.md/#-클래스와-객체의-관계)
+
 * [생성자와 소멸자](./constructor_destructor.md)
-  - 생성자
-  - 소멸자
 * [복사생성자](./copy_constructor.md)
 * [정적 클래스](./Static.md) 
 * [프랜즈 클래스](../friend_function_class.md)
