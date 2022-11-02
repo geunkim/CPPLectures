@@ -5,7 +5,7 @@
 복사 생성자를 정의하는 구문은 다음과 같다.
 
 ```cpp
-class 이름::class 이름(const class 이름 &참조이름) {
+class 이름::class 이름(const class <클래스 이름>& <변수 이름>) {
    ....
 }
 ```
