@@ -132,7 +132,7 @@
    - [Weak Pointer](./SmartPointer/weak_ptr.md)
    
 ### **[템플릿](./Template)**
-   - 템플릿 개념
+   - [템플릿 개념](./Template/template.md)
    - [함수 템플릿](./Template/functionTemplate.md)
    - [클래스 템플릿](./Template/classTemplate.md)
    - 클래스 템플릿의 특수화
