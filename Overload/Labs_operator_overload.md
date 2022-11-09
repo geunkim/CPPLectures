@@ -144,14 +144,36 @@ public:
 };
 ```
 
-5. 다음 myString 클래스를 구현하고 검증하라.
+5. 다음 myVector의 연산자 오버로드를 구현하고 검증하라.
+
+```c++
+class myVector
+{
+	double x, y;
+public:
+	myVector(double x = 0.0, double y = 0.0):  x(x), y(y){};
+
+	myVector operator+(myVector& V);
+	myVector operator-(myVector& V);	
+  	myVector operator-();
+  	myVector operator++();
+  	myVector operator++(int);
+  	myVector operator--();
+  	myVector operator--(int);
+  	bool operator==(myVector& V);
+  	friend ostream& operator << (ostream& os, const myVector& v);
+};
+```
+
+
+6. 다음 myString 클래스를 구현하고 검증하라.
 
 ```c++
 class myString
 {
-	char* buf;		// 문자열 데이터가 저장된 메모리 식작 조사 		
+	char* buf;		// 문자열 데이터가 저장된 메모리 시작 조사 		
 	int length;		// 문자열의 길이 
-	int capacity;  	// 할당된 메모리 용량
+	int capacity;  	        // 할당된 메모리 용량
 public:
 	myString();
 	myString(const char* str);		// 
@@ -167,25 +189,5 @@ public:
 };
 ```
 
-6. 다음 myVector의 연산자 오버로드를 구현하고 검증하라.
-
-```c++
-class myVector
-{
-	double x, y;
-public:
-	myVector(double x = 0.0, double y = 0.0):  x(x), y(y){};
-
-	myVector operator+(myVector& V);
-	myVector operator-(myVector& V);	
-  myVector operator-();
-  myVector operator++();
-  myVector operator++(int);
-  myVector operator--();
-  myVector operator--(int);
-	bool operator==(myVector& V);
-  friend ostream& operator << (ostream& os, const myVector& v);
-};
-```
 
 
