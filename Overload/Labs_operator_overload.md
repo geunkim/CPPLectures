@@ -175,10 +175,9 @@ class myString
 	int length;		// 문자열의 길이 
 	int capacity;  	        // 할당된 메모리 용량
 public:
-	myString();
-	myString(const char* str);		// 
-	myString(const myString& str);  // 복사 생성자
-	~myString();
+	myString();                     // 저장공간을 255개를 할당 
+	myString(const char* str);	// str의 내용을 buf 공간에 복사 (str 내의 문자열의 길이는 254 이하)
+	myString(const myString& str);  // buf의 내용도 모두 복사 
 
 	int length() const;
 	int capacity() const;
