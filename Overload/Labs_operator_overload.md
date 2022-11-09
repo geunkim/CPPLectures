@@ -165,7 +165,7 @@ public:
 	bool operator==(myString& str);
 	bool operator > (myString& str);
 };
-
+```
 
 6. 다음 myVector의 연산자 오버로드를 구현하고 검증하라.
 
