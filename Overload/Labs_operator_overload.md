@@ -144,7 +144,7 @@ public:
 };
 ```
 
-5. 다음 myString 클래스를 구헌하고 검증하라.
+5. 다음 myString 클래스를 구현하고 검증하라.
 
 ```c++
 class myString
