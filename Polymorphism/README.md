@@ -13,5 +13,6 @@
 * [다형성의 개념](./Concept.md)
 * [가상 함수와 동적 바인딩](./VirtualFunction.md)
 * [가상 소멸자](./virtual_destructor.md)
-* [상향 형변환]
-* [순수 가상 함수] 
+* [순수 가상 함수](./pureVirtualFunc.md)
+* [프로그램 실습](./Labs.md)
+* [프로그램 문제](./Problems.md)

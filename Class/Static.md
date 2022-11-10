@@ -1,4 +1,4 @@
-# 정적 클래스, 정적 멤버변수, 정적 멤버함수, 정적 상수 (static class, static member varialbe, static member function, const static member)
+# 정적 클래스, 정적 멤버변수, 정적 멤버함수, 정적 상수 (static class, static member variable, static member function, const static member)
 
 ## 정적 멤버
 
