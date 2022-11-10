@@ -6,6 +6,7 @@ int main(int argc, char const *argv[])
 	int data1, data2;
 
 	cout <<"두 수를 입력하라."
+
 	
 	cin >> data1 >> data2;
 
