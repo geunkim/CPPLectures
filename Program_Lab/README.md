@@ -5,9 +5,9 @@
 * [예외처리](./Lab3.md)
 * [const, static, 상속](./Lab4.md)
 * [Lab7](./Lab7.md)
-* [Lab7](./Lab9.md)
-* [Lab7](./Lab10.md)
-* [Lab7](./Lab11.md)
+* [Lab9](./Lab9.md)
+* [Lab10](./Lab10.md)
+* [Lab11](./Lab11.md)
 
 * [Lab2](./Lab2.md)
 * [Template](./Template.md)
