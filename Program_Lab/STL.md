@@ -58,4 +58,4 @@ template <typename T, size_t N> class array;
 template <typename T> class vector;
 ```
 
-4. 템플릿 클래스 list, set, map 을 활용하는 프로그램 작성하시오.
+4. 템플릿 클래스 list, set 을 활용하는 프로그램 작성하시오.
