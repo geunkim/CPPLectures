@@ -35,7 +35,7 @@ int main(int argc, char const *argv[])
 {
     stack<int> s;
 
-    cout << s.empty() << endl
+    cout << s.empty() << endl;
   
     s.push(4); 
     s.push(7); 
