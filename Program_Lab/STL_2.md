@@ -99,7 +99,7 @@ int main(int argc, char const *argv[])
 }
 ```
 
-8 7번의 priority_queue를  queue로 변경하어 데이터를 저장하고 저장된 데이터를 출력하는 프로그램을 작성하라.
+8. 7번의 priority_queue를  queue로 변경하어 데이터를 저장하고 저장된 데이터를 출력하는 프로그램을 작성하라.
 
 9. STL map container를 사용하는 프로그램을 작성하라. 
 
