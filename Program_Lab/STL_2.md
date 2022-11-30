@@ -44,8 +44,9 @@ int main(int argc, char const *argv[])
  
     
     cout << s.size() << endl;
-    cout << s.top() << end;
-    cout << s.pop() << endl;
+    cout << s.top() << endl;
+    s.pop();
+    cout << s.top() << endl;
     cout << s.size() << endl;
   
     // s에 저장된 모든 데이터를 화면에 출력하는 코드를 여기에 추가
@@ -75,7 +76,8 @@ int main(int argc, char const *argv[])
    
     cout << q.size() << endl;
     cout << q.top() << endl;
-    cout << q.pop() << endl;
+    q.pop();
+    cout << q.top() << endl;
   
 }
 ```
