@@ -1,4 +1,4 @@
-다음 코드에 알고리즘 추가학기
+다음 코드에 알고리즘 추가하기
 
 ```c++
 #include <iostream>
@@ -55,7 +55,9 @@ int main(int argc, char const *argv[])
   it = max_element(v.begin(), v.end());
   cout << *it << endl;
 
-   // reverse
+  // swap_ranges
+
+  // reverse
    
    
 	return 0;
