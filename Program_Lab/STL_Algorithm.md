@@ -22,7 +22,7 @@ int main(int argc, char const *argv[])
 	v.push_back(10);
 	v.push_back(2);
 	v.push_back(30);
-	v.push_back(30);
+	v.push_back(40);
 	v.push_back(5);
 	v.push_back(7);
 
