@@ -56,10 +56,22 @@ int main(int argc, char const *argv[])
   cout << *it << endl;
 
   // swap_ranges
-
   // reverse
+  // reverse_copy
+  // fill
+  // fill_n
+  // adjacent_find
+  // is_sorted
+  // find_if
+  // remove
+  // remove_copy_if
+  // unique
+  // erase
+  // suffle
+  // 
+ 
    
    
-	return 0;
+  return 0;
 }
 ```
