@@ -1,4 +1,4 @@
-다음 코드에 알고리즘 추가하기
+다음 코드에  STL 알고리즘을 사용 검증 하기
 
 ```c++
 #include <iostream>
@@ -68,7 +68,35 @@ int main(int argc, char const *argv[])
   // unique
   // erase
   // suffle
-  // 
+  // all_of
+  // any_of
+  // replace
+  // binary_search
+  // merge
+  // partial_sort 
+  // count_if
+  // count
+  // partion
+  // rotate_copy
+  // rotate
+  // copy
+  // make_heap
+  // generate
+  // copy_backward
+  // set_interaction
+  // set_difference
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
  
    
    
