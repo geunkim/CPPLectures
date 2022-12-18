@@ -86,6 +86,6 @@ C++14 버전에서는 반복자의 정확한 데이터 구조를 몰라도 auto 
  * 데이터의 삽입으로 필요한 경우 자동적으로 capacity를 증가시킴 
  
  capacity 증가가 더 큰 연속된 메모리 공간을 확보하는 경우 이미 저장된 데이터들이 새로 확보된 곳으로 모두 복사하여야 한다.
- insertion에 의한 capacity의 증가가 발생하는 경우 대략적인 평균적인 실행 시간을 constant로 하기 위해 capacity를 두 배로 증가한다. 
- Capacity는 감소하지 않는다. 메모리는 해지(release)하지 않는다. 
+ insertion에 의한 capacity의 증가가 발생하는 경우 대략적인 평균적인 실행 시간을 constant로 하기 위해 capacity를 두 배로 증가시킨다. 
+ Capacity는 감소하지 않으며 메모리는 해지(release)하지 않는다. 
  
