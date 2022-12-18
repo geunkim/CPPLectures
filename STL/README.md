@@ -9,7 +9,7 @@
 
 ## 학습 내용
 
-* [표준 템플릿 라이브러리 란?](/STL_intro.md)
+* [표준 템플릿 라이브러리 란?](./STL_Intro.md)
 * [STL 컨테이너]
 * [STL 반복자]
 * [STL 알고리즘](./algorithms.md)
