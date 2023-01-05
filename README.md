@@ -200,4 +200,6 @@
 8. [git --everything-is-local](https://git-scm.com/)
 9. [LEARN C++](https://www.learncpp.com/)
 10. [C++ Tutor - Visualize C++ code execution to learn C++ online](https://pythontutor.com/cpp.html#mode=edit)
+11. 전문가를 위한 C 
+12. 전문가를 위한 C++ 
 
