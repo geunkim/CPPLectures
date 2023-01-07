@@ -96,8 +96,8 @@
    - [정적 클래스](./Class/Static.md)
    - [프렌즈 클래스](./friend_function_class.md)
    - [임시 객체](TemporaryClass.md)
-   - 프로그램 실습
-   - 프로그램 문제
+   - 프로그램 실습(./Class/NewLabs.md)
+   - 프로그램 문제(./Class/NewProblems.md)
 
 ### **[클래스와 상속](./Inheritance)**
    - [상속의 개념](./Inheritance/Concept.md)
