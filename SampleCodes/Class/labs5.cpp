@@ -14,6 +14,7 @@ public:
 		val = new int[i];
 		init(val, i);
 	}
+	~Data(){ delete val }
 	void init(int*, int);
 	void insert(int);
 	void deleteData(int);
@@ -59,6 +60,8 @@ void Data::insert(int n)
 		{
 			val[i] = val2[i];
 		}
+		
+		delete val2;
 
 		num *= 2;
 
