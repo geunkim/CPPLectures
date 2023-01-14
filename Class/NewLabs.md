@@ -216,5 +216,128 @@ int main(int argc, const char* argv[])
 }
 ```
 
+#
+
+### 10. 해당 프로그램에서 코드를 추가하여 함수 show()를 호출할 시 다음과 같은 결과가 나오도록 하라
+(단, 접근 지정자의 범위를 수정하지 않으며 '홍길동'과 '10'은 각 클래스의 멤버 변수로 출력한다.)
+
+출력 결과
+```
+홍길동 has 10 books
+```
+
+```c++
+#include <iostream>
+
+using namespace std;
+
+class Man
+{
+	string name = "홍길동";
+public:
+	void show(int);
+};
+
+void Man::show(int book)
+{
+
+}
+
+class Book
+{
+	int num = 10;
+public:
+
+};
+
+int main(int argc, const char* argv[])
+{
+
+
+	return 0;
+}
+```
+
+#
+
+### 11. 프로그램을 실행 시 다음의 출력 결과가 나오도록 코드를 추가하라
+
+출력 결과
+```c++
+10
+10
+```
+
+```c++
+#include <iostream>
+
+using namespace std;
+
+class A
+{
+	int num = 100;
+public:
+	void setNum(int num) { this->num = num; }
+	int getNum() { return num; }
+};
+
+class B
+{
+	A a;
+public:
+	// 코드 작성
+};
+
+int main(int argc, const char* argv[])
+{
+	B b;
+	cout << b.getA_num() << endl;
+	
+	A a;
+	a = b.getA();
+
+	cout << a.getNum() << endl;
+
+	return 0;
+}
+```
+
+#
+
+### 12. 프로그램 실행 시 다음의 출력 결과가 나오도록 클래스에 코드를 추가하라
+```c++
+A is older
+```
+
+```c++
+#include <iostream>
+
+using namespace std;
+
+class Man
+{
+	string name;
+	int age;
+public:
+	Man(string name, int age) {
+		this->name = name;
+		this->age = age;
+	}
+        // 코드 작성
+};
+
+int main(int argc, const char* argv[])
+{
+	Man a("A", 20);
+	Man b("B", 10);
+
+	cout << a.older(a, b) << " is older" << endl;
+		 
+	return 0;
+}
+```
+
+#
+
 
 
