@@ -339,5 +339,139 @@ int main(int argc, const char* argv[])
 
 #
 
+### 13. 다음 프로그램을 실행하면 컴파일 에러가 발생한다. 에러를 해결할 수 있는 한 줄의 코드를 작성하라.
+정적 멤버를 사용하기 위한 조건을 알고 있는지
+```c++
+#include <iostream>
 
+using namespace std;
+
+class Player
+{
+	static int playerNum;
+public:
+	static int getPlayerNum() { return playerNum; }
+};
+
+int main(int argc, const char* argv[])
+{
+	Player a, b;
+
+	cout << a.getPlayerNum() << endl;
+
+	return 0;
+}
+```
+
+#
+
+### 14. 다음 프로그램에서 main 함수에서 에러가 발생하지 않도록 클래스 멤버 함수 getTreeNum()을 적절히 수정하라. 수정 후 정적 멤버의 특징을 추론하라
+정적 멤버의 특징을 이해하고 있는가
+
+```c++
+#include <iostream>
+
+using namespace std;
+
+class Tree
+{
+	static int treeNum;
+public:
+	Tree(int leaf)
+	{
+		treeNum++;
+	}
+	int getTreeNum()
+	{
+		return treeNum;
+	}
+};
+
+int Tree::treeNum = 0;
+
+int main(int argc, const char* argv[])
+{
+	cout << Tree::getTreeNum() << endl;
+
+	Tree a(10), b(20);
+
+	cout << Tree::getTreeNum() << endl;
+
+	return 0;
+}
+```
+
+#
+
+### 15. 다음 프로그램에서 에러가 발생하지 않도록 클래스 Man을 수정하라.
+프렌드 함수의 역할을 이해하고 있는지
+```c++
+#include <iostream>
+
+using namespace std;
+
+class Man {
+	int money;
+public:
+	Man(int money) { this->money = money; }
+	bool rich(Man a, Man b);         
+};
+
+bool rich(Man a, Man b) {                       
+	if (a.money > b.money) return true;     
+	else return false;                     
+}
+
+int main(int argc, const char* argv[]) {
+
+	Man Jinho(100);
+	Man Donghun(200);
+
+	if (rich(Jinho, Donghun)) cout << "rich : Jinho" << endl; 
+	else cout << "rich : Donghun" << endl;                 
+
+	return 0;
+}
+```
+
+#
+
+### 16. 다음 프로그램에서 에러가 발생하지 않도록 수정하라. 단, 코드의 추가만 허용되며 순서 변경, 기존 코드의 수정은 하지 않는다.
+다른 클래스의 멤버 함수를 프렌드로 활용할 수 있는지
+```c++
+#include <iostream>
+
+using namespace std;
+
+class Man;
+
+class MantoMan {
+public:
+	bool fight(Man a, Man b);
+};
+
+class Man {
+	int power;
+public:
+	Man(int power) { this->power = power; }
+};
+
+bool MantoMan::fight(Man a, Man b) { 
+	if (a.power > b.power) return true;
+	else return false;
+}
+
+
+int main(int argc, const char* argv[]) {
+
+	Man Donghun(50);
+	Man Jinho(1000);
+	MantoMan a;
+
+	if (a.fight(Donghun, Jinho) == 1) cout << "Donghun Win" << endl;
+	else cout << "Jinho Win" << endl;
+
+	return 0;
+}
+```
 
