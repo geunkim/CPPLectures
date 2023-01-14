@@ -1,6 +1,6 @@
 #
 
-### 1. 다음 코드에서 클래스 Tree의 객체를 생성하고 메인 함수에서 Tree의 멤버 변수에 값을 저장 후 출력하라
+### 1. 다음 코드에서 구조체 Tree의 객체를 생성하고 메인 함수에서 Tree의 멤버 변수에 값을 저장 후 출력하라
 객체의 데이터 구조를 알고, 데이터를 저장 및 활용할 수 있는가?
 
 ```c++
@@ -8,9 +8,8 @@
 
 using namespace std;
 
-class Tree
+struct Tree
 {
-public:
 	string name;
 	int leaf;
 };
@@ -25,7 +24,7 @@ int main(int argc, const char* argv[])
 #
 
 
-### 2. 클래스 Man의 두 멤버 변수를 출력하는 멤버 함수를 구현하고 이를 메인 함수에서 호출하라
+### 2. 구조체 Man의 두 멤버 변수를 출력하는 멤버 함수를 구현하고 이를 메인 함수에서 호출하라
 클래스 내에서 멤버 변수를 활용하여 멤버 함수를 구현하고 이를 호출할 수 있는가?
 
 ```c++
@@ -33,9 +32,8 @@ int main(int argc, const char* argv[])
 
 using namespace std;
 
-class Man
+struct Man
 {
-public:
 	string name = "홍길동";
 	int age = 24;
 	void show()
