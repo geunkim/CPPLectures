@@ -233,8 +233,9 @@ using namespace std;
 
 class Man
 {
-	string name = "홍길동";
+	string name;
 public:
+	Man() { name = "홍길동"; }
 	void show(int);
 };
 
@@ -275,8 +276,9 @@ using namespace std;
 
 class A
 {
-	int num = 100;
+	int num;
 public:
+	A() { num = 100; }
 	void setNum(int num) { this->num = num; }
 	int getNum() { return num; }
 };
