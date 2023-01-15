@@ -4,9 +4,9 @@ using namespace std;
 
 class A
 {
-	int num = 100;
+	int num;
 public:
-	void setNum(int num) { this->num = num; }
+	void setNum(int num = 100) { this->num = num; }
 	int getNum() { return num; }
 };
 
