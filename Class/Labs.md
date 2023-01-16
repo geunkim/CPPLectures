@@ -98,3 +98,145 @@ int main(int argc, char const *argv[])
 	return 0;
 }
 ```
+
+## 추가 실습 문제
+
+6. 해당 코드는 멤버변수에 접근할때 정보은닉을 위반하고 접근하려고 하는 코드이다. 이 코드를 정보 은닉을 지키도록 수정하라.
+
+```c++
+
+#include <iostream>
+
+using namespace std;
+
+class Student
+{
+private:
+	string name;
+public:
+	Student(string str) : name(str)
+	{
+		cout << name << "생성자" << endl;
+	}
+	~Student()
+	{
+		cout << name << "소멸자" << endl;
+	}
+	//name 간접접근 함수 추가
+
+};
+
+int main(int argc, char const* argv[])
+{
+	Student a("a");
+	cout << "a의 이름은? "<<a.name << endl;
+
+	return 0;
+}
+
+```
+키워드 
+"클래스" "정보은닉" 
+
+7. 해당 Student와 Person 클래스의 변수는 const로 상수화 되어있다. 이때 Student는 초기화가 되지만 Person은 초기화가 불가능하다.
+   초기화 방법의 차이를 비교하고 호출시점에 대해 생각해 보자.
+
+``` c++
+#include <iostream>
+
+using namespace std;
+
+class Student
+{
+private:
+	 const string name;
+public:
+	Student(string str) : name(str)
+	{
+		cout << name << "Student 생성자" << endl;
+	}
+	~Student()
+	{
+		cout << name << "Student 소멸자" << endl;
+	}
+	string GetName() { return name; }
+
+};
+
+class Person
+{
+private:
+	const string name;
+public:
+	Person(string str)
+	{
+		name = str;
+		cout << name << "Person 생성자" << endl;
+	}
+	~Person()
+	{
+		cout << name << "Person 소멸자" << endl;
+	}
+	string GetName() { return name; }
+};
+int main(int argc, char const* argv[])
+{
+	Student a("a");
+	Person a("a");
+
+	return 0;
+}
+
+```
+
+키워드
+"생성자" "멤버 이니셜라이저" "초기화리스트"
+
+8. 해당코드는 person 클래스에서 정적변수 money를 사용하는 모습이다. 코드를 보고 정적변수의 접근, 초기화, 활용 등을 생각해 보자	
+
+``` c++
+#include <iostream>
+
+using namespace std;
+
+class Person
+{
+private:
+	static int money;
+	const string name;
+public:
+	Person(string str) : name(str)
+	{
+		cout << name << "Person 생성자" << endl;
+	}
+	~Person()
+	{
+		cout << name << "Person 소멸자" << endl;
+	}
+	string GetName() { return name; }
+	static void BuyIceCream() { money -= 1000; }
+	static int GetMoney() { return money; }
+	
+};
+
+int Person::money = 5000;
+
+int main(int argc, char const* argv[])
+{
+	Person a("a");
+	Person b("b");
+	Person c("c");
+
+	a.BuyIceCream();
+	b.BuyIceCream();
+	c.BuyIceCream();
+
+	cout << Person::GetMoney() << endl;
+
+	return 0;
+}
+
+```
+
+키워드
+"정적 변수" "정적 함수" "static"
