@@ -24,7 +24,7 @@ int main(int argc, const char* argv[])
 #
 
 
-### 2. 구조체 Man의 두 멤버 변수를 출력하는 멤버 함수를 구현하고 이를 메인 함수에서 호출하라
+### 2. 클래스 Man의 두 멤버 변수를 출력하는 멤버 함수를 구현하고 이를 메인 함수에서 호출하라
 클래스 내에서 멤버 변수를 활용하여 멤버 함수를 구현하고 이를 호출할 수 있는가?
 
 ```c++
@@ -32,10 +32,17 @@ int main(int argc, const char* argv[])
 
 using namespace std;
 
-struct Man
+class Man
 {
-	string name = "홍길동";
-	int age = 24;
+	string name;
+	int age;
+	Man()
+	{
+		name = "홍길동";
+		age = 24;
+	}
+		
+	
 	void show()
 	{
 		// 코드 작성
@@ -65,9 +72,14 @@ using namespace std;
 
 class Man
 {
-	string name = "홍길동";
-	int age = 24;
+	string name;
+	int age;
 public:
+	Man()
+	{
+		name = "홍길동";
+		age = 24;
+	}
 	// 멤버 함수 구현
 };
 
@@ -91,9 +103,13 @@ using namespace std;
 
 class Man
 {
-	string name = "홍길동";
+	string name;
 	int age;
 public:
+	Man()
+	{
+		name = "홍길동";
+	}
 	// 멤버 함수 구현
 };
 
@@ -152,7 +168,6 @@ using namespace std;
 
 class Man
 {
-	string name = "홍길동";
 	int age;
 public:
 	Man(int);
@@ -188,7 +203,6 @@ using namespace std;
 
 class Man
 {
-	string name = "홍길동";
 	int age;
 public:
 	Man() 
