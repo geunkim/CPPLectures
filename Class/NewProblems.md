@@ -97,7 +97,7 @@
 - 해당하는 Person의 name이 있는 경우 해당 Person의 child를 통해 새 Person을 동적 생성한다. 새로 생성된 Person의 name은 add()의 두 번째 파라미터이다.
 - 새로 생성된 Person 객체가 add()를 통해 새로운 객체를 종속할 수 있도록 포인터 변수를 조정한다.
 - 다음은 메인 함수와 실행 결과를 나타낸다.
-- ```c++
+```c++
 
 int main() {
 
