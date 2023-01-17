@@ -23,7 +23,7 @@ public:
 	int getPower() { return power; }
 	string getName() { return name; }
 	void setPower(int power) { this->power = power; }
-	friend MantoMan; // MantoMan Å¬·¡½ºÀÇ ¸ğµç ¸â¹ö ÇÔ¼ö¸¦ ÇÁ·»µå ¼±¾ğ
+	friend MantoMan; // MantoMan í´ë˜ìŠ¤ì˜ ëª¨ë“  ë©¤ë²„ í•¨ìˆ˜ë¥¼ í”„ë Œë“œ ì„ ì–¸
 };
 
 Man MantoMan::fight(Man a, Man b) {
