@@ -25,9 +25,9 @@
 ### 3. 다음의 조건을 만족하는 프로그램을 작성하라
 
 - 클래스 Man이 있다. Man에는 이름과 나이를 저장하는 멤버 변수 name과 age가 있다.
-- public에는 객체 생성 시 전달받은 값으로 name과 age를 초기화하는 생성자가 있다.
-- 또한 public에는 name과 age를 반환하는 멤버 함수가 있다.
-- 메인 함수에서 Man의 객체 배열을 생성한다. 원소 객체는 3개이며 3개 모두 생성자에 맞게 맴버 변수를 초기화한다.
+- 클래스 Man에는 객체 생성 시 전달받은 값으로 name과 age를 초기화하는 생성자가 있다.
+- name과 age를 반환하는 멤버 함수가 있다.
+- 메인 함수에서 2개 이상의 원소를 가진 Man의 객체 배열을 생성과 동시에 멤버 변수 값을 저장한다.
 - 반복문과 멤버 함수를 이용하여 원소 객체들의 멤버 변수 값을 차례로 출력한다.
 
 [#C++ 객체 배열](https://github.com/Hongyoosung/Cpp-Learning/blob/master/ObjectPointer/ObjectArray.md)
