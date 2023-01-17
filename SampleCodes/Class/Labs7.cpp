@@ -1,5 +1,5 @@
-﻿#include <iostream>
-#include <deque>
+#include <iostream>
+
 
 using namespace std;
 
@@ -24,16 +24,14 @@ public:
 		if (person->name == name) return person;
 		else
 		{
-			cout << "find error" << endl;
-			cout << person->name << endl;
 			return NULL;
 		}
 	}
 
 	void add_Person(string parent, string child)
 	{
-		Person* parent_person = find(person, parent);
-		if (parent_person == NULL)
+		
+		if (find(person, parent) == NULL)
 		{
 			cout << parent << " 을(를) 찾지 못했습니다" << endl;
 			return;
@@ -52,6 +50,7 @@ int main() {
 	World w("홍길동");
 	w.add_Person("홍길동", "a");
 	w.add_Person("a", "b");
+	w.add_Person("c", "d");
 
 	return 0;
 }
