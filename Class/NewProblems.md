@@ -8,7 +8,7 @@
 - 메인 함수에서 Man의 객체 A와 B를 생성한다. 이때, A에는 아무 값을 입력하지 않고 B에는 10과 20을 입력한다.
 - 각 멤버 함수들을 테스트하여 정상적으로 작동하는지 확인한다.
 
-[C++ 클래스 멤버](https://boycoding.tistory.com/239)
+[C++ 클래스 멤버](https://github.com/geunkim/CPPLectures/blob/master/Class/Objects.md)
 
 #
 
@@ -19,7 +19,7 @@
 - 멤버 함수로 treeNum을 반환하는 함수와 현재 생성된 모든 Tree 객체의 leaf 수의 합을 반환하는 함수가 있다.
 - 메인 함수에서 객체를 생성하고 테스트하여 모든 멤버가 정상적으로 작동하는지 확인한다.
 
-[#C++ 정적 클래스](https://codingcoding.tistory.com/736)
+[#C++ 정적 클래스](https://github.com/geunkim/CPPLectures/blob/master/Class/Static.md)
 #
 
 ### 3. 다음의 조건을 만족하는 프로그램을 작성하라
@@ -30,7 +30,7 @@
 - 메인 함수에서 Man의 객체 배열을 생성한다. 원소 객체는 3개이며 3개 모두 생성자에 맞게 맴버 변수를 초기화한다.
 - 반복문과 멤버 함수를 이용하여 원소 객체들의 멤버 변수 값을 차례로 출력한다.
 
-[#C++ 객체 배열](https://senticoding.tistory.com/55)
+[#C++ 객체 배열](https://github.com/Hongyoosung/Cpp-Learning/blob/master/ObjectPointer/ObjectArray.md)
 
 #
 
@@ -45,7 +45,7 @@
 - 멤버 함수 useGold()는 입력받은 값만큼의 gold를 차감하고 차감된 gold의 5배 만큼의 money를 획득한다.
 - 메인 함수에서 테스트하여 모든 멤버가 정상적으로 작동하는지 확인한다.
 
-[#C++ 프렌드](https://coding-factory.tistory.com/698)
+[#C++ 프렌드](https://github.com/geunkim/CPPLectures/blob/master/friend_function_class.md)
 
 #
 
@@ -74,7 +74,7 @@
 - 이후 패배한 객체의 power를 MantoMan의 멤버 함수를 활용하여 승리한 객체의 power보다 높게 설정한다.
 - 다시 fight()를 실행하고 결과를 확인한다.
 
-[#C++ 프렌드](https://coding-factory.tistory.com/698)
+[#C++ 프렌드](https://github.com/geunkim/CPPLectures/blob/master/friend_function_class.md)
 
 #
 
@@ -83,4 +83,4 @@
 - 만약 배열이 가득 찬 상태에서 insert()를 실행할 시, 기존 배열의 두 배 크기를 갖는 새로운 배열을 할당 후 그곳에 기존의 값을 모두 복사할 것, 새로 할당된 배열은 클래스의 멤버 변수로써 유효해야 한다.
 - 입력받은 정수에 해당하는 배열의 인덱스 값을 다시 0으로 만드는 deleteData()함수를 구현할 것. 이때, 0이 된 원소 뒤에 원소가 존재할 경우, 모두 앞으로 한 칸씩 이동할 것.
 
-[#C++ 동적할당](https://jhnyang.tistory.com/334)
+[#C++ 동적할당](https://github.com/Hongyoosung/Cpp-Learning/blob/master/ObjectPointer/Dynamic%20Memory.md)
