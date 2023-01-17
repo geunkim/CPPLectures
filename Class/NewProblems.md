@@ -84,3 +84,33 @@
 - 입력받은 정수에 해당하는 배열의 인덱스 값을 다시 0으로 만드는 deleteData()함수를 구현할 것. 이때, 0이 된 원소 뒤에 원소가 존재할 경우, 모두 앞으로 한 칸씩 이동할 것.
 
 [#C++ 동적할당](https://github.com/Hongyoosung/Cpp-Learning/blob/master/ObjectPointer/Dynamic%20Memory.md)
+
+#
+
+### 8. 다음의 문장을 참고하여 프로그램을 완성하라.
+- 최종 형태 : 하나의 구조체 객체로부터 종속되는 새로운 구조체 객체를 생성, 종속 관계는 포인터로 이루어진다. 객체 A를 통해 B를 생성할 경우, A의 포인터는 B를 가리키게 된다.
+- 구조체 Person은 이름을 저장하는 변수 name과 Person형 포인터 변수 child를 가지고 있다.
+- 클래스 World는  멤버 변수로 Person형 포인터 변수를 가지고 있다.
+- Wolrd의 생성자는 멤버 변수를 통해 Person 객체를 동적 생성한다. 이때, 입력받은 문자열을 name에 저장하고 child는 NULL로 저장한다.
+- 멤버 함수 find()는 매개변수로 Person형 포인터와 문자열을 입력받는다. 만약 현재 Person 구조체의 name이 입력받은 문자열과 같다면 매개변수로 받은 포인터를 반환한다. 같지 않을 경우 NULL을 반환하는 오류 검사를 구현한다.
+- 멤버 함수 add()는 첫 번째 매개변수로 기존 Person의 name과 두 번째 매개변수로 해당 객체에 종속할 새로운 객체의 name을 문자열로 입력받는다. find() 함수를 통해 add()로 입력받은 문자열에 해당하는 기존 Person의 객체가 존재하지 않는 경우를 검사한다.
+- 해당하는 Person의 name이 있는 경우 해당 Person의 child를 통해 새 Person을 동적 생성한다. 새로 생성된 Person의 name은 add()의 두 번째 파라미터이다.
+- 새로 생성된 Person 객체가 add()를 통해 새로운 객체를 종속할 수 있도록 포인터 변수를 조정한다.
+- 다음은 메인 함수와 실행 결과를 나타낸다.
+- ```c++
+
+int main() {
+
+	World w("홍길동");
+	w.add_Person("홍길동", "a");
+	w.add_Person("a", "b");
+	w.add_Person("c", "d");
+
+	return 0;
+}
+```
+```c++
+홍길동 의 자식은 a 입니다
+a 의 자식은 b 입니다
+c 을(를) 찾지 못했습니다
+```
