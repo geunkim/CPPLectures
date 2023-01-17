@@ -8,7 +8,7 @@
 - 메인 함수에서 Man의 객체 A와 B를 생성한다. 이때, A에는 아무 값을 입력하지 않고 B에는 10과 20을 입력한다.
 - 각 멤버 함수들을 테스트하여 정상적으로 작동하는지 확인한다.
 
-[C++ 클래스 멤버](https://github.com/geunkim/CPPLectures/blob/master/Class/Objects.md)
+[#C++ 클래스 멤버](https://github.com/geunkim/CPPLectures/blob/master/Class/Objects.md)
 
 #
 
