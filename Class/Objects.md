@@ -127,7 +127,7 @@ class 클래스 이름 {  // 클래스 이름의 자료형을 정의
 
 ```C++
 class Rect {
-public:                // 접근 
+public:                // 접근 지정자
   int width, height;   // 멤버 변수
   int getArea();       // 멤버 함수
 };
