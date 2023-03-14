@@ -11,8 +11,8 @@ int main(int argc, char const *argv[])
 	// 다음 줄에 화면에 Hello World!! 를 출력하는 코드 작성
 	
 	return 0;
-}/
-````
+}
+```
 
 2. 키보드로 부터 정수 두 개를 입력받아 변수 ```first```, ```second```에 저장하고 화면에 출력하는 프로그램을 완성하시오.
 ```c++
@@ -46,7 +46,8 @@ int main(int argc, char const *argv[])
 
 	return 0;
 }
-````
+```
+
 4. 다음 프로그램의 ```main``` 함수에서 10이 저장된 value와 20이 저장된 value를 출력하여 10과 20이 화면에 출력되도록 프로그램을 완성하시오.
 
 ```c++
