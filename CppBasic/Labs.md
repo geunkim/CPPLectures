@@ -139,7 +139,7 @@ int main(int argc, char const *argv[])
 }
 ```
 
-8. 다음 프로그램을 실행하고 실행 결과로 부터 ```"true"``` 와 ```true```, ```"false"```, ```false``의 차이점을 추론하시오.
+8. 다음 프로그램을 실행하고 실행 결과로 부터 ```"true"``` 와 ```true```, ```"false"```, ```false```의 차이점을 추론하시오.
 
 ```c++
 #include <iostream>
