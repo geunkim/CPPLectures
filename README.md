@@ -24,7 +24,7 @@
    - [키보드 입력 및 콘솔 출력](./CppBasic/InOut.md)
    - [전처리기(Preprocessor)](./CppBasic/Preprocessor.md)
    - [프로그램 개발 과정](./CppBasic/ProgramDev.md)
-   - [개념(Concept)](./CppBasic/Concept.md)
+   - [개념(Concept)](./CppBasic/Concept.md). (Template을 이해한 후 읽어봐야할 주제)
    - [프로그램 실습](./CppBasic/Labs.md)
    - [프로그램 문제](./CppBasic/Problems.md)
 
