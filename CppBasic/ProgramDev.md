@@ -46,6 +46,12 @@ C++ 키워드와 문법에 따라 작성한 코드를 컴퓨터 CPU가 이해할
 
   - **[명령 창에서 코드 실행](https://docs.microsoft.com/ko-kr/cpp/build/vscpp-step-2-build?view=msvc-150#run-your-code-in-a-command-window)**: 일반적으로 Visual Studio가 아닌 명령 프롬프트에서 콘솔 앱을 살행한다. 
 
+### 알아야 할 내용
+* 프로그램 개발 절차 
+  - 소스코드 작성
+  - 전처리 
+  - 컴파일 (결과 파일: 오브젝트 파일, 목적파일)
+  - 링크 (결과 파일: 실행 파일)
 
 
 
