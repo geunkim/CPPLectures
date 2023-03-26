@@ -275,3 +275,45 @@ int main(int argc, char const *argv[])
 }
 ```
 
+12. 다음 프로그램 코드를 실행하고 ```static_cast<short>()```
+
+
+```c++
+#include <iostream>
+
+using namespace std;
+
+int main(int argc, char const *argv[])
+{
+	int someInteger = 987654321;
+	short someShort = static_cast<short>(someInteger);
+	long someLong = someShort * 10000;
+	double someDouble = someLong + 35.987654321;
+	float someFloat = someShort + 35.987654321f;
+	float castFloat = static_cast<float>(someDouble);
+
+	auto autoValue = someLong;
+
+	cout << someInteger << endl;
+	cout << someShort << endl;
+	cout << someLong << endl;
+
+	cout.setf(ios::fixed);
+	cout.precision(10); 
+	cout << "double: ";
+	cout << someDouble << endl;
+
+	cout.setf(ios::fixed);
+	cout.precision(10); 	
+	cout << "float: ";
+	cout << someFloat << endl;
+
+	cout << "cast float:";
+	cout << castFloat << endl;
+
+	cout << typeid(someShort).name() << endl;
+	cout << typeid(autoValue).name() << endl;
+
+	return 0;
+}
+```
