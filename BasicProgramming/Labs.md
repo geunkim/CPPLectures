@@ -317,3 +317,28 @@ int main(int argc, char const *argv[])
 	return 0;
 }
 ```
+13. 다음 프로그램 코드를 실행 결과로 부터 ```unsigned short```, 와 ```short``` 자료형의 차이점을 추론하라. 또한 ```short``` 을 ```int```로 변경한 후 싱행 결과와 
+short 일 때의 결과를 비교하고 유사점과 차이점을 추론하라.
+
+```c++
+#include <iostream>
+
+using namespace std;
+
+int main(int argc, char const *argv[])
+{
+	short SomeShort = 32750;
+	unsigned short unShort = 32750, count = 0;
+
+	cout << (SomeShort == unShort) << endl;
+
+	while(SomeShort > 0 || SomeShort < -32760) {
+		SomeShort+= 1;
+		unShort += 1;
+		cout << "(" << count << ")SomeShort: " << SomeShort << endl;
+		cout << "(" << count << ")UnSighedShort: " << unShort <<endl;
+		count++;
+	}
+	return 0;
+}
+```
