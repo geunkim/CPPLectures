@@ -275,7 +275,7 @@ int main(int argc, char const *argv[])
 }
 ```
 
-12. 다음 프로그램 코드를 실행하고 ```static_cast<short>()```
+12. 다음 프로그램 코드를 실행하고 ```static_cast<short>()```의 의미와 ```cout.setf(ios::fixed)```, ```cout.precision()```, ```typeid().name()```의 기능을 추론하라.
 
 
 ```c++
@@ -318,7 +318,7 @@ int main(int argc, char const *argv[])
 }
 ```
 13. 다음 프로그램 코드를 실행 결과로 부터 ```unsigned short```, 와 ```short``` 자료형의 차이점을 추론하라. 또한 ```short``` 을 ```int```로 변경한 후 싱행 결과와 
-short 일 때의 결과를 비교하고 유사점과 차이점을 추론하라.
+```short``` 일 때의 결과를 비교하고 유사점과 차이점을 추론하라.
 
 ```c++
 #include <iostream>
