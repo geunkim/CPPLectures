@@ -294,3 +294,27 @@ int main(int argc, char const *argv[])
 	return 0;
 }
 ```
+18. 다음 프로그램은 무엇을 하는 프로그램인지 추론하라. 
+
+```c++
+#include <iostream>
+using namespace std;
+
+int main(int argc, char const *argv[])
+{
+	int data, res;
+	int sum = 0;
+	cin >> data;
+
+	do{
+		res = data % 10;
+		cout << "data: " << data << ", res: " << res << endl;
+		data /= 10;
+		sum += res;
+		if(data < 10) sum += data;
+	}while(data >= 10);
+	cout << "data: " << data << " sum: " << sum << endl; 
+
+	return 0;
+}
+```
