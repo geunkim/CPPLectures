@@ -368,3 +368,46 @@ int main(int argc, char const *argv[])
 	return 0;
 }
 ```
+15. 다음 프로그램 코드의 결과를 추른하고 실행 결과의 비교를 하라.
+
+```c++
+#include <iostream>
+using namespace std;
+
+
+int main(int argc, char const *argv[])
+{
+	short var;  //정수 (-100 ~ 30000)를 저장하는 변수 선언 
+	cout << "정수를 입력하시요: ";
+	cin >> var;
+
+	cout << "입력한 값은:" << var << endl;
+	cout << var * 4 << endl;
+	// 산술연산
+	// +, -, /, *, % 
+	auto num = 10;
+
+	cout << "나머지 연산:" << num % 4 << endl;
+	// 관계 연산
+	// ==, !=, <, >, <=, >=
+
+	cout << (var == num) << endl;
+	cout << (var != num) << endl;
+	cout << (var < num) << endl;
+	cout << (var > num) << endl;
+	cout << (var <= num) << endl;
+	cout << (var >= num) << endl;
+
+	// 논리 연산 
+	// ||, &&, ! 
+
+	bool v1 = true;
+	bool v2 = false;
+	cout << "논리연산" << endl;
+	cout << (v1 || v2) << endl;
+	cout << (v1 && v2) << endl;
+	cout << (!v1) << endl;
+
+	return 0;
+}
+```
