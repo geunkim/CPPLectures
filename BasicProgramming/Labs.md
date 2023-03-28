@@ -143,6 +143,7 @@ int main(int argc, char const *argv[])
 
 	return 0;
 }
+```
 
 7. 다음 프로그램 코드의 연산 결과를 추론하고 실행 결과와 같은지 확인하고 결과 값의 근거를 설명하라.
 
@@ -339,6 +340,31 @@ int main(int argc, char const *argv[])
 		cout << "(" << count << ")UnSighedShort: " << unShort <<endl;
 		count++;
 	}
+	return 0;
+}
+```
+14. 다음 프로그램 코드를 실행하고 참조 변수(reference variable)와 일반 변수의 관계를 추론하라. 
+
+```c++
+#include <iostream>
+
+using namespace std;
+
+int main(int argc, char const *argv[])
+{
+	int GeneralValue = 100;		  // 일반 변수
+	int& refValue = GeneralValue; // 참조 변수
+
+	cout << "GeneralValue(before): " << GeneralValue << endl;
+	
+	refValue = 300;
+
+	cout << "GeneralValue(after): " << GeneralValue << endl;
+
+	GeneralValue = 500;
+
+	cout << "refValue: " << refValue << endl;
+
 	return 0;
 }
 ```
