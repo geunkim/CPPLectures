@@ -45,6 +45,36 @@ _condition_ 은 특정 조건을 검사하는 부분으로 관계 연산과 논�
 if 문의 몸체라고 한다. 조건식의 조건이 만족되었을 때 실행되는 프로그램 문장이 여러 개 인 경우 중괄호({})를 사용하고 프로그램 문장이 하나이면 
 중괄호를 생략할 수 있다.
 
+#### C++17의 if 구문 
+C++17은 현재의 ```if```문의 구문에서 초기 조건을 제공하는 것이 가능히다. 새로운 구문을 "초기화를 포함하는 if문'''이라 한다.
+이는 일반적인 코드 패턴을 단순화하고 사용자가 변수의 유효 범위를 엄격하게 유지하도록 하여 변수 유효 범위(scope)에서 변수가 누출되는 것을 방지할 수 있다.
+
+다음은 C++17 구문에 맞추어 작성된 프로그램 코드의 예이다.
+```c++
+#include <iostream>
+#include <cstdlib>
+
+using namespace std;
+
+int main(int argc, char const *argv[])
+{
+	srand(time(NULL)); // set seed of random number generator
+	
+	if(int rnum = rand(); rnum % 2 == 0) {
+		cout << rnum << " 은 짝수 이다.";
+	}
+	else{
+		cout << rnum << " 은 홀수 이다.";
+	}
+	return 0;
+}
+```
+프로그램 실행 결과의 예는 다음과 같다. 
+
+```bash
+750988514 은 짝수이다.
+```
+
 ## if-else 문
 
 앞에서 살펴본 ```if 문```은 _condition_ 을 만족하는 경우에만 수행할 일(프로그램 문장)이 있는 경우에 사용되며  
