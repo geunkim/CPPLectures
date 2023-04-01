@@ -11,7 +11,6 @@ int main(int argc, char const *argv[])
 	{
 		int a = 20;
 		cout << "a(1): " << a << endl;
-
 	}
 	{
 		int a = 30;
@@ -24,7 +23,6 @@ int main(int argc, char const *argv[])
  		}
  		cout << "a(4): " << a << endl;
 	}
-
 	cout << "a(5): " << a << endl;
 
 	return 0;
