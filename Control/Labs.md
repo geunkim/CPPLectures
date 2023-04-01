@@ -1,5 +1,36 @@
 # Labs - 제어문 
 
+0. 다음 프로그램의 실행하고 실행 결과로 부터 변수의 유효 범위를 추론하라.
+```c++
+#include <iostream>
+using namespace std;
+
+int main(int argc, char const *argv[])
+{
+	int a = 10;
+	{
+		int a = 20;
+		cout << "a(1): " << a << endl;
+
+	}
+	{
+		int a = 30;
+		cout << "a(2): " << a << endl;
+	}
+	{
+		int a = 40;
+		{
+			cout << "a(3): " << a << endl;
+ 		}
+ 		cout << "a(4): " << a << endl;
+	}
+
+	cout << "a(5): " << a << endl;
+
+	return 0;
+}
+```
+
 1. 다음 프로그램 코드를 실행 시켰을 때 90을 입력하였을 때 ***100 이하 정수이다*** 가 화면에 출력되고 110을 입력하였을 때 ***100 초과 정수이다*** 가 화면에 출력되는지 확인하라. 
 결과가 지정한대로 출력되지 않는다면 이유를 추론하라.
 
@@ -314,6 +345,30 @@ int main(int argc, char const *argv[])
 		if(data < 10) sum += data;
 	}while(data >= 10);
 	cout << "data: " << data << " sum: " << sum << endl; 
+
+	return 0;
+}
+```
+19. 다음 조건문의 실행 결과를 실행 후 ```if 문``` 다음의 주석문의 ```//```을 제거하고 컴파일 하였을 때 오류가 발생한다면 이유를 추론하라.
+
+```c++
+#include <iostream>
+#include <cstdlib>
+
+using namespace std;
+
+int main(int argc, char const *argv[])
+{
+	srand(time(NULL)); // set seed of random number generator
+	
+	if(int rnum = rand(); rnum % 2 == 0) {
+		cout << rnum << " 은 짝수 이다.";
+	}
+	else{
+		cout << rnum << " 은 홀수 이다.";
+	}
+
+	//cout << "rnum: " << rnum << endl;
 
 	return 0;
 }
