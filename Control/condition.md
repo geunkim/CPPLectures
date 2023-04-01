@@ -224,6 +224,30 @@ _expression_ 과 ```case 문``` 의 값들은 모두 정수형이어야 한다. 
 ```default  문```이 마지막에 나타날 경우 ```break 문```은 생략할 수 있으나 ```default  문``` 이 
 ```case 문```  사이에 배치될 경우 ```break 문```은 필요하다. 
 
+switch 문도 if 문과 같이 c++17 에서 부터 다음 구문과 같이 초기화를 할 수 있다. 
+
+```c++
+```c++
+#include <iostream>
+#include <cstdlib>
+
+using namespace std;
+
+int main(int argc, char const *argv[])
+{
+	srand(time(NULL)); // set seed of random number generator
+	
+	switch(auto rnum = rand(); rnum % 2){
+	  case 0:
+	       cout << rnum << " 은 짝수 이다.";
+	       break;
+	  case 1:
+	       cout << rnum << " 은 홀수 이다.";
+	}
+	return 0;
+}
+```
+
 ## ? : 조건 연산자.
 
 조건 연산자는 ```?:``` 기호를 사용하며 3개의 인수가 필요한 유일한 연산자이다. 
