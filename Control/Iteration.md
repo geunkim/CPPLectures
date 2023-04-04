@@ -212,10 +212,10 @@ int main(int argc, char const *argv[])
 
 ## continue 문 
 
-[다음](../SampleCodes/Conrol/continueIteration.cc)은 반복문에서 ``continue`` 문을 사용한 예로 **i** 의 값이 5 일 때와 8 일 때를 출력하지 않고 반복문을 계속하는 예아다. 
+[다음](../SampleCodes/Conrol/continueIteration.cc)은 반복문에서 ``continue`` 문을 사용한 예로 **i** 의 값이 5 일 때와 8 일 때를 출력하지 않고 반복문을 계속하는 예이다. 
 
 ```C++
-#include <iostream>
+#include <iostream>ㅎ
 using namespace std;
 
 int main(int argc, char const *argv[])
