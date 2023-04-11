@@ -39,11 +39,71 @@ for(int i = 0; i < 3; i++)
   cout << score[i] << endl; 
 ```
 
-```C++
+### 범위 기반 for 문 (Range-based for statement)
+
+범위 기반 ```for 문```은 배열과 같이 다루어야 할 데이터의 개수(범위: range)를 알 수 있는 메모리의 데이터를 반복적으로 접근할 때 유용하개 
+사용할 수 있는 반복문이다. 이는 다루어야 하는 데이터의 개수을 알 수 있는 배열에 ```for 문```을 사용하는 경우 복잡하고 오류가 발생하기 쉽다. 
+범위 기반 ```for 문```은 새로운 유형의 반복 구조로 배열의 각 데이터으 ㅣ접근의 반복할 수 있는 방법을 제공한다. 
+
+범위 기반 ```for 문```의 구조는 다음과 같다. 
+
+```c++
+for(range-declaration : expression) {
+  statement;
+}
+```
+
+* ```expression```: 배열과 같이 여러 개의 데이터가 저장되어 있는 데이터 리스트 
+* ```range-declaration```: ```expression```의 하나의 데이터를 저장할 수 있는 변수의 선언 
+* ```statement```: ```expression```의 데이터 리스트의 각 값을 처리하는 명령문 
+
+1) 범위 기반 ```for``` 문 사용 예
+
+```c++
+for(auto data : {1, 2, 3} {
+   cout <<  2 * data << endl;
+}
+```
+
+```c++
+auto v = { 6, 7, 8}
+for(auto data : {v} {
+   cout <<  data << endl;
+}
+```
+
+```c++
+int list[] = {10, 20, 30};
+for(auto i: list) {
+  i *= 2;
+}
+for(auto i: list) {
+  cout << i << endl;
+}
+```
+앞의 코드에서 첫 번째 범위 기반 for 문에는 ```auto i```로 배열 list의 원소의 값을 접근하고 있어 배열 list의 각 요소의 값이 변수 ``ì```에 복사가 된다.
+복사된 값에 2배를 한 후 저장을 하여도 배열 list에 저장된 값에는 영향을 주지 않는다. 그러므로 앞의 코드는 
+
+
+
+```c++
+int list[] = {10, 20, 30};
+for(auto& i: list) {
+  i *= 2;
+}
+for(auto i: list) {
+  cout << i << endl;
+}
+```
+
+
+```c++
 int score[] = {50, 40, 30};
 for(auto data: score)
 	cout << data << endl;
 ```
+
+* [범위 기반 for 문]
 
 ## 배열의 복사
 
