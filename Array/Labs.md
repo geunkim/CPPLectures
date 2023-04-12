@@ -1,4 +1,4 @@
-# 프로그림 실습(Labs.)
+# 프로그램 실습(Labs.)
 
 1. 다음 프로그램 코드를 실행하였을 때 출력 1, 출력 2, 출력 3, 출력 4의 결과를 추론하라. (근거와 함께)
 
@@ -18,7 +18,7 @@ int main(int argc, char const *argv[])
 	return 0;
 }
 ```
-2. 다음 프로그램 코드를 실행하였을 때 메모리에 할당되는 저정공간의 크기(바이트 단위로)와 출력 1, 출력 2, 출력 3의 결과를 추론하라. 근거와 함께) 
+2. 다음 프로그램 코드를 실행하였을 때 메모리에 할당되는 저장공간의 크기(바이트 단위로)와 출력 1, 출력 2, 출력 3의 결과를 추론하라. (근거와 함께) 
 
 ```c++
 #include <iostream>
@@ -35,7 +35,7 @@ int main(int argc, char const *argv[])
 	return 0;
 }
 ```
-3. 다음 프로그램 코드의 출력 1 ~ 출력 6까지의 결과를 추론하고 실행 결과와 같은지 확인하라. 또한 grades, name 배열에 할당된 저장공간의 크기(바이트 단위)도 추론하고 출력 5와 출록 6의 결과를 비교하라. 
+3. 다음 프로그램 코드의 출력 1 ~ 출력 6까지의 결과를 추론하고 실행 결과와 같은지 확인하라. 또한 grades, name 배열에 할당된 저장공간의 크기(바이트 단위)도 추론하고 출력 5와 출력 6의 결과를 비교하라. 
 
 ```c++
 #include <iostream>
@@ -166,3 +166,24 @@ int main(int argc, char const *argv[])
 	return 0;
 }
 ```
+10. 다음 프로그램의 실행 결과를 추론하고 실행 결과와 같은지 화인해라.
+
+```c++
+#include <iostream>
+using namespace std;
+
+int main(int argc, char const *argv[])
+{
+	int data[] = {1, 2, 3, 4, 5};
+
+	for(auto& e : data) {
+		e *= 15;
+	}
+
+	for(const auto& e : data) {
+		cout << e << "  ";
+	}
+	cout << endl;
+	
+	return 0;
+}
