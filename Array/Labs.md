@@ -53,7 +53,7 @@ int main(int argc, char const *argv[])
 	cout << grades[5] << endl; // 출력 4
 
 	cout << name << endl;      // 출력 5
-	cout << grades << endl;    // 출려 6
+	cout << grades << endl;    // 출력 6
 
 	return 0;
 }
