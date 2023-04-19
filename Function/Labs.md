@@ -43,9 +43,9 @@ int main(int argc, char const *argv[]) // (2) main 함수 정의
 	return 0;
 }
 
-int min_value(int x, int y){ return x > y ? y : x;} // (3) min 함수 정의
+int min_value(int x, int y){ return x > y ? y : x;} // (3) min_value 함수 정의
 
-int min_value(int a, int b);  // (4) min 함수 선언
+int min_value(int, int);  // (4) min_value 함수 선언
 ```
 
 
