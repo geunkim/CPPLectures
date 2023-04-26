@@ -33,7 +33,7 @@ sum(200, 100);    // sum(200, 100); 의미
 
 ```C++ 
 int sum(int a = 5, int b);    // 컴파일 에러 방생 
-int sum(int a, int b = 10:    // 컴파일 성공 
+int sum(int a, int b = 10);    // 컴파일 성공 
 ```
 
 ## 기본 매개변수를 가진 함수에 인수 전달하는 규칙
