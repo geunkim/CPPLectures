@@ -371,3 +371,32 @@ int main(int argc, char const *argv[])
 	return 0;
 }
 ```
+
+20. 다음 프로그램 코드에서 함수에 전달된 값에 따라 출력되는 문장이 올바르게 되도록 함수 내부를 수정하라
+```c++
+#include <iostream>
+
+using namespace std;
+
+string func(int n){
+	if(n < 10) {
+		return "10 보다 작음";
+	}
+	else if(n < 5){
+		return "5 보다 작음";
+	}
+	else {
+		return "5이상 10 이하 이다";
+	}
+}
+
+
+int main(int argc, char const *argv[])
+{
+	cout << func(10) << endl;
+	cout << func(3) << endl;
+	cout << func(7) << endl;
+	return 0;
+}
+
+
