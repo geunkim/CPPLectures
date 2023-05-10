@@ -30,7 +30,7 @@ int main(int argc, char const *argv[])
 }
 ```
 
-2. 다음 프로그램의 에러를 수정하고 왜 에러가 발생하였는지 분석하고 실행 결과를 1번과 비교하라. 
+2. 다음 프로그램의 에러를 수정하고 왜 에러가 발생하였는지 분석하고 실행 결과를 1번과 비교하라. (1) 다음의 두 줄을 주석처리 하면 에러가 생기는지도 확인하라.
 
 ```c++
 #include <iostream>
@@ -39,6 +39,7 @@ using namespace std;
 void myswap(const int &a, const int &b){
 	cout << "(before) a: " << a << ", b: " << b << endl;
 	int tmp = a;
+	//(1)
 	a = b;
 	b = a;
 	cout << "(after) a: " << a << ", b: " << b << endl;
