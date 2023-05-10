@@ -141,4 +141,28 @@ int main(int argc, char const *argv[])
 }
 ```
 
-7. [SampleCodes의 Pointer 저장소](/SampleCodes/Pointer)의 프로그램을 실행하고 분석하라.  
+7. 다음 프로그램의 실행 결과를 추론하고 실행 결과와 비교를 하라.
+```c++
+#include <iostream>
+using namespace std;
+
+int main(int argc, char const *argv[])
+{
+	int a = 100, b = 200;
+	int &ref = a;
+	int *ptr = &b;
+
+	*ptr = *ptr + 100;
+
+	cout << ref << ", ";
+	cout << *ptr << ", ";
+
+	a += b++; 
+	*ptr += ++ref;
+	
+	cout << ref << ", ";
+	cout << *ptr << endl;
+}
+```
+
+8. [SampleCodes의 Pointer 저장소](/SampleCodes/Pointer)의 프로그램을 실행하고 분석하라.  
