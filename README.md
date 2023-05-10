@@ -70,7 +70,7 @@
    - [포인터 관련 연산자](./Pointer/PointerOperator.md)
    - [이중 포인터](./Pointer/DoublePointer.md)
    - [스마트 포인터](./SmartPointer)
-   - [프로그램 실습]
+   - [프로그램 실습](./Labs.md)
    - [프로그램 문제]
  
    
