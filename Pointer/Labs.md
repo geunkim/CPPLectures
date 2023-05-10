@@ -115,7 +115,7 @@ int main(int argc, char const *argv[])
 
 5. 실수가 저장된 배열과 배열의 크기를 전달받아서 배열에 저장된 값 중 세 번째로 작은 값을 찾아 반환하는 함수를 정의하시오. (함수 내의 연산은 포인터 변수 darr을 이용하여 작성하라.)
 ```c++
-   함수의 원형: int thirdValueinArray(double *darr, int len);
+   함수의 원형: double thirdValueinArray(double *darr, int len);
 ```
 
 6. 다음 함수를 수행한 결과를 추론하라.
