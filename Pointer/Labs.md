@@ -141,4 +141,4 @@ int main(int argc, char const *argv[])
 }
 ```
 
-7. SampleCode 디렉토리의 프로그램을 실행하고 분석하라.  
+7. [SampleCodes의 Pointer 저장소](/SampleCodes/Pointer)의 프로그램을 실행하고 분석하라.  
