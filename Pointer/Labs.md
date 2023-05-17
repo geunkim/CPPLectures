@@ -10,7 +10,7 @@ void myswap(int a, int b){
 	cout << "(before) a: " << a << ", b: " << b << endl;
 	int tmp = a;
 	a = b;
-	b = a;
+	b = tmp;
 	cout << "(after) a: " << a << ", b: " << b << endl;
 }
 
@@ -41,7 +41,7 @@ void myswap(const int &a, const int &b){
 	int tmp = a;
 	//(1)
 	a = b;
-	b = a;
+	b = tmp;
 	cout << "(after) a: " << a << ", b: " << b << endl;
 }
 
@@ -70,7 +70,7 @@ void myswap(int *a, int *b){
 	cout << "(before) a: " << *a << ", b: " << *b << endl;
 	int tmp = *a;
 	*a = *b;
-	*b = *a;
+	*b = tmp;
 	cout << "(after) a: " << *a << ", b: " << *b << endl;
 }
 
