@@ -1,6 +1,47 @@
 # 클래스 실습
 
-1. 다음 클래스 Person 클래를 구현하고 main 함수에서 Person 클래스의 객체를 생성하며 데이터가 저장되는 것을 확인할 수 있는 프로그램을 작성하라.
+
+1. 다음 코드를 무엇을 하는 것인지 분석하고 생성자가 무엇이며 프로그램을 실행하고 결과를 분석하고 클래스에 멤버 함수를 추가하고 검증하라.
+
+```c++
+#include <iostream>
+using namespace std;
+
+class Box
+{
+	int height;
+	int width;
+public:
+	Box(int h = 3, int w = 5);
+	int area();	
+};
+Box::Box(int h, int w)
+{
+	height = h;
+	width = w;
+}
+
+int Box::area()
+{
+	return height * width;
+}
+
+
+int main(int argc, char const *argv[])
+{
+	Box b;
+	Box c(3, 4);
+	Box d(2);
+
+	cout << b.area() << endl;
+	cout << c.area() << endl;
+	cout << d.area() << endl;
+
+	return 0;
+}
+```
+
+2. 다음 클래스 Person 클래를 구현하고 main 함수에서 Person 클래스의 객체를 생성하며 데이터가 저장되는 것을 확인할 수 있는 프로그램을 작성하라.
 
    (1) 멤버 변수는 외부에서 접근이 불가능하도록 멤버 함수는 외부에서 접근이 가능하도록 접근 지정자 설정
    
@@ -24,12 +65,12 @@ int main(int argc, char const *argv[])
 	return 0;
 }
 ```
-2. 1번의 Person 클래스에 생성자를 추가하시요. 생성자 함수를 통해 객체가 생성될 때 입력 파러미터를 전달받아 입력 파러미터 값이 멤버변수 age의 값으로 저정되도록 
+3. 2번의 Person 클래스에 생성자를 추가하시요. 생성자 함수를 통해 객체가 생성될 때 입력 파러미터를 전달받아 입력 파러미터 값이 멤버변수 age의 값으로 저정되도록 
    생성자를 추가하라. 
 
-3. 2번의 생성자는 default parameter 값을 20으로 를 가지며 값을 전달받지 않는 경우 20이 age에 저장되도록 생성자를 수정하라.
+4. 3번의 생성자는 default parameter 값을 20으로 를 가지며 값을 전달받지 않는 경우 20이 age에 저장되도록 생성자를 수정하라.
 
-4. 다음 프로그램의 생성자와 멤버함수를 구현하고 화면에 다음과 같이 출력이 이루어 지도록 프로그램을 작성하라.
+5. 다음 프로그램의 생성자와 멤버함수를 구현하고 화면에 다음과 같이 출력이 이루어 지도록 프로그램을 작성하라.
 ```bash
   num: 100 (객체의  num에 저장된 값)
   gas: 200.5  (객체의 gas에 저장된 값)
@@ -68,7 +109,7 @@ int main(int argc, char const *argv[])
 ```
 
 
-5. 다음 프로그램의 생성자와 소멸자의 호출 시점을 추론해 보고 실행한 결과와 같은지 확인하고 분석 결과를 기술하라. 
+6. 다음 프로그램의 생성자와 소멸자의 호출 시점을 추론해 보고 실행한 결과와 같은지 확인하고 분석 결과를 기술하라. 
 
 ```c++
 
@@ -98,3 +139,28 @@ int main(int argc, char const *argv[])
 	return 0;
 }
 ```
+7. 다음 코드에서 객체가 몇 개가 생성되고 어떤 순서로 생성되고 삭제되는지 추론하고 코드를 추가하여 확인하라.
+```c++
+#include <iostream>
+using namespace std;
+
+class Tower
+{
+	int height;
+public:
+	Tower(int h = 10) : height(h) {}
+}
+
+void f()
+{
+	Tower a(20);
+}
+
+Tower b, c(30);
+
+int main(int argc, char const *argv[])
+{
+	f();
+	Tower d(40);
+	return 0;
+}
