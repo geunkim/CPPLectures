@@ -164,3 +164,4 @@ int main(int argc, char const *argv[])
 	Tower d(40);
 	return 0;
 }
+8. 일상생활을 객체를 클래스로 정의하고 멤버함수를 추가하고 확인하라.
