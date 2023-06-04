@@ -251,7 +251,7 @@ using namespace std;
 int main(int argc, char const *argv[])
 {
     char buf[255];
-    ifstream fin("./text.txt");
+    ifstream fin("text.txt");
     if(!fin) {
         cout << "[Error] text.txt file open" << endl;
         return 0;
@@ -268,7 +268,6 @@ int main(int argc, char const *argv[])
 앞의 프로그램을 실행한 결과는 다음과 같다. 
 
 1: Hello World!
-
 2: This a sample file.
 
 다음은 앞의 프로그램 예제를 ```istream``` 클래스의 ```getline(char* line, int n)```멤버 함수를 이용하여 ``text.txt`` 파일의 내용을 한 줄씩 읽어 화면에 출력하는 프로그램 코드이다
@@ -301,7 +300,6 @@ int main(int argc, char const *argv[])
 앞의 프로그램 코드의 결과는 다음과 같다. 
 
 1: Hello World!
-
 2: This a sample file.
 
 ```istream``` 클래스의 ```getline(char* line, int n)```멤버 함수 대신 ``string``클래스를 활용하여 파일에서 데이터를 읽어오기 위해서 ```getline(ifstream fin, string line)``` 함수가 있다. 이 ```getline()``` 함수는 
