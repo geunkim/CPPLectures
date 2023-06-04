@@ -89,7 +89,6 @@ ios::in | ios::binary
 * ```<<``` 연산자를 이용하여 데이터를 파일에 쓴다.  
 * 파일에 데이터 쓰기를 완료하면 파일을 닫는다.
 
-
 ## 파일에 데이터 출력
 
 ### 파일 쓰기를 위한 파일 스트림 객체 생성 
@@ -103,7 +102,6 @@ ofstream fout;
 
 ```fout``` 객체가 생성되었기 때문에 이것을 이용하여 파일에 데이터 쓰기를 할 수 있다.
 앞에서 생성한 파일 스트림에 대해 쓰기를 할 파일이 지정되지 않아 특정 파일에 대해서 ``파일 열기``를 하여야 한다.
-
 
 ### 파일 열기 
 
@@ -165,7 +163,7 @@ fout.close();
 ```close()``` 함수가 호출되어 ```fout``` 파일 스트림과 파일과의 연결이 끊긴 후 에는 ```fout```을 통해 파일 쓰기를 할 수 없다. 
 다시 ```open()``` 함수를 통해 쓰기를 할 파일을 열어 파일 스트림과 파일을 연결하여야 한다. 
 
-### 파일 쓰기 예제
+### 텍스트 파일 쓰기 예제
 
 다음은 실행 파일이 있는 디렉토리에 있는 ``text.txt`` 파일을 열거나 ``text.txt`` 파일을 생성하고 ```fout``` 스트림과 연결하고 ``Hello World!`` 문자열을 ``text.txt``에 저장한다. 
 파일에 데이터를 저장하기 위해서는 파일 스트림 객체 ```fout```을 이용하여야 한다.   
@@ -200,6 +198,47 @@ int main(int argc, char const *argv[])
 
 ![file_content](./text_txt_content.png)
 
+### 이진파일(binary file) 쓰기 예제
+
+다음은 배열에 저장된 정수 값 1, 2, 3, 4, 5 6 을 ```exbinary.bin``` 이진파일을 생성하고 데이터를 저장하는 프로그램 코드 에이다.
+파일은 이진파일의 형태로 생성되어야 하기 때문에 객세 생성 시 모드가 다음과 같이 이진파일로 지정되어야 한다.
+
+```c++
+ofstream myfile("exbinary.bin", ios::binary);
+```
+
+이진파일에 데이터를 이진 데이터 형태로 쓸 수 있도록 ofstream 클래스가 제공하는 맴버함수로는 ``write()`` 가 있다. 
+``ofstream`` 클래스는 ``ostream`` 클래스를 상속하고 있어 ``ostream`` 클래스의 ``write()`` 멤버함수를 그대로 사용한다.
+``write`` 메소드의 원형은 다음과 같다.
+
+```c++
+ostream& òstream::write(const char* s, streamsize n);
+```
+
+``write`` 함수는 ``s``로 시작되는 배열을 ``n``개의 바이트를 ``ostream`` 클래스의 객체로 전달한다.
+
+```c++
+#include <iostream>
+#include <fstream>
+
+using namespace std;
+
+int main(int argc, char const *argv[])
+{
+	short data[] = {1, 2, 3, 4, 5, 6};
+	ofstream myfile("exbinary.bin", ios::binary);
+	if(myfile.is_open()) 
+	{
+		myfile.write((char *)data, 6*sizeof(short));
+		myfile.close();
+
+	}
+	else cout << "Unable to open file" << endl;
+	return 0;
+}
+```
+앞의 프로그램을 실행하여 생성한 ``exbinary.bin`` 파일의 크기를 확인하면 12바이트 (6 * 2바이트) 임을 확인할 수 있다. 
+
 ## 파일의 데이터 읽기 
 
 파일의 데이터를 읽는 과정도 파일에 데이터를 쓰는 과정과 유시하며, 파일의 데이터를 읽어오기 위해서 다음의 과정이 요구된다. 
@@ -232,7 +271,7 @@ ifstream fin;
 fin.open("text.txt");
 ```
 
-### 파일 읽기 예제
+### 텍스트 파일 읽기 예제
 
 다음은 실행 파일이 있는 디렉토리에 있는 ``text.txt`` 파일을 읽기 모드로 열어 파일의 데이터를 한 줄씩 읽어서 
 문자열 버퍼에 저장한 후 화면에 출력하는 프로그램 코드이다.  
@@ -264,10 +303,9 @@ int main(int argc, char const *argv[])
     return 0;
 }
 ```
-
 앞의 프로그램을 실행한 결과는 다음과 같다. 
 
-1: Hello World!
+1: Hello World!</br>
 2: This a sample file.
 
 다음은 앞의 프로그램 예제를 ```istream``` 클래스의 ```getline(char* line, int n)```멤버 함수를 이용하여 ``text.txt`` 파일의 내용을 한 줄씩 읽어 화면에 출력하는 프로그램 코드이다
@@ -299,10 +337,53 @@ int main(int argc, char const *argv[])
 
 앞의 프로그램 코드의 결과는 다음과 같다. 
 
-1: Hello World!
+1: Hello World!</br>
 2: This a sample file.
 
-```istream``` 클래스의 ```getline(char* line, int n)```멤버 함수 대신 ``string``클래스를 활용하여 파일에서 데이터를 읽어오기 위해서 ```getline(ifstream fin, string line)``` 함수가 있다. 이 ```getline()``` 함수는 
-``string`` 클래스와 관련한 것으로 ```<string>``` 헤더 파일에 선언되어 있다. 이는 파일에서 한 줄을 읽어 ```string```객체에 저장한다. ```string``` 객체를 사용하면 파알의 한 줄을 구성하는 문자의 개수를 고려하지 않아도 된다. 
+```istream``` 클래스의 ```getline(char* line, int n)```멤버 함수 대신 ``string``클래스를 활용하여 파일에서 데이터를 읽어오기 위해서 ```getline(ifstream fin, string line)``` 함수가 있다. 이 ```getline()``` 함수는 ``string`` 클래스와 관련한 것으로 ```<string>``` 헤더 파일에 선언되어 있다. 이는 파일에서 한 줄을 읽어 ```string```객체에 저장한다. ```string``` 객체를 사용하면 파알의 한 줄을 구성하는 문자의 개수를 고려하지 않아도 된다. 
 
+### 이진 파일(binary) 일기 예제
 
+앞에서 저장한 ``exbinary.bin`` 파일을 읽기 위해서 사용하는 멤버 함수는 ``read()`` 이다. 
+``read()`` 함수의 원형은 다음과 같다.
+
+```c++
+istream& read(char* s, stremsize n);
+```
+스트림으로 부터 ``n`` 바이트를 읽어서 ``s``가 가리키는 배열에 데이터를 저정한다. 
+
+```c++
+#include <iostream>
+#include <fstream>
+
+using namespace std;
+
+int main(int argc, char const *argv[])
+{
+	short data[6];
+	ifstream myfile("exbinary.bin", ios::binary);
+	if(myfile.is_open()) 
+	{
+		myfile.read((char *)data, 6*sizeof(short));
+
+		for(int i : data)
+			cout << "data: " << i << endl;
+
+		myfile.close();
+		
+	}
+	else cout << "Unable to open file" << endl;
+	return 0;
+}
+```
+
+프로그램 실행 결과는 다음과 같다.
+
+```bash
+data: 1
+data: 2
+data: 3
+data: 4
+data: 5
+data: 6
+```
