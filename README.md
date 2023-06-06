@@ -72,14 +72,21 @@
    - [스마트 포인터](./SmartPointer)
    - [프로그램 실습](./Pointer/Labs.md)
    - [프로그램 문제]
- 
-   
+    
 ### **[구조체, 공용체, 열거형](./Struct)**
    - [구조체](./Struct/Struct.md)
    - [공용체](./Struct/Union.md)
    - [열거형](./Struct/Enum.md)
    - [프로그램 실습](./Struct/Labs.md)
    - [프로그램 문제](./Struct/Problems.md)
+
+### **[데이터 입출력](./InputOutput)**
+   - [스트림(stream)](./InputOutput/stream.md)
+   - [출력 스트림(output stream)](./InputOutput/output.md)
+   - [입력 스트림(input stream)](./InputOutput/input.md)
+   - [파일 스트림(file stream)](./InputOutput/Advanced_InOut.md)
+   - 프로그램 실습
+   - 프로그램 문제
 
 ### **[메모리 모델과 이름 공간](./MemoryModelAndNameSpace)**
    - [메모리 모델](./MemoryModelAndNameSpace/Memory_Model.md)
@@ -158,13 +165,7 @@
    - 프로그램 실습
    - 프로그램 문제
 
-### **[데이터 입출력](./InputOutput)**
-   - [스트림(stream)](./InputOutput/stream.md)
-   - [출력 스트림(output stream)](./InputOutput/output.md)
-   - [입력 스트림(input stream)](./InputOutput/input.md)
-   - [파일 스트림(file stream)](./InputOutput/Advanced_InOut.md)
-   - 프로그램 실습
-   - 프로그램 문제
+
    
 ## Part 3
 
