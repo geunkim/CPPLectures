@@ -86,7 +86,7 @@
    - [입력 스트림(input stream)](./InputOutput/input.md)
    - [파일 스트림(file stream)](./InputOutput/Advanced_InOut.md)
    - 프로그램 실습
-   - 프로그램 문제
+   - [프로그램 문제](./InputOutput/Problems.md)
 
 ### **[메모리 모델과 이름 공간](./MemoryModelAndNameSpace)**
    - [메모리 모델](./MemoryModelAndNameSpace/Memory_Model.md)
