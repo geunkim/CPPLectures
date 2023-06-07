@@ -4,7 +4,7 @@
 
 2. 1.에서 생성한 파일에서 내용을 읽어 화면에 출력하는 프로그램을 작성하라.
 
-3.https://github.com/geunkim/CPPLectures/tree/master/SampleCodes/File/img/lena.bmp 파일을 다운로드 받은 후 파일을 읽어 
+3. https://github.com/geunkim/CPPLectures/tree/master/SampleCodes/File/img/lena.bmp 파일을 다운로드 받은 후 파일을 읽어 
 "lenacopy.bmp"라는 새로운 파일에 복사하는 프로그램을 작성하라. (lena.tmp 파일의 픽셀 수는 512x512) 
 
 4. "lena.bmp" 파일을 읽어 각 밝기에 해당하는 픽샐의 갯수를 찾아 화면에 출력하는 프로그램을 작성하라.
