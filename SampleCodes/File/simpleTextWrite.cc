@@ -5,8 +5,9 @@ using namespace std;
 
 int main(int argc, char const *argv[])
 {
+	
 	ofstream myfile;
-	myfile.open("example.txt", ios::app);
+	myfile.open("example.txt");
 	if(myfile.is_open()) {
 		myfile << "Third line" << endl;
 		myfile << "Fourth line" << endl;
