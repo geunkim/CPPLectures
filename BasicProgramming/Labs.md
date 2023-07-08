@@ -192,8 +192,39 @@ int main(int argc, char const *argv[])
 }
 ```
 
-9. 
+9. 다음 프로그램의 실행하고 모든 함수가 호출되는지 호출되지 않는다면 왜 호출을 하지 않는지 분석하라.  
 
+```c++
+#include <iostream>
+using namespace std;
+
+bool tf() {
+	cout << "true" << endl;
+	return true;
+}
+
+bool ff() {
+	cout << "false" << endl;
+	return false;
+}
+
+int main(int argc, char const *argv[])
+{
+	if(tf() || ff()) { cout << "--(1)--" << endl; } cout << "main (1)" << endl;
+
+	if(ff() && tf()) { cout << "--(2)--" << endl; } cout << "main (2)" << endl;
+
+	if(ff() || tf()) { cout << "--(3)--" << endl; }	cout << "main (3)" << endl;
+
+	if(tf() && ff()) { cout << "--(4)--" << endl; } cout << "main (4)" << endl;
+
+	if(!tf() && ff() && tf()) { cout << "--(5)--" << endl;} cout << "main (5)" << endl;
+
+	if(!tf() || ff() || tf()) { cout << "--(6)--" << endl;} cout << "main (5)" << endl;
+
+	return 0;
+}
+```
 
 
 10. 다음 프로그램 코드의 실행 결과를 추론한 후 실행 결과와 같은지 확인하고 결과 값의 근거를 설명하라.
