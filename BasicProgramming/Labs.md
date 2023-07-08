@@ -192,7 +192,11 @@ int main(int argc, char const *argv[])
 }
 ```
 
-9. 다음 프로그램 코드의 실행 결과를 추론한 후 실행 결과와 같은지 확인하고 결과 값의 근거를 설명하라.
+9. 
+
+
+
+10. 다음 프로그램 코드의 실행 결과를 추론한 후 실행 결과와 같은지 확인하고 결과 값의 근거를 설명하라.
 
 ```c++
 include <iostream>
@@ -224,7 +228,7 @@ int main(int argc, char const *argv[])
 }
 ```
 
-10. 다음 프로그램 코드의 실행 결과를 추론한 후 실행 결과와 같은지 확인하고 결과 값의 근거를 설명하라.
+11. 다음 프로그램 코드의 실행 결과를 추론한 후 실행 결과와 같은지 확인하고 결과 값의 근거를 설명하라.
 
 ```c++
 #include <iostream>
@@ -249,7 +253,7 @@ int main(int argc, char const *argv[])
 	return 0;
 }
 ```
-11. 다음 프로그램 코드를 실행하고 ```sizeof()``` 는 무엇을 하는 함수이고 입력 데이터와 출력 데이터의 의미를 확인하고 실핼 결과의 의미를 설명하라.
+12. 다음 프로그램 코드를 실행하고 ```sizeof()``` 는 무엇을 하는 함수이고 입력 데이터와 출력 데이터의 의미를 확인하고 실핼 결과의 의미를 설명하라.
 
 ```c++
 #include <iostream>
@@ -276,7 +280,7 @@ int main(int argc, char const *argv[])
 }
 ```
 
-12. 다음 프로그램 코드를 실행하고 ```static_cast<short>()```의 의미와 ```cout.setf(ios::fixed)```, ```cout.precision()```, ```typeid().name()```의 기능을 추론하라.
+13. 다음 프로그램 코드를 실행하고 ```static_cast<short>()```의 의미와 ```cout.setf(ios::fixed)```, ```cout.precision()```, ```typeid().name()```의 기능을 추론하라.
 
 
 ```c++
@@ -318,7 +322,7 @@ int main(int argc, char const *argv[])
 	return 0;
 }
 ```
-13. 다음 프로그램 코드를 실행 결과로 부터 ```unsigned short```, 와 ```short``` 자료형의 차이점을 추론하라. 또한 ```short``` 을 ```int```로 변경한 후 싱행 결과와 
+14. 다음 프로그램 코드를 실행 결과로 부터 ```unsigned short```, 와 ```short``` 자료형의 차이점을 추론하라. 또한 ```short``` 을 ```int```로 변경한 후 싱행 결과와 
 ```short``` 일 때의 결과를 비교하고 유사점과 차이점을 추론하라.
 
 ```c++
@@ -343,7 +347,7 @@ int main(int argc, char const *argv[])
 	return 0;
 }
 ```
-14. 다음 프로그램 코드를 실행하고 참조 변수(reference variable)와 일반 변수의 관계를 추론하라. 
+15. 다음 프로그램 코드를 실행하고 참조 변수(reference variable)와 일반 변수의 관계를 추론하라. 
 
 ```c++
 #include <iostream>
@@ -368,7 +372,7 @@ int main(int argc, char const *argv[])
 	return 0;
 }
 ```
-15. 다음 프로그램 코드의 결과를 추른하고 실행 결과의 비교를 하라.
+16. 다음 프로그램 코드의 결과를 추른하고 실행 결과의 비교를 하라.
 
 ```c++
 #include <iostream>
