@@ -17,6 +17,7 @@
 ## 학습 내용
 
 - [컴퓨터와 프로그래밍(프로그래밍 언어 개념)](./ProgrammingLanguage.md)
+- [C++ 언어 소개[(./C++_Intro.md)
 - [기본 C++ 프로그래밍 요소](./Basic.md) 
 - [키보드 입력 및 콘솔 출력](./InOut.md)
 - [이름공간(namespace)](./Namespace.md)
