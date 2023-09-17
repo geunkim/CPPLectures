@@ -72,5 +72,5 @@ s1.age = 20;
 s1.department = 21;
 ```
 
-[앞으로](https://github.com/geunkim/CPPLectures/edit/master/Class/README.md)
+[앞으로](https://github.com/geunkim/CPPLectures/edit/master/Class/)
 
