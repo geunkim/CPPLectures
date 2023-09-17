@@ -1,4 +1,4 @@
-# 복사 생성사(Copy Constructor)
+# 복사 생성자(Copy Constructor)
 
 
 선언되는 객체와 같은 자료형의 객체의 복사가 필요할 때 사용되는 생성자이다.
