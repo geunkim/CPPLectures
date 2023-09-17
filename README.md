@@ -16,6 +16,15 @@
     - [Microsoft Visaul Studio 2017 설치](https://docs.microsoft.com/ko-kr/cpp/build/vscpp-step-0-installation?view=msvc-150)
     - C++를 사용한 데스크톱 개발 워크로드 선택한 다음 설치
 
+* C++17 표준에 따른 함수 정의
+```c++[코드](../SampleCodes/BasicProgram/C++17_main.cc)
+#include <iostream>
+
+auto main() -> int {
+	std::cout << "C++ 17 based function defintion " << std::endl;
+}
+```
+
 ## Part 1
 
 ### **[C++ 기초](./CppBasic)**
