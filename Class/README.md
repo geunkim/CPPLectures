@@ -12,8 +12,6 @@
 
 * [C 구조체와 C++ 구조체 비교](./struct_in_c_cpp.md)
 * [클래스와 객체](./Objects.md)
-  - [클래스와 객체의 관계](./Objects.md/#-클래스와-객체의-관계)
-
 * [생성자와 소멸자](./constructor_destructor.md)
 * [복사생성자](./copy_constructor.md)
 * [대입연산자](./asignOverload.md)
