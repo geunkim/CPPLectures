@@ -22,11 +22,31 @@ int main(int argc, char const *argv[])
 }
 ```
 
-2. 다음 코드를 컴파일하고 오류가 발생하는지 확인하라. 오류가 발생하면 이유가 분석하라
+2. 다음 코드를 컴파일하고 오류가 발생하는지 확인하라. 
+```c++
+#include <iostream>
 
+using namespace std;
 
+class Point 
+{
+	int x, y;
+	Point(int a, int b) : x{a}, y{b} {}
+public:
+	void show(){
+	  cout << x << ", " << y << endl;
+	}
+};
 
-2. 다음 코드를 컴파일하고 오류가 발생하는지 학인하라. 오류가 발생하면 이유가 분석하라.
+int main(int argc, char const *argv[])
+{
+	
+	return 0;
+}
+```
+3. 2번의 프로그램의 main 함수에서 Point 클래스에서 선언된 생성자를 이용하여 객체를 생성하는 코드를 추가하고 컴파일을 하였을 때 오류가 발생하는지 확인하라. 오류가 발생하면 이유를 분석하라.
+
+4. 다음 코드를 컴파일하고 오류가 발생하는지 학인하라. 오류가 발생하면 이유를 분석하라.
 ```c++
 #include <iostream>
 using namespace std;
@@ -50,7 +70,7 @@ int main(int argc, char const *argv[])
 }
 ```
 
-3. 다음 코드를 컴파일하는 경우 오류가 발생한다. 오류가 발생하는 이유를 분석하라. 오류가 발생하지 않도록 main 함수의 코드를 수정하라.
+5. 다음 코드를 컴파일하는 경우 오류가 발생한다. 오류가 발생하는 이유를 분석하라. 오류가 발생하지 않도록 main 함수의 코드를 수정하라.
 
 ```c++
 #include <iostream>
@@ -85,29 +105,7 @@ int main(int argc, char const* argv[]) {
    return 0;
 }
 ```
-
-4. 다음 코드를 컴파일하고 오류가 발생하는지 확인하라. 그 후 main 함수에서 Point 클래스의 객체를 생성하는 코드를 추가한 후 컴파일하여 오류가 발생하는지 확인하고 오류가 발생한다면 이유를 분석하라.
-
-```c++
-#include <iostream>
-using namespace std;
-
-
-class Point
-{
-	int x, y;
-	Point() {};
-public:
-	int getX() { return x;}
-};
-
-int main(int argc, char const *argv[])
-{
-	return 0;
-}
-```
-
-5. 다음 코드를 컴파일하고 발생하는 오류의 이유를 분석하라.
+6. 다음 코드를 컴파일하고 발생하는 오류의 이유를 분석하라.
 
 ```c++
 #include <iostream>
