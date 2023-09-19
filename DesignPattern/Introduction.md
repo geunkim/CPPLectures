@@ -9,27 +9,36 @@
 
 * 생성 디자인 패턴
   - 싱글턴(Singleton pattern)
-  - 단순 팩토리 패턴 (Simple 
-  - 팩토리 메서드 패턴
-  - 추상 팩토리 패턴
   - 빌더 패턴(Builder pattern)
   - 프로토타입 패턴(Prototype pattern)
+  - 팩트로 패턴(Factory pattern)
+     > 단순 팩토리 패턴(Simple Factory pattern)
+     > 팩토리 메서드 패턴(Factory Method Pattern)
+     > 추상 팩토리 패턴(Abstract Factory pattern)
+ 
 * 구조 디자인 패턴
-  - 프록시 패턴(Proxy pattern)
-  - 데커레이터 패턴(Decorator pattern)
   - 어댑터 패턴(Adapter pattern)
-  - 브리지 패턴(Bridge pattern)
-  - 퍼사드 패턴(Facade pattern)
+  - 브릿지 패턴(Bridge pattern)
   - 컴포지트 패턴(Composite pattern)
+  - 데커레이터 패턴(Decorator pattern)
+  - 퍼사드 패턴(Facade pattern)
   - 플라이웨이트 패턴(Flyweight pattern)
+  - 프록시 패턴(Proxy pattern)
+
 * 행동 패턴
+  - 커맨드 패턴(Command pattern)
+  - 인터프리터 패턴(Interprete pattern)
+  - 반복자 패턴(Iterator pattern)
+  - 중재자 패턴(Mediator pattern)
+  - 메멘토 패턴(Memento pattern)
   - 옵서버 패턴(Observer pattern)
   - 템플릿 메소트 패턴(Template Method pattern)
   - 전략 패턴(Strategy pattern)
   - 상태 패턴(State pattern)
-  - 반복자 패턴(Iterator pattern)
-  - 인터프리터 패턴(Interprete pattern)
-  - 중재자 패턴(Mediator pattern)
-  - 커맨드 패턴(Command pattern)
-  - 메멘토 패턴(Memento pattern)
+  - 비지터 패턴(Visotor pattern)
+
+
+
+
+
     
