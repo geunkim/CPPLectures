@@ -18,7 +18,7 @@
 
 ## C++ 17 표준에 따른 함수 정의
 
-* C++17 표준에 따른 함수 정의 ([코드](../SampleCodes/BasicProgram/C++17_main.cc))
+* C++17 표준에 따른 함수 정의 ([코드](./SampleCodes/BasicProgram/C++17_main.cc))
 ```c++
 #include <iostream>
 
@@ -176,7 +176,7 @@ auto main() -> int {
    - 프로그램 실습
    - 프로그램 문제
 
-
+### **[Design Pattern](./DesignPattern)**
    
 ## Part 3
 
