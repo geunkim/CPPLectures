@@ -12,9 +12,9 @@
   - 빌더 패턴(Builder pattern)
   - 프로토타입 패턴(Prototype pattern)
   - 팩트로 패턴(Factory pattern)
-     > 단순 팩토리 패턴(Simple Factory pattern)
-     > 팩토리 메서드 패턴(Factory Method Pattern)
-     > 추상 팩토리 패턴(Abstract Factory pattern)
+     + 단순 팩토리 패턴(Simple Factory pattern)
+     + 팩토리 메서드 패턴(Factory Method Pattern)
+     + 추상 팩토리 패턴(Abstract Factory pattern)
  
 * 구조 디자인 패턴
   - 어댑터 패턴(Adapter pattern)
