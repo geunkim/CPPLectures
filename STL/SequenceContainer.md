@@ -14,6 +14,43 @@ class vector
 ```
 ``vector`` 클래스의 멤버 함수는 다음과 같다. 
 
+#### 클래스 텦플릿 ``vector``의 정의가 있는 C++ 표준 라이브러리 해터 파일 vector의 내용 일부
+```c++
+namespace std {
+template <class Type, class Allocator = allocator<Type>>
+class vector {
+public:
+    typedef T                                        value_type;
+    typedef typename allocator_type::size_type       size_type;
+    ...
+    vector() noexcept(is_nothrow_default_constructible<allocator_type>::value);
+    ~vector();
+    // functions
+
+    void push_back(const value_type& x);
+    void push_back(value_type&& x);
+
+    // operator
+    vector& operator=(const vector& x);
+    vector& operator=(vector&& x)
+            noexcept(
+             allocator_type::propagate_on_container_move_assignment::value ||
+             allocator_type::is_always_equal::value); // C++17
+    void assign(size_type n, const value_type& u);
+    ...
+    iterator begin() noexcept;
+    iterator end() noexcept;
+    ...
+    reference front();
+    reference back();
+    패ㅑd resize(size_type sz);
+    value_type* data() noexcept:
+    ...
+    };
+
+} // namespace std
+```
+
 |함수 이름| 설명 |
 |:---:|:---:|
 | assign | vector를 지우고 지정된 요소를 빈 벡터에 복사 |
