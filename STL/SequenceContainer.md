@@ -89,7 +89,7 @@ public:
 | operator= | vector 요소를 다른 vector의 복사본으로 바꿈 |
 
 ### arraay
-``array`` 컨테이너는 ``vector`` 컨테이너의 잔점을 가지나 크기가 고정되어 있다.
+``array`` 컨테이너는 ``vector`` 컨테이너의 장점을 가지나 크기가 고정되어 있다.
 
 ### deque
 ``deque``(double-ended queue) 컨테이너는 컨테이너의 앞과 뒤에서 데이터(객체)를 빠르게 삽입 삭제할 수 있도록 하는 컨테이로 랜덤 액세스와 저장공간의 크기가 
