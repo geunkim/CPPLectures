@@ -11,6 +11,7 @@ int main(int argc, char const *argv[])
   vector <int> v1;
   v1.push_back(10);
 }
+```
 
 2. 클래스 템플릿 ``vector``를 사용한 프로그램이다. 프로그램 수행 결과를 예측하고 실행 결과의 비교하고 vector 분석하라.
 
