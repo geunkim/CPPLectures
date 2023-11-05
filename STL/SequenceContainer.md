@@ -13,7 +13,7 @@ template <class Type, class Allocator = allocator<Type>>
 class vector;
 ```
 
-#### 클래스 텦플릿 ``vector``의 정의가 있는 C++ 표준 라이브러리 해터 파일 vector의 내용 일부
+#### 클래스 템플릿 ``vector``의 정의가 있는 C++ 표준 라이브러리 해터 파일 vector의 내용 일부
 ```c++
 namespace std {
 template <class Type, class Allocator = allocator<Type>>
