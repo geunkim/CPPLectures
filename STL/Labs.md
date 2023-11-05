@@ -18,11 +18,9 @@ int main(int argc, char const *argv[])
 ```c++
 #include <vector>
 #include <iostream>
-
+using namespace std;
 int main()
 {
-  
-  using namespace std;
   vector<int> v1, v2, v3;
 
   v1.push_back(10);
@@ -74,10 +72,32 @@ int main()
 }
 ```
 
-3. 아래의 링크를 참조하여 vector 클래스의 다른 멤버 함수와 연산자를 활용한 프로그램을 작성하라.
+3. 사각형을 표현하는 클래스를 정의하고 클래스를 ``vector`` 를 이용하여 저쟝하고 처랴하는 프로그램을 작성하라.
+
+4. 다음 프로그램의 실행 결과를 분석하라.
+
+```c++
+#include <vector>
+#include <iostream>
+using namespace std;
+int main()
+{
+  vector<int> v1(5);
+  v1.push_back(3);
+
+  cout << v1.capacity() << endl;
+  cout << v1.size() << endl;
+}
+```
+
+5.  6번의 프로그램에서 3 저장되는 위치는?
+
+6.  6의 프로그램에서 첫 번째 위치에 데이터 10을 저장하는 프로그램을 작성하라.
+
+7. 아래의 링크를 참조하여 vector 클래스의 다른 멤버 함수와 연산자를 활용한 프로그램을 작성하라.
 
 https://learn.microsoft.com/ko-kr/cpp/standard-library/vector-operators?view=msvc-170 
 
-
+8. SampleCodes/STL 디렉토리의 ``vector_sample.cc`` 파일을 기반으로 ``vector`` 클래스의 멤버 함수를 검증하는 함수를 작성하라.
 
 
