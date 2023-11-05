@@ -65,7 +65,7 @@ public:
 | clear | vector 요소를 지움 |
 | data | vector의 첫 번쨰 요소에 대한 포인터를 반환 |
 | emplace | 생성된 요소를 vector의 지정된 위치에 삽입 |
-| emplace_back | vector의 끄에 생성된 요소를 추가 |
+| emplace_back | vector의 끝에 생성된 요소를 추가 |
 | end | vector의 끝을 가리키는 임의 액세스 반복자를 반환 |
 | erase | 지정된 위치에서 vector의 요소 또는 요소의 범위를 제거 |
 | front | vector의 첫 번째 요소에 대한 참조를 반환 |
