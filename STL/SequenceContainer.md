@@ -89,7 +89,7 @@ public:
 | operator[] | 지정된 위치에 있는 vector 요소에 대한 참조를 반환 |
 | operator= | vector 요소를 다른 vector의 복사본으로 바꿈 |
 
-### arraay
+### array
 ``array`` 컨테이너는 ``vector`` 컨테이너의 장점을 가지나 크기가 고정되어 있다.
 
 ```c++
