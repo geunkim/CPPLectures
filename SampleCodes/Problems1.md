@@ -22,3 +22,15 @@ bool equalArrays(T array1[], T array2[], int length);
 template <typename T>
 void reverserray(T array[], int length);
 ```
+
+4. 다음 MyArray 클래스를 탬플릿 클래스로 확장하고 메스도를 추가하라.
+```c++
+class MyArray{
+  int *p;
+  int size;
+public:
+  MyArray(int num); // 생성자. num 만큼의 저장공간을 동적 활당
+  int at(int pos);  // pos위치에 있는 데이터 값 반환
+  int &operator[](int i);  // [] 연산자 중복
+};
+```
