@@ -5,7 +5,7 @@ STL에서도 컨테이너에 저장된 데이터에 대한 문제를 해결하�
 
 ## 컨테이너 공통 멤버 함수
 
-아래의 멤버 함수들은 무든 컨테이너가 제공하는 것으로 컨테이너의 종류에 관계 없이 사용된다. 
+아래의 멤버 함수들은 모든 컨테이너가 제공하는 것으로 컨테이너의 종류에 관계 없이 사용된다. 
 
 |함수(function) | 설명(description) |
 |:----:|:----:|
@@ -36,14 +36,21 @@ STL 알고리즘은 컨테이너에 저장된 데이터 값의 내용과 순서�
 ## 불변경 알고리즘
 | 분류 | 알고리즘 | 설명 |
 |:---:|:---|:---|
-| 계수 알고리즘 | count() | 주어진 값과 일치하는 데이터의 개수를 반환 |
-| 계수 알고리즘 | count_if() | 주어진 조건이 맞는 데이터의 개수를 반환 |
+| 계수 알고리즘 | size_t count(iterator start, iterator end, const TYPE& val) | 주어진 값과 일치하는 데이터의 개수를 반환 |
+| 계수 알고리즘 | size_t count_if(iterator start, iterator end, UnaryPred p) | 주어진 조건이 맞는 데이터의 개수를 반환 |
 | 탐색 알고리즘 | search() | 주이진 값과 일치하는 첫 번째 요소를 반환 |
 | 탐색 알고리즘 | search_n() | 주이진 값과 일치하는 n 개의 요소를 반환 |
 | 탐색 알고리즘 | find() | 주이진 값과 일치하는 n 개의 요소를 반환 |
 | 탐색 알고리즘 | find_if() |  주이진 조건과 일치하는 n 개의 요소를 반환 |
+| 탐색 알고리즘 | find_if_not() |  주이진 조건과 일치하는 n 개의 요소를 반환 |
 | 탐색 알고리즘 | find_end() | 
-| 탐색 알고리즘 | binary_search() | 
+| 탐색 알고리즘 | find_first_of() |  주이진 조건과 일치하는 n 개의 요소를 반환 |
+| 탐색 알고리즘 | bool binary_search(iterator start, iterator end, const TYPE& val) | 주어진 컨테이너에서 주어진 값이 있는지 탐색 | 
+| 탐색 알고리즘 | iterator max_element(iterator start, iterator end) | 주어진 컨테이너에서 최대값이 저장된 위치 반환 |
+| 탐색 알고리즘 | iterator min_element(iterator start, iterator end) | 주어진 컨테이너에서 최소값이 저장된 위치 반환 |
+| 정렬 알고리즘 | void sort(iterator start, iterator end) | 주어진 컨테이너 값을 정렬 |
+| 정렬 알고리즘 | void reverse(first_iterator, last_iterator) | 주어진 컨테이너 데이터 순서를 반전 |
+
 
 ### 계수 알고리즘 
 
