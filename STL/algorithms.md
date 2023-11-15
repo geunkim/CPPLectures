@@ -48,8 +48,8 @@ STL 알고리즘은 컨테이너에 저장된 데이터 값의 내용과 순서�
 | 탐색 알고리즘 | bool binary_search(iterator start, iterator end, const TYPE& val) | 주어진 컨테이너에서 주어진 값이 있는지 탐색 | 
 | 탐색 알고리즘 | iterator max_element(iterator start, iterator end) | 주어진 컨테이너에서 최대값이 저장된 위치 반환 |
 | 탐색 알고리즘 | iterator min_element(iterator start, iterator end) | 주어진 컨테이너에서 최소값이 저장된 위치 반환 |
-| 정렬 알고리즘 | void sort(iterator start, iterator end) | 주어진 컨테이너 값을 정렬 |
-| 정렬 알고리즘 | void reverse(first_iterator, last_iterator) | 주어진 컨테이너 데이터 순서를 반전 |
+| 정렬 알고리즘 | void sort(iterator start, iterator end) | 주어진 컨테이너 값을 정렬 |
+| 정렬 알고리즘 | void reverse(first_iterator, last_iterator) | 주어진 컨테이너 데이터 순서를 반전 |
 
 
 ### 계수 알고리즘 
