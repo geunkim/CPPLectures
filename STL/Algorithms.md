@@ -36,20 +36,19 @@ STL 알고리즘은 컨테이너에 저장된 데이터 값의 내용과 순서�
 ## 불변경 알고리즘
 | 분류 | 알고리즘 | 설명 |
 |:---:|:---|:---|
-| 계수 알고리즘 | size_t count(iterator start, iterator end, const TYPE& val) | 주어진 값과 일치하는 데이터의 개수를 반환 |
-| 계수 알고리즘 | size_t count_if(iterator start, iterator end, UnaryPred p) | 주어진 조건이 맞는 데이터의 개수를 반환 |
-| 탐색 알고리즘 | search() | 주이진 값과 일치하는 첫 번째 요소를 반환 |
-| 탐색 알고리즘 | search_n() | 주이진 값과 일치하는 n 개의 요소를 반환 |
-| 탐색 알고리즘 | find() | 주이진 값과 일치하는 n 개의 요소를 반환 |
-| 탐색 알고리즘 | find_if() |  주이진 조건과 일치하는 n 개의 요소를 반환 |
-| 탐색 알고리즘 | find_if_not() |  주이진 조건과 일치하는 n 개의 요소를 반환 |
-| 탐색 알고리즘 | find_end() | 
-| 탐색 알고리즘 | find_first_of() |  주이진 조건과 일치하는 n 개의 요소를 반환 |
-| 탐색 알고리즘 | bool binary_search(iterator start, iterator end, const TYPE& val) | 주어진 컨테이너에서 주어진 값이 있는지 탐색 | 
-| 탐색 알고리즘 | iterator max_element(iterator start, iterator end) | 주어진 컨테이너에서 최대값이 저장된 위치 반환 |
-| 탐색 알고리즘 | iterator min_element(iterator start, iterator end) | 주어진 컨테이너에서 최소값이 저장된 위치 반환 |
-| 정렬 알고리즘 | void sort(iterator start, iterator end) | 주어진 컨테이너 값을 정렬 |
-| 정렬 알고리즘 | void reverse(first_iterator, last_iterator) | 주어진 컨테이너 데이터 순서를 반전 |
+| 계수 | size_t count(iterator start, iterator end, const TYPE& val) | 컨테이너의 [start, end)에서 주어진 값과 일치하는 데이터의 개수를 반환 |
+| 계수 | size_t count_if(iterator start, iterator end, UnaryPred p) | 컨테이너의 [start, end)에서 p()가 true가 되는 데이터의 개수를 반환 |
+| 탐색 | iterator search(iterator start1, iterator end1, iterator start2, iterator end2); | 컨테이너 [start1, end1)에서 [start2, end2)요소가 있는지를 찾아서 첫 번째 요소의 반복자 반환 |
+| 탐색 | iterator search_n(iterator start, iterator end, size_t num, const TYPE& val); | 컨테이너의 [start, end) 에서 num 번 째 val 값의 요소의 반복자 반환 |
+| 탐색 | iterator find(iterator start, iterator end, const TYPE& val); | 컨테이너의 [star, end)에서 val 값을 찾아 val 값을 포인팅하는 반복자를 반환 |
+| 탐색 | iterator find_if(iterator start, iterator end, UnPred up); |  컨테이너의 [star, end)에서 up()이 true를 반환하는 첫번 째 요소에 대한 반복자를 반환 |
+| 탐색 | iterator find_end(iterator start, iterator end, iterator seq_start, iterator seq_end) | 컨테이너의 [start, end)에서 [seq_start, seq_end)의 시퀀스를 찾아 마지막에 나타나는 시퀀스의 첫번 쨰 요소의 반환자를 반환 |
+| 탐색 | iterator find_first_of(iterator start, iterator end, iterator find_start, iterator find_end); | 컨테이너의 [first_start, first_end)의 요소 중 [start, end)의 데이터가 처음 나타나는 것의 반복자를 반환 |
+| 탐색 | bool binary_search(iterator start, iterator end, const TYPE& val) | 컨테이너에서 [start, end)에서 주어진 값이 있는지 탐색 | 
+| 탐색 | iterator max_element(iterator start, iterator end) | 컨테이너의 [start, end)에서 최대값이 저장된 위치 반환 |
+| 탐색 | iterator min_element(iterator start, iterator end) | 컨테이너의 [start, end)에서 최소값이 저장된 위치 반환 |
+| 정렬 | void sort(iterator start, iterator end) | 컨테이너의 [start, end)에서 값을 정렬 |
+| 정렬 | void reverse(first_iterator, last_iterator) | 컨테이너의 [start, end)의 데이터 순서를 반전 |
 
 
 ### 계수 알고리즘 
