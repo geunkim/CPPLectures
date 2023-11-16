@@ -15,6 +15,6 @@
     + [연관 컨테이너](./AssociativeContainer.md)
     + [컨테이너 어댑터](./ContainerAdapters.md)
 * [STL 반복자](./Iterator.md)
-* [STL 알고리즘](./algorithms.md)
+* [STL 알고리즘](./Algorithms.md)
 * [프로그램 실습](./Labs.md)
 * [프로그램 문제](./Problems.md)
