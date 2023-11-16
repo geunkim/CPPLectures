@@ -175,7 +175,7 @@ auto main() -> int {
      + [연관 컨테이너](./STL/AssociativeContainer.md)
      + [컨테이너 어댑터](./STL/ContainerAdapters.md)
    - [STL 반복자](./STL/Iterator.md)
-   - [STL 알고리즘](./STL/algorithms.md)
+   - [STL 알고리즘](./STL/Algorithms.md)
    - [프로그램 실습](./STL/Labs.md)
    - [프로그램 문제](./STL/Problems.md)
 
