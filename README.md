@@ -217,4 +217,5 @@ auto main() -> int {
 10. [C++ Tutor - Visualize C++ code execution to learn C++ online](https://pythontutor.com/cpp.html#mode=edit)
 11. ["전문가를 위한 C" 책의 소스](https://github.com/PacktPublishing/Extreme-C)
 12. 전문가를 위한 C++
-13. Github개념을 돕는 자료[Learn Git Branching](https://learngitbranching.js.org/?locale=ko)
+13. [Learn Git Branching](https://learngitbranching.js.org/?locale=ko)
+14. [C++ 버전 기능이 정리된 사이트](https://github.com/AnthonyCalandra/modern-cpp-features)
