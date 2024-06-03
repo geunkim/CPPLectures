@@ -18,9 +18,13 @@
 
 ### 테스트 수준
 
-* 단위 테스트(unit test): 단위의 기능을 테스트하낟. 
+* 단위 테스트(unit test): 단위의 기능을 테스트한다. 
 * 통합 테스트(integration test)
 * 시스템 테스트(system test)
 * 인수 테스트(acceptance test)
 * 회귀 테스트(regression test)
 
+
+### 테스트 도구
+
+* [GoogleTest](./GoogleTest.md)
