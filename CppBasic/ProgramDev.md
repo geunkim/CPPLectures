@@ -2,7 +2,7 @@
 
 다음은 C++ 프로그래밍 언어를 사용하여 프로그램을 작성하고 실행파일을 만들고 실행파일을 싫행하는 전체 과정을 나타낸다. 
 
-![programdev](./images/programdev.png)
+![Image](https://github.com/user-attachments/assets/5661439d-8b91-4e78-a1ed-ef7aed9a85f4)
 
 ## 프로그램 개발 과정
 
