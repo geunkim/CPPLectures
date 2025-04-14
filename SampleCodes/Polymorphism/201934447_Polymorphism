@@ -1,0 +1,129 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+class Article
+{
+	string name;
+	int price;
+public:
+	Article() : name("빈 물품"), price(0) { cout << "물품 클래스" << endl; };
+	Article(string n, int p) : name(n), price(p) { cout << "물품 클래스" << endl; };
+
+	void setName(string s) { name = s; }
+	void setPrice(int p) { price = p; }
+
+	string getName() { return name; }
+	int getPrice() { return price; }
+
+	virtual void account() = 0;
+};
+
+class Snack : public Article
+{
+public:
+	Snack() : Article() { cout << "과자 클래스" << endl; };
+	Snack(string n, int p) : Article(n, p) { cout << "과자 클래스" << endl; };
+
+	void account()
+	{
+		cout << "----- [과자] -----" << endl;
+		cout << "과자명 : " << getName() << endl;
+		cout << "과자 가격 : " << getPrice() << endl;
+		cout << "------------------" << endl;
+	}
+};
+
+class Drink : public Article
+{
+public:
+	Drink() : Article() { cout << "음료 클래스" << endl; };
+	Drink(string n, int p) : Article(n, p) { cout << "음료 클래스" << endl; };
+
+	void account()
+	{
+		cout << "----- [음료] -----" << endl;
+		cout << "음료명 : " << getName() << endl;
+		cout << "음료 가격 : " << getPrice() << endl;
+		cout << "------------------" << endl;
+	}
+};
+
+int main()
+{
+	Snack s[3] = { Snack("새우깡", 1300), Snack("프링글스", 1100), Snack("빼빼로", 830) };
+	Drink d[3] = { Drink("코카콜라", 2000), Drink("사이다", 2000), Drink("식혜", 2530) };
+
+	Article* a = NULL;
+	int num;
+	int done = 0;
+
+	while (done == 0)
+	{
+		cout << "과자면 1, 음료면 2" << endl;
+		cin >> num;
+		if (num == 1)
+		{
+			num = 0;
+			cout << "1~3번 중, 하나를 선택하세요." << endl;
+			cin >> num;
+
+ 			if (num == 1)
+			{
+				a = &s[0];
+				done = 1;
+			}
+			else if (num == 2)
+			{
+				a = &s[1];
+				done = 1;
+			}
+			else if (num ==3)
+			{
+				a = &s[2];
+				done = 1;
+			}
+			else
+			{
+				cout << "잘못된 입력입니다. 처음부터 다시 입력합니다." << endl;
+				cout << endl;
+			}
+		}
+		else if (num == 2)
+		{
+			num = 0;
+			cout << "1~3번 중, 하나를 선택하세요." << endl;
+			cin >> num;
+
+			if (num == 1)
+			{
+				a = &d[0];
+				done = 1;
+			}
+			else if (num == 2)
+			{
+				a = &d[1];
+				done = 1;
+			}
+			else if (num == 3)
+			{
+				a = &d[2];
+				done = 1;
+			}
+			else
+			{
+				cout << "잘못된 입력입니다. 처음부터 다시 입력합니다." << endl;
+				cout << endl;
+			}
+		}
+		else
+		{
+			cout << "잘못된 입력입니다. 다시 입력해 주세요." << endl;
+		}
+	}
+ 
+	a->account();
+
+	return 0;
+}
