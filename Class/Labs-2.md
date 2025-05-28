@@ -90,7 +90,7 @@ public:
 };
 
 // 생성자 
-Car::Car(int n, double g) {}. // n의 값을 num에 g의 값을 gas에 저장하는 생성자
+Car::Car(int n, double g) {} // n의 값을 num에 g의 값을 gas에 저장하는 생성자
 
 int Car::getNum() { }  // num 값 반환
 
