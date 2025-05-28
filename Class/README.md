@@ -18,7 +18,6 @@
 * [대입연산자](./asignOverload.md)
 * [정적 클래스](./Static.md) 
 * [프랜즈 클래스](../friend_function_class.md)
-* 정적 멤버 함수 (o)
 * [임시 객체](./TemporaryClass.md)
 
 
