@@ -210,5 +210,34 @@ int main(int argc, char const *argv[])
 }
 ```
 
+11. 다음 프로그램 코드가 실행해라. 그리고 두 ```increase``` 함수의 차이를 분석하라.
+
+```c++
+#include <iostream>
+using namespace std;
+
+void increase(int* x, int* y) {
+	++x, ++y;
+}
+
+void increase(int& x, int& y) {
+	++x, ++y;
+}
+
+int main(int argc, char const* argv[])
+{
+	int x = 10, y = 20;
+
+	cout << "increase 사용 전 : " << x << ", " << y << endl;
+
+	increase(&x, &y);
+	cout << "참조 매개변수형 increase 사용 후: " << x << ", " << y << endl;
+
+	increase(x, y);
+	cout << "포인터 매개변수형 increase 사용 후: " << x << ", " << y << endl;
+
+	return 0;
+}
+```
 
 
