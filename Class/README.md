@@ -17,7 +17,7 @@
 * [이동 생성자](./move_constructor.md)
 * [대입 연산자](./assignOverload.md)
 * [정적 클래스](./Static.md) 
-* [프랜즈 클래스](../function/friend_function_class.md)
+* [프랜즈 클래스](../Function/friend_function_class.md)
 * [임시 객체](./TemporaryClass.md)
 
 
