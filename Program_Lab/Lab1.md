@@ -10,6 +10,7 @@
 class Point{
 	double x;
 	double y;
+public:
 	double getX();
 	double getY();
 	Point();
