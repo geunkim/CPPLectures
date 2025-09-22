@@ -34,6 +34,7 @@ class Date{
 	int year;
 	int month;
 	int day;
+public:
 	Date()
 	Date(int y, int m, int d);
 	~Date();
@@ -53,6 +54,7 @@ class Date{
 ```C++
 class Person {
 	int age;
+public:
 	Person();
 	void setAge(int age);
 	int getAge();
