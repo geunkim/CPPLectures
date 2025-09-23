@@ -159,7 +159,7 @@ using namespace std;
 
 class Animal {
 public:
-    void speak() {  // 가상 함수
+    void speak() {  
         cout << "동물이 소리를 냅니다." << endl;
     }
 };
