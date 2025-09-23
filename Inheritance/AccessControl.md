@@ -4,7 +4,7 @@
 즉, 부모 클래스의 멤버와 부모 클래스로부터 상속받은 멤버는 다른 것이다.
 ```C++
 // BaseClass, Base2를 상속받은 후 보호수준을 private로 격상시킨다, Base3은 그냥 상속받는다.
-class privClass : private BaseClass, Base2, public Base3 {
+class privClass : private Base1, Base2, public Base3 {
 public:
     void func() {
         a;
@@ -27,9 +27,9 @@ private > protected > public
 부모 클래스로부터 상속받을 때 자식 클래스에서 상속받은 멤버들이 어떻게 변하는지 정리한 표이다.
 상속 접근지정자 | private 멤버 | protected 멤버 | public 멤버
 ----- | ----- | ----- | -----
-private으로 상속 | 접근 블가능 | private | private
-protected으로 상속 | 접근 불가능 | protected | protected
-public으로 상속 | 접근 불가능 | protected | public
+private으로 상속 | 상속 안됨, 접근 불가능 | private | private
+protected으로 상속 | 상속 안됨, 접근 불가능 | protected | protected
+public으로 상속 | 성속 안됨, 접근 불가능 | protected | public
 
 ## 자식 클래스의 접근 가능 여부
 부모 클래스에서 상속 접근 지정자를 통해서 받을 때 자식 클래스가 접근이 가능한 지, 불가능한지가 있다
