@@ -1,6 +1,6 @@
-# Class 실습 (3)
+# Class 상속 실습 (1)
 
-1. 다음 코드ㄹ르 기반으로 요구하는 멤버 함수를 정의하시오. 
+1. 다음 코드를 기반으로 요구하는 멤버 함수를 정의하시오. 
 ```c++
 
 class Base {
@@ -42,3 +42,98 @@ int main(int argc, char cost *argv[])
 
 }
 ```
+2. 정수형, 실수형, 문자형을 저장할 수 있는 배열 클래스 IntegerArr, RealArr, CharArr를 정의하고 main 함수에서 객체를 생성하고 클래스 정의를 검증하시오. 세 개의 클래스의 멤버 변수와 멤버 함수는 같도록 정의하시오. 
+
+3. 각 클래스의 생성자를 통해 멤버변수를 초기화하고 접근자와 설정자 함수를 선언하고 정의한 후 main 함수에서 각 클래스의 객체를 생성하여 객체의 구현을 검증하시오. 
+**(자식 클래스 생성 시 자식 클래스의 멤버 변수와 부모 클래스의 멤버 변수를 초기화한다. t-> turbo, s-> speed)**
+  
+  - 자식 클래스의 멤버 변수 초기화 시 초기화 리스트를 활용해 보기
+  - 자식 클래스의 멤버 변수 초기화 시 초기화 리스트를 활용하지 않기 
+
+```c++
+#include <iostream>
+using namespace std;
+
+class Car
+{ 
+  int speed;
+public:
+  Car(int s);
+  // 메소드 추가 
+};
+
+class SportCar : public Car
+{
+  bool turbo;
+public:
+  SportCar(int s, bool t);
+  // 메소드 추가
+};
+
+int main(int argc, char const *argv[])
+{
+
+  return 0;
+}
+```
+
+4. 두 개의 클래스를 간결하게 하나의 클래스로 다시 작성하고 main 함수에서 테스트하시오.
+
+```c++
+class TwoDimension
+{
+  double x, y;
+public:
+  TwoDimension(double i, double j);
+};
+
+class ThreeDimension
+{
+  double x, y, z;
+public:
+  ThreeDimension(double i, double j, double k);
+};
+```
+
+5. 다음 클래스들을 구현하고 main 함수에서 각 객체를 생성하고 검증하시오.
+
+```c++
+#include <iostream>
+#include <string>
+using namespace std;
+
+class Person{
+  stirng name;
+  string address;
+  string tel;
+public:
+  Person();
+  ~Person();
+  // 메소드 추가
+};
+
+class Professor : public Person
+{
+public:
+  Professor();
+  ~Professor();
+  void teach();
+};
+
+class TennisPlayer : public Person
+{
+public:
+  TennisPlayer();
+  ~TennisPlayer();
+  void playTennis();
+};
+
+class Businessman : public Person
+{
+public:
+  Businessman();
+  ~Businessman();
+  void runBusiness();
+};
+```
+
