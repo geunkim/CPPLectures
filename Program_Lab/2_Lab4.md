@@ -1,100 +1,6 @@
-# 상속 및 다형성 실습
+# 다형성 실습
 
-
-1. 각 클래스의 생성자를 통해 멤버변수를 초기화하고 접근자와 설정자 함수를 선언하고 정의한 후 main 함수에서 각 클래스의 객체를 생성하여 객체의 구현을 검증하시오. 
-**(자식 클래스 생성 시 자식 클래스의 멤버 변수와 부모 클래스의 멤버 변수를 초기화한다. t-> turbo, s-> speed)**
-  
-  - 자식 클래스의 멤버 변수 초기화 시 초기화 리스트를 활용해 보기
-  - 자식 클래스의 멤버 변수 초기화 시 초기화 리스트를 활용하지 않기 
-
-```c++
-#include <iostream>
-using namespace std;
-
-class Car
-{ 
-  int speed;
-public:
-  Car(int s);
-  // 메소드 추가 
-};
-
-class SportCar : public Car
-{
-  bool turbo;
-public:
-  SportCar(int s, bool t);
-  // 메소드 추가
-};
-
-int main(int argc, char const *argv[])
-{
-
-  return 0;
-}
-```
-
-2. 두 개의 클래스를 간결하게 하나의 클래소로 다시 작성하고 main 함수에서 테스트하시오.
-
-```c++
-class TwoDimension
-{
-  double x, y;
-public:
-  TwoDimension(double i, double j);
-};
-
-class ThreeDimension
-{
-  double x, y, z;
-public:
-  ThreeDimension(double i, double j, double k);
-};
-```
-
-3. 다음 클래스들을 구현하고 main 함수에서 각 객체를 생성하고 검증하시오.
-
-```c++
-#include <iostream>
-#include <string>
-using namespace std;
-
-class Person{
-  stirng name;
-  string address;
-  string tel;
-public:
-  Person();
-  ~Person();
-  // 메소드 추가
-};
-
-class Professor : public Person
-{
-public:
-  Professor();
-  ~Professor();
-  void teach();
-};
-
-class TennisPlayer : public Person
-{
-public:
-  TennisPlayer();
-  ~TennisPlayer();
-  void playTennis();
-};
-
-class Businessman : public Person
-{
-public:
-  Businessman();
-  ~Businessman();
-  void runBusiness();
-};
-```
-
-4. 다음의 클래스 상속관계에서 main() 함수에서 각 클래스의 객체를 생성하여 클래스의 오버라이딩과 다형성을 검증할 수 있는 프로그램을 작성하고 확인하시오.
+1. 다음의 클래스 상속관계에서 main() 함수에서 각 클래스의 객체를 생성하여 클래스의 오버라이딩과 다형성을 검증할 수 있는 프로그램을 작성하고 확인하시오.
 
 ```c++
 #include <iostream>
@@ -120,7 +26,7 @@ int main(int argc, char const *argv[])
 }
 ```
 
-5. 다음에 대해서 기술하시오.
+2. 다음에 대해서 기술하시오.
 
 - 클래스를 정의하는 방법 (접근지정자 포함)
 - 클래스를 상속하여 정의하는 방법 및 상속의 효과(이유, 장점 등)
@@ -128,7 +34,7 @@ int main(int argc, char const *argv[])
 - 클래스의 다형성을 이용하는 방법 및 효과(이유, 장점 등)
 - 클래스 상속 시 자식 클래스의 객체에서 부모 클래스의 멤버 변수와 멤버 함수를 접근하는 방법 
 
-6. 다음 프로그램에서 객체가 생성되는 갯수를 생각해보고 생성자 함수와 소멸자 함수가 각각 몇 번 호출되는지 분석하고 생성자 호출 개수와 소멸자 호출 개수가 같은지 확인하고 분석하시오.
+3. 다음 프로그램에서 객체가 생성되는 갯수를 생각해보고 생성자 함수와 소멸자 함수가 각각 몇 번 호출되는지 분석하고 생성자 호출 개수와 소멸자 호출 개수가 같은지 확인하고 분석하시오.
 
 ```c++
 #include <iostream>
@@ -160,7 +66,7 @@ int main(int argc, char const *argv[])
 }
 ```
 
-7. 클래스 템플릿 ``vector``를 사용한 프로그램이다. 프로그램 수행 결과를 예측하고 실행 결과의 비교하고 vector 분석하라.
+4. 클래스 템플릿 ``vector``를 사용한 프로그램이다. 프로그램 수행 결과를 예측하고 실행 결과의 비교하고 vector 분석하라.
 
 * 클래스 텦플릿 ``vector``의 정의가 있는 C++ 표준 라이브러리 해터 파일 vector의 내용의 일부를 보인다.
 
@@ -261,7 +167,7 @@ int main()
 }
 ```
 
-8. 다음의 프로그램을 실행시키고 생성자의 호출 개수와 소멸자의 호출 개수가 같은지 확인하고 이유가 무엇인지 분석하고 해결하라.
+5. 다음의 프로그램을 실행시키고 생성자의 호출 개수와 소멸자의 호출 개수가 같은지 확인하고 이유가 무엇인지 분석하고 해결하라.
 	
 ```c++
 #include <iostream>
