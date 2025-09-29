@@ -167,34 +167,6 @@ int main()
 }
 ```
 
-5. 다음의 프로그램을 실행시키고 생성자의 호출 개수와 소멸자의 호출 개수가 같은지 확인하고 이유가 무엇인지 분석하고 해결하라.
-	
-```c++
-#include <iostream>
-using namespace std;
 
-class Parent {
-public:
-	Parent() { cout << "Parent 생성자" << endl; }
-	~Parent() { cout << "Parent 소멸자" << endl; }
-};
-
-class Child :public Parent {
-public:
-	Child() { cout << " Child 생성자" << endl;}
-	~Child() { cout << "Child 소멸자" << endl; }
-};
-
-class TestChild : public Child {
-public:
-	TestChild() { cout << "TestChild 생성자" << endl; }
-	~TestChild() { cout << "TestChild 소멸자" << endl; }
-};
-
-int main() {
-	Parent* a = new TestChild;
-	delete a;
-}
-```	
 	
 	
