@@ -1,7 +1,7 @@
 # Polymorphism(다형성) 이란
 
-다형성(Polymorphism)이라는 단어는 한 자료형의 데이터가 여러 자료형을 갖는다는 것을 의미한다.
-C++의 다형성은 하나의 메소드가 여러가지 다른 자료형의 메소드의 작업을 하는 것을 말한다. 
+다형성(Polymorphism)이란 단어는 하나의 인터페이스나 함수가 여러가지 형태로 동작할 수 있는 특성을 의미한다.
+C++의 다형성은 하나의 함수가 다양한 자료형이나 상황에 맞게 동작할 수 있는 성질을 의미한다.
 실 생활에서 다형성의 예로 아버지, 남편, 직원의 역할을 하는 남자와 어머니, 부인, 직원의 역할을 하는 여자가 있다. 따라서 같은 사람이 환경에 따라 다른 역할(특성)을 한다는 것이 다형성이다. 
 객체지향 프로그래밍에서 다형성은 중요한 기능 중 하나이다.
 
@@ -103,21 +103,21 @@ print() in base class
 
 ## 가상 함수 (virtual function)
 
-가상함수은 상속에 기반에 둔 기술이다. 가상함수는 부모 클래스에서 가상함수라고 선언된 멤버함수가 자식 클래스에서 재 정의된(오버라이딩) 함수이다. 
-부모 클래스의 포인터 변수  또는 참조 번수를 사용하여 자식 클래스를 참조할 경우 헤딩 객체에 대한 가상 험수를 호출하고 자식 클래스의 멤버함수를 실행할 수 있다. 
+가상 함수는 상속에 기반에 둔 기술이다. 가상 함수는 부모 클래스에서 가상 함수라고 선언된 멤버함수가 자식 클래스에서 재 정의된(오버라이딩) 함수이다. 
+부모 클래스의 포인터 변수  또는 참조 변수를 사용하여 자식 클래스를 참조할 경우 해당 객체에 대한 가상 함수를 호출하고 자식 클래스의 멤버함수를 실행할 수 있다. 
 
-* 가상함수는 함수 호출에 사용되는 참조 또는 포인터의 자료형에 관계없이 객체에 대한 올바른 함수가 호출되도록 한다.
+* 가상 함수는 함수 호출에 사용되는 참조 또는 포인터의 자료형에 관계없이 객체에 대한 올바른 함수가 호출되도록 한다.
 * 함수는 부모 클래스에서 **virtual** 키워드로 선언된다.
 * 함수의 호출의 해석은 런타임에 수행된다.
 
 
-### 가상 함수의 규칙##
+### 가상 함수의 규칙
 
 * 가상 함수는 정적이 아니다.
-* 가상 함수는 다른 클래스의 ```friend```함수일 수 있따.
-* 동적 다형성(런타임 다형성)을 달성하기 위해서 부모 클래스 타입의 포인터 번수 또는 참조 변수를 사용하여 가상함수에 액세스할 수 있다. 
+* 가상 함수는 다른 클래스의 ```friend```함수일 수 있다.
+* 동적 다형성(런타임 다형성)을 달성하기 위해서 부모 클래스 타입의 포인터 변수 또는 참조 변수를 사용하여 가상 함수에 액세스할 수 있다. 
 * 가상 함수의 프로토타임(함수 원형)은 부모 클래스와 자식 클래스에서 모두 동일해야 한다.
-* 항상 부모 클래스에서 정의되고 자식 클래스에서 제정의된다. 자식 클래스가 항상 부모 클래스의 가상 함수를 오버라이딩하여야 하는 것은 아니다. 
+* 항상 부모 클래스에서 정의되고 자식 클래스에서 재정의된다. 자식 클래스가 항상 부모 클래스의 가상 함수를 오버라이딩해야 하는 것은 아니다. 
   오버라이딩하지 않는 경우 부모 클래스의 함수가 사용된다.
 * 클래스는 가상 소멸자를 가질 수 있으나 가상 생성자는 가질 수 없다.
 
@@ -144,6 +144,100 @@ Shape *pShape = new Circle();
 
 ## 하향 형변환(Down-Casting)
 
-자식 클래스의 포인터에 부모 클래스의 객체가 자식 클래스의 형으로 캐스팅되는 것으로 명시적, 암시적 캐스팅이라고도 한다.
+자식 클래스의 포인터에 부모 클래스의 객체가 자식 클래스의 형으로 캐스팅되는 것으로 명시적, 암시적 캐스팅이라고도 한다. 
+하향 형변환은 일반적으로 명시적 캐스팅을 통해 수행되며, 안전성을 위해 ```dynamic_cast```를 사용하는 것을 권장한다. 
 
-형변환 과정에서 데이터의 일부가 잘리는 경우도 생긴다. double 자료형인 데이터가 int 자료형으로 된다. 대입된다면 소수점 이하의 데이터가 손실된다. 
+형변환 과정에서 데이터의 일부가 잘리는 경우도 생긴다. double 자료형인 데이터가 int 자료형으로 된다. 대입된다면 소수점 이하의 데이터가 손실된다.
+
+아래는 static_cast의 예로 무조건 캐스팅을 허용하므로, 실제 타입을 확인하지 않고 강제로 변환한다. 
+따라서 b2 처럼 실제 Base의 객체를 Derived 로 변환하면 런터임 에러가 발생할 수 있다. 
+```c++
+#include <iostream>
+using namespace std;
+
+class Base {
+public:
+    virtual void print() {
+        cout << "Base::print()" << endl;
+    }
+};
+
+class Derived : public Base {
+public:
+    void print() {
+        cout << "Derived::print()" << endl;
+    }
+    void onlyInDerived() {
+        cout << "Function only in Derived" << endl;
+    }
+};
+
+int main() {
+    Base* b = new Derived();
+
+    // 안전한 업캐스팅 (자식 → 부모)
+    Derived* d1 = static_cast<Derived*>(b);
+    d1->print();           // Derived::print()
+    d1->onlyInDerived();   // Function only in Derived
+
+    Base* b2 = new Base();
+
+    // 잘못된 다운캐스팅 (부모 → 자식)
+    Derived* d2 = static_cast<Derived*>(b2);
+    d2->print();           // ?? UB: Base 객체를 Derived로 취급 (위험!)
+    d2->onlyInDerived();   // 런타임 오류 발생 가능
+
+    delete b;
+    delete b2;
+}
+```
+#### 안전한 캐스팅 (dynamic_cast)
+dynamic_cast는 런테임에서 실제 객체 타입을 검사하여 변환이 유효하면 캐스팅이 성공적으롤 이루어지고 잘못된 변환이면, nullptr 변환(포인터 일때)롤 반환하고 참조일 경우에는 예외(std::bad_cast)가 발생한다.
+
+```c++
+#include <iostream>
+using namespace std;
+
+class Base {
+public:
+    virtual void print() {
+        cout << "Base::print()" << endl;
+    }
+};
+
+class Derived : public Base {
+public:
+    void print() override {
+        cout << "Derived::print()" << endl;
+    }
+    void onlyInDerived() {
+        cout << "Function only in Derived" << endl;
+    }
+};
+
+int main() {
+    Base* b = new Derived();
+
+    // 올바른 다운캐스팅
+    Derived* d1 = dynamic_cast<Derived*>(b);
+    if (d1) {
+        d1->print();           // Derived::print()
+        d1->onlyInDerived();   // Function only in Derived
+    }
+
+    Base* b2 = new Base();
+
+    // 잘못된 다운캐스팅 → nullptr 반환
+    Derived* d2 = dynamic_cast<Derived*>(b2);
+    if (d2) {
+        d2->print();
+    } else {
+        cout << "dynamic_cast failed: b2 is not Derived" << endl;
+    }
+
+    delete b;
+    delete b2;
+}
+```
+
+
