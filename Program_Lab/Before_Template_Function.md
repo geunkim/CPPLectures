@@ -6,14 +6,14 @@
   (i) 배열의 크기는 100으로 고정한 경우
   (ii) 배열의 크기를 객체를 생성할 때 저장 공간의 크기를 동적으로 할당하는 경우
 
-  front():첫 번째 원소에 접근 (반환)
-  back(): 마지막 원소에 접근 (반환)
-  size(): 현재 원소 개수 반환
-  empty(): 배열이 비어 있는지 여부를 boolean(true/false)으로 반환
-  capacity(): 배열 클래스에 할당된 메모리 공간의 크기 반환
+  - front():첫 번째 원소에 접근 (반환)
+  - back(): 마지막 원소에 접근 (반환)
+  - size(): 현재 원소 개수 반환
+  - empty(): 배열이 비어 있는지 여부를 boolean(true/false)으로 반환
+  - capacity(): 배열 클래스에 할당된 메모리 공간의 크기 반환
 
-  at(int idx): idx에 있는 값 반환
-  insert(int idx, <type> data): idx에 값 저장
-  push_back(<type> data): 배열의 끝에 원소를 추가 
-  pop_back(); 배열의 마지막 원소를 제거
+  - at(int idx): idx에 있는 값 반환
+  - insert(int idx, <type> data): idx에 값 저장
+  - push_back(<type> data): 배열의 끝에 원소를 추가 
+  - pop_back(); 배열의 마지막 원소를 제거
 
