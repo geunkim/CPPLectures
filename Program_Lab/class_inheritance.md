@@ -136,4 +136,41 @@ public:
   void runBusiness();
 };
 ```
+5. 다음의 코드에서 컴파일 에러가 발생하는 부분을 확인하고 컴파일이 발생하는 부분의 코드를 수정하시오.
 
+```c++
+class Base{
+	int a;
+protected:
+	int b;
+public:
+	Base() { cout << "Base(1)" << endl; }
+	Base(int i, int j) : a(i), b(j) { cout << "Base(2)" << endl; }
+	void setTwoData(int k, int l) { a = k; b = l;}
+	void setA(int i) { a = i;}
+	void setB(int j) { b = j;}
+	int getDataA() {return a;}
+	int getDataB() {return b;} 
+};
+
+class Derived : public Base 
+{
+	int c;
+public:
+	Derived(int k) : c(k) {}
+	Derived(int i, int j, int k) : Base(i, j), c(k) {}
+	void setThreeData(int i, int j, int k) {a = i, b = j, c = k;}
+	void printAll() {cout << "a: " << a <<", b:" << b << ",c: " << c << endl; } 
+};
+
+int main(int argc, char const *argv[])
+{
+	Derived child1(50);
+	Derived child2(1, 2, 3);
+	child1.setThreeData(10, 20, 30);
+	child1.printAll();
+	child2.printAll();
+
+	return 0;
+}
+```
