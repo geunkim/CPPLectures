@@ -183,7 +183,7 @@ using namespace std;
 class Parent {
 public:
 	Parent() { cout << "Parent 생성자" << endl; }
-	~Parent() { cout << "Parent 소멸자" << endl; }
+	~Parent() { cout << "Parent 소멸자" << endl; }  // Parent의 소멸자가 Child, TestChild의 소멸자와 연계가 필요(virtual)
 };
 
 class Child :public Parent {
@@ -201,5 +201,8 @@ public:
 int main() {
 	Parent* a = new TestChild;
 	delete a;
+
+	//Child b;
+	//TestChild c;
 }
 ```	
