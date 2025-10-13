@@ -300,4 +300,45 @@ public:
 };
 ```
 
+## 배열 연산자 오버로딩
 
+C++에서 배열 연산자(operator[]) 오버로딩을 할 때 반환 원본 객체의 요소를 직접 수정하거나 접근하여야 하기 때문에 반환 타입은 reference로 하여야 한다. 
+
+C++의 기본 배열은 다음과 같이 동작한다.
+
+```c++
+int array[] = {1, 2, 3};
+arr[0] = 10;    // 배열의 첫번째 저장 장소에 새로운 값을 저장
+int x = arr[2]; // 배열에 저장된 값을 읽기
+```
+사용자 정의 클래스에서 operator[]를 오버로딩할 때도 기본 배열처럼 대입 연산자 기준으로 좌변에 있어야 하기 때문에 참조로 반환해야 한다. 
+
+```c++
+class Array {
+    int data[3];
+public:
+    int operator[](int i) { return data[i]; }  // 값 반환
+};
+
+int main() {
+    Array arr;
+    arr[0] = 10;  	// (컴파일 에러) 임시 값(int)에는 대입할 수 없음
+	int x = arr[1]; 
+}
+```
+arr[0]은 data[0] 값을 반환한 것으로 데이터를 저장할 수 있는 저장 장소가 할당되어 있지 않아 오류가 발생한다.
+
+```c++
+class Array {
+    int data[3];
+public:
+    int& operator[](int i) { return data[i]; }  // 참조 반환
+};
+
+int main() {
+    Array arr;
+    arr[0] = 10;      // 가능: data[0] 직접 수정
+    int x = arr[1];   // 값 읽기 가능
+}
+```
+arr[0]은 data[0]에 대한 참조(lvalue reference) 로 반환되므로원소를 직접 수정할 수 있다.
