@@ -341,4 +341,4 @@ int main() {
     int x = arr[1];   // 값 읽기 가능
 }
 ```
-arr[0]은 data[0]에 대한 참조(lvalue reference) 로 반환되므로원소를 직접 수정할 수 있다.
+arr[0]은 data[0]에 대한 참조(lvalue reference)로 반환되므로 원소를 직접 수정할 수 있다.
