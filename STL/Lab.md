@@ -14,6 +14,7 @@ int main(int argc, char const *argv[])
 }
 ```
 2. 다음 함수를 구현하고 테스트하는 프로그램을 작성하라. (label 스트링이 비워있으면 출력하지 않고 있으면 출력한 후 vector 내의 값을 출력)
+   함수의 기능: 입력 벡터 v 에 있는 모든 데이터 값을 화면에 출력
 ```c++
 void print_vec(const vector<int>& v, const string& label = "");
 ```
