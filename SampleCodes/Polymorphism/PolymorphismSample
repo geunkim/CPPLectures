@@ -1,0 +1,42 @@
+#include <iostream>
+
+using namespace std;
+
+class Base
+{
+public:
+	int a;
+	Base() : a(10) {}
+	virtual void print() = 0;
+	virtual void setA(int _a) { a = _a; }
+};
+
+class Derived : public Base
+{
+	int b;
+public:
+	Derived() : Base(), b(10) {}
+	void print() { cout << "a : " << a <<  ", b : " << b << endl; }
+	void setA(int _a) { a *= _a; }
+};
+
+int main()
+{
+	// Base b;             추상 클래스는 인스턴스를 생성할 수 없다
+	Base* bptr;         // 포인터에 의한 참조는 가능함
+	Derived d;
+	Derived* dptr = new Derived;
+
+	d.print();
+
+	bptr = &d;
+	bptr->setA(20);
+	d.print();
+	dptr->print();
+
+	dptr->setA(10);
+	d.print();
+	dptr->print();
+
+	return 0;
+}
