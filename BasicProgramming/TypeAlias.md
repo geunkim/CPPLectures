@@ -67,7 +67,7 @@ void actual_function(int arg) { /* some code */ }
 func fptr = &actual_function;
 ```
 
-## 템블릿 별칭
+## 템플릿 별칭
 
 ```typedef``` 메커니즘의 제약사항은 템플릿과 동작하지 않는 것이다. 그러나 C++11 의 
 자료형 별칭 구문은 템플릿 별칭을 만들 수 있도록 한다. 
