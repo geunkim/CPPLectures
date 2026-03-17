@@ -51,7 +51,7 @@ int main(int argc, char const *argv[])
 	return 0;
 }
 ```
-4.  다음 코드의 실행 결과가 ```a: 100, b: 400```가 출력되도록 프로그램 코드 추가 영역 아래에 변수 ```a```와 ```b```에 대하 다음 기능을 수행하도록 코드를 추가하라. (a에 100을 대입하고 b에는 a에 저장된 값의 4배한 값을 대입하는 코드를 추가하라.) 
+4.  다음 코드의 실행 결과가 ```a: 100, b: 400```가 출력되도록 프로그램 코드 추가 영역 아래에 변수 ```a```와 ```b```에 대해 다음 기능을 수행하도록 코드를 추가하라. (a에 100을 대입하고 b에는 a에 저장된 값의 4배한 값을 대입하는 코드를 추가하라.) 
 
 ```c++
 #include <iostream>
@@ -311,49 +311,7 @@ int main(int argc, char const *argv[])
 }
 ```
 
-13. 다음 프로그램 코드를 실행하고 ```static_cast<short>()```의 의미와 ```cout.setf(ios::fixed)```, ```cout.precision()```, ```typeid().name()```의 기능을 추론하라.
-
-
-```c++
-#include <iostream>
-
-using namespace std;
-
-int main(int argc, char const *argv[])
-{
-	int someInteger = 987654321;
-	short someShort = static_cast<short>(someInteger);
-	long someLong = someShort * 10000;
-	double someDouble = someLong + 35.987654321;
-	float someFloat = someShort + 35.987654321f;
-	float castFloat = static_cast<float>(someDouble);
-
-	auto autoValue = someLong;
-
-	cout << someInteger << endl;
-	cout << someShort << endl;
-	cout << someLong << endl;
-
-	cout.setf(ios::fixed);
-	cout.precision(10); 
-	cout << "double: ";
-	cout << someDouble << endl;
-
-	cout.setf(ios::fixed);
-	cout.precision(10); 	
-	cout << "float: ";
-	cout << someFloat << endl;
-
-	cout << "cast float:";
-	cout << castFloat << endl;
-
-	cout << typeid(someShort).name() << endl;
-	cout << typeid(autoValue).name() << endl;
-
-	return 0;
-}
-```
-14. 다음 프로그램 코드를 실행 결과로 부터 ```unsigned short```, 와 ```short``` 자료형의 차이점을 추론하라. 또한 ```short``` 을 ```int```로 변경한 후 싱행 결과와 
+13. 다음 프로그램 코드를 실행 결과로 부터 ```unsigned short```, 와 ```short``` 자료형의 차이점을 추론하라. 또한 ```short``` 을 ```int```로 변경한 후 싱행 결과와 
 ```short``` 일 때의 결과를 비교하고 유사점과 차이점을 추론하라.
 
 ```c++
@@ -378,7 +336,7 @@ int main(int argc, char const *argv[])
 	return 0;
 }
 ```
-15. 다음 프로그램 코드를 실행하고 참조 변수(reference variable)와 일반 변수의 관계를 추론하라. 
+14. 다음 프로그램 코드를 실행하고 참조 변수(reference variable)와 일반 변수의 관계를 추론하라. 
 
 ```c++
 #include <iostream>
@@ -403,7 +361,7 @@ int main(int argc, char const *argv[])
 	return 0;
 }
 ```
-16. 다음 프로그램 코드의 결과를 추른하고 실행 결과의 비교를 하라.
+15. 다음 프로그램 코드의 결과를 추른하고 실행 결과의 비교를 하라.
 
 ```c++
 #include <iostream>
@@ -442,6 +400,47 @@ int main(int argc, char const *argv[])
 	cout << (v1 || v2) << endl;
 	cout << (v1 && v2) << endl;
 	cout << (!v1) << endl;
+
+	return 0;
+}
+```
+
+16. 다음 프로그램 코드를 실행하고 ```static_cast<short>()```의 의미와 ```cout.setf(ios::fixed)```, ```cout.precision()```, ```typeid().name()```의 기능을 추론하라.
+```c++
+#include <iostream>
+
+using namespace std;
+
+int main(int argc, char const *argv[])
+{
+	int someInteger = 987654321;
+	short someShort = static_cast<short>(someInteger);
+	long someLong = someShort * 10000;
+	double someDouble = someLong + 35.987654321;
+	float someFloat = someShort + 35.987654321f;
+	float castFloat = static_cast<float>(someDouble);
+
+	auto autoValue = someLong;
+
+	cout << someInteger << endl;
+	cout << someShort << endl;
+	cout << someLong << endl;
+
+	cout.setf(ios::fixed);
+	cout.precision(10); 
+	cout << "double: ";
+	cout << someDouble << endl;
+
+	cout.setf(ios::fixed);
+	cout.precision(10); 	
+	cout << "float: ";
+	cout << someFloat << endl;
+
+	cout << "cast float:";
+	cout << castFloat << endl;
+
+	cout << typeid(someShort).name() << endl;
+	cout << typeid(autoValue).name() << endl;
 
 	return 0;
 }
