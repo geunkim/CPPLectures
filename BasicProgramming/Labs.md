@@ -230,7 +230,7 @@ int main(int argc, char const *argv[])
 10. 다음 프로그램 코드의 실행 결과를 추론한 후 실행 결과와 같은지 확인하고 결과 값의 근거를 설명하라.
 
 ```c++
-include <iostream>
+#include <iostream>
 using namespace std;
 
 int main(int argc, char const *argv[])
