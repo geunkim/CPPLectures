@@ -238,15 +238,18 @@ int main(int argc, char const *argv[])
 	unsigned short value = 0xffff;
 	unsigned short mask1 = 0x00ff;
 	unsigned char mask2 = 0x77;
-	unsigned char mask3 = (unsigned char)01010101;
-	unsigned char mask4 = (unsigned char)10101010;
-
+	unsigned char mask3 = (unsigned char)01010101;  // 8진수로 해석
+	unsigned char mask4 = (unsigned char)10101010;  // 10진수 해석
+	unsigned char mask5 = (unsigned char)0b01010101;  // 2진수로 저장
+	unsigned char mask6 = (unsigned char)0b01010101;  // 2진수로 저장
 
 	cout << "[출력 1]: " << value << endl;
 	cout << "[출력 2]: " << mask1 << endl;
 	cout << "[출력 3]: " << (int)mask2 << endl;
 	cout << "[출력 4]: " << (int)mask3 << endl;
 	cout << "[출력 5]: " << (int)mask4 << endl;		
+	cout << "[출력 6]: " << (int)mask5 << endl;
+	cout << "[출력 7]: " << (int)mask6 << endl;		
 
 	cout << "[출력 - 1]: " << (value & mask1) << endl;
 	cout << "[출력 - 2]: " << (value & mask2) << endl;
