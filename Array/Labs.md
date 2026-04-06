@@ -1,4 +1,5 @@
 # 프로그램 실습(Labs.)
+프로그램 실습을 하면서 각 줄의 기능이 무엇인지 분석하여 리포트를 제출하사오.
 
 1. 다음 프로그램 코드를 실행하였을 때 출력 1, 출력 2, 출력 3, 출력 4의 결과를 추론하라. (근거와 함께)
 
@@ -77,7 +78,7 @@ int main(int argc, char const *argv[])
 
 
 	cout << name << endl;      // 출력 5
-	cout << grades << endl;    // 출려 6
+	cout << grades << endl;    // 출력 6
 
 	return 0;
 }
@@ -90,11 +91,11 @@ using namespace std;
 
 int main(int argc, char const *argv[])
 {
-	float data[10], initlal_value = 10.1;
+	float data[10], initial_value = 10.1;
 
 	for(int i = 0; i < 10; i++){
-		data[i] = initlal_value;
-		initlal_value += 0.3;
+		data[i] = initial_value;
+		initial_value += 0.3;
 	}
 
   // 프로그램 코드 영역
@@ -119,7 +120,7 @@ int main(int argc, char const *argv[])
 	char name[] = "Chul-Soo Kim";
 	int values[] = {10, 40, 50, 60, 80, 100};
 
-	num = sizeof(name)/sizeof(name[0]);
+	num = sizeof(name)/sizeof(name[0]);  
 	cout << "num_of_name: " << num << endl;
 	num = sizeof(values)/sizeof(values[0]);
 	cout << "num of values: " << num << endl;
@@ -131,7 +132,7 @@ int main(int argc, char const *argv[])
 8. 다음 프로그램 코드 실행 결과를 추론하고 실행 결과와 같은지 확인하라. 
 
 ```c++
-include <iostream>
+#include <iostream>
 using namespace std;
 
 int main(int argc, char const *argv[])
@@ -166,7 +167,7 @@ int main(int argc, char const *argv[])
 	return 0;
 }
 ```
-10. 다음 프로그램의 실행 결과를 추론하고 실행 결과와 같은지 화인해라.
+10. 다음 프로그램의 실행 결과를 추론하고 실행 결과와 같은지 확인해라.
 
 ```c++
 #include <iostream>
@@ -187,3 +188,125 @@ int main(int argc, char const *argv[])
 	
 	return 0;
 }
+
+11. 다음 프로그램 코드의 실행 결과를 추론하고 실행 결과와 같은지 확인하라. scores 배열의 모든 원소의 합을 계산하는 로직을 분석하라.
+
+```c++
+#include <iostream>
+using namespace std;
+
+int main(int argc, char const *argv[])
+{
+	int scores[] = {85, 90, 78, 95, 88, 92};
+	int sum = 0;
+	int count = sizeof(scores) / sizeof(scores[0]);
+
+	for(int i = 0; i < count; i++) {
+		sum += scores[i];
+	}
+
+	cout << "총합: " << sum << endl;
+	cout << "평균: " << sum / count << endl;
+	cout << "평균(실수): " << (double)sum / count << endl;
+
+	return 0;
+}
+```
+
+12. 다음 프로그램은 2차원 배열의 개념을 다룬다. 실행 결과를 추론하고 각 요소에 저장된 값을 확인하라. 또한 matrix 배열의 메모리 크기(바이트 단위)를 계산하라.
+
+```c++
+#include <iostream>
+using namespace std;
+
+int main(int argc, char const *argv[])
+{
+	int matrix[3][3] = {
+		{1, 2, 3},
+		{4, 5, 6},
+		{7, 8, 9}
+	};
+
+	cout << "행렬의 원소들:" << endl;
+	for(int i = 0; i < 3; i++) {
+		for(int j = 0; j < 3; j++) {
+			cout << matrix[i][j] << "  ";
+		}
+		cout << endl;
+	}
+
+	cout << "메모리 크기: " << sizeof(matrix) << " bytes" << endl;
+
+	return 0;
+}
+```
+
+13. 다음 프로그램 코드를 완성하라. 배열의 최댓값을 찾는 로직을 구현하고 실행 결과를 확인하라.
+
+```c++
+#include <iostream>
+using namespace std;
+
+int main(int argc, char const *argv[])
+{
+	int numbers[] = {34, 12, 78, 45, 23, 89, 56, 39};
+	int max_value = numbers[0];
+	int count = sizeof(numbers) / sizeof(numbers[0]);
+
+	// 최댓값을 찾는 코드를 작성하세요.
+	// for 반복문을 사용하여 배열의 모든 요소와 비교하세요.
+
+	cout << "최댓값: " << max_value << endl;
+
+	return 0;
+}
+```
+
+14. 다음 프로그램은 배열의 순서를 역으로 출력한다. 실행 결과를 추론하고 프로그램을 실행하여 결과를 확인하라.
+
+```c++
+#include <iostream>
+using namespace std;
+
+int main(int argc, char const *argv[])
+{
+	char word[] = "programming";
+	int length = sizeof(word) / sizeof(word[0]);
+
+	cout << "원본 문자열: " << word << endl;
+	cout << "역순 출력: ";
+
+	for(int i = length - 2; i >= 0; i--) {
+		cout << word[i];
+	}
+	cout << endl;
+
+	return 0;
+}
+```
+
+15. 다음 프로그램 코드에서 두 배열의 모든 원소를 하나의 새로운 배열로 병합하는 코드를 작성하고 실행 결과를 확인하라.
+
+#include <iostream>
+using namespace std;
+
+int main(int argc, char const *argv[])
+{
+	int array1[] = {10, 20, 30, 40};
+	int array2[] = {50, 60, 70};
+	int size1 = sizeof(array1) / sizeof(array1[0]);
+	int size2 = sizeof(array2) / sizeof(array2[0]);
+	int merged[size1 + size2];
+
+	// 두 배열을 merged 배열로 병합하는 코드를 작성하세요.
+	// 먼저 array1의 모든 원소를 복사하고, 그 다음 array2의 모든 원소를 복사하세요.
+
+	cout << "병합된 배열: ";
+	for(int i = 0; i < size1 + size2; i++) {
+		cout << merged[i] << "  ";
+	}
+	cout << endl;
+
+	return 0;
+}
+```
