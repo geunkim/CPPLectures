@@ -287,6 +287,7 @@ int main(int argc, char const *argv[])
 
 15. 다음 프로그램 코드에서 두 배열의 모든 원소를 하나의 새로운 배열로 병합하는 코드를 작성하고 실행 결과를 확인하라.
 
+```c++
 #include <iostream>
 using namespace std;
 
