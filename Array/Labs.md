@@ -297,7 +297,7 @@ int main(int argc, char const *argv[])
 	int array2[] = {50, 60, 70};
 	int size1 = sizeof(array1) / sizeof(array1[0]);
 	int size2 = sizeof(array2) / sizeof(array2[0]);
-	int merged[size1 + size2];
+	int *merged = new int[size1 + size2];
 
 	// 두 배열을 merged 배열로 병합하는 코드를 작성하세요.
 	// 먼저 array1의 모든 원소를 복사하고, 그 다음 array2의 모든 원소를 복사하세요.
