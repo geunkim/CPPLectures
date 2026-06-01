@@ -88,7 +88,8 @@ auto main() -> int {
    - [구조체](./Struct/Struct.md)
    - [공용체](./Struct/Union.md)
    - [열거형](./Struct/Enum.md)
-   - [프로그램 실습](./Struct/Labs.md)
+   % [프로그램 실습](./Struct/Labs.md)
+   - [프로그램 실습]
    - [프로그램 문제](./Struct/Problems.md)
 
 ### **[데이터 입출력](./InputOutput)**
