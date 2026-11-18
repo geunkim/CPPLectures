@@ -50,5 +50,86 @@ STL 알고리즘은 컨테이너에 저장된 데이터 값의 내용과 순서�
 | 정렬 | void sort(iterator start, iterator end) | 컨테이너의 [start, end)에서 값을 정렬 |
 | 정렬 | void reverse(iterator first, iterator last) | 컨테이너의 [first, end)의 데이터를 역순으로 배치 |
 
+## find_if() 
+컨테이너에서 특정 조건을 만족하는 첫번째 원소의 위치를 찾아주는 알고리즘(함수)
+
+예제 코드: vector 내에서 짝수와 홀수가 있는 첫번째 원소의 위치를 알려 주는 프로그램
+```c++
+#include <iostream>
+#include <vector>
+#include <algorithm> // std::find_if
+
+bool even(int n) {
+    return n % 2 == 0;
+}
+
+int main() {
+    std::vector<int> numbers = {1, 3, 5, 8, 10, 13};
+
+    // 첫 번째로 등장하는 짝수 찾기
+    auto it = std::find_if(numbers.begin(), numbers.end(), even);
+
+    if (it != numbers.end()) {
+        std::cout << "찾은 첫 번째 짝수: " << *it << std::endl; // 8 출력
+        // 인덱스 위치 계산
+        std::cout << "인덱스 위치: " << std::distance(numbers.begin(), it) << std::endl; // 3 출력
+    } else {
+        std::cout << "짝수가 없습니다." << std::endl;
+    }
+
+    it = std::find_if(numbers.begin(), numbers.end(), [](int n){return n % 2 == 1; });
+   if (it != numbers.end()) {
+        std::cout << "찾은 첫 번째 홀수: " << *it << std::endl; // 1 출력
+        // 인덱스 위치 계산
+        std::cout << "인덱스 위치: " << std::distance(numbers.begin(), it) << std::endl; // 0 출력
+    } else {
+        std::cout << "홀수가 없습니다." << std::endl;
+    }
+
+    return 0;
+}
+```
+
+## count if() 
+컨테이너에서 특정 조건을 만족하는 원소의 개수를 알려주는 알고리즘(함수) 
+
+예제 코드: vector 내에서 짝수의 개수와 10 이상의 수의 개수를 구하는 프로그램
+```c++
+#include <iostream>
+#include <vector>
+#include <algorithm> // std::find_if
+
+bool even(int n) {
+    return n % 2 == 0;
+}
+
+int main() {
+    std::vector<int> numbers = {1, 3, 5, 8, 10, 13};
+
+    // 첫 번째로 등장하는 짝수 찾기
+    auto it = std::find_if(numbers.begin(), numbers.end(), even);
+
+    if (it != numbers.end()) {
+        std::cout << "찾은 첫 번째 짝수: " << *it << std::endl; // 8 출력
+        // 인덱스 위치 계산
+        std::cout << "인덱스 위치: " << std::distance(numbers.begin(), it) << std::endl; // 3 출력
+    } else {
+        std::cout << "짝수가 없습니다." << std::endl;
+    }
+
+    it = std::find_if(numbers.begin(), numbers.end(), [](int n){return n % 2 == 1; });
+   if (it != numbers.end()) {
+        std::cout << "찾은 첫 번째 홀수: " << *it << std::endl; // 1 출력
+        // 인덱스 위치 계산
+        std::cout << "인덱스 위치: " << std::distance(numbers.begin(), it) << std::endl; // 0 출력
+    } else {
+        std::cout << "홀수가 없습니다." << std::endl;
+    }
+
+    return 0;
+}
+```
+
+
 
 
