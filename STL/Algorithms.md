@@ -97,34 +97,22 @@ int main() {
 ```c++
 #include <iostream>
 #include <vector>
-#include <algorithm> // std::find_if
+#include <algorithm> // std::count_if
 
 bool even(int n) {
     return n % 2 == 0;
 }
 
 int main() {
-    std::vector<int> numbers = {1, 3, 5, 8, 10, 13};
+    std::vector<int> numbers = {1, 3, 5, 8, 10, 12, 13};
 
-    // 첫 번째로 등장하는 짝수 찾기
-    auto it = std::find_if(numbers.begin(), numbers.end(), even);
+    // 방법 1: 일반 함수(even) 사용
+    int even_count = std::count_if(numbers.begin(), numbers.end(), even);
+    std::cout << "짝수의 개수: " << even_count << "개" << std::endl; // 3개 출력 (8, 10, 12)
 
-    if (it != numbers.end()) {
-        std::cout << "찾은 첫 번째 짝수: " << *it << std::endl; // 8 출력
-        // 인덱스 위치 계산
-        std::cout << "인덱스 위치: " << std::distance(numbers.begin(), it) << std::endl; // 3 출력
-    } else {
-        std::cout << "짝수가 없습니다." << std::endl;
-    }
-
-    it = std::find_if(numbers.begin(), numbers.end(), [](int n){return n % 2 == 1; });
-   if (it != numbers.end()) {
-        std::cout << "찾은 첫 번째 홀수: " << *it << std::endl; // 1 출력
-        // 인덱스 위치 계산
-        std::cout << "인덱스 위치: " << std::distance(numbers.begin(), it) << std::endl; // 0 출력
-    } else {
-        std::cout << "홀수가 없습니다." << std::endl;
-    }
+    // 방법 2: 람다식을 사용해 10 이상인 수의 개수 세기
+    int over_ten_count = std::count_if(numbers.begin(), numbers.end(), [](int n) {return n >= 10;});
+    std::cout << "10 이상인 수의 개수: " << over_ten_count << "개" << std::endl; // 3개 출력 (10, 12, 13)
 
     return 0;
 }
